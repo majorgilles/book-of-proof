@@ -181,14 +181,14 @@ Reply with ONLY a JSON object: {"verdict":"correct"|"partial"|"incorrect","feedb
   }
 
   // ---------- settings ----------
-  function setupSettings() {
+  function setupSettings(reading) {
     const prov = el('select', {}, ...Object.entries(PROVIDERS).map(([k, v]) => el('option', { value: k, textContent: v.label })));
     const model = el('input', { placeholder: 'model' }), key = el('input', { type: 'password', placeholder: 'API key', autocomplete: 'off' });
     const base = el('input', { placeholder: 'Base URL' });
     const sync = () => { const p = PROVIDERS[prov.value]; model.placeholder = p.model || 'model name'; base.parentElement.hidden = prov.value !== 'custom'; };
     prov.value = S.provider; model.value = S.model; key.value = S.key; base.value = S.baseUrl;
     const status = el('p', { className: 'hint' });
-    const dlg = el('dialog', { className: 'settings' }, el('h2', { textContent: 'Answer checking' }),
+    const dlg = el('dialog', { className: 'settings' }, reading, el('h2', { textContent: 'Answer checking' }),
       el('p', { className: 'hint', textContent: 'Answers are checked by an AI model using your own API key. The key is stored only in this browser and sent only to the provider you choose.' }),
       el('label', {}, 'Provider', prov), el('label', {}, 'Model', model), el('label', {}, 'Base URL', base), el('label', {}, 'API key', key), status,
       el('div', { className: 'row' },
@@ -271,22 +271,18 @@ Reply with ONLY a JSON object: {"verdict":"correct"|"partial"|"incorrect","feedb
       themeBtns.forEach((b, i) => b.setAttribute('aria-pressed', String((R.theme || '') === THEMES[i][0])));
       size.value = R.fs || 18; out.textContent = (R.fs || 18) + ' px';
     };
-    const dlg = el('dialog', { className: 'settings reading' }, el('h2', { textContent: 'Reading' }),
+    size.setAttribute('aria-label', 'Text size');
+    sync();
+    return el('section', { className: 'reading' }, el('h2', { textContent: 'Reading' }),   // first section of Settings
       el('p', { className: 'hint', textContent: 'Theme' }), el('div', { className: 'themes' }, ...themeBtns),
       el('p', { className: 'hint', textContent: 'Text size' }),
       el('div', { className: 'sizes' }, el('button', { type: 'button', className: 'ghost', textContent: 'A−', title: 'Smaller', onclick: () => step(-1) }),
-        size, el('button', { type: 'button', className: 'ghost', textContent: 'A+', title: 'Larger', onclick: () => step(1) }), out),
-      el('div', { className: 'row' },
-        el('button', { type: 'button', className: 'ghost', textContent: 'Reset', onclick: () => { delete R.theme; delete R.fs; apply(); } }),
-        el('button', { type: 'button', textContent: 'Done', onclick: () => dlg.close() })));
-    size.setAttribute('aria-label', 'Text size');
-    document.body.append(dlg); sync();
-    document.getElementById('reading-btn').onclick = () => dlg.showModal();
+        size, el('button', { type: 'button', className: 'ghost', textContent: 'A+', title: 'Larger', onclick: () => step(1) }), out,
+        el('button', { type: 'button', className: 'ghost', textContent: 'Reset', onclick: () => { delete R.theme; delete R.fs; apply(); } })));
   }
 
   document.addEventListener('DOMContentLoaded', async () => {
-    setupReading();
-    setupSettings();
+    setupSettings(setupReading());
     setupCode();
     const outline = await fetch('outline.json').then(r => r.json()).catch(() => []);
     document.body.dataset.page === 'index' ? setupIndex(outline) : setupChapter(outline);  // captures exercise TeX before typesetting

@@ -27,7 +27,7 @@ PAGE = '''<!doctype html>
 <script defer src="assets/app.js"></script>
 </head><body data-page="{slug}"{code}>
 <header class="top"><a href="index.html" class="home">{book}</a>
-<nav>{home}{prev}{next}<button id="reading-btn" type="button" class="ghost" title="Theme and text size" aria-label="Theme and text size">Aa</button><button id="settings-btn" type="button">Settings</button></nav></header>
+<nav>{home}{prev}{next}<button id="settings-btn" type="button">Settings</button></nav></header>
 <main class="book">{body}</main>
 <nav class="pager">{prev}{home}{next}</nav>
 {license}
