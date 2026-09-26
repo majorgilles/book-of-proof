@@ -15,6 +15,8 @@ LICENSE = ('<footer class="license"><p><em>Book of Proof</em>, Third Edition, by
            'This site is an unmodified format conversion with added progress tracking and exercise checking; '
            'it is not affiliated with or endorsed by the author.</p></footer>')
 
+HOME = '<a href="index.html" class="toc-link">☰ Contents</a>'
+
 PAGE = '''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{title} — {book}</title>
@@ -24,9 +26,9 @@ PAGE = '''<!doctype html>
 <script defer src="assets/app.js"></script>
 </head><body data-page="{slug}">
 <header class="top"><a href="index.html" class="home">{book}</a>
-<nav>{prev}{next}<button id="settings-btn" type="button">Settings</button></nav></header>
+<nav>{home}{prev}{next}<button id="settings-btn" type="button">Settings</button></nav></header>
 <main class="book">{body}</main>
-<nav class="pager">{prev}{next}</nav>
+<nav class="pager">{prev}{home}{next}</nav>
 {license}
 </body></html>'''
 
@@ -61,7 +63,7 @@ def main():
         prev = f'<a href="{pages[i-1][0]}.html" rel="prev">← Previous</a>' if i else ''
         nxt = f'<a href="{pages[i+1][0]}.html" rel="next">Next →</a>' if i + 1 < len(pages) else ''
         body = re.sub(r'^<!-- pages: .*? -->\s*', '', src)
-        (SITE / f'{slug}.html').write_text(PAGE.format(title=title_of(src), book=BOOK, slug=slug, prev=prev, next=nxt,
+        (SITE / f'{slug}.html').write_text(PAGE.format(title=title_of(src), book=BOOK, slug=slug, prev=prev, next=nxt, home=HOME,
                                                        body=body, license=LICENSE), encoding='utf-8')
         book.append(outline(slug, src) if slug != 'solutions' else {'slug': slug, 'title': title_of(src), 'sections': []})
     (SITE / 'outline.json').write_text(json.dumps(book, ensure_ascii=False, indent=1), encoding='utf-8')
@@ -85,7 +87,7 @@ def main():
              '<p class="io"><button id="export-btn" type="button">Export progress</button> '
              '<label class="btn">Import progress<input id="import-file" type="file" accept="application/json" hidden></label></p>'
              f'<ol class="toc">{toc}</ol></section>')
-    (SITE / 'index.html').write_text(PAGE.format(title='Contents', book=BOOK, slug='index', prev='', next='', body=index,
+    (SITE / 'index.html').write_text(PAGE.format(title='Contents', book=BOOK, slug='index', prev='', next='', home='', body=index,
                                                  license=LICENSE), encoding='utf-8')
     print(f'built {len(pages)} pages, {sum(len(s["ex"]) for c in book for s in c["sections"])} exercises, {len(sols)} solutions')
 

@@ -209,6 +209,7 @@ def convert(slug, a, b, skip=(), solutions=False):
             continue
         # --- body text ---
         indent = row.x0 - left
+        if wrap: wrap -= 1; indent = 0                         # lines wrapped around a drop cap are indented
         gap = (row.y0 - last_row_y) if last_row_y is not None and last_row_y < row.y0 else 0
         last_row_y = row.y1
         starts_label = ft.bold and ft.text.strip().split(' ')[0] in LABELS
@@ -217,7 +218,6 @@ def convert(slug, a, b, skip=(), solutions=False):
         caption = ft.bold and re.match(r'^Figure \d+\.\d+\.', text)
         item = indent > 3 and re.match(r'^\d+\.(?!\d)', text) is not None   # numbered list inside the body
         display = indent > 28 and not bullet and not caption and not item
-        if wrap: wrap -= 1; indent = 0 if not dropcap else indent   # lines wrapped around a drop cap are indented
         new = not para or indent > 8 or gap > 9 or starts_label or starts_proof or bullet or caption or display or item or para_cls == 'display'
         if para and re.search(r'\w-(</\w+>)*$', para[-1]): new = False     # a word broken across lines never ends a paragraph
         if new:
