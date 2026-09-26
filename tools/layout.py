@@ -1,6 +1,6 @@
 """Page layout analysis: turns a PDF page into rows of styled spans, figure boxes and hard-math boxes.
 Text is taken verbatim from the PDF text layer; only glyph encodings of the Fourier math fonts are remapped."""
-import pymupdf
+import re, pymupdf
 
 FIX = {'Fourier-Math-Symbols': {';': '∅', 'p': '√'},
        'Fourier-Math-Extension': {'©': '{', 'ª': '}', '¡': '(', '¢': ')', '£': '[', '¤': ']', '³': '(', '´': ')', 'µ': '(', '¶': ')'},
@@ -8,6 +8,7 @@ FIX = {'Fourier-Math-Symbols': {';': '∅', 'p': '√'},
 NEG = {'=': '≠', '∈': '∉', '⊆': '⊈', '⊂': '⊄', '⊇': '⊉', '⊃': '⊅', '≡': '≢', '|': '∤', '∃': '∄', '<': '≮', '>': '≯',
        '≤': '≰', '≥': '≱', '∼': '≁', '≈': '≉', '∣': '∤'}
 TOP, BOTTOM = 75, 675          # running head above, footer below (PDF points)
+MONO = re.compile(r'Mono|Courier|Consol|Code|Inconsolata|Menlo|Typewriter|CMTT|LMTT', re.I)   # code fonts; adapt per book
 
 
 class Span:
@@ -29,6 +30,8 @@ class Span:
 
     @property
     def prose(self): return self.font.startswith('TeXGyreSchola')
+    @property
+    def mono(self): return bool(MONO.search(self.font))   # code font (coding books)
     @property
     def bold(self): return 'Bold' in self.font
     @property

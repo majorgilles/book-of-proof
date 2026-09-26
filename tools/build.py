@@ -21,16 +21,23 @@ PAGE = '''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{title} — {book}</title>
 <link rel="stylesheet" href="assets/style.css">
+<script>try{{var r=JSON.parse(localStorage.getItem('bop-reader-v1'))||{{}};if(r.theme)document.documentElement.dataset.theme=r.theme;if(r.fs)document.documentElement.style.setProperty('--fs',r.fs+'px')}}catch(e){{}}</script>
 <script>window.MathJax={{tex:{{inlineMath:[['\\\\(','\\\\)']],displayMath:[['\\\\[','\\\\]']]}},startup:{{typeset:false}}}};</script>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 <script defer src="assets/app.js"></script>
-</head><body data-page="{slug}">
+</head><body data-page="{slug}"{code}>
 <header class="top"><a href="index.html" class="home">{book}</a>
-<nav>{home}{prev}{next}<button id="settings-btn" type="button">Settings</button></nav></header>
+<nav>{home}{prev}{next}<button id="reading-btn" type="button" class="ghost" title="Theme and text size" aria-label="Theme and text size">Aa</button><button id="settings-btn" type="button">Settings</button></nav></header>
 <main class="book">{body}</main>
 <nav class="pager">{prev}{home}{next}</nav>
 {license}
 </body></html>'''
+
+
+def code_attr(src):
+    """Coding books: the language of the page's code blocks, so exercises there get a runnable editor."""
+    m = re.search(r'<pre class="code" data-lang="([^"]+)"', src)
+    return f' data-code-lang="{m.group(1)}"' if m else ''
 
 
 def title_of(src):
@@ -63,7 +70,7 @@ def main():
         prev = f'<a href="{pages[i-1][0]}.html" rel="prev">← Previous</a>' if i else ''
         nxt = f'<a href="{pages[i+1][0]}.html" rel="next">Next →</a>' if i + 1 < len(pages) else ''
         body = re.sub(r'^<!-- pages: .*? -->\s*', '', src)
-        (SITE / f'{slug}.html').write_text(PAGE.format(title=title_of(src), book=BOOK, slug=slug, prev=prev, next=nxt, home=HOME,
+        (SITE / f'{slug}.html').write_text(PAGE.format(title=title_of(src), book=BOOK, slug=slug, prev=prev, next=nxt, home=HOME, code=code_attr(src),
                                                        body=body, license=LICENSE), encoding='utf-8')
         book.append(outline(slug, src) if slug != 'solutions' else {'slug': slug, 'title': title_of(src), 'sections': []})
     (SITE / 'outline.json').write_text(json.dumps(book, ensure_ascii=False, indent=1), encoding='utf-8')
@@ -87,7 +94,7 @@ def main():
              '<p class="io"><button id="export-btn" type="button">Export progress</button> '
              '<label class="btn">Import progress<input id="import-file" type="file" accept="application/json" hidden></label></p>'
              f'<ol class="toc">{toc}</ol></section>')
-    (SITE / 'index.html').write_text(PAGE.format(title='Contents', book=BOOK, slug='index', prev='', next='', home='', body=index,
+    (SITE / 'index.html').write_text(PAGE.format(title='Contents', book=BOOK, slug='index', prev='', next='', home='', code='', body=index,
                                                  license=LICENSE), encoding='utf-8')
     print(f'built {len(pages)} pages, {sum(len(s["ex"]) for c in book for s in c["sections"])} exercises, {len(sols)} solutions')
 

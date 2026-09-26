@@ -1,14 +1,15 @@
 """Deterministic PDF -> HTML converter. Prose comes verbatim from the PDF text layer (never retyped);
 figures and hard math become exact SVG crops.
   python tools/convert.py ch01 14 44 [skip-first skip-last]"""
-import sys, re, html, pathlib, pymupdf
+import os, sys, re, html, pathlib, pymupdf
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
 from layout import analyse, rejoin
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-PDF = pymupdf.open(ROOT / 'work/Main.pdf')
+PDF = pymupdf.open(os.environ.get('BOOK_PDF', ROOT / 'work/Main.pdf'))   # BOOK_PDF overrides (tests)
 LABELS = ('Definition', 'Theorem', 'Proposition', 'Lemma', 'Corollary', 'Example', 'Fact')
 NUM = re.compile(r'^(\d+)\.$')
+CODE_LANG = 'python'   # language of code blocks in a coding book: python | javascript | sql | other (display only)
 
 
 def crop(pno, r, path):
@@ -101,8 +102,19 @@ def convert(slug, a, b, skip=(), solutions=False):
     ex = None                      # exercise-block state
     last_row_y = None
 
+    code_buf = []
+
+    def code_html(lines):
+        x0 = min(x for x, _, _ in lines)
+        body = '\n'.join(' ' * round((x - x0) / cw) + t.rstrip() for x, cw, t in lines)   # indentation from x offsets
+        return f'<pre class="code" data-lang="{CODE_LANG}"><code>{html.escape(body)}</code></pre>'
+
+    def flush_code():
+        if code_buf: out.append(code_html(code_buf)); code_buf.clear()
+
     def close_para():
         nonlocal para, para_cls
+        flush_code()
         if para:
             cls = f' class="{para_cls}"' if para_cls else ''
             out.append(f'<p{cls}>' + ' '.join(para).replace('  ', ' ') + '</p>')
@@ -118,7 +130,7 @@ def convert(slug, a, b, skip=(), solutions=False):
                 if cur_group is not None: out.append('</ol>')
                 if ex['groups'].get(it['group']): out.append(f'<p class="ex-group">{ex["groups"][it["group"]]}</p>')
                 out.append('<ol class="ex-list">'); cur_group = it['group']
-            body = ' '.join(it['html']).strip()
+            body = ' '.join(it['html']).strip() + (code_html(it['code']) if it.get('code') else '')
             if solutions:
                 out.append(f'<li><div class="sol" id="sol-{ex["key"]}-{it["num"]}" data-ex="ex-{ex["key"]}-{it["num"]}">'
                            f'<p><strong>{it["num"]}.</strong> {body}</p></div></li>')
@@ -178,6 +190,15 @@ def convert(slug, a, b, skip=(), solutions=False):
             out.append(f'<div class="exercises" data-for="{key}"><h3>{html.escape(text)}</h3>')
             ex = {'key': key, 'items': [], 'groups': {}, 'group': 0, 'cols': [], 'intro': []}
             continue
+        # --- code blocks (coding books): rows set entirely in a monospace font ---
+        vis = [v for k, v in row.items if k == 'span' and v.text.strip()]
+        if vis and all(v.mono for v in vis) and not any(k == 'math' for k, _ in row.items):
+            cw = next(((v.x1 - v.x0) / len(v.text) for v in vis if len(v.text) > 3), 5.0)   # monospace char width
+            line = ''.join(v.text for k, v in row.items if k == 'span')
+            if ex is not None and ex['items']:                # code inside an exercise
+                ex['items'][-1].setdefault('code', []).append((row.x0, cw, line)); continue
+            if para: close_para()
+            code_buf.append((row.x0, cw, line)); continue
         if ex is not None:
             # group heading "A. ..." (bold) or its bold continuation
             if ft.bold and re.match(r'^[A-Z]\.\s', text) and not NUM.match(ft.text.strip()):
@@ -207,6 +228,7 @@ def convert(slug, a, b, skip=(), solutions=False):
                                     'y': row.y0, 'pno': pno, 'html': [C.inline(pno, row, seg)]})
             ex['last'] = 'item'
             continue
+        flush_code()
         # --- body text ---
         indent = row.x0 - left
         if wrap: wrap -= 1; indent = 0                         # lines wrapped around a drop cap are indented

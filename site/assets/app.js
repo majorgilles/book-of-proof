@@ -58,14 +58,20 @@
     return j.choices[0].message.content;
   }
 
-  const GRADER = `You grade answers to exercises from the textbook "Book of Proof" (Richard Hammack). Math is written in LaTeX.
-Judge mathematical correctness and, for proofs, rigor and completeness at the level of the book. Accept any correct answer
-or valid proof, not only the one in the official solution. Be concise and kind; point to the first real error.
+  const BOOK = () => document.querySelector('.top .home')?.textContent.trim() || 'this textbook';
+  const GRADER = () => `You grade answers to exercises from the textbook "${BOOK()}". Math is written in LaTeX.
+Judge correctness and, for proofs, rigor and completeness at the level of the book. Accept any correct answer
+or valid proof, not only the one in the official solution. For code, the student's program was really executed and its
+output is included: a crash, wrong output or missing requirement is not correct; judge style only if the exercise asks.
+Be concise and kind; point to the first real error.
 Reply with ONLY a JSON object: {"verdict":"correct"|"partial"|"incorrect","feedback":"<= 120 words, may use LaTeX"}`;
-  async function grade(ex, answer) {
+  async function grade(ex, answer, run) {
     const user = [ex.group && `Instructions for this group of exercises: ${ex.group}`, `Exercise ${ex.num}: ${ex.src}`,
-      ex.sol && `Official solution from the book (reference only): ${ex.sol}`, `Student answer:\n${answer}`].filter(Boolean).join('\n\n');
-    const out = await ask(GRADER, user);
+      ex.sol && `Official solution from the book (reference only): ${ex.sol}`,
+      `Student answer${run ? ` (${run.lang} code)` : ''}:\n${answer}`,
+      run && `Actual execution result:\n${(run.out || '(no output)').slice(0, 4000)}${run.error ? `\nERROR: ${run.error.slice(0, 2000)}` : ''}`,
+    ].filter(Boolean).join('\n\n');
+    const out = await ask(GRADER(), user);
     const m = out.match(/\{[\s\S]*\}/);
     if (!m) throw new Error('Unexpected grader reply: ' + out.slice(0, 200));
     const g = JSON.parse(m[0]);
@@ -107,18 +113,34 @@ Reply with ONLY a JSON object: {"verdict":"correct"|"partial"|"incorrect","feedb
       while (g && !g.classList.contains('ex-group') && g.tagName !== 'H3') g = g.previousElementSibling;
       const ex = { id: li.id, num: li.value || '', src: plain(li.innerHTML), group: g?.classList.contains('ex-group') ? plain(g.innerHTML) : '' };
       const st = P.ex[li.id] || {};
-      const ta = el('textarea', { rows: 3, placeholder: 'Your answer. Write math in LaTeX, e.g. \\(\\{1,2,3\\}\\) or \\(x \\in \\mathbb{Z}\\)', value: st.a || '' });
+      // coding exercise: runnable language on this page and the exercise shows code or asks for a program
+      const lang = li.querySelector('pre.code')?.dataset.lang || document.body.dataset.codeLang;
+      const isCode = !!WORKERS[lang] && !!(li.querySelector('pre.code') ||
+        /\b(write|implement|program|function|code|script|class|method|print|output)\b/i.test(ex.src + ' ' + ex.group));
+      const ta = el('textarea', { rows: isCode ? 8 : 3, className: isCode ? 'code-input' : '', spellcheck: !isCode, value: st.a || '',
+        placeholder: isCode ? `Your ${lang} code (Run to try it; Check answer runs it and grades the result)` :
+          'Your answer. Write math in LaTeX, e.g. \\(\\{1,2,3\\}\\) or \\(x \\in \\mathbb{Z}\\)' });
+      const runBox = el('pre', { className: 'run-out', hidden: true });
+      const runBtn = el('button', { type: 'button', className: 'ghost run', textContent: '▶ Run', hidden: !isCode });
+      runBtn.onclick = async () => { runBtn.disabled = true; showRun(runBox, { out: 'Running…' });
+        try { showRun(runBox, await runCode(lang, ta.value)); } catch (e) { showRun(runBox, { error: e.message }); }
+        runBtn.disabled = false; };
       const prev = el('div', { className: 'preview' }), res = el('div', { className: 'result' });
       const check = el('button', { type: 'button', textContent: 'Check answer' });
       const solBtn = el('button', { type: 'button', className: 'ghost', textContent: 'Show book solution', hidden: true });
       const solBox = el('div', { className: 'solution', hidden: true });
       const mark = (s, fb) => { P.ex[li.id] = { ...P.ex[li.id], s, fb, a: ta.value, t: Date.now() }; persist(); show(); refresh(); };
       const show = () => { const e = P.ex[li.id]; li.dataset.s = e?.s || ''; res.innerHTML = e?.s ? `<strong>${e.s[0].toUpperCase() + e.s.slice(1)}.</strong> ${e.fb || ''}` : ''; typeset([res]); };
-      let tm; ta.oninput = () => { clearTimeout(tm); tm = setTimeout(() => { prev.textContent = ta.value; typeset([prev]); }, 400); };
+      let tm; ta.oninput = () => { if (isCode) return; clearTimeout(tm); tm = setTimeout(() => { prev.textContent = ta.value; typeset([prev]); }, 400); };
+      if (isCode) ta.onkeydown = e => { if (e.key === 'Tab') { e.preventDefault(); ta.setRangeText('    ', ta.selectionStart, ta.selectionEnd, 'end'); } };
       check.onclick = async () => {
         if (!ta.value.trim()) return;
-        check.disabled = true; res.textContent = 'Checking…';
-        try { const g = await grade({ ...ex, sol: (await sols)[li.id] && plain((await sols)[li.id]) }, ta.value); mark(g.s, g.fb); }
+        check.disabled = true; res.textContent = isCode ? 'Running your code…' : 'Checking…';
+        try {
+          let run = null;
+          if (isCode) { run = { lang, ...(await runCode(lang, ta.value)) }; showRun(runBox, run); res.textContent = 'Checking…'; }
+          const g = await grade({ ...ex, sol: (await sols)[li.id] && plain((await sols)[li.id]) }, ta.value, run); mark(g.s, g.fb);
+        }
         catch (e) { res.textContent = 'Could not check: ' + e.message; }
         check.disabled = false;
       };
@@ -128,7 +150,7 @@ Reply with ONLY a JSON object: {"verdict":"correct"|"partial"|"incorrect","feedb
         el('button', { type: 'button', className: 'ghost', textContent: '✓', title: 'Mark correct', onclick: () => mark('correct', 'Marked correct by you.') }),
         el('button', { type: 'button', className: 'ghost', textContent: '✗', title: 'Mark incorrect', onclick: () => mark('incorrect', 'Marked incorrect by you.') }));
       li.append(el('details', { className: 'answer', open: !!st.a }, el('summary', { textContent: st.s ? 'Your answer' : 'Answer this' }),
-        ta, prev, el('div', { className: 'row' }, check, solBtn, self), res, solBox));
+        ta, prev, el('div', { className: 'row' }, runBtn, check, solBtn, self), runBox, res, solBox));
       show();
     });
   }
@@ -179,8 +201,93 @@ Reply with ONLY a JSON object: {"verdict":"correct"|"partial"|"incorrect","feedb
     document.getElementById('settings-btn').onclick = () => dlg.showModal();
   }
 
+  // ---------- code execution for coding books (Python via Pyodide, JavaScript natively), each in a Web Worker ----------
+  const PYODIDE = 'https://cdn.jsdelivr.net/pyodide/v0.26.4/full/';
+  const WORKERS = {
+    python: `importScripts('${PYODIDE}pyodide.js');
+      let py; const ready = loadPyodide({ indexURL: '${PYODIDE}' }).then(p => { py = p; postMessage({ ready: true }); });
+      onmessage = async e => { await ready; let out = '';
+        py.setStdout({ batched: s => out += s + '\\n' }); py.setStderr({ batched: s => out += s + '\\n' });
+        try { await py.loadPackagesFromImports(e.data); await py.runPythonAsync(e.data); postMessage({ out }); }
+        catch (err) { postMessage({ out, error: String(err.message || err) }); } };`,
+    javascript: `postMessage({ ready: true });
+      onmessage = async e => { let out = ''; const log = (...a) => out += a.map(x => typeof x === 'string' ? x : JSON.stringify(x)).join(' ') + '\\n';
+        self.console = { log, info: log, warn: log, error: log };
+        try { await (0, eval)('(async () => {' + e.data + '\\n})()'); postMessage({ out }); }
+        catch (err) { postMessage({ out, error: String(err && err.stack || err) }); } };`,
+  };
+  const pool = {};
+  function worker(lang) {                       // one warm worker per language; recreated after a timeout
+    if (!pool[lang]) {
+      const w = new Worker(URL.createObjectURL(new Blob([WORKERS[lang]], { type: 'text/javascript' })));
+      pool[lang] = { w, ready: new Promise((res, rej) => { w.onmessage = e => e.data.ready && res(); w.onerror = rej; }) };
+    }
+    return pool[lang];
+  }
+  async function runCode(lang, code, timeout = 10000) {
+    if (!WORKERS[lang]) throw new Error(`Running ${lang} code is not supported in the browser.`);
+    const p = worker(lang);
+    await Promise.race([p.ready, new Promise((_, rej) => setTimeout(() => rej(new Error('The interpreter took too long to load.')), 90000))]);
+    return new Promise(res => {
+      const t = setTimeout(() => { p.w.terminate(); delete pool[lang]; res({ out: '', error: `Stopped after ${timeout / 1000} s (infinite loop?)` }); }, timeout);
+      p.w.onmessage = e => { if (e.data.ready) return; clearTimeout(t); res(e.data); };
+      p.w.postMessage(code);
+    });
+  }
+  const showRun = (box, r) => { box.hidden = false; box.textContent = (r.out || '') + (r.error ? (r.out ? '\n' : '') + r.error : '') || '(no output)'; box.classList.toggle('err', !!r.error); };
+
+  function setupCode() {
+    document.querySelectorAll('pre.code').forEach(pre => {
+      const lang = pre.dataset.lang;
+      if (!WORKERS[lang] || pre.closest('li.ex details')) return;
+      const code = pre.querySelector('code');
+      code.contentEditable = 'plaintext-only'; code.spellcheck = false;       // readers can tweak and re-run examples
+      const box = el('pre', { className: 'run-out', hidden: true });
+      const btn = el('button', { type: 'button', className: 'ghost run', textContent: '▶ Run' });
+      btn.onclick = async () => { btn.disabled = true; box.hidden = false; box.textContent = 'Running… (first run loads the interpreter)';
+        try { showRun(box, await runCode(lang, code.innerText)); } catch (e) { showRun(box, { error: e.message }); }
+        btn.disabled = false; };
+      pre.after(el('div', { className: 'run-bar' }, btn), box);
+    });
+  }
+
+  // ---------- reading preferences: theme + text size (applied early by an inline <head> script) ----------
+  function setupReading() {
+    const RKEY = 'bop-reader-v1', R = load(RKEY, {}), root = document.documentElement;
+    const THEMES = [['', 'Auto', 'linear-gradient(90deg,#fbfaf7 50%,#171716 50%)'], ['light', 'Light', '#fbfaf7'],
+                    ['sepia', 'Sepia', '#f4ecd8'], ['dark', 'Dark', '#171716'], ['contrast', 'High contrast', '#000']];
+    const apply = () => {
+      R.theme ? root.dataset.theme = R.theme : delete root.dataset.theme;
+      R.fs ? root.style.setProperty('--fs', R.fs + 'px') : root.style.removeProperty('--fs');
+      save(RKEY, R); sync();
+    };
+    const themeBtns = THEMES.map(([k, label, sw]) => el('button', { type: 'button', className: 'ghost',
+      onclick: () => { R.theme = k; apply(); } }, el('span', { className: 'theme-swatch', style: `background:${sw}` }), label));
+    const size = el('input', { type: 'range', min: 14, max: 26, step: 1 });
+    const out = el('span', { className: 'hint' });
+    size.oninput = () => { R.fs = +size.value; apply(); };
+    const step = d => { R.fs = Math.min(26, Math.max(14, (R.fs || 18) + d)); apply(); };
+    const sync = () => {
+      themeBtns.forEach((b, i) => b.setAttribute('aria-pressed', String((R.theme || '') === THEMES[i][0])));
+      size.value = R.fs || 18; out.textContent = (R.fs || 18) + ' px';
+    };
+    const dlg = el('dialog', { className: 'settings reading' }, el('h2', { textContent: 'Reading' }),
+      el('p', { className: 'hint', textContent: 'Theme' }), el('div', { className: 'themes' }, ...themeBtns),
+      el('p', { className: 'hint', textContent: 'Text size' }),
+      el('div', { className: 'sizes' }, el('button', { type: 'button', className: 'ghost', textContent: 'A−', title: 'Smaller', onclick: () => step(-1) }),
+        size, el('button', { type: 'button', className: 'ghost', textContent: 'A+', title: 'Larger', onclick: () => step(1) }), out),
+      el('div', { className: 'row' },
+        el('button', { type: 'button', className: 'ghost', textContent: 'Reset', onclick: () => { delete R.theme; delete R.fs; apply(); } }),
+        el('button', { type: 'button', textContent: 'Done', onclick: () => dlg.close() })));
+    size.setAttribute('aria-label', 'Text size');
+    document.body.append(dlg); sync();
+    document.getElementById('reading-btn').onclick = () => dlg.showModal();
+  }
+
   document.addEventListener('DOMContentLoaded', async () => {
+    setupReading();
     setupSettings();
+    setupCode();
     const outline = await fetch('outline.json').then(r => r.json()).catch(() => []);
     document.body.dataset.page === 'index' ? setupIndex(outline) : setupChapter(outline);  // captures exercise TeX before typesetting
     await whenMathJax(); typeset([document.querySelector('main')]);
