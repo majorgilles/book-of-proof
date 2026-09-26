@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="9.207428" height="19.014557" viewBox="0 0 9.207428 19.014557">
+<defs>
+<clipPath id="clip_1">
+<path transform="matrix(1,0,0,-1,-355.213,353.7138)" d="M355.213 334.69926H364.42045V353.7138H355.213Z" clip-rule="evenodd"/>
+</clipPath>
+<path id="font_2_14" d="M.47499085-.017181397C.47499085 .008758545 .47399903 .009765625 .44699098 .009765625H.3829956C.35598756 .009765625 .35499574 .008758545 .35499574-.017181397V-.28263856C.35499574-.3085785 .35598756-.3095703 .3829956-.3095703H.44699098C.47399903-.3095703 .47499085-.3085785 .47499085-.28263856V-.017181397Z"/>
+</defs>
+<g>
+<g clip-path="url(#clip_1)">
+<use data-text="&#xf8f4;" xlink:href="#font_2_14" transform="matrix(9.1656,0,0,-9.1656,.7999878,1.3728333)"/>
+<use data-text="&#xf8f4;" xlink:href="#font_2_14" transform="matrix(9.1656,0,0,-9.1656,.7999878,4.1228334)"/>
+<use data-text="&#xf8f4;" xlink:href="#font_2_14" transform="matrix(9.1656,0,0,-9.1656,.7999878,6.871826)"/>
+<use data-text="&#xf8f4;" xlink:href="#font_2_14" transform="matrix(9.1656,0,0,-9.1656,.7999878,9.621826)"/>
+<use data-text="&#xf8f4;" xlink:href="#font_2_14" transform="matrix(9.1656,0,0,-9.1656,.7999878,12.371826)"/>
+</g>
+</g>
+</svg>

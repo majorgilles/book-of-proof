@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="9.2074589" height="21.764588" viewBox="0 0 9.2074589 21.764588">
+<defs>
+<clipPath id="clip_1">
+<path transform="matrix(1,0,0,-1,-238.32799,123.18591)" d="M238.32799 101.421329H247.53545V123.18591H238.32799Z" clip-rule="evenodd"/>
+</clipPath>
+<path id="font_2_14" d="M.47499085-.017181397C.47499085 .008758545 .47399903 .009765625 .44699098 .009765625H.3829956C.35598756 .009765625 .35499574 .008758545 .35499574-.017181397V-.28263856C.35499574-.3085785 .35598756-.3095703 .3829956-.3095703H.44699098C.47399903-.3095703 .47499085-.3085785 .47499085-.28263856V-.017181397Z"/>
+</defs>
+<g clip-path="url(#clip_1)">
+<use data-text="&#xf8f4;" xlink:href="#font_2_14" transform="matrix(9.1656,0,0,-9.1656,.80000308,1.3728485)"/>
+<use data-text="&#xf8f4;" xlink:href="#font_2_14" transform="matrix(9.1656,0,0,-9.1656,.80000308,4.1228487)"/>
+<use data-text="&#xf8f4;" xlink:href="#font_2_14" transform="matrix(9.1656,0,0,-9.1656,.80000308,6.871849)"/>
+<use data-text="&#xf8f4;" xlink:href="#font_2_14" transform="matrix(9.1656,0,0,-9.1656,.80000308,9.621849)"/>
+<use data-text="&#xf8f4;" xlink:href="#font_2_14" transform="matrix(9.1656,0,0,-9.1656,.80000308,12.371849)"/>
+<use data-text="&#xf8f4;" xlink:href="#font_2_14" transform="matrix(9.1656,0,0,-9.1656,.80000308,15.12085)"/>
+<path transform="matrix(1,0,0,-1,83.29402,10.547913)" stroke-width=".398" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M0 0V13.983"/>
+<path transform="matrix(1,0,0,-1,100.47002,10.547913)" stroke-width=".398" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M0 0V13.983"/>
+<path transform="matrix(1,0,0,-1,118.04402,10.547913)" stroke-width=".398" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M0 0V13.983"/>
+<path transform="matrix(1,0,0,-1,120.037,10.547913)" stroke-width=".398" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M0 0V13.983"/>
+<path transform="matrix(1,0,0,-1,157.25902,10.547913)" stroke-width=".398" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M0 0V13.983"/>
+<path transform="matrix(1,0,0,-1,83.29402,24.530915)" stroke-width=".398" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M0 0V13.983"/>
+<path transform="matrix(1,0,0,-1,100.47002,24.530915)" stroke-width=".398" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M0 0V13.983"/>
+<path transform="matrix(1,0,0,-1,118.04402,24.530915)" stroke-width=".398" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M0 0V13.983"/>
+<path transform="matrix(1,0,0,-1,120.037,24.530915)" stroke-width=".398" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M0 0V13.983"/>
+<path transform="matrix(1,0,0,-1,157.25902,24.530915)" stroke-width=".398" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M0 0V13.983"/>
+</g>
+</svg>

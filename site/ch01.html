@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chapter 1 Sets — Book of Proof</title>
+<link rel="stylesheet" href="assets/style.css">
+<script>window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]},startup:{typeset:false}};</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<script defer src="assets/app.js"></script>
+</head><body data-page="ch01">
+<header class="top"><a href="index.html" class="home">Book of Proof</a>
+<nav><a href="front.html" rel="prev">← Previous</a><a href="ch02.html" rel="next">Next →</a><button id="settings-btn" type="button">Settings</button></nav></header>
+<main class="book"><section class="chapter" id="ch1">
+<h1><span class="num">Chapter 1</span> Sets</h1>
+<p>All of mathematics can be described with sets. This becomes more and more apparent the deeper into mathematics you go. It will be apparent in most of your upper level courses, and certainly in this course. The theory of sets is a language that is perfectly suited to describing and explaining all types of mathematical structures.</p>
+<section class="sec" id="s1-1" data-title="Introduction to Sets">
+<h2><span class="num">1.1</span> Introduction to Sets</h2>
+<p>A<strong> set</strong> is a collection of things. The things are called<strong> elements</strong> of the set. We are mainly concerned with sets whose elements are mathematical entities, such as numbers, points, functions, etc.</p>
+<p>A set is often expressed by listing its elements between commas, enclosed by braces. For example, the collection {2,4,6,8} is a set which has four elements, the numbers 2,4,6 and 8. Some sets have inﬁnitely many elements. For example, consider the collection of all integers,</p>
+<p class="display">{...,−4,−3,−2,−1,0,1,2,3,4,...}.</p>
+<p>Here the dots indicate a pattern of numbers that continues forever in both the positive and negative directions. A set is called an<strong> inﬁnite</strong> set if it has inﬁnitely many elements; otherwise it is called a<strong> ﬁnite</strong> set.</p>
+<p>Two sets are <strong>equal </strong>if they contain exactly the same elements. Thus {2,4,6,8} = {4,2,8,6} because even though they are listed in a diﬀerent order, the elements are identical; but {2,4,6,8} ≠ {2,4,6,7}. Also</p>
+<p class="display">{... − 4,−3,−2,−1,0,1,2,3,4...} = {0,−1,1,−2,2,−3,3,−4,4,...}.</p>
+<p>We often let uppercase letters stand for sets. In discussing the set {2,4,6,8} we might declare<i> A</i> = {2,4,6,8} and then use<i> A</i> to stand for {2,4,6,8}. To express that 2 is an element of the set <i>A</i>, we write 2 ∈ <i>A</i>, and read this as “2<em> is an element of </em><i>A</i>,” or “2<em> is in </em><i>A</i>,” or just “2<em> in </em><i>A</i>.” We also have 4 ∈ <i>A</i>, 6 ∈ <i>A</i> and 8 ∈ <i>A</i>, but 5 ∉ <i>A</i>. We read this last expression as “5<em> is not an element of</em> <i>A</i>,” or “5<em> not in </em><i>A</i>.” Expressions like 6,2 ∈ <i>A </i>or 2,4,8 ∈ <i>A </i>are used to indicate that several things are in a set.</p>
+<p>Some sets are so signiﬁcant that we reserve special symbols for them. The set of<strong> natural numbers</strong> (i.e., the positive whole numbers) is denoted by ℕ, that is,</p>
+<p class="display">ℕ = {1,2,3,4,5,6,7,...}.</p>
+<p>The set of<strong> integers</strong></p>
+<p class="display">ℤ = {...,−3,−2,−1,0,1,2,3,4,...}</p>
+<p>is another fundamental set. The symbol ℝ stands for the set of all <strong>real</strong> <strong>numbers</strong>, a set that is undoubtedly familiar to you from calculus. Other special sets will be listed later in this section.</p>
+<p>Sets need not have just numbers as elements. The set<i> B</i> = {<i>T</i>, <i>F</i>} consists of two letters, perhaps representing the values “true” and “false.” The set <i>C </i>= {<i>a</i>,<i> e</i>,<i> i</i>, <i>o</i>, <i>u</i>} consists of the lowercase vowels in the English alphabet. The set <i>D</i> = {(0,0),(1,0),(0,1),(1,1)} has as elements the four corner points of a square on the <i>x</i>-<i>y </i>coordinate plane. Thus (0,0) ∈ <i>D</i>, (1,0) ∈ <i>D</i>, etc., but (1,2) ∉ <i>D </i>(for instance). It is even possible for a set to have other sets as elements. Consider <i>E </i> = {1,{2,3},{2,4}}, which has three elements: the number 1, the set {2,3} and the set {2,4}. Thus 1 ∈ <i>E </i>and {2,3} ∈ <i>E </i>and {2,4} ∈ <i>E</i>. But note that 2 ∉ <i>E</i>, 3 ∉ <i>E </i>and 4 ∉ <i>E</i>.</p>
+<p>Consider the set<i> M</i> = <img class="m" src="figs/m/ch01-0001.svg" alt="{[00 00]" data-crop="15:173.6,372.0,202.8,388.2" style="height:16.2pt;vertical-align:-5.2pt">,<img class="m" src="figs/m/ch01-0002.svg" alt="[10 01]" data-crop="15:206.2,372.0,229.9,388.2" style="height:16.2pt;vertical-align:-5.2pt">,<img class="m" src="figs/m/ch01-0003.svg" alt="[11 01]}" data-crop="15:233.2,372.0,262.5,388.3" style="height:16.2pt;vertical-align:-5.3pt"> of three two-by-two matrices. We have <img class="m" src="figs/m/ch01-0004.svg" alt="[00 00]" data-crop="15:79.7,386.2,103.4,402.4" style="height:16.2pt;vertical-align:-5.4pt">∈ <i>M</i>, but <img class="m" src="figs/m/ch01-0005.svg" alt="[10 11]" data-crop="15:148.3,386.3,171.9,402.4" style="height:16.1pt;vertical-align:-5.4pt">∉ <i>M</i>. Letters can serve as symbols denoting a set’s elements: If <i>a</i> = <img class="m" src="figs/m/ch01-0006.svg" alt="[00 00]" data-crop="15:134.0,400.4,157.6,416.7" style="height:16.2pt;vertical-align:-5.7pt">, <i>b</i> = <img class="m" src="figs/m/ch01-0007.svg" alt="[10 01]" data-crop="15:179.2,400.4,202.9,416.7" style="height:16.2pt;vertical-align:-5.7pt"> and <i>c</i> = <img class="m" src="figs/m/ch01-0008.svg" alt="[11 01]" data-crop="15:242.6,400.5,266.3,416.7" style="height:16.2pt;vertical-align:-5.7pt">, then <i>M</i> = {<i>a</i>, <i>b</i>,<i> c</i>}.</p>
+<p>If <i>X </i>is a ﬁnite set, its <strong>cardinality </strong>or <strong>size </strong>is the number of elements it has, and this number is denoted as |<i>X </i>|. Thus for the sets above, |<i>A</i>| = 4, |<i>B</i>| = 2, |<i>C</i>| = 5, |<i>D</i>| = 4, |<i>E</i>| = 3 and |<i>M</i>| = 3.</p>
+<p>There is a special set that, although small, plays a big role. The<strong> empty</strong> <strong>set</strong> is the set {} that has no elements. We denote it as ∅, so ∅ = {}. Whenever you see the symbol ∅, it stands for {}. Observe that |∅| = 0. The empty set is the only set whose cardinality is zero.</p>
+<p>Be careful in writing the empty set. Don’t write {∅} when you mean ∅. These sets can’t be equal because ∅ contains nothing while {∅} contains one thing, namely the empty set. If this is confusing, think of a set as a box with things in it, so, for example, {2,4,6,8} is a “box” containing four numbers. The empty set ∅ = {} is an empty box. By contrast, {∅} is a box with an empty box inside it. Obviously, there’s a diﬀerence: An empty box is not the same as a box with an empty box inside it. Thus ∅ ≠ {∅}. (You might also note |∅| = 0 and <img class="m" src="figs/m/ch01-0009.svg" alt="¯¯{" data-crop="15:188.6,620.2,198.0,637.8" style="height:17.7pt;vertical-align:-7.8pt">∅<img class="m" src="figs/m/ch01-0010.svg" alt="}¯¯" data-crop="15:203.9,620.2,213.4,637.8" style="height:17.7pt;vertical-align:-7.8pt"> = 1 as additional evidence that ∅ ≠ {∅}.)</p>
+<p>This box analogy can help us think about sets. The set<i> F</i> = {∅,{∅},{{∅}}} may look strange but it is really very simple. Think of it as a box containing three things: an empty box, a box containing an empty box, and a box containing a box containing an empty box. Thus |<i>F</i>| = 3. The set<i> G</i> = {ℕ,ℤ} is a box containing two boxes, the box of natural numbers and the box of integers. Thus |<i>G</i>| = 2.</p>
+<p>A special notation called<strong> set-builder notation</strong> is used to describe sets that are too big or complex to list between braces. Consider the inﬁnite set of even integers <i>E</i> = {...,−6,−4,−2,0,2,4,6,...}. In set-builder notation this set is written as</p>
+<p class="display"><i>E</i> = {2<i>n</i> :<i> n</i> ∈ ℤ}.</p>
+<p>We read the ﬁrst brace as “<em>the set of all things of form</em>,” and the colon as “<em>such that</em>.” So the expression <i>E</i> = {2<i>n</i> :<i> n</i> ∈ ℤ} reads as “<i>E </i><em>equals the set of</em> <em>all things of form </em>2<i>n</i><em>, such that </em><i>n </i><em>is an element of </em>ℤ.” The idea is that <i>E</i> consists of all possible values of 2<i>n</i>, where <i>n</i> takes on all values in ℤ.</p>
+<p>In general, a set <i>X </i>written with set-builder notation has the syntax</p>
+<p class="display"><i>X </i>= {expression : rule},</p>
+<p>where the elements of <i>X </i>are understood to be all values of “expression” that are speciﬁed by “rule.” For example, above <i>E </i>is the set of all values of the expression 2<i>n</i> that satisfy the rule<i> n</i> ∈ ℤ. There can be many ways to express the same set. For example, <i>E </i>= {2<i>n</i> : <i>n</i> ∈ ℤ} = {<i>n</i> : <i>n</i> is an even integer} = {<i>n</i> :<i> n</i> = 2<i>k</i>, <i>k</i> ∈ ℤ}. Another common way of writing it is</p>
+<p class="display"><i>E</i> = {<i>n</i> ∈ ℤ :<i> n</i> is even},</p>
+<p>read “<i>E </i><em>is the set of all </em><i>n</i><em> in </em>ℤ<em> such that </em><i>n</i><em> is even</em>.” Some writers use a bar instead of a colon; for example, <i>E</i> = {<i>n</i> ∈ ℤ |<i> n</i> is even}. We use the colon.</p>
+<p class="lbl example"><strong>Example 1.1 </strong>Here are some further illustrations of set-builder notation.</p>
+<p class="item">1. {<i>n</i> :<i> n</i> is a prime number} = {2,3,5,7,11,13,17,...}</p>
+<p class="item">2. {<i>n</i> ∈ ℕ :<i> n</i> is prime} = {2,3,5,7,11,13,17,...}</p>
+<p class="item">3. {<i>n</i><sup>2 </sup>:<i> n</i> ∈ ℤ} = {0,1,4,9,16,25,...}</p>
+<p class="item">4. {<i>x</i> ∈ ℝ :<i> x</i><sup>2 </sup>− 2 = 0} = <img class="m" src="figs/m/ch01-0011.svg" alt="{√2," data-crop="16:197.7,554.6,220.7,576.9" style="height:22.4pt;vertical-align:-2.9pt">−<img class="m" src="figs/m/ch01-0012.svg" alt="√2}" data-crop="16:227.4,554.6,247.5,576.9" style="height:22.4pt;vertical-align:-2.9pt"></p>
+<p class="item">5. {<i>x</i> ∈ ℤ :<i> x</i><sup>2 </sup>− 2 = 0} = ∅</p>
+<p class="item">6. {<i>x</i> ∈ ℤ : |<i>x</i>| &lt; 4} = { − 3,−2,−1,0,1,2,3}</p>
+<p class="item">7. {2<i>x</i> :<i> x</i> ∈ ℤ,|<i>x</i>| &lt; 4} = { − 6,−4,−2,0,2,4,6}</p>
+<p class="item">8. {<i>x</i> ∈ ℤ : |2<i>x</i>| &lt; 4} = { − 1,0,1}</p>
+<p>Items 6–8 above highlight a conﬂict of notation that we must always be alert to. The expression |<i>X </i>| means <em>absolute value </em>if <i>X </i>is a number and<em> cardinality</em> if <i>X </i>is a set. The distinction should always be clear from context. Consider {<i>x</i> ∈ ℤ : |<i>x</i>| &lt; 4} in Example 1.1 (6) above. Here <i>x</i> ∈ ℤ, so <i>x</i> is a number (not a set), and thus the bars in |<i>x</i>| must mean absolute value, not cardinality. On the other hand, suppose <i>A</i> = {{1,2},{3,4,5,6},{7}} and <i>B</i> = {<i>X </i>∈ <i>A</i> : |<i>X </i>| &lt; 3}. The elements of <i>A </i>are sets (not numbers), so the |<i>X </i>| in the expression for <i>B</i> must mean cardinality. Therefore <i>B</i> = {{1,2},{7}}.</p>
+<p class="lbl example"><strong>Example 1.2 </strong>Describe the set <i>A</i> = {7<i>a </i>+ 3<i>b </i>: <i>a</i>, <i>b</i> ∈ ℤ}. <strong>Solution: </strong>This set contains all numbers of form 7<i>a</i> + 3<i>b</i>, where <i>a </i>and <i>b</i> are integers. Each such number 7<i>a</i> + 3<i>b </i>is an integer, so <i>A </i>contains only integers. But<em> which</em> integers? If <i>n </i>is<em> any</em> integer, then <i>n</i> = 7<i>n</i> + 3(−2<i>n</i>), so <i>n</i> = 7<i>a </i>+ 3<i>b</i> where <i>a</i> =<i> n</i> and <i>b</i> = −2<i>n</i>. Therefore <i>n</i> ∈ <i>A</i>. We’ve now shown that <i>A </i>contains only integers, and also that every integer is an element of <i>A</i>. Consequently <i>A</i> = ℤ.</p>
+<p>We close this section with a summary of special sets. These are sets that are so common that they are given special names and symbols.</p>
+<p class="bullet">• The empty set: ∅ = {}</p>
+<p class="bullet">• The natural numbers: ℕ = {1,2,3,4,5,...}</p>
+<p class="bullet">• The integers: ℤ = {...,−3,−2,−1,0,1,2,3,4,5,...}</p>
+<p class="display"><i>m</i></p>
+<p class="bullet">• The rational numbers: ℚ = <img class="m" src="figs/m/ch01-0013.svg" alt="n" data-crop="17:217.2,411.7,224.1,423.4" style="height:11.6pt;vertical-align:-0.0pt"><i>x </i>: <i>x</i> = , where <i>m</i>, <i>n</i> ∈ ℤ and <i>n</i> ≠ 0<img class="m" src="figs/m/ch01-0014.svg" alt="o" data-crop="17:392.7,411.7,399.5,423.4" style="height:11.6pt;vertical-align:-0.0pt"></p>
+<p class="display"><i>n </i></p>
+<p class="bullet">• The real numbers: ℝ We visualize the set ℝ of real numbers as an inﬁnitely long number line.</p>
+<p class="display">−4 −3 −2 −1 0 1 2 3 4</p>
+<p>Notice that ℚ is the set of all numbers in ℝ that can be expressed as a fraction of two integers. You may be aware that ℚ ≠ ℝ, as <img class="m" src="figs/m/ch01-0015.svg" alt="√2" data-crop="17:338.6,524.3,354.2,546.6" style="height:22.4pt;vertical-align:-2.6pt"> ∉ ℚ but <img class="m" src="figs/m/ch01-0016.svg" alt="√2" data-crop="17:392.8,524.3,408.4,546.6" style="height:22.4pt;vertical-align:-2.6pt"> ∈ ℝ. (If not, this point will be addressed in Chapter 6.)</p>
+<p>In calculus you encountered intervals on the number line. Like ℝ, these too are inﬁnite sets of numbers. Any two numbers <i>a</i>, <i>b</i> ∈ ℝ with <i>a</i> &lt;<i> b </i>give rise to various intervals. Graphically, they are represented by a darkened segment on the number line between <i>a</i> and <i>b</i>. A solid circle at an endpoint indicates that that number is included in the interval. A hollow circle indicates a point that is not included in the interval.</p>
+<figure><img src="figs/ch01-0017.svg" alt="Figure" style="width:112pt"></figure>
+<p class="bullet">• Closed interval: [<i>a</i>, <i>b</i>] = {<i>x</i> ∈ ℝ :<i> a</i> ≤ <i>x</i> ≤ <i>b</i>}</p>
+<figure><img src="figs/ch01-0018.svg" alt="Figure" style="width:112pt"></figure>
+<p class="bullet">• Open interval: (<i>a</i>, <i>b</i>) = {<i>x</i> ∈ ℝ :<i> a</i> &lt;<i> x</i> &lt;<i> b</i>}</p>
+<figure><img src="figs/ch01-0019.svg" alt="Figure" style="width:112pt"></figure>
+<p class="bullet">• Half-open interval: (<i>a</i>, <i>b</i>] = {<i>x</i> ∈ ℝ :<i> a</i> &lt;<i> x</i> ≤ <i>b</i>}</p>
+<figure><img src="figs/ch01-0020.svg" alt="Figure" style="width:112pt"></figure>
+<p class="bullet">• Half-open interval: [<i>a</i>, <i>b</i>) = {<i>x</i> ∈ ℝ :<i> a</i> ≤ <i>x</i> &lt;<i> b</i>}</p>
+<p class="bullet">• Inﬁnite interval: (<i>a</i>,∞) = {<i>x</i> ∈ ℝ :<i> a</i> &lt;<i> x</i>}</p>
+<p class="bullet">• Inﬁnite interval: [<i>a</i>,∞) = {<i>x</i> ∈ ℝ :<i> a</i> ≤ <i>x</i>}</p>
+<figure><img src="figs/ch01-0021.svg" alt="Figure" style="width:112pt"></figure>
+<p class="bullet">• Inﬁnite interval: (−∞, <i>b</i>) = {<i>x</i> ∈ ℝ :<i> x</i> &lt;<i> b</i>}</p>
+<figure><img src="figs/ch01-0022.svg" alt="Figure" style="width:112pt"></figure>
+<p class="bullet">• Inﬁnite interval: (−∞, <i>b</i>] = {<i>x</i> ∈ ℝ :<i> x</i> ≤ <i>b</i>}</p>
+<p>Each of these intervals is an inﬁnite set containing inﬁnitely many numbers as elements. For example, though its length is short, the interval (0.1,0.2) contains inﬁnitely many numbers, that is, all numbers between 0.1 and 0.2. It is an unfortunate notational accident that (<i>a</i>, <i>b</i>) can denote both an open interval on the line and a point on the plane. The diﬀerence is usually clear from context. In the next section we will see yet another meaning of (<i>a</i>, <i>b</i>).</p>
+<div class="exercises" data-for="1.1"><h3>Exercises for Section 1.1</h3>
+<p class="ex-group"><strong>A. </strong>Write each of the following sets by listing their elements between braces.</p>
+<ol class="ex-list">
+<li class="ex" id="ex-1.1-1" value="1">{5<i>x </i>− 1 :<i> x</i> ∈ ℤ}</li>
+<li class="ex" id="ex-1.1-2" value="2">{3<i>x </i>+ 2 :<i> x</i> ∈ ℤ}</li>
+<li class="ex" id="ex-1.1-3" value="3">{<i>x</i> ∈ ℤ : −2 ≤ <i>x</i> &lt; 7}</li>
+<li class="ex" id="ex-1.1-4" value="4">{<i>x</i> ∈ ℕ : −2 &lt;<i> x</i> ≤ 7}</li>
+<li class="ex" id="ex-1.1-5" value="5">{<i>x</i> ∈ ℝ :<i> x</i><sup>2 </sup>= 3}</li>
+<li class="ex" id="ex-1.1-6" value="6">{<i>x</i> ∈ ℝ :<i> x</i><sup>2 </sup>= 9}</li>
+<li class="ex" id="ex-1.1-7" value="7">{<i>x</i> ∈ ℝ :<i> x</i><sup>2 </sup>+ 5<i>x</i> = −6}</li>
+<li class="ex" id="ex-1.1-8" value="8">{<i>x</i> ∈ ℝ :<i> x</i><sup>3 </sup>+ 5<i>x</i><sup>2 </sup>= −6<i>x</i>}</li>
+<li class="ex" id="ex-1.1-9" value="9">{<i>x</i> ∈ ℝ : sin<i>πx</i> = 0}</li>
+<li class="ex" id="ex-1.1-10" value="10">{<i>x</i> ∈ ℝ : cos <i>x</i> = 1}</li>
+<li class="ex" id="ex-1.1-11" value="11">{<i>x</i> ∈ ℤ : |<i>x</i>| &lt; 5}</li>
+<li class="ex" id="ex-1.1-12" value="12">{<i>x</i> ∈ ℤ : |2<i>x</i>| &lt; 5}</li>
+<li class="ex" id="ex-1.1-13" value="13">{<i>x</i> ∈ ℤ : |6<i>x</i>| &lt; 5}</li>
+<li class="ex" id="ex-1.1-14" value="14">{5<i>x</i> :<i> x</i> ∈ ℤ,|2<i>x</i>| ≤ 8}</li>
+<li class="ex" id="ex-1.1-15" value="15">{5<i>a </i>+ 2<i>b</i> :<i> a</i>, <i>b</i> ∈ ℤ}</li>
+<li class="ex" id="ex-1.1-16" value="16">{6<i>a </i>+ 2<i>b</i> :<i> a</i>, <i>b</i> ∈ ℤ}</li>
+</ol>
+<p class="ex-group"><strong>B. </strong>Write each of the following sets in set-builder notation.</p>
+<ol class="ex-list">
+<li class="ex" id="ex-1.1-17" value="17">{2,4,8,16,32,64,...}</li>
+<li class="ex" id="ex-1.1-18" value="18">{0,4,16,36,64,100,...}</li>
+<li class="ex" id="ex-1.1-19" value="19">{...,−6,−3,0,3,6,9,12,15,...}</li>
+<li class="ex" id="ex-1.1-20" value="20">{...,−8,−3,2,7,12,17,...}</li>
+<li class="ex" id="ex-1.1-21" value="21">{0,1,4,9,16,25,36,...}</li>
+<li class="ex" id="ex-1.1-22" value="22">{3,6,11,18,27,38,...}</li>
+<li class="ex" id="ex-1.1-23" value="23">{3,4,5,6,7,8}</li>
+<li class="ex" id="ex-1.1-24" value="24">{ − 4,−3,−2,−1,0,1,2}</li>
+<li class="ex" id="ex-1.1-25" value="25">{...,<img class="m" src="figs/m/ch01-0023.svg" alt="81" data-crop="18:306.8,596.6,314.5,612.6" style="height:16.0pt;vertical-align:-5.6pt">,<img class="m" src="figs/m/ch01-0024.svg" alt="14" data-crop="18:316.6,596.6,324.3,612.6" style="height:16.0pt;vertical-align:-5.6pt">,<img class="m" src="figs/m/ch01-0025.svg" alt="12" data-crop="18:326.5,596.6,334.2,612.6" style="height:16.0pt;vertical-align:-5.6pt">,1,2,4,8,...}</li>
+<li class="ex" id="ex-1.1-26" value="26">{...,<img class="m" src="figs/m/ch01-0026.svg" alt="271" data-crop="18:306.8,611.1,318.4,627.1" style="height:16.0pt;vertical-align:-6.1pt">,<img class="m" src="figs/m/ch01-0027.svg" alt="19" data-crop="18:320.5,611.1,328.2,627.1" style="height:16.0pt;vertical-align:-6.1pt">,<img class="m" src="figs/m/ch01-0028.svg" alt="31" data-crop="18:330.4,611.1,338.1,627.1" style="height:16.0pt;vertical-align:-6.1pt">,1,3,9,27,...}</li>
+<li class="ex" id="ex-1.1-27" value="27">{...,−<i>π</i>,−<img class="m" src="figs/m/ch01-0029.svg" alt="π2" data-crop="18:331.1,625.8,337.1,641.7" style="height:15.8pt;vertical-align:-5.7pt"> ,0,<img class="m" src="figs/m/ch01-0030.svg" alt="π2" data-crop="18:348.0,625.8,356.2,641.7" style="height:15.8pt;vertical-align:-5.7pt"> ,<i>π</i>,<img class="m" src="figs/m/ch01-0031.svg" alt="32π" data-crop="18:367.8,625.7,379.9,641.7" style="height:16.0pt;vertical-align:-5.7pt">,2<i>π</i>,<img class="m" src="figs/m/ch01-0032.svg" alt="52π" data-crop="18:396.7,625.7,408.8,641.7" style="height:16.0pt;vertical-align:-5.7pt">,...}</li>
+<li class="ex" id="ex-1.1-28" value="28">{...,−<img class="m" src="figs/m/ch01-0033.svg" alt="32" data-crop="18:315.5,640.2,321.1,656.2" style="height:16.0pt;vertical-align:-5.2pt">,−<img class="m" src="figs/m/ch01-0034.svg" alt="34" data-crop="18:332.0,640.2,337.5,656.2" style="height:16.0pt;vertical-align:-5.2pt">,0,<img class="m" src="figs/m/ch01-0035.svg" alt="34" data-crop="18:348.4,640.2,356.1,656.2" style="height:16.0pt;vertical-align:-5.2pt">,<img class="m" src="figs/m/ch01-0036.svg" alt="32" data-crop="18:358.2,640.2,365.9,656.2" style="height:16.0pt;vertical-align:-5.2pt">,<img class="m" src="figs/m/ch01-0037.svg" alt="94" data-crop="18:368.1,640.2,375.8,656.2" style="height:16.0pt;vertical-align:-5.2pt">,3,<img class="m" src="figs/m/ch01-0038.svg" alt="154" data-crop="18:386.7,640.2,398.3,656.2" style="height:16.0pt;vertical-align:-5.2pt">,<img class="m" src="figs/m/ch01-0039.svg" alt="92" data-crop="18:400.5,640.2,408.1,656.2" style="height:16.0pt;vertical-align:-5.2pt">,...}</li>
+</ol>
+<p class="ex-group"><strong>C. </strong>Find the following cardinalities.</p>
+<ol class="ex-list">
+<li class="ex" id="ex-1.1-29" value="29"><img class="m" src="figs/m/ch01-0040.svg" alt="¯¯{{" data-crop="19:83.8,103.4,96.7,119.6" style="height:16.3pt;vertical-align:-6.6pt">1},{2,{3,4}},∅<img class="m" src="figs/m/ch01-0041.svg" alt="}¯¯" data-crop="19:157.3,103.4,166.1,119.6" style="height:16.3pt;vertical-align:-6.6pt"></li>
+<li class="ex" id="ex-1.1-30" value="30"><img class="m" src="figs/m/ch01-0044.svg" alt="¯¯{{" data-crop="19:83.8,118.9,96.7,135.2" style="height:16.3pt;vertical-align:-7.2pt">1,4},<i>a</i>, <i>b</i>,{{3,4}},{∅<img class="m" src="figs/m/ch01-0045.svg" alt="}}¯¯" data-crop="19:179.8,118.9,192.7,135.2" style="height:16.3pt;vertical-align:-7.2pt"></li>
+<li class="ex" id="ex-1.1-31" value="31"><img class="m" src="figs/m/ch01-0048.svg" alt="¯¯{{{" data-crop="19:83.5,134.5,100.5,150.7" style="height:16.3pt;vertical-align:-6.7pt">1},{2,{3,4}},∅<img class="m" src="figs/m/ch01-0049.svg" alt="}}¯¯" data-crop="19:161.2,134.5,174.1,150.7" style="height:16.3pt;vertical-align:-6.7pt"></li>
+<li class="ex" id="ex-1.1-32" value="32"><img class="m" src="figs/m/ch01-0052.svg" alt="¯¯{{{" data-crop="19:83.8,150.0,100.8,166.3" style="height:16.3pt;vertical-align:-7.3pt">1,4},<i>a</i>, <i>b</i>,{{3,4}},{∅<img class="m" src="figs/m/ch01-0053.svg" alt="}}}¯¯" data-crop="19:183.9,150.0,200.9,166.3" style="height:16.3pt;vertical-align:-7.3pt"></li>
+<li class="ex" id="ex-1.1-33" value="33"><img class="m" src="figs/m/ch01-0056.svg" alt="¯¯{" data-crop="19:83.8,165.5,92.5,181.8" style="height:16.3pt;vertical-align:-6.8pt"><i>x</i> ∈ ℤ : |<i>x</i>| &lt; 10<img class="m" src="figs/m/ch01-0057.svg" alt="}¯¯" data-crop="19:147.9,165.5,156.6,181.8" style="height:16.3pt;vertical-align:-6.8pt"></li>
+<li class="ex" id="ex-1.1-34" value="34"><img class="m" src="figs/m/ch01-0042.svg" alt="¯¯{" data-crop="19:263.2,103.4,272.0,119.6" style="height:16.3pt;vertical-align:-6.6pt"><i>x</i> ∈ ℕ : |<i>x</i>| &lt; 10<img class="m" src="figs/m/ch01-0043.svg" alt="}¯¯" data-crop="19:327.8,103.4,336.6,119.6" style="height:16.3pt;vertical-align:-6.6pt"></li>
+<li class="ex" id="ex-1.1-35" value="35"><img class="m" src="figs/m/ch01-0046.svg" alt="¯¯{" data-crop="19:263.2,118.9,272.0,135.2" style="height:16.3pt;vertical-align:-7.2pt"><i>x</i> ∈ ℤ :<i> x</i><sup>2 </sup>&lt; 10<img class="m" src="figs/m/ch01-0047.svg" alt="}¯¯" data-crop="19:326.7,118.9,335.4,135.2" style="height:16.3pt;vertical-align:-7.2pt"></li>
+<li class="ex" id="ex-1.1-36" value="36"><img class="m" src="figs/m/ch01-0050.svg" alt="¯¯{" data-crop="19:263.2,134.5,272.0,150.7" style="height:16.3pt;vertical-align:-6.7pt"><i>x</i> ∈ ℕ :<i> x</i><sup>2 </sup>&lt; 10<img class="m" src="figs/m/ch01-0051.svg" alt="}¯¯" data-crop="19:327.1,134.5,335.9,150.7" style="height:16.3pt;vertical-align:-6.7pt"></li>
+<li class="ex" id="ex-1.1-37" value="37"><img class="m" src="figs/m/ch01-0054.svg" alt="¯¯{" data-crop="19:262.8,150.0,271.6,166.3" style="height:16.3pt;vertical-align:-7.3pt"><i>x</i> ∈ ℕ :<i> x</i><sup>2 </sup>&lt; 0<img class="m" src="figs/m/ch01-0055.svg" alt="}¯¯" data-crop="19:321.5,150.0,330.3,166.3" style="height:16.3pt;vertical-align:-7.3pt"></li>
+<li class="ex" id="ex-1.1-38" value="38"><img class="m" src="figs/m/ch01-0058.svg" alt="¯¯{" data-crop="19:263.2,165.5,272.0,181.8" style="height:16.3pt;vertical-align:-6.8pt"><i>x</i> ∈ ℕ : 5<i>x</i> ≤ 20<img class="m" src="figs/m/ch01-0059.svg" alt="}¯¯" data-crop="19:327.9,165.5,336.7,181.8" style="height:16.3pt;vertical-align:-6.8pt"></li>
+</ol>
+<p class="ex-group"><strong>D. </strong>Sketch the following sets of points in the <i>x</i>-<i>y</i> plane.</p>
+<ol class="ex-list">
+<li class="ex" id="ex-1.1-39" value="39">{(<i>x</i>,<i> y</i>) :<i> x</i> ∈ [1,2],<i> y</i> ∈ [1,2]}</li>
+<li class="ex" id="ex-1.1-40" value="40">{(<i>x</i>,<i> y</i>) :<i> x</i> ∈ [0,1],<i> y</i> ∈ [1,2]}</li>
+<li class="ex" id="ex-1.1-41" value="41">{(<i>x</i>,<i> y</i>) :<i> x</i> ∈ [−1,1],<i> y</i> = 1}</li>
+<li class="ex" id="ex-1.1-42" value="42">{(<i>x</i>,<i> y</i>) :<i> x</i> = 2,<i> y</i> ∈ [0,1]}</li>
+<li class="ex" id="ex-1.1-43" value="43">{(<i>x</i>,<i> y</i>) : |<i>x</i>| = 2,<i> y</i> ∈ [0,1]}</li>
+<li class="ex" id="ex-1.1-44" value="44">{(<i>x</i>, <i>x</i><sup>2</sup>) :<i> x</i> ∈ ℝ}</li>
+<li class="ex" id="ex-1.1-45" value="45">{(<i>x</i>,<i> y</i>) :<i> x</i>,<i> y</i> ∈ ℝ, <i>x</i><sup>2 </sup>+<i> y</i><sup>2 </sup>= 1}</li>
+<li class="ex" id="ex-1.1-46" value="46">{(<i>x</i>,<i> y</i>) :<i> x</i>,<i> y</i> ∈ ℝ, <i>x</i><sup>2 </sup>+<i> y</i><sup>2 </sup>≤ 1}</li>
+<li class="ex" id="ex-1.1-47" value="47">{(<i>x</i>,<i> y</i>) :<i> x</i>,<i> y</i> ∈ ℝ,<i> y</i> ≥ <i>x</i><sup>2 </sup>− 1}</li>
+<li class="ex" id="ex-1.1-48" value="48">{(<i>x</i>,<i> y</i>) :<i> x</i>,<i> y</i> ∈ ℝ, <i>x</i> &gt; 1}</li>
+<li class="ex" id="ex-1.1-49" value="49">{(<i>x</i>, <i>x </i>+<i> y</i>) :<i> x</i> ∈ ℝ,<i> y</i> ∈ ℤ}</li>
+<li class="ex" id="ex-1.1-50" value="50">{(<i>x</i>,<img class="m" src="figs/m/ch01-0060.svg" alt="xy2" data-crop="19:278.1,265.5,289.4,283.1" style="height:17.5pt;vertical-align:-5.1pt">) :<i> x</i> ∈ ℝ,<i> y</i> ∈ ℕ}</li>
+<li class="ex" id="ex-1.1-51" value="51">{(<i>x</i>,<i> y</i>) ∈ ℝ<sup>2 </sup>: (<i>y </i>− <i>x</i>)(<i>y </i>+<i> x</i>) = 0}</li>
+<li class="ex" id="ex-1.1-52" value="52">{(<i>x</i>,<i> y</i>) ∈ ℝ<sup>2 </sup>: (<i>y </i>− <i>x</i><sup>2</sup>)(<i>y </i>+<i> x</i><sup>2</sup>) = 0}</li>
+</ol>
+</div>
+</section>
+<section class="sec" id="s1-2" data-title="The Cartesian Product">
+<h2><span class="num">1.2</span> The Cartesian Product</h2>
+<p>Given two sets <i>A </i>and <i>B</i>, it is possible to “multiply” them to produce a new set denoted as <i>A</i> ×<i> B</i>. This operation is called the <em>Cartesian product</em>. To understand it, we must ﬁrst understand the idea of an ordered pair.</p>
+<p><strong>Deﬁnition 1.1 </strong>An <strong>ordered pair </strong>is a list (<i>x</i>,<i> y</i>) of two things <i>x </i>and <i>y</i>, enclosed in parentheses and separated by a comma.</p>
+<p>For example, (2,4) is an ordered pair, as is (4,2). These ordered pairs are diﬀerent because even though they have the same things in them, the order is diﬀerent. We write (2,4) ≠ (4,2). Right away you can see that ordered pairs can be used to describe points on the plane, as was done in calculus, but they are not limited to just that. The things in an ordered pair don’t have to be numbers. You can have ordered pairs of letters, such as (<i>ℓ</i>, <i>m</i>), ordered pairs of sets such as ({2,5},{3,2}), even ordered pairs of ordered pairs like ((2,4),(4,2)). The following are also ordered pairs: (2,{1,2,3}), (ℝ,(0,0)). Any list of two things enclosed by parentheses is an ordered pair. Now we are ready to deﬁne the Cartesian product.</p>
+<p><strong>Deﬁnition 1.2 </strong>The<strong> Cartesian product</strong> of two sets <i>A</i> and<i> B</i> is another set, denoted as <i>A</i> × <i>B</i> and deﬁned as <i>A</i> × <i>B</i> = {(<i>a</i>, <i>b</i>) :<i> a</i> ∈ <i>A</i>, <i>b</i> ∈ <i>B</i>}.</p>
+<p>Thus <i>A</i> ×<i> B </i>is a set of ordered pairs of elements from <i>A </i>and <i>B</i>. For example, if <i>A</i> = {<i>k</i>,<i>ℓ</i>, <i>m</i>} and <i>B</i> = {<i>q</i>, <i>r</i>}, then</p>
+<p class="display"><i>A</i> × <i>B</i> = {(<i>k</i>,<i> q</i>),(<i>k</i>, <i>r</i>),(<i>ℓ</i>,<i> q</i>),(<i>ℓ</i>, <i>r</i>),(<i>m</i>,<i> q</i>),(<i>m</i>, <i>r</i>)}.</p>
+<p>Figure 1.1 shows how to make a schematic diagram of <i>A</i> × <i>B</i>. Line up the elements of <i>A </i>horizontally and line up the elements of <i>B </i>vertically, as if <i>A </i>and <i>B</i> form an <i>x</i>- and <i>y</i>-axis. Then ﬁll in the ordered pairs so that each element (<i>x</i>,<i> y</i>) is in the column headed by <i>x</i> and the row headed by <i>y</i>.</p>
+<figure><img src="figs/ch01-0061.svg" alt="Figure" style="width:172pt"></figure>
+<p class="caption"><strong>Figure 1.1. </strong>A diagram of a Cartesian product</p>
+<p>For another example, {0,1} × {2,1} = {(0,2),(0,1),(1,2),(1,1)}. If you are a visual thinker, you may wish to draw a diagram similar to Figure 1.1. The rectangular array of such diagrams give us the following general fact.</p>
+<p class="display"><strong>Fact 1.1 </strong>If <i>A </i>and<i> B</i> are ﬁnite sets, then |<i>A</i> × <i>B</i>| = |<i>A</i>|·|<i>B</i>|.</p>
+<p class="lbl example"><strong>Example 1.3 </strong>Let <i>A</i> =<img class="m" src="figs/m/ch01-0062.svg" alt="" data-crop="20:193.1,405.2,278.9,430.2" style="height:24.9pt;vertical-align:-4.2pt"> be the set consisting of the six faces of a dice. The Cartesian product <i>A</i> ×<i> A </i>is diagramed below. By Fact 1.1 (or by simple counting), |<i>A</i> ×<i> A</i>| = 6 · 6 = 36. We might think of <i>A</i> ×<i> A </i>as the set of possible outcomes in rolling a dice two times in a row. Each element of the product is an ordered pair of form (result of 1st roll, result of 2nd roll). Such constructions are useful in the study of probability.</p>
+<p class="display"><i>A A</i> ×<i> A</i></p>
+<p class="display">( , ) ( , ) ( , ) ( , ) ( , ) ( , )</p>
+<p class="display">( , ) ( , ) ( , ) ( , ) ( , ) ( , )</p>
+<p class="display">( , ) ( , ) ( , ) ( , ) ( , ) ( , )</p>
+<p class="display">( , ) ( , ) ( , ) ( , ) ( , ) ( , )</p>
+<p class="display">( , ) ( , ) ( , ) ( , ) ( , ) ( , )</p>
+<p class="display">( , ) ( , ) ( , ) ( , ) ( , ) ( , )</p>
+<p class="display"><i>A</i></p>
+<p>The set ℝ × ℝ = {(<i>x</i>,<i> y</i>) :<i> x</i>,<i> y</i> ∈ ℝ} should be very familiar. It can be viewed as the set of points on the Cartesian plane, as drawn in Figure 1.2(a). The set ℝ × ℕ = {(<i>x</i>,<i> y</i>) :<i> x</i> ∈ ℝ,<i> y</i> ∈ ℕ} can be regarded as all of the points on the plane whose second coordinate is a natural number. This is illustrated in Figure 1.2(b), which shows that ℝ × ℕ looks like inﬁnitely many horizontal lines at integer heights above the <i>x</i>-axis. The set ℕ×ℕ is the set of all points on the plane whose coordinates are both natural numbers. It looks like a grid of dots in the ﬁrst quadrant, as illustrated in Figure 1.2(c).</p>
+<p class="display"><i>y y y</i></p>
+<figure><img src="figs/ch01-0063.svg" alt="Figure" style="width:102pt"></figure>
+<figure><img src="figs/ch01-0064.svg" alt="Figure" style="width:102pt"></figure>
+<figure><img src="figs/ch01-0065.svg" alt="Figure" style="width:102pt"></figure>
+<p class="display">(a) (b) (c)</p>
+<p class="caption"><strong>Figure 1.2. </strong>Drawings of some Cartesian products</p>
+<p>It is even possible for one factor of a Cartesian product to be a Cartesian product itself, as in ℝ × (ℕ × ℤ) = {(<i>x</i>,(<i>y</i>,<i> z</i>)) :<i> x</i> ∈ ℝ, (<i>y</i>,<i> z</i>) ∈ ℕ × ℤ}.</p>
+<p>We can also deﬁne Cartesian products of three or more sets by moving beyond ordered pairs. An<strong> ordered triple</strong> is a list (<i>x</i>,<i> y</i>,<i> z</i>). The Cartesian product of the three sets ℝ, ℕ and ℤ is ℝ × ℕ × ℤ = {(<i>x</i>,<i> y</i>,<i> z</i>) :<i> x</i> ∈ ℝ, <i>y</i> ∈ ℕ,<i> z</i> ∈ ℤ}. Of course there is no reason to stop with ordered triples. In general,</p>
+<p class="display"><i>A</i><sub>1</sub> ×<i> A</i><sub>2</sub> ×···×<i> A</i><sub><i>n</i></sub> = {(<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>,..., <i>x</i><sub><i>n</i></sub>) : <i>x</i><sub><i>i</i></sub> ∈ <i>A</i><sub><i>i </i></sub>for each <i>i</i> = 1,2,..., <i>n</i>}.</p>
+<p>Be mindful of parentheses. There is a slight diﬀerence between ℝ×(ℕ×ℤ) and ℝ × ℕ × ℤ. The ﬁrst is a Cartesian product of two sets; its elements are ordered pairs (<i>x</i>,(<i>y</i>,<i> z</i>)). The second is a Cartesian product of three sets; its elements are ordered triples (<i>x</i>,<i> y</i>,<i> z</i>). To be sure, in many situations there is no harm in blurring the distinction between expressions like (<i>x</i>,(<i>y</i>,<i> z</i>)) and (<i>x</i>,<i> y</i>,<i> z</i>), but for now we regard them as diﬀerent.</p>
+<p>For any set <i>A </i>and positive integer <i>n</i>, the<strong> Cartesian power </strong><i>A</i><sup><i>n </i></sup>is</p>
+<p class="display"><i>A</i><sup><i>n </i></sup>=<i> A</i> ×<i> A</i> ×···×<i> A</i> = {(<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>,..., <i>x</i><sub><i>n</i></sub>) : <i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>,..., <i>x</i><sub><i>n</i></sub> ∈ <i>A</i>}.</p>
+<p>In this way, ℝ<sup>2 </sup>is the familiar Cartesian plane and ℝ<sup>3 </sup>is three-dimensional space. You can visualize how, if ℝ<sup>2 </sup>is the plane, then ℤ<sup>2 </sup>= {(<i>m</i>, <i>n</i>) :<i> m</i>, <i>n</i> ∈ ℤ} is a grid of points on the plane. Likewise, as ℝ<sup>3 </sup>is 3-dimensional space, ℤ<sup>3 </sup>= {(<i>m</i>, <i>n</i>,<i> p</i>) :<i> m</i>, <i>n</i>,<i> p</i> ∈ ℤ} is a grid of points in space.</p>
+<p>In other courses you may encounter sets that are very similar to ℝ<sup><i>n</i></sup>, but yet have slightly diﬀerent shades of meaning. Consider, for example, the set of all two-by-three matrices with entries from ℝ:</p>
+<p class="display"><i>M</i> = <img class="m" src="figs/m/ch01-0066.svg" alt="{[ ux vy wz]" data-crop="22:211.5,133.5,250.1,149.1" style="height:15.6pt;vertical-align:-4.1pt"> : <i>u</i>, <i>v</i>, <i>w</i>, <i>x</i>,<i> y</i>,<i> z</i> ∈ ℝ}.</p>
+<p>This is not really all that diﬀerent from the set</p>
+<p class="display">ℝ<sup>6 </sup>= {(<i>u</i>, <i>v</i>, <i>w</i>, <i>x</i>,<i> y</i>,<i> z</i>) : <i>u</i>, <i>v</i>, <i>w</i>, <i>x</i>,<i> y</i>,<i> z</i> ∈ ℝ}.</p>
+<p>The elements of these sets are merely certain arrangements of six real numbers. Despite their similarity, we maintain that <i>M</i> ≠ ℝ<sup>6</sup>, for two-by-three matrices are not the same things as sequences of six numbers.</p>
+<p class="lbl example"><strong>Example 1.4 </strong>Represent the two sides of a coin by the set <i>S</i> = {h,t} . The possible outcomes of tossing the coin seven times in a row can be described with the Cartesian power <i>S</i><sup>7</sup>. A typical element of <i>S</i><sup>7 </sup>looks like</p>
+<p class="display">(h,h,t,h,t,t,t),</p>
+<p>meaning a head was tossed ﬁrst, then another head, then a tail, then a head followed by three tails. Note that <img class="m" src="figs/m/ch01-0067.svg" alt="¯¯" data-crop="22:249.1,327.5,254.1,345.1" style="height:17.7pt;vertical-align:-7.1pt"><i>S</i><img class="m" src="figs/m/ch01-0068.svg" alt="7¯¯" data-crop="22:259.9,326.8,269.6,345.1" style="height:18.3pt;vertical-align:-7.1pt"> = 2<sup>7</sup> = 128, so there are 128 possible outcomes. If this is not clear, then it will be explained fully in Chapter 3.</p>
+<div class="exercises" data-for="1.2"><h3>Exercises for Section 1.2</h3>
+<p class="ex-group"><strong>A. </strong>Write out the indicated sets by listing their elements between braces.</p>
+<ol class="ex-list">
+<li class="ex" id="ex-1.2-1" value="1">Suppose <i>A</i> = {1,2,3,4} and <i>B</i> = {<i>a</i>,<i> c</i>}. (a) <i>A</i> × <i>B </i>(c) <i>A</i> ×<i> A </i>(e) ∅× <i>B </i>(g) <i>A</i> × (<i>B</i> × <i>B</i>) (b) <i>B</i> ×<i> A </i>(d) <i>B</i> × <i>B </i>(f) (<i>A</i> × <i>B</i>) × <i>B </i>(h) <i>B</i><sup>3</sup></li>
+<li class="ex" id="ex-1.2-2" value="2">Suppose <i>A</i> = {<i>π</i>,<i> e</i>,0} and <i>B</i> = {0,1}. (a) <i>A</i> × <i>B </i>(c) <i>A</i> ×<i> A </i>(e) <i>A</i> × ∅ (g) <i>A</i> × (<i>B</i> × <i>B</i>) (b) <i>B</i> ×<i> A </i>(d) <i>B</i> × <i>B </i>(f) (<i>A</i> × <i>B</i>) × <i>B </i>(h) <i>A</i> × <i>B</i> × <i>B</i></li>
+<li class="ex" id="ex-1.2-3" value="3">{<i>x</i> ∈ ℝ :<i> x</i><sup>2 </sup>= 2} × {<i>a</i>,<i> c</i>,<i> e</i>}</li>
+<li class="ex" id="ex-1.2-4" value="4">{<i>n</i> ∈ ℤ : 2 &lt;<i> n</i> &lt; 5} × {<i>n</i> ∈ ℤ : |<i>n</i>| = 5}</li>
+<li class="ex" id="ex-1.2-5" value="5">{<i>x</i> ∈ ℝ :<i> x</i><sup>2 </sup>= 2} × {<i>x</i> ∈ ℝ : |<i>x</i>| = 2}</li>
+<li class="ex" id="ex-1.2-6" value="6">{<i>x</i> ∈ ℝ :<i> x</i><sup>2 </sup>=<i> x</i>} × {<i>x</i> ∈ ℕ :<i> x</i><sup>2 </sup>=<i> x</i>}</li>
+<li class="ex" id="ex-1.2-7" value="7">{∅} × {0,∅} × {0,1}</li>
+<li class="ex" id="ex-1.2-8" value="8">{0,1}<sup>4</sup></li>
+</ol>
+<p class="ex-group"><strong>B. </strong>Sketch these Cartesian products on the <i>x</i>-<i>y</i> plane ℝ<sup>2 </sup>(or ℝ<sup>3 </sup>for the last two).</p>
+<ol class="ex-list">
+<li class="ex" id="ex-1.2-9" value="9">{1,2,3} × { − 1,0,1}</li>
+<li class="ex" id="ex-1.2-10" value="10">{ − 1,0,1} × {1,2,3}</li>
+<li class="ex" id="ex-1.2-11" value="11">[0,1] × [0,1]</li>
+<li class="ex" id="ex-1.2-12" value="12">[−1,1] × [1,2]</li>
+<li class="ex" id="ex-1.2-13" value="13">{1,1.5,2} × [1,2]</li>
+<li class="ex" id="ex-1.2-14" value="14">[1,2] × {1,1.5,2}</li>
+<li class="ex" id="ex-1.2-15" value="15">{1} × [0,1]</li>
+<li class="ex" id="ex-1.2-16" value="16">[0,1] × {1}</li>
+<li class="ex" id="ex-1.2-17" value="17">ℕ × ℤ</li>
+<li class="ex" id="ex-1.2-18" value="18">ℤ × ℤ</li>
+<li class="ex" id="ex-1.2-19" value="19">[0,1] × [0,1] × [0,1]</li>
+<li class="ex" id="ex-1.2-20" value="20"><sup>{</sup>(<i>x</i>,<i> y</i>)∈ℝ<sup>2</sup>:<i>x</i><sup>2</sup>+<i>y</i><sup>2</sup>≤1<sup>}</sup>×[0,1]</li>
+</ol>
+</div>
+</section>
+<section class="sec" id="s1-3" data-title="Subsets">
+<h2><span class="num">1.3</span> Subsets</h2>
+<p>It can happen that every element of a set <i>A </i>is an element of another set <i>B</i>. For example, each element of<i> A</i> = {0,2,4} is also an element of<i> B</i> = {0,1,2,3,4}. When <i>A </i>and <i>B</i> are related this way we say that <i>A </i><em>is a subset of </em><i>B</i>.</p>
+<p><strong>Deﬁnition 1.3 </strong>Suppose <i>A </i>and <i>B</i> are sets. If every element of <i>A </i>is also an element of <i>B</i>, then we say <i>A </i>is a<strong> subset</strong> of <i>B</i>, and we denote this as <i>A</i> ⊆ <i>B</i>. We write <i>A</i> ⊈ <i>B</i> if <i>A</i> is<em> not</em> a subset of<i> B</i>, that is, if it is<em> not</em> true that every element of <i>A </i>is also an element of <i>B</i>. Thus <i>A</i> ⊈ <i>B</i> means that there is at least one element of <i>A </i>that is<em> not</em> an element of <i>B</i>.</p>
+<p class="lbl example"><strong>Example 1.5 </strong>Be sure you understand why each of the following is true.</p>
+<p class="item">1. {2,3,7} ⊆ {2,3,4,5,6,7}</p>
+<p class="item">2. {2,3,7} ⊈ {2,4,5,6,7}</p>
+<p class="item">3. {2,3,7} ⊆ {2,3,7}</p>
+<p class="item">4. {(<i>x</i>,sin(<i>x</i>)) : <i>x</i> ∈ ℝ} ⊆ ℝ<sup>2</sup></p>
+<p class="item">5. {1,3,5,7,11,13,17,...} ⊆ ℕ</p>
+<p class="item">6. ℕ ⊆ ℤ ⊆ ℚ ⊆ ℝ</p>
+<p class="item">7. ℝ × ℕ ⊆ ℝ × ℝ</p>
+<p class="item">8. <i>A</i> ⊆ <i>A </i>for any set <i>A</i></p>
+<p class="item">9. ∅ ⊆∅.</p>
+<p>This brings us to a signiﬁcant fact: If<i> B</i> is any set whatsoever, then ∅ ⊆ <i>B</i>. To see why this is true, look at the last sentence of Deﬁnition 1.3. It says that ∅ ⊈ <i>B</i> would mean that there is at least one element of ∅ that is not an element of <i>B</i>. But this cannot be so because ∅ contains no elements! Thus it is not the case that ∅ ⊈ <i>B</i>, so it must be that ∅ ⊆ <i>B</i>.</p>
+<p class="lbl fact"><strong>Fact 1.2 </strong>The empty set is a subset of all sets, that is, ∅ ⊆ <i>B</i> for any set<i> B</i>.</p>
+<p>Here is another way to look at it. Imagine a subset of <i>B</i> as a thing you make by starting with braces {}, then ﬁlling them with selections from <i>B</i>. For example, to make one particular subset of <i>B</i> = {<i>a</i>, <i>b</i>,<i> c</i>}, start with {}, select <i>b </i>and <i>c </i>from <i>B </i>and insert them into {} to form the subset {<i>b</i>,<i> c</i>}. Alternatively, you could have chosen just <i>a</i> to make {<i>a</i>}, and so on. But one option is to simply select nothing from<i> B</i>. This leaves you with the subset {}. Thus {} ⊆ <i>B</i>. More often we write it as ∅ ⊆ <i>B</i>.</p>
+<p>This idea of “making” a subset can help us list out all the subsets of a given set <i>B</i>. As an example, let <i>B</i> = {<i>a</i>, <i>b</i>,<i> c</i>}. Let’s list all of its subsets. One way of approaching this is to make a tree-like structure. Begin with the subset {}, which is shown on the left of Figure 1.3. Considering the element <i>a</i> of <i>B</i>, we have a choice: insert it into {}, or not. The lines from {} point to what we get depending whether or not we insert <i>a</i>, either {} or {<i>a</i>}. Now move on to the element<i> b</i> of<i> B</i>. For each of the sets just formed we can either insert or not insert <i>b</i>, and the lines on the diagram point to the resulting sets {}, {<i>b</i>},{<i>a</i>}, or {<i>a</i>, <i>b</i>}. Finally, to each of these sets, we can either insert <i>c</i> or not insert it, and this gives us, on the far right-hand column, the sets {}, {<i>c</i>}, {<i>b</i>}, {<i>b</i>,<i> c</i>}, {<i>a</i>}, {<i>a</i>,<i> c</i>}, {<i>a</i>, <i>b</i>} and {<i>a</i>, <i>b</i>,<i> c</i>}. These are the eight subsets of <i>B</i> = {<i>a</i>, <i>b</i>,<i> c</i>}.</p>
+<p class="display">Insert <i>a</i>? Insert <i>b </i>? Insert <i>c </i>?</p>
+<figure><img src="figs/ch01-0069.svg" alt="Figure" style="width:240pt"></figure>
+<p class="caption"><strong>Figure 1.3. </strong>A “tree” for listing subsets</p>
+<p>We can see from the way this tree branches that if it happened that <i>B</i> = {<i>a</i>}, then <i>B</i> would have just two subsets, those in the second column of the diagram. If it happened that <i>B</i> = {<i>a</i>, <i>b</i>}, then <i>B </i>would have four subsets, those in the third column, and so on. At each branching of the tree, the number of subsets doubles. So in general, if |<i>B</i>| =<i> n</i>, then <i>B</i> has 2<sup><i>n </i></sup>subsets.</p>
+<p class="lbl fact"><strong>Fact 1.3 </strong>If a ﬁnite set has <i>n</i> elements, then it has 2<sup><i>n </i></sup>subsets.</p>
+<p>For a slightly more complex example, consider listing the subsets of <i>B</i> = {1,2,{1,3}}. This<i> B</i> has just three elements: 1, 2 and {1,3}. At this point you probably don’t even have to draw a tree to list out <i>B</i>’s subsets. You just make all the possible selections from <i>B </i>and put them between braces to get</p>
+<p class="display">{}, {1}, {2}, {{1,3}}, {1,2}, {1,{1,3}}, {2,{1,3}}, {1,2,{1,3}}.</p>
+<p>These are the eight subsets of <i>B</i>. Exercises like this help you identify what is and isn’t a subset. You know immediately that a set such as {1,3} is<em> not</em> a subset of <i>B</i> because it can’t be made by inserting elements from <i>B</i> into {}, as the 3 is not an element of <i>B</i> and thus is not a valid selection. Notice that although {1,3} ⊈ <i>B</i>, it<em> is</em> true that {1,3} ∈ <i>B</i>. Also, {{1,3}} ⊆ <i>B</i>.</p>
+<p class="lbl example"><strong>Example 1.6 </strong>Be sure you understand why the following statements are true. Each illustrates an aspect of set theory that you’ve learned so far. 1. 1 ∈ {1,{1}} . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1 is the ﬁrst element listed in {1,{1}} 2. 1 ⊈ {1,{1}} . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .because 1 is not a set</p>
+<p class="item">3. {1} ∈ {1,{1}} . . . . . . . . . . . . . . . . . . . . . . . {1} is the second element listed in {1,{1}}</p>
+<p class="item">4. {1} ⊆ {1,{1}} . . . . . . . . . . . . . . . . . . . . .make subset {1} by selecting 1 from {1,{1}}</p>
+<p class="item">5. {{1}} ∉ {1,{1}}. . . . . . . . .because {1,{1}} contains only 1 and {1}, and not {{1}}</p>
+<p class="item">6. {{1}} ⊆ {1,{1}} . . . . . . . . . . . . . . . make subset {{1}} by selecting {1} from {1,{1}}</p>
+<p class="item">7. ℕ ∉ ℕ . . . . . . . . . . . . . . . ℕ is a set (not a number) and ℕ contains only numbers</p>
+<p class="item">8. ℕ ⊆ ℕ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . because <i>X </i>⊆ <i>X </i>for every set <i>X</i></p>
+<p class="item">9. ∅ ∉ ℕ . . . . . . . . . . . . . . . . . because the set ℕ contains only numbers and no sets</p>
+<p class="item">10. ∅ ⊆ ℕ. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .because ∅ is a subset of every set</p>
+<p class="item">11. ℕ ∈ {ℕ} . . . . . . . . . . . . . . . . . . . . . . . . . because {ℕ} has just one element, the set ℕ</p>
+<p class="item">12. ℕ ⊈ {ℕ} . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . because, for instance, 1 ∈ ℕ but 1 ∉ {ℕ}</p>
+<p class="item">13. ∅ ∉ {ℕ} . . . . . . . . . . . . . . . . . . . . note that the only element of {ℕ} is ℕ, and ℕ ≠ ∅</p>
+<p class="item">14. ∅ ⊆ {ℕ} . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .because ∅ is a subset of every set</p>
+<p class="item">15. ∅ ∈ {∅,ℕ}. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .∅ is the ﬁrst element listed in {∅,ℕ}</p>
+<p class="item">16. ∅ ⊆ {∅,ℕ} . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . because ∅ is a subset of every set</p>
+<p class="item">17. {ℕ} ⊆ {∅,ℕ} . . . . . . . . . . . . . . . . . . . . . .make subset {ℕ} by selecting ℕ from {∅,ℕ}</p>
+<p class="item">18. {ℕ} ⊈ {∅,{ℕ}} . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . because ℕ ∉ {∅,{ℕ}}</p>
+<p class="item">19. {ℕ} ∈ {∅,{ℕ}} . . . . . . . . . . . . . . . . . . . . {ℕ} is the second element listed in {∅,{ℕ}}</p>
+<p class="item">20. {(1,2),(2,2),(7,1)} ⊆ ℕ × ℕ . . . . . . . . . . . . . . . . . .each of (1,2), (2,2), (7,1) is in ℕ × ℕ</p>
+<p>Though they should help you understand the concept of subset, the above examples are somewhat artiﬁcial. But in general, subsets arise very naturally. For instance, consider the unit circle <i>C</i> = {(<i>x</i>,<i> y</i>) ∈ ℝ<sup>2 </sup>:<i> x</i><sup>2 </sup>+<i> y</i><sup>2 </sup>= 1}. This is a subset <i>C</i> ⊆ ℝ<sup>2</sup>. Likewise the graph of a function <i>y</i> = <i>f</i> (<i>x</i>) is a set of points <i>G </i>= {(<i>x</i>,<i> f</i> (<i>x</i>)) : <i>x</i> ∈ ℝ}, and <i>G </i>⊆ ℝ<sup>2</sup>. Surely sets such as <i>C </i>and <i>G</i> are more easily understood or visualized when regarded as subsets of ℝ<sup>2</sup>. Mathematics is ﬁlled with such instances where it is important to regard one set as a subset of another.</p>
+<div class="exercises" data-for="1.3"><h3>Exercises for Section 1.3</h3>
+<p class="ex-group"><strong>A. </strong>List all the subsets of the following sets.</p>
+<ol class="ex-list">
+<li class="ex" id="ex-1.3-1" value="1">{1,2,3,4}</li>
+<li class="ex" id="ex-1.3-2" value="2">{1,2,∅}</li>
+<li class="ex" id="ex-1.3-3" value="3">{{ℝ}}</li>
+<li class="ex" id="ex-1.3-4" value="4">∅</li>
+<li class="ex" id="ex-1.3-5" value="5">{∅}</li>
+<li class="ex" id="ex-1.3-6" value="6">{ℝ,ℚ,ℕ}</li>
+<li class="ex" id="ex-1.3-7" value="7">{ℝ,{ℚ,ℕ}}</li>
+<li class="ex" id="ex-1.3-8" value="8">{{0,1},{0,1,{2}},{0}}</li>
+</ol>
+<p class="ex-group"><strong>B. </strong>Write out the following sets by listing their elements between braces.</p>
+<ol class="ex-list">
+<li class="ex" id="ex-1.3-9" value="9">{<i>X </i>:<i> X </i>⊆ {3,2,<i>a</i>} and |<i>X</i>| = 2}</li>
+<li class="ex" id="ex-1.3-10" value="10">{<i>X </i>⊆ ℕ : |<i>X</i>| ≤ 1}</li>
+<li class="ex" id="ex-1.3-11" value="11">{<i>X </i>:<i> X </i>⊆ {3,2,<i>a</i>} and |<i>X</i>| = 4}</li>
+<li class="ex" id="ex-1.3-12" value="12">{<i>X </i>:<i> X </i>⊆ {3,2,<i>a</i>} and |<i>X</i>| = 1}</li>
+</ol>
+<p class="ex-group"><strong>C. </strong>Decide if the following statements are true or false. Explain.</p>
+<ol class="ex-list">
+<li class="ex" id="ex-1.3-13" value="13">ℝ<sup>3 </sup>⊆ ℝ<sup>3 </sup></li>
+<li class="ex" id="ex-1.3-14" value="14">ℝ<sup>2 </sup>⊆ ℝ<sup>3 </sup></li>
+<li class="ex" id="ex-1.3-15" value="15">{(<i>x</i>,<i>y</i>)∈ℝ<sup>2 </sup>: <i>x</i>−1=0}⊆{(<i>x</i>,<i>y</i>)∈ℝ<sup>2 </sup>: <i>x</i><sup>2</sup>−<i>x</i>=0}</li>
+<li class="ex" id="ex-1.3-16" value="16">{(<i>x</i>,<i>y</i>)∈ℝ<sup>2 </sup>: <i>x</i><sup>2</sup>−<i>x</i>=0}⊆{(<i>x</i>,<i>y</i>)∈ℝ<sup>2 </sup>: <i>x</i>−1=0}</li>
+</ol>
+</div>
+</section>
+<section class="sec" id="s1-4" data-title="Power Sets">
+<h2><span class="num">1.4</span> Power Sets</h2>
+<p>Given a set, you can form a new set with the<em> power set</em> operation.</p>
+<p><strong>Deﬁnition 1.4 </strong>If <i>A </i>is a set, the<strong> power set</strong> of <i>A </i>is another set, denoted as 𝒫(<i>A</i>) and deﬁned to be the set of all subsets of <i>A</i>. In symbols, 𝒫(<i>A</i>) = {<i>X </i>:<i> X </i>⊆ <i>A</i>}.</p>
+<p>For example, suppose <i>A</i> = {1,2,3}. The power set of <i>A </i>is the set of all subsets of <i>A</i>. We learned how to ﬁnd these subsets in the previous section, and they are {}, {1}, {2}, {3}, {1,2}, {1,3}, {2,3} and {1,2,3}. Therefore the power set of <i>A </i>is</p>
+<p class="display">𝒫(<i>A</i>) = <img class="m" src="figs/m/ch01-0070.svg" alt="n" data-crop="26:176.2,566.0,183.1,577.7" style="height:11.6pt;vertical-align:-0.0pt">∅, {1}, {2}, {3}, {1,2}, {1,3}, {2,3}, {1,2,3<img class="m" src="figs/m/ch01-0071.svg" alt="} o" data-crop="26:376.9,566.0,390.1,580.7" style="height:14.6pt;vertical-align:-1.7pt">.</p>
+<p>As we saw in the previous section, if a ﬁnite set <i>A </i>has <i>n</i> elements, then it has 2<sup><i>n </i></sup>subsets, and thus its power set has 2<sup><i>n </i></sup>elements.</p>
+<p class="display"><strong>Fact 1.4 </strong>If <i>A </i>is a ﬁnite set, then |𝒫(<i>A</i>)| = 2<sup>|</sup><sup><i>A</i></sup><sup>|</sup>.</p>
+<p class="lbl example"><strong>Example 1.7 </strong>You should examine the following statements and make sure you understand how the answers were obtained. In particular, notice that in each instance the equation |𝒫(<i>A</i>)| = 2<sup>|</sup><sup><i>A</i></sup><sup>| </sup>is true.</p>
+<p class="item">1. 𝒫 ({0,1,3}) = { ∅, {0}, {1}, {3}, {0,1}, {0,3}, {1,3}, {0,1,3} }</p>
+<p class="item">2. 𝒫 ({1,2}) = { ∅, {1}, {2}, {1,2} }</p>
+<p class="item">3. 𝒫 ({1}) = { ∅, {1} }</p>
+<p class="item">4. 𝒫 (∅) = { ∅ }</p>
+<p class="item">5. 𝒫 ({<i>a</i>}) = { ∅, {<i>a</i>} }</p>
+<p class="item">6. 𝒫 ({∅}) = { ∅, {∅} }</p>
+<p class="item">7. 𝒫 ({<i>a</i>}) × 𝒫 ({∅}) = { (∅,∅), (∅,{∅}), ({<i>a</i>},∅), ({<i>a</i>},{∅}) }</p>
+<p class="item">8. 𝒫 (𝒫 ({∅})) = { ∅, {∅}, {{∅}}, {∅,{∅}} }</p>
+<p class="item">9. 𝒫 ({1,{1,2}}) = { ∅, {1}, {{1,2}}, {1,{1,2}} }</p>
+<p class="item">10. 𝒫 ({ℤ,ℕ}) = { ∅, {ℤ}, {ℕ}, {ℤ,ℕ} }</p>
+<p>Next are some that are <strong>wrong</strong>. See if you can determine why they are wrong and make sure you understand the explanation on the right.</p>
+<p class="item">11. 𝒫(1) = { ∅, {1} } . . . . . . . . . . . . . . . . . . . . . . . . . . meaningless because 1 is not a set</p>
+<p class="item">12. 𝒫 ({1,{1,2}}) = {∅,{1},{1,2},{1,{1,2}}} . . . . . . wrong because {1,2} ⊈ {1,{1,2}}</p>
+<p class="item">13. 𝒫 ({1,{1,2}}) = {∅,{{1}},{{1,2}},{1,{1,2}}} . . . wrong because {{1}} ⊈ {1,{1,2}}</p>
+<p>If <i>A </i>is ﬁnite, then it is possible (though maybe not practical) to list out 𝒫(<i>A</i>) between braces as was done in the above example. That is not possible if <i>A </i>is inﬁnite. For example, consider 𝒫(ℕ). If you start listing its elements you quickly discover that ℕ has inﬁnitely many subsets, and it’s not clear how (or if) they could be arranged in a list with a deﬁnite pattern:</p>
+<p class="display">𝒫(ℕ) = {∅,{1},{2},...,{1,2},{1,3},...,{39,47},</p>
+<p class="display">...,{3,87,131},...,{2,4,6,8,...},... ? ...}.</p>
+<p>The set 𝒫(ℝ<sup>2</sup>) is mind boggling. Think of ℝ<sup>2 </sup>= {(<i>x</i>,<i> y</i>) :<i> x</i>,<i> y</i> ∈ ℝ} as the set of all points on the Cartesian plane. A subset of ℝ<sup>2 </sup>(that is, an<em> element</em> of 𝒫(ℝ<sup>2</sup>)) is a set of points in the plane. Let’s look at some of these sets. Since {(1,2),(1,1)} ⊆ ℝ<sup>2</sup>, we know that {(1,2),(1,1)} ∈ 𝒫(ℝ<sup>2</sup>). We can even draw a picture of this subset, as in Figure 1.4(a). For another example, the graph of the equation <i>y</i> =<i> x</i><sup>2 </sup>is the set of points <i>G </i>= {(<i>x</i>, <i>x</i><sup>2</sup>) :<i> x</i> ∈ ℝ} and this is a subset of ℝ<sup>2</sup>, so<i> G</i> ∈ 𝒫(ℝ<sup>2</sup>). Figure 1.4(b) is a picture of<i> G</i>. Because this can be done for any function, the graph of any imaginable function <i>f </i>: ℝ → ℝ is an element of 𝒫(ℝ<sup>2</sup>).</p>
+<p class="display"><i>y y y</i></p>
+<figure><img src="figs/ch01-0072.svg" alt="Figure" style="width:93pt"></figure>
+<figure><img src="figs/ch01-0073.svg" alt="Figure" style="width:93pt"></figure>
+<figure><img src="figs/ch01-0074.svg" alt="Figure" style="width:93pt"></figure>
+<p class="display">(a) (b) (c)</p>
+<p class="caption"><strong>Figure 1.4. </strong>Three of the many, many sets in 𝒫(ℝ<sup>2</sup>)</p>
+<p>In fact, any black-and-white image on the plane can be thought of as a subset of ℝ<sup>2</sup>, where the black points belong to the subset and the white points do not. So the text “INFINITE” in Figure 1.4(c) is a subset of ℝ<sup>2 </sup>and therefore an element of 𝒫(ℝ<sup>2</sup>). By that token, 𝒫(ℝ<sup>2</sup>) contains a copy of the page you are reading now.</p>
+<p>Thus, in addition to containing every imaginable function and every imaginable black-and-white image, 𝒫(ℝ<sup>2</sup>) also contains the full text of every book that was ever written, those that are yet to be written and those that will never be written. Inside of 𝒫(ℝ<sup>2</sup>) is a detailed biography of your life, from beginning to end, as well as the biographies of all of your unborn descendants. It is startling that the ﬁve symbols used to write 𝒫(ℝ<sup>2</sup>) can express such an incomprehensibly large set.</p>
+<p>Homework: Think about 𝒫(𝒫(ℝ<sup>2</sup>)).</p>
+<div class="exercises" data-for="1.4"><h3>Exercises for Section 1.4</h3>
+<p class="ex-group"><strong>A. </strong>Write the following sets by listing their elements between braces.</p>
+<ol class="ex-list">
+<li class="ex" id="ex-1.4-1" value="1">𝒫 ({{<i>a</i>, <i>b</i>},{<i>c</i>}})</li>
+<li class="ex" id="ex-1.4-2" value="2">𝒫 ({1,2,3,4})</li>
+<li class="ex" id="ex-1.4-3" value="3">𝒫 ({{∅},5})</li>
+<li class="ex" id="ex-1.4-4" value="4">𝒫 ({ℝ,ℚ})</li>
+<li class="ex" id="ex-1.4-5" value="5">𝒫 (𝒫 ({2}))</li>
+<li class="ex" id="ex-1.4-6" value="6">𝒫 ({1,2}) × 𝒫 ({3})</li>
+<li class="ex" id="ex-1.4-7" value="7">𝒫 ({<i>a</i>, <i>b</i>}) × 𝒫 ({0,1})</li>
+<li class="ex" id="ex-1.4-8" value="8">𝒫 ({1,2} × {3})</li>
+<li class="ex" id="ex-1.4-9" value="9">𝒫 ({<i>a</i>, <i>b</i>} × {0})</li>
+<li class="ex" id="ex-1.4-10" value="10">{<i>X </i>∈ 𝒫 ({1,2,3}) : |<i>X</i>| ≤ 1}</li>
+<li class="ex" id="ex-1.4-11" value="11">{<i>X </i>⊆ 𝒫 ({1,2,3}) : |<i>X</i>| ≤ 1}</li>
+<li class="ex" id="ex-1.4-12" value="12">{<i>X </i>∈ 𝒫 ({1,2,3}) : 2 ∈ <i>X</i>}</li>
+</ol>
+<p class="ex-group"><strong>B. </strong>Suppose that |<i>A</i>| =<i> m</i> and |<i>B</i>| =<i> n</i>. Find the following cardinalities.</p>
+<ol class="ex-list">
+<li class="ex" id="ex-1.4-13" value="13">|𝒫(𝒫(𝒫(<i>A</i>)))|</li>
+<li class="ex" id="ex-1.4-14" value="14">|𝒫(𝒫(<i>A</i>))|</li>
+<li class="ex" id="ex-1.4-15" value="15">|𝒫(<i>A</i> × <i>B</i>)|</li>
+<li class="ex" id="ex-1.4-16" value="16">|𝒫(<i>A</i>) × 𝒫(<i>B</i>)|</li>
+<li class="ex" id="ex-1.4-17" value="17"><img class="m" src="figs/m/ch01-0075.svg" alt="¯¯{" data-crop="28:288.0,570.6,296.8,586.9" style="height:16.3pt;vertical-align:-6.9pt"><i>X </i>∈ 𝒫(<i>A</i>) : |<i>X</i>| ≤ 1<img class="m" src="figs/m/ch01-0076.svg" alt="}¯¯" data-crop="28:371.4,570.6,380.1,586.9" style="height:16.3pt;vertical-align:-6.9pt"></li>
+<li class="ex" id="ex-1.4-18" value="18">|𝒫(<i>A</i> × 𝒫(<i>B</i>))|</li>
+<li class="ex" id="ex-1.4-19" value="19">|𝒫(𝒫(𝒫(<i>A</i> × ∅)))|</li>
+<li class="ex" id="ex-1.4-20" value="20"><img class="m" src="figs/m/ch01-0077.svg" alt="¯¯{" data-crop="28:288.4,617.3,297.2,633.5" style="height:16.3pt;vertical-align:-6.5pt"><i>X </i>⊆ 𝒫(<i>A</i>) : |<i>X</i>| ≤ 1<img class="m" src="figs/m/ch01-0078.svg" alt="}¯¯" data-crop="28:373.0,617.3,381.8,633.5" style="height:16.3pt;vertical-align:-6.5pt"></li>
+</ol>
+</div>
+</section>
+<section class="sec" id="s1-5" data-title="Union, Intersection, Diﬀerence">
+<h2><span class="num">1.5</span> Union, Intersection, Diﬀerence</h2>
+<p>Just as numbers are combined with operations such as addition, subtraction and multiplication, there are various operations that can be applied to sets. The Cartesian product (deﬁned in Section 1.2) is one such operation; given sets <i>A </i>and <i>B</i>, we can combine them with × to get a new set <i>A</i> × <i>B</i>. Here are three new operations called union, intersection and diﬀerence.</p>
+<p><strong>Deﬁnition 1.5 </strong>Suppose <i>A </i>and <i>B</i> are sets.</p>
+<p>The<strong> union</strong> of <i>A </i>and <i>B</i> is the set <i>A</i> ∪ <i>B</i> = {<i>x </i>: <i>x</i> ∈ <i>A </i>or <i>x</i> ∈ <i>B</i>}.</p>
+<p>The<strong> intersection</strong> of <i>A </i>and <i>B</i> is the set <i>A</i> ∩ <i>B</i> = {<i>x </i>: <i>x</i> ∈ <i>A </i>and <i>x</i> ∈ <i>B</i>}.</p>
+<p>The<strong> diﬀerence</strong> of <i>A </i>and <i>B</i> is the set <i>A</i> − <i>B</i> = {<i>x </i>: <i>x</i> ∈ <i>A </i>and <i>x</i> ∉ <i>B</i>}.</p>
+<p>In words, the union <i>A</i> ∪ <i>B</i> is the set of all things that are in <i>A </i>or in <i>B</i> (or in both). The intersection <i>A</i> ∩ <i>B</i> is the set of all things in both <i>A </i>and <i>B</i>. The diﬀerence <i>A</i> − <i>B</i> is the set of all things that are in <i>A </i>but not in <i>B</i>.</p>
+<p class="lbl example"><strong>Example 1.8 </strong>Suppose <i>A</i> = {<i>a</i>, <i>b</i>,<i> c</i>, <i>d</i>,<i> e</i>}, <i>B</i> = {<i>d</i>,<i> e</i>,<i> f </i>} and <i>C</i> = {1,2,3}.</p>
+<p class="item">1. <i>A</i> ∪ <i>B</i> = {<i>a</i>, <i>b</i>,<i> c</i>, <i>d</i>,<i> e</i>,<i> f </i>}</p>
+<p class="item">2. <i>A</i> ∩ <i>B</i> = {<i>d</i>,<i> e</i>}</p>
+<p class="item">3. <i>A</i> − <i>B</i> = {<i>a</i>, <i>b</i>,<i> c</i>}</p>
+<p class="item">4. <i>B</i> − <i>A</i> = {<i>f </i>}</p>
+<p class="item">5. (<i>A</i> − <i>B</i>) ∪ (<i>B</i> − <i>A</i>) = {<i>a</i>, <i>b</i>,<i> c</i>,<i> f </i>}</p>
+<p class="item">6. <i>A</i> ∪ <i>C</i> = {<i>a</i>, <i>b</i>,<i> c</i>, <i>d</i>,<i> e</i>,1,2,3}</p>
+<p class="item">7. <i>A</i> ∩ <i>C</i> = ∅</p>
+<p class="item">8. <i>A</i> − <i>C</i> = {<i>a</i>, <i>b</i>,<i> c</i>, <i>d</i>,<i> e</i>}</p>
+<p class="item">9. (<i>A</i> ∩ <i>C</i>) ∪ (<i>A</i> − <i>C</i>) = {<i>a</i>, <i>b</i>,<i> c</i>, <i>d</i>,<i> e</i>}</p>
+<p class="item">10. (<i>A</i> ∩ <i>B</i>) × <i>B</i> = {(<i>d</i>, <i>d</i>),(<i>d</i>,<i> e</i>),(<i>d</i>,<i> f</i> ),(<i>e</i>, <i>d</i>),(<i>e</i>,<i> e</i>),(<i>e</i>,<i> f</i> )}</p>
+<p class="item">11. (<i>A</i> × <i>C</i>) ∩ (<i>B</i> × <i>C</i>) = {(<i>d</i>,1),(<i>d</i>,2),(<i>d</i>,3),(<i>e</i>,1),(<i>e</i>,2),(<i>e</i>,3)}</p>
+<p>Parts 12–15 use interval notation (Section 1.1), so [2,5] = {<i>x</i> ∈ ℝ : 2 ≤ <i>x</i> ≤ 5}, etc. Sketching these on the number line may aid your understanding.</p>
+<p class="item">12. [2,5] ∪ [3,6] = [2,6]</p>
+<p class="item">13. [2,5] ∩ [3,6] = [3,5]</p>
+<p class="item">14. [2,5] − [3,6] = [2,3)</p>
+<p class="item">15. [0,3] − [1,2] = [0,1) ∪ (2,3]</p>
+<p>Observe that for any sets <i>X </i>and <i>Y </i>it is always true that <i>X</i> ∪ <i>Y </i>=<i> Y</i> ∪ <i>X</i> and <i>X</i> ∩ <i>Y </i>=<i> Y</i> ∩ <i>X </i>, but in general <i>X</i> − <i>Y </i>≠<i> Y</i> − <i>X </i>.</p>
+<p class="lbl example"><strong>Example 1.9 </strong>Let <i>A</i> = {(<i>x</i>, <i>x</i><sup>2</sup>) :<i> x</i> ∈ ℝ} be the graph of the equation <i>y</i> =<i> x</i><sup>2</sup> and let<i> B</i> = {(<i>x</i>, <i>x </i>+2) :<i> x</i> ∈ ℝ} be the graph of the equation <i>y</i> =<i> x </i>+2. These sets are subsets of ℝ<sup>2</sup>. They are sketched together in Figure 1.5(a). Figure 1.5(b) shows <i>A</i> ∪ <i>B</i>, the set of all points (<i>x</i>,<i> y</i>) that are on one (or both) of the two graphs. Observe that <i>A</i> ∩ <i>B</i> = {(−1,1),(2,4)} consists of just two elements, the two points where the graphs intersect, as illustrated in Figure 1.5(c). Figure 1.5(d) shows <i>A </i>−<i>B</i>, which is the set <i>A</i> with “holes” where<i> B</i> crossed it. In set builder notation, we could write <i>A </i>∪<i>B</i> = {(<i>x</i>,<i> y</i>) :<i> x</i> ∈ ℝ,<i> y</i> =<i> x</i><sup>2 </sup>or <i>y</i> =<i> x</i>+2} and <i>A</i> − <i>B</i> = {(<i>x</i>, <i>x</i><sup>2</sup>) :<i> x</i> ∈ ℝ − { − 1,2}}.</p>
+<figure><img src="figs/ch01-0079.svg" alt="Figure" style="width:71pt"></figure>
+<figure><img src="figs/ch01-0080.svg" alt="Figure" style="width:69pt"></figure>
+<figure><img src="figs/ch01-0081.svg" alt="Figure" style="width:71pt"></figure>
+<figure><img src="figs/ch01-0082.svg" alt="Figure" style="width:69pt"></figure>
+<p class="caption"><strong>Figure 1.5. </strong>The union, intersection and diﬀerence of sets <i>A </i>and <i>B</i></p>
+<div class="exercises" data-for="1.5"><h3>Exercises for Section 1.5</h3>
+<ol class="ex-list">
+<li class="ex" id="ex-1.5-1" value="1">Suppose <i>A</i> = {4,3,6,7,1,9}, <i>B</i> = {5,6,8,4} and <i>C</i> = {5,8,4}. Find: <strong>(a) </strong><i>A</i> ∪ <i>B </i><strong>(d) </strong><i>A</i> − <i>C </i><strong>(g) </strong><i>B</i> ∩ <i>C</i> <strong>(b) </strong><i>A</i> ∩ <i>B </i><strong>(e) </strong><i>B</i> − <i>A </i><strong>(h) </strong><i>B</i> ∪ <i>C</i> <strong>(c) </strong><i>A</i> − <i>B </i><strong>(f) </strong><i>A</i> ∩ <i>C </i><strong>(i) </strong><i>C</i> − <i>B</i></li>
+<li class="ex" id="ex-1.5-2" value="2">Suppose <i>A</i> = {0,2,4,6,8}, <i>B</i> = {1,3,5,7} and <i>C</i> = {2,8,4}. Find: <strong>(a) </strong><i>A</i> ∪ <i>B </i><strong>(d) </strong><i>A</i> − <i>C </i><strong>(g) </strong><i>B</i> ∩ <i>C</i> <strong>(b) </strong><i>A</i> ∩ <i>B </i><strong>(e) </strong><i>B</i> − <i>A </i><strong>(h) </strong><i>C</i> − <i>A</i> <strong>(c) </strong><i>A</i> − <i>B </i><strong>(f) </strong><i>A</i> ∩ <i>C </i><strong>(i) </strong><i>C</i> − <i>B</i></li>
+<li class="ex" id="ex-1.5-3" value="3">Suppose <i>A</i> = {0,1} and <i>B</i> = {1,2}. Find: <strong>(a) </strong>(<i>A</i> × <i>B</i>) ∩ (<i>B</i> × <i>B</i>) <strong>(d) </strong>(<i>A</i> ∩ <i>B</i>) ×<i> A </i><strong>(g) </strong>𝒫(<i>A</i>) − 𝒫(<i>B</i>) <strong>(b) </strong>(<i>A</i> × <i>B</i>) ∪ (<i>B</i> × <i>B</i>) <strong>(e) </strong>(<i>A</i> × <i>B</i>) ∩ <i>B </i><strong>(h) </strong>𝒫(<i>A</i> ∩ <i>B</i>) <strong>(c) </strong>(<i>A</i> × <i>B</i>) − (<i>B</i> × <i>B</i>) <strong>(f) </strong>𝒫(<i>A</i>) ∩ 𝒫(<i>B</i>) <strong>(i) </strong>𝒫(<i>A</i> × <i>B</i>)</li>
+<li class="ex" id="ex-1.5-4" value="4">Suppose <i>A</i> = {<i>b</i>,<i> c</i>, <i>d</i>} and <i>B</i> = {<i>a</i>, <i>b</i>}. Find: <strong>(a) </strong>(<i>A</i> × <i>B</i>) ∩ (<i>B</i> × <i>B</i>) <strong>(d) </strong>(<i>A</i> ∩ <i>B</i>) ×<i> A </i><strong>(g) </strong>𝒫(<i>A</i>) − 𝒫(<i>B</i>) <strong>(b) </strong>(<i>A</i> × <i>B</i>) ∪ (<i>B</i> × <i>B</i>) <strong>(e) </strong>(<i>A</i> × <i>B</i>) ∩ <i>B </i><strong>(h) </strong>𝒫(<i>A</i> ∩ <i>B</i>) <strong>(c) </strong>(<i>A</i> × <i>B</i>) − (<i>B</i> × <i>B</i>) <strong>(f) </strong>𝒫(<i>A</i>) ∩ 𝒫(<i>B</i>) <strong>(i) </strong>𝒫(<i>A</i>) × 𝒫(<i>B</i>)</li>
+<li class="ex" id="ex-1.5-5" value="5">Sketch the sets <i>X </i>= [1,3]×[1,3] and<i> Y </i>= [2,4]×[2,4] on the plane ℝ<sup>2</sup>. On separate drawings, shade in the sets <i>X</i> ∪ <i>Y </i>, <i>X</i> ∩ <i>Y </i>, <i>X</i> − <i>Y </i>and<i> Y</i> − <i>X</i>. (Hint: <i>X </i>and<i> Y </i>are Cartesian products of intervals. You may wish to review how you drew sets like [1,3] × [1,3] in the exercises for Section 1.2.)</li>
+<li class="ex" id="ex-1.5-6" value="6">Sketch the sets <i>X </i>= [−1,3]×[0,2] and<i> Y </i>= [0,3]×[1,4] on the plane ℝ<sup>2</sup>. On separate drawings, shade in the sets <i>X</i> ∪ <i>Y </i>, <i>X</i> ∩ <i>Y </i>, <i>X</i> − <i>Y </i>and<i> Y</i> − <i>X</i>.</li>
+<li class="ex" id="ex-1.5-7" value="7">Sketch the sets <i>X </i>= {(<i>x</i>,<i> y</i>) ∈ ℝ<sup>2 </sup>:<i> x</i><sup>2 </sup>+<i> y</i><sup>2 </sup>≤ 1} and <i>Y </i>= {(<i>x</i>,<i> y</i>) ∈ ℝ<sup>2 </sup>:<i> x</i> ≥ 0} on ℝ<sup>2</sup>. On separate drawings, shade in the sets <i>X</i> ∪ <i>Y </i>, <i>X</i> ∩ <i>Y </i>, <i>X</i> − <i>Y </i>and<i> Y</i> − <i>X</i>.</li>
+<li class="ex" id="ex-1.5-8" value="8">Sketch the sets <i>X </i>= {(<i>x</i>,<i> y</i>) ∈ ℝ<sup>2 </sup>:<i> x</i><sup>2 </sup>+<i> y</i><sup>2 </sup>≤ 1} and <i>Y </i>= {(<i>x</i>,<i> y</i>) ∈ ℝ<sup>2 </sup>: −1 ≤ <i>y</i> ≤ 0} on ℝ<sup>2</sup>. On separate drawings, shade in the sets <i>X</i> ∪ <i>Y </i>, <i>X</i> ∩ <i>Y </i>, <i>X</i> − <i>Y </i>and<i> Y</i> − <i>X</i>.</li>
+<li class="ex" id="ex-1.5-9" value="9">Is the statement (ℝ × ℤ) ∩ (ℤ × ℝ) = ℤ × ℤ true or false? What about the statement (ℝ × ℤ) ∪ (ℤ × ℝ) = ℝ × ℝ?</li>
+<li class="ex" id="ex-1.5-10" value="10">Do you think the statement (ℝ − ℤ) × ℕ = (ℝ × ℕ) − (ℤ × ℕ) is true, or false? Justify.</li>
+</ol>
+</div>
+</section>
+<section class="sec" id="s1-6" data-title="Complement">
+<h2><span class="num">1.6</span> Complement</h2>
+<p>This section introduces yet another set operation, called the<em> set complement</em>. The deﬁnition requires the idea of a<em> universal set</em>, which we now discuss.</p>
+<p>When dealing with a set, we almost always regard it as a subset of some larger set. For example, consider the set of prime numbers <i>P </i>= {2,3,5,7,11,13,...}. If asked to name some things that are <em>not </em>in <i>P</i>, we might mention some composite numbers like 4 or 6 or 423. It probably would not occur to us to say that Vladimir Putin is not in <i>P</i>. True, Vladimir Putin is not in <i>P</i>, but he lies entirely outside of the discussion of what is a prime number and what is not. We have an unstated assumption that</p>
+<p class="display"><i>P</i> ⊆ ℕ</p>
+<p>because ℕ is the most natural setting in which to discuss prime numbers. In this context, anything not in <i>P </i>should still be in ℕ. This larger set ℕ is called the<strong> universal set</strong> or<strong> universe</strong> for <i>P</i>.</p>
+<p>Almost every useful set in mathematics can be regarded as having some natural universal set. For instance, the unit circle is the set <i>C</i> = {(<i>x</i>,<i> y</i>) ∈ ℝ<sup>2 </sup>: <i>x</i><sup>2 </sup>+<i> y</i><sup>2 </sup>= 1}, and since all these points are in the plane ℝ<sup>2 </sup>it is natural to regard ℝ<sup>2 </sup>as the universal set for <i>C</i>. In the absence of speciﬁcs, if <i>A </i>is a set, then its universal set is often denoted as<i> U</i>. We are now ready to deﬁne the complement operation.</p>
+<p><strong>Deﬁnition 1.6 </strong>Let <i>A</i> be a set with a universal set<i> U</i>. The<strong> complement</strong> of <i>A</i>, denoted <img class="m" src="figs/m/ch01-0083.svg" alt="A" data-crop="31:128.8,634.2,138.8,647.9" style="height:13.7pt;vertical-align:-2.9pt">, is the set <img class="m" src="figs/m/ch01-0084.svg" alt="A" data-crop="31:191.7,634.2,201.6,647.9" style="height:13.7pt;vertical-align:-2.9pt"> =<i> U</i> − <i>A</i>.</p>
+<p class="lbl example"><strong>Example 1.10 </strong>If <i>P </i>is the set of prime numbers, then</p>
+<p class="display"><img class="m" src="figs/m/ch01-0085.svg" alt="P" data-crop="32:185.6,111.8,194.9,125.3" style="height:13.5pt;vertical-align:-3.3pt"> = ℕ − <i>P</i> = {1,4,6,8,9,10,12,...}.</p>
+<p>Thus <img class="m" src="figs/m/ch01-0086.svg" alt="P" data-crop="32:106.7,137.5,116.1,151.0" style="height:13.5pt;vertical-align:-3.0pt"> is the set of composite numbers and 1.</p>
+<p class="lbl example"><strong>Example 1.11 </strong>Let <i>A</i> = {(<i>x</i>, <i>x</i><sup>2</sup>) :<i> x</i> ∈ ℝ} be the graph of the equation <i>y</i> =<i> x</i><sup>2</sup>. Figure 1.6(a) shows <i>A </i>in its universal set ℝ<sup>2</sup>. The complement of <i>A </i>is <img class="m" src="figs/m/ch01-0087.svg" alt="A" data-crop="32:430.6,183.9,440.5,197.6" style="height:13.7pt;vertical-align:-2.6pt"> = ℝ<sup>2 </sup>− <i>A </i>= {(<i>x</i>,<i> y</i>) ∈ ℝ<sup>2 </sup>:<i> y</i> ≠<i> x</i><sup>2</sup>}, illustrated by the shaded area in Figure 1.6(b).</p>
+<figure><img src="figs/ch01-0088.svg" alt="Figure" style="width:106pt"></figure>
+<figure><img src="figs/ch01-0089.svg" alt="Figure" style="width:106pt"></figure>
+<p class="display">(a) (b)</p>
+<p class="caption"><strong>Figure 1.6. </strong>A set and its complement</p>
+<div class="exercises" data-for="1.6"><h3>Exercises for Section 1.6</h3>
+<ol class="ex-list">
+<li class="ex" id="ex-1.6-1" value="1">Let <i>A</i> = {4,3,6,7,1,9} and<i> B</i> = {5,6,8,4} have universal set<i> U</i> = {0,1,2,...,10}. Find: <strong>(a) </strong><img class="m" src="figs/m/ch01-0090.svg" alt="A" data-crop="32:108.6,421.7,117.8,434.4" style="height:12.7pt;vertical-align:-2.4pt"> <strong>(d) </strong><i>A</i> ∪ <img class="m" src="figs/m/ch01-0091.svg" alt="A" data-crop="32:245.5,421.7,254.7,434.4" style="height:12.7pt;vertical-align:-2.4pt"> <strong>(g) </strong><img class="m" src="figs/m/ch01-0092.svg" alt="A" data-crop="32:347.9,421.7,357.1,434.4" style="height:12.7pt;vertical-align:-2.4pt"> − <img class="m" src="figs/m/ch01-0093.svg" alt="B" data-crop="32:364.6,421.9,373.1,434.4" style="height:12.5pt;vertical-align:-2.4pt"> <strong>(b) </strong><img class="m" src="figs/m/ch01-0094.svg" alt="B" data-crop="32:109.0,438.4,117.6,450.9" style="height:12.5pt;vertical-align:-2.9pt"> <strong>(e) </strong><i>A</i> − <img class="m" src="figs/m/ch01-0095.svg" alt="A" data-crop="32:244.5,438.2,253.8,450.9" style="height:12.7pt;vertical-align:-2.9pt"> <strong>(h) </strong><img class="m" src="figs/m/ch01-0096.svg" alt="A" data-crop="32:348.6,437.4,357.9,450.1" style="height:12.7pt;vertical-align:-2.1pt"> ∩ <i>B</i> <strong>(c) </strong><i>A</i> ∩ <img class="m" src="figs/m/ch01-0097.svg" alt="A" data-crop="32:124.7,454.8,133.9,467.5" style="height:12.7pt;vertical-align:-2.5pt"> <strong>(f) </strong><i>A</i> − <img class="m" src="figs/m/ch01-0098.svg" alt="B" data-crop="32:242.7,454.9,251.3,467.5" style="height:12.5pt;vertical-align:-2.5pt"> <strong>(i) </strong><img class="m" src="figs/m/ch01-0099.svg" alt="A ∩B" data-crop="32:345.5,452.1,371.7,467.5" style="height:15.3pt;vertical-align:-2.5pt"></li>
+<li class="ex" id="ex-1.6-2" value="2">Let <i>A</i> = {0,2,4,6,8} and <i>B</i> = {1,3,5,7} have universal set<i> U</i> = {0,1,2,...,8}. Find: <strong>(a) </strong><img class="m" src="figs/m/ch01-0100.svg" alt="A" data-crop="32:108.6,487.8,117.8,500.5" style="height:12.7pt;vertical-align:-2.5pt"> <strong>(d) </strong><i>A</i> ∪ <img class="m" src="figs/m/ch01-0101.svg" alt="A" data-crop="32:245.5,487.8,254.7,500.5" style="height:12.7pt;vertical-align:-2.5pt"> <strong>(g) </strong><img class="m" src="figs/m/ch01-0102.svg" alt="A" data-crop="32:347.9,487.8,357.1,500.5" style="height:12.7pt;vertical-align:-2.5pt"> ∩ <img class="m" src="figs/m/ch01-0103.svg" alt="B" data-crop="32:364.6,488.0,373.1,500.5" style="height:12.5pt;vertical-align:-2.5pt"> <strong>(b) </strong><img class="m" src="figs/m/ch01-0104.svg" alt="B" data-crop="32:109.0,503.6,117.6,516.1" style="height:12.5pt;vertical-align:-3.1pt"> <strong>(e) </strong><i>A</i> − <img class="m" src="figs/m/ch01-0105.svg" alt="A" data-crop="32:244.5,503.4,253.8,516.1" style="height:12.7pt;vertical-align:-3.1pt"> <strong>(h) </strong><img class="m" src="figs/m/ch01-0106.svg" alt="A ∩B" data-crop="32:348.6,503.4,373.9,516.1" style="height:12.7pt;vertical-align:-3.1pt"> <strong>(c) </strong><i>A</i> ∩ <img class="m" src="figs/m/ch01-0107.svg" alt="A" data-crop="32:124.7,518.9,133.9,531.6" style="height:12.7pt;vertical-align:-2.6pt"> <strong>(f) </strong><img class="m" src="figs/m/ch01-0108.svg" alt="A ∪B" data-crop="32:226.0,518.9,251.3,531.6" style="height:12.7pt;vertical-align:-2.6pt"> <strong>(i) </strong><img class="m" src="figs/m/ch01-0109.svg" alt="A" data-crop="32:345.5,518.9,354.7,531.6" style="height:12.7pt;vertical-align:-2.6pt"> × <i>B</i></li>
+<li class="ex" id="ex-1.6-3" value="3">Sketch the set <i>X </i>= [1,3] × [1,2] on the plane ℝ<sup>2</sup>. On separate drawings, shade in the sets <img class="m" src="figs/m/ch01-0110.svg" alt="X" data-crop="32:127.6,548.2,137.4,560.7" style="height:12.5pt;vertical-align:-2.7pt"> and <img class="m" src="figs/m/ch01-0111.svg" alt="X" data-crop="32:158.7,548.2,168.5,560.7" style="height:12.5pt;vertical-align:-2.7pt"> ∩ ([0,2] × [0,3]).</li>
+<li class="ex" id="ex-1.6-4" value="4">Sketch the set <i>X </i>= [−1,3]×[0,2] on the plane ℝ<sup>2</sup>. On separate drawings, shade in the sets <img class="m" src="figs/m/ch01-0112.svg" alt="X" data-crop="32:127.6,576.3,137.4,588.8" style="height:12.5pt;vertical-align:-2.8pt"> and <img class="m" src="figs/m/ch01-0113.svg" alt="X" data-crop="32:158.7,576.3,168.5,588.8" style="height:12.5pt;vertical-align:-2.8pt"> ∩ ([−2,4] × [−1,3]).</li>
+<li class="ex" id="ex-1.6-5" value="5">Sketch the set <i>X </i>= {(<i>x</i>,<i> y</i>) ∈ ℝ<sup>2 </sup>: 1 ≤ <i>x</i><sup>2 </sup>+<i> y</i><sup>2 </sup>≤ 4} on the plane ℝ<sup>2</sup>. On a separate drawing, shade in the set <img class="m" src="figs/m/ch01-0114.svg" alt="X" data-crop="32:207.9,604.4,217.7,616.9" style="height:12.5pt;vertical-align:-2.9pt">.</li>
+<li class="ex" id="ex-1.6-6" value="6">Sketch the set <i>X </i>= {(<i>x</i>,<i> y</i>) ∈ ℝ<sup>2 </sup>:<i> y</i> &lt;<i> x</i><sup>2</sup>} on ℝ<sup>2</sup>. Shade in the set <img class="m" src="figs/m/ch01-0115.svg" alt="X" data-crop="32:364.6,619.9,374.4,632.4" style="height:12.5pt;vertical-align:-2.4pt">.</li>
+</ol>
+</div>
+</section>
+<section class="sec" id="s1-7" data-title="Venn Diagrams">
+<h2><span class="num">1.7</span> Venn Diagrams</h2>
+<p>In thinking about sets, it is sometimes helpful to draw informal, schematic diagrams of them. In doing this we often represent a set with a circle (or oval), which we regard as enclosing all the elements of the set. Such diagrams can illustrate how sets combine using various operations. For example, Figures 1.7(a–c) show two sets <i>A </i>and <i>B</i> that overlap in a middle region. The sets <i>A</i> ∪ <i>B</i>, <i>A</i> ∩ <i>B</i> and <i>A</i> − <i>B</i> are shaded. Such graphical representations of sets are called<strong> Venn diagrams</strong>, after their inventor, British logician John Venn, 1834–1923.</p>
+<figure><img src="figs/ch01-0116.svg" alt="Figure" style="width:289pt"></figure>
+<p class="display">(a) (b) (c)</p>
+<p class="caption"><strong>Figure 1.7. </strong>Venn diagrams for two sets</p>
+<p>Though you are unlikely to draw Venn diagrams as a part of a proof of any theorem, you will probably ﬁnd them to be useful “scratch work” devices that help you to understand how sets combine, and to develop strategies for proving certain theorems or solving certain problems. The remainder of this section uses Venn diagrams to explore how three sets can be combined using ∪ and ∩.</p>
+<p>Let’s begin with the set <i>A</i> ∪ <i>B</i> ∪ <i>C</i>. Our deﬁnitions suggest this should consist of all elements which are in one or more of the sets <i>A</i>, <i>B </i>and <i>C</i>. Figure 1.8(a) shows a Venn diagram for this. Similarly, we think of <i>A </i>∩<i>B</i>∩<i>C</i> as all elements common to each of <i>A</i>,<i> B</i> and<i> C</i>, so in Figure 1.8(b) the region belonging to all three sets is shaded.</p>
+<figure><img src="figs/ch01-0117.svg" alt="Figure" style="width:72pt"></figure>
+<figure><img src="figs/ch01-0118.svg" alt="Figure" style="width:73pt"></figure>
+<p class="display">(a) (b)</p>
+<p class="caption"><strong>Figure 1.8. </strong>Venn diagrams for three sets</p>
+<p>We can also think of <i>A</i> ∩ <i>B</i> ∩ <i>C </i>as the two-step operation (<i>A</i> ∩ <i>B</i>) ∩ <i>C</i>. In this expression the set <i>A</i> ∩ <i>B</i> is represented by the region common to both <i>A</i> and <i>B</i>, and when we intersect<em> this</em> with <i>C </i>we get Figure 1.8(b). This is a visual representation of the fact that <i>A</i> ∩ <i>B</i> ∩ <i>C</i> = (<i>A</i> ∩ <i>B</i>) ∩ <i>C</i>. Similarly, we have <i>A</i> ∩ <i>B</i> ∩ <i>C</i> = <i>A</i> ∩ (<i>B</i> ∩ <i>C</i>). Likewise, <i>A</i> ∪ <i>B</i> ∪ <i>C</i> = (<i>A</i> ∪ <i>B</i>) ∪ <i>C</i> = <i>A</i> ∪ (<i>B</i> ∪ <i>C</i>).</p>
+<p>Notice that in these examples, where the expression either contains only the symbol ∪ or only the symbol ∩, the placement of the parentheses is irrelevant, so we are free to drop them. It is analogous to the situations in algebra involving expressions (<i>a</i>+<i>b</i>)+<i>c</i> =<i> a</i>+(<i>b</i>+<i>c</i>) or (<i>a</i>·<i>b</i>)·<i>c</i> =<i> a</i>·(<i>b</i>·<i>c</i>). We tend to drop the parentheses and write simply <i>a </i>+<i> b</i> +<i> c </i>or <i>a </i>·<i> b</i> ·<i> c</i>. By contrast, in an expression like (<i>a</i>+ <i>b</i>)· <i>c</i> the parentheses are absolutely essential because (<i>a </i>+<i> b</i>) ·<i> c</i> and <i>a </i>+ (<i>b</i> ·<i> c</i>) are generally not equal.</p>
+<p>Now let’s use Venn diagrams to help us understand the expressions (<i>A</i> ∪ <i>B</i>) ∩ <i>C </i>and <i>A</i> ∪ (<i>B</i> ∩ <i>C</i>), which use a mix of ∪ and ∩. Figure 1.9 shows how to draw a Venn diagram for (<i>A</i> ∪ <i>B</i>) ∩ <i>C</i>. In the drawing on the left, the set <i>A</i> ∪ <i>B </i>is shaded with horizontal lines, while <i>C </i>is shaded with vertical lines. Thus the set (<i>A</i> ∪ <i>B</i>) ∩ <i>C </i>is represented by the cross-hatched region where <i>A</i> ∪ <i>B </i>and <i>C </i>overlap. The superﬂuous shadings are omitted in the drawing on the right showing the set (<i>A</i> ∪ <i>B</i>) ∩ <i>C</i>.</p>
+<figure><img src="figs/ch01-0119.svg" alt="Figure" style="width:83pt"></figure>
+<figure><img src="figs/ch01-0120.svg" alt="Figure" style="width:68pt"></figure>
+<p class="caption"><strong>Figure 1.9. </strong>How to make a Venn diagram for (<i>A</i> ∪ <i>B</i>) ∩ <i>C</i></p>
+<p>Now think about <i>A</i> ∪ (<i>B</i> ∩ <i>C</i>). In Figure 1.10 the set <i>A </i>is shaded with horizontal lines, and<i> B</i>∩<i>C</i> is shaded with vertical lines. The union <i>A</i>∪(<i>B</i>∩<i>C</i>) is represented by the totality of all shaded regions, as shown on the right.</p>
+<figure><img src="figs/ch01-0121.svg" alt="Figure" style="width:68pt"></figure>
+<figure><img src="figs/ch01-0122.svg" alt="Figure" style="width:68pt"></figure>
+<p class="caption"><strong>Figure 1.10. </strong>How to make a Venn diagram for <i>A</i> ∪ (<i>B</i> ∩ <i>C</i>)</p>
+<p>Compare the diagrams for (<i>A</i> ∪ <i>B</i>) ∩ <i>C </i>and <i>A</i> ∪ (<i>B</i> ∩ <i>C</i>) in Figures 1.9 and 1.10. The fact that the diagrams are diﬀerent indicates that (<i>A</i> ∪ <i>B</i>) ∩ <i>C</i> ≠ <i>A</i> ∪ (<i>B</i> ∩ <i>C</i>) in general. Thus an expression such as <i>A</i> ∪ <i>B</i> ∩ <i>C </i>is absolutely meaningless because we can’t tell whether it means (<i>A </i>∪<i>B</i>)∩<i>C</i> or <i>A </i>∪(<i>B </i>∩<i>C</i>). In summary, Venn diagrams have helped us understand the following.</p>
+<p><strong>Important Points:</strong></p>
+<p class="bullet">• If an expression involving sets uses only ∪, then parentheses are optional.</p>
+<p class="bullet">• If an expression involving sets uses only ∩, then parentheses are optional.</p>
+<p class="bullet">• If an expression uses both ∪ and ∩, then parentheses are<strong> essential</strong>.</p>
+<p>In the next section we will study types of expressions that use only ∪ or only ∩. These expressions will not require the use of parentheses.</p>
+<div class="exercises" data-for="1.7"><h3>Exercises for Section 1.7</h3>
+<ol class="ex-list">
+<li class="ex" id="ex-1.7-1" value="1">Draw a Venn diagram for <img class="m" src="figs/m/ch01-0123.svg" alt="A" data-crop="35:183.4,315.0,192.6,327.7" style="height:12.7pt;vertical-align:-2.7pt">, where <i>A </i>is a subset of a universal set<i> U</i>.</li>
+<li class="ex" id="ex-1.7-2" value="2">Draw a Venn diagram for <i>B</i> − <i>A</i>.</li>
+<li class="ex" id="ex-1.7-3" value="3">Draw a Venn diagram for (<i>A</i> − <i>B</i>) ∩ <i>C</i>.</li>
+<li class="ex" id="ex-1.7-4" value="4">Draw a Venn diagram for (<i>A</i> ∪ <i>B</i>) − <i>C</i>.</li>
+<li class="ex" id="ex-1.7-5" value="5">Draw Venn diagrams for <i>A </i>∪(<i>B</i>∩<i>C</i>) and (<i>A </i>∪<i>B</i>)∩(<i>A </i>∪<i>C</i>). Based on your drawings, do you think <i>A</i> ∪ (<i>B</i> ∩ <i>C</i>) = (<i>A</i> ∪ <i>B</i>) ∩ (<i>A</i> ∪ <i>C</i>)?</li>
+<li class="ex" id="ex-1.7-6" value="6">Draw Venn diagrams for <i>A </i>∩(<i>B</i>∪<i>C</i>) and (<i>A </i>∩<i>B</i>)∪(<i>A </i>∩<i>C</i>). Based on your drawings, do you think <i>A</i> ∩ (<i>B</i> ∪ <i>C</i>) = (<i>A</i> ∩ <i>B</i>) ∪ (<i>A</i> ∩ <i>C</i>)?</li>
+<li class="ex" id="ex-1.7-7" value="7">Suppose sets <i>A </i>and <i>B</i> are in a universal set<i> U</i>. Draw Venn diagrams for <img class="m" src="figs/m/ch01-0124.svg" alt="A ∩B" data-crop="35:400.4,433.4,425.6,446.1" style="height:12.7pt;vertical-align:-3.1pt"> and <img class="m" src="figs/m/ch01-0125.svg" alt="A" data-crop="35:84.2,445.9,93.4,458.6" style="height:12.7pt;vertical-align:-2.6pt"> ∪ <img class="m" src="figs/m/ch01-0126.svg" alt="B" data-crop="35:100.9,446.1,109.5,458.6" style="height:12.5pt;vertical-align:-2.6pt">. Based on your drawings, do you think it’s true that <img class="m" src="figs/m/ch01-0127.svg" alt="A ∩B" data-crop="35:351.2,445.9,376.4,458.6" style="height:12.7pt;vertical-align:-2.6pt"> = <img class="m" src="figs/m/ch01-0128.svg" alt="A" data-crop="35:387.0,445.9,396.2,458.6" style="height:12.7pt;vertical-align:-2.6pt"> ∪ <img class="m" src="figs/m/ch01-0129.svg" alt="B" data-crop="35:403.6,446.1,412.2,458.6" style="height:12.5pt;vertical-align:-2.6pt">?</li>
+<li class="ex" id="ex-1.7-8" value="8">Suppose sets <i>A </i>and <i>B</i> are in a universal set<i> U</i>. Draw Venn diagrams for <img class="m" src="figs/m/ch01-0130.svg" alt="A ∪B" data-crop="35:400.4,461.5,425.6,474.2" style="height:12.7pt;vertical-align:-2.2pt"> and <img class="m" src="figs/m/ch01-0131.svg" alt="A" data-crop="35:84.2,474.0,93.4,486.7" style="height:12.7pt;vertical-align:-2.7pt"> ∩ <img class="m" src="figs/m/ch01-0132.svg" alt="B" data-crop="35:100.9,474.2,109.5,486.7" style="height:12.5pt;vertical-align:-2.7pt">. Based on your drawings, do you think it’s true that <img class="m" src="figs/m/ch01-0133.svg" alt="A ∪B" data-crop="35:351.2,474.0,376.4,486.7" style="height:12.7pt;vertical-align:-2.7pt"> = <img class="m" src="figs/m/ch01-0134.svg" alt="A" data-crop="35:387.0,474.0,396.2,486.7" style="height:12.7pt;vertical-align:-2.7pt"> ∩ <img class="m" src="figs/m/ch01-0135.svg" alt="B" data-crop="35:403.6,474.2,412.2,486.7" style="height:12.5pt;vertical-align:-2.7pt">?</li>
+<li class="ex" id="ex-1.7-9" value="9">Draw a Venn diagram for (<i>A</i> ∩ <i>B</i>) − <i>C</i>.</li>
+<li class="ex" id="ex-1.7-10" value="10">Draw a Venn diagram for (<i>A</i> − <i>B</i>) ∪ <i>C</i>. Following are Venn diagrams for expressions involving sets <i>A</i>, <i>B</i> and <i>C</i>. Write a corresponding expression. <figure><img src="figs/ch01-0136.svg" alt="Figure" style="width:61pt"></figure> <figure><img src="figs/ch01-0137.svg" alt="Figure" style="width:61pt"></figure> <figure><img src="figs/ch01-0138.svg" alt="Figure" style="width:61pt"></figure> <figure><img src="figs/ch01-0139.svg" alt="Figure" style="width:61pt"></figure></li>
+<li class="ex" id="ex-1.7-11" value="11"></li>
+<li class="ex" id="ex-1.7-12" value="12"></li>
+<li class="ex" id="ex-1.7-13" value="13"></li>
+<li class="ex" id="ex-1.7-14" value="14"></li>
+</ol>
+</div>
+</section>
+<section class="sec" id="s1-8" data-title="Indexed Sets">
+<h2><span class="num">1.8</span> Indexed Sets</h2>
+<p>When a mathematical problem involves lots of sets, it is often convenient to keep track of them by using subscripts (also called indices). Thus instead of denoting three sets as <i>A</i>, <i>B</i> and <i>C</i>, we might instead write them as <i>A</i><sub>1</sub>, <i>A</i><sub>2</sub> and <i>A</i>3. These are called<strong> indexed sets</strong>.</p>
+<p>Although we deﬁned union and intersection to be operations that combine two sets, you by now have no diﬃculty forming unions and intersections of three or more sets. (For instance, in the previous section we drew Venn diagrams for the intersection and union of three sets.) But let’s take a moment to write down careful deﬁnitions. Given sets <i>A</i>1,<i> A</i>2,...,<i> An</i>, the set <i>A</i><sub>1</sub> ∪ <i>A</i><sub>2</sub> ∪ <i>A</i><sub>3</sub> ∪··· ∪ <i>A</i><sub><i>n </i></sub>consists of everything that is in <em>at least one </em>of the sets <i>A</i><sub><i>i</i></sub>. Likewise <i>A</i><sub>1</sub>∩ <i>A</i><sub>2</sub>∩ <i>A</i><sub>3</sub>∩···∩ <i>A</i><sub><i>n</i></sub> consists of everything that is common to<em> all</em> of the sets <i>Ai</i>. Here is a careful deﬁnition.</p>
+<p><strong>Deﬁnition 1.7 </strong>Suppose <i>A</i>1,<i> A</i>2,...,<i> An </i>are sets. Then</p>
+<p><i>A</i><sub>1</sub> ∪ <i>A</i><sub>2</sub> ∪ <i>A</i><sub>3</sub> ∪···∪ <i>A</i><sub><i>n </i></sub>= {<i>x </i>: <i>x</i> ∈ <i>A</i><sub><i>i </i></sub>for<em> at least one set </em><i>A</i><sub><i>i</i></sub>, for 1 ≤ <i>i</i> ≤ <i>n</i>},</p>
+<p><i>A</i><sub>1</sub> ∩ <i>A</i><sub>2</sub> ∩ <i>A</i><sub>3</sub> ∩···∩ <i>A</i><sub><i>n </i></sub>= {<i>x </i>: <i>x</i> ∈ <i>A</i><sub><i>i </i></sub>for<em> every</em> set <i>A</i><sub><i>i</i></sub>, for 1 ≤ <i>i</i> ≤ <i>n</i>}.</p>
+<p>But if the number <i>n</i> of sets is large, these expressions can get messy. To overcome this, we now develop some notation akin to sigma notation. You already know that sigma notation is a convenient symbolism for expressing sums of many numbers. Given numbers <i>a</i>1, <i>a</i>2, <i>a</i>3,..., <i>an</i>, then</p>
+<p class="display"><i>n</i></p>
+<p class="display"><img class="m" src="figs/m/ch01-0140.svg" alt="X" data-crop="36:198.1,428.6,210.8,440.2" style="height:11.6pt;vertical-align:-1.2pt"> <i>a</i><sub><i>i</i></sub> =<i> a</i><sub>1</sub> +<i> a</i><sub>2</sub> +<i> a</i><sub>3</sub> +···+<i> a</i><sub><i>n</i></sub>.</p>
+<p class="display"><i>i</i>=1</p>
+<p>Even if the list of numbers is inﬁnite, the sum</p>
+<p class="display">∞</p>
+<p class="display"><img class="m" src="figs/m/ch01-0141.svg" alt="X" data-crop="36:190.2,490.8,202.9,502.4" style="height:11.6pt;vertical-align:-1.4pt"> <i>a</i><sub><i>i</i></sub> =<i> a</i><sub>1</sub> +<i> a</i><sub>2</sub> +<i> a</i><sub>3</sub> +···+<i> a</i><sub><i>i</i></sub> +···</p>
+<p class="display"><i>i</i>=1</p>
+<p>is often still meaningful. The notation we are about to introduce is very similar to this. Given sets <i>A</i>1,<i> A</i>2,<i> A</i>3, ..., <i>An</i>, we deﬁne</p>
+<p><i>n n</i></p>
+<p><img class="m" src="figs/m/ch01-0142.svg" alt="[" data-crop="36:91.0,569.8,103.2,581.5" style="height:11.6pt;vertical-align:-1.5pt"> <i>A</i><sub><i>i </i></sub>= <i>A</i><sub>1</sub> ∪ <i>A</i><sub>2</sub> ∪ <i>A</i><sub>3</sub> ∪···∪ <i>A</i><sub><i>n </i></sub>and <img class="m" src="figs/m/ch01-0143.svg" alt="\" data-crop="36:300.6,569.8,312.8,581.5" style="height:11.6pt;vertical-align:-1.5pt"> <i>A</i><sub><i>i </i></sub>= <i>A</i><sub>1</sub> ∩ <i>A</i><sub>2</sub> ∩ <i>A</i><sub>3</sub> ∩···∩ <i>A</i><sub><i>n</i></sub>.</p>
+<p><i>i</i>=1 <i>i</i>=1</p>
+<p class="lbl example"><strong>Example 1.12 </strong>Suppose <i>A</i>1 = {0,2,5}, <i>A</i>2 = {1,2,5} and <i>A</i>3 = {2,5,7}. Then 3 3 <img class="m" src="figs/m/ch01-0144.svg" alt="[" data-crop="36:79.6,631.8,91.8,643.4" style="height:11.6pt;vertical-align:-1.4pt"> <i>A</i><sub><i>i</i></sub> =<i> A</i><sub>1</sub> ∪ <i>A</i><sub>2</sub> ∪ <i>A</i><sub>3</sub> = {0,1,2,5,7} and <img class="m" src="figs/m/ch01-0145.svg" alt="\" data-crop="36:285.1,631.8,297.3,643.4" style="height:11.6pt;vertical-align:-1.4pt"> <i>A</i><sub><i>i</i></sub> =<i> A</i><sub>1</sub> ∩ <i>A</i><sub>2</sub> ∩ <i>A</i><sub>3</sub> = {2,5}. <i>i</i>=1 <i>i</i>=1 This notation is also used when the list of sets <i>A</i>1, <i>A</i>2, <i>A</i>3, <i>A</i>4,... is inﬁnite:</p>
+<p>∞ <img class="m" src="figs/m/ch01-0146.svg" alt="[" data-crop="37:60.8,118.1,73.0,129.7" style="height:11.6pt;vertical-align:-1.7pt"> <i>A</i><sub><i>i </i></sub>= <i>A</i><sub>1</sub> ∪ <i>A</i><sub>2</sub> ∪ <i>A</i><sub>3</sub> ∪··· = {<i>x</i> : <i>x</i> ∈ <i>A</i><sub><i>i </i></sub>for at least one set <i>A</i><sub><i>i </i></sub>with 1 ≤ <i>i</i>}. <i>i</i>=1</p>
+<p>∞ <img class="m" src="figs/m/ch01-0147.svg" alt="\" data-crop="37:60.8,152.0,73.0,163.6" style="height:11.6pt;vertical-align:-1.6pt"> <i>A</i><sub><i>i </i></sub>= <i>A</i><sub>1</sub> ∩ <i>A</i><sub>2</sub> ∩ <i>A</i><sub>3</sub> ∩··· = {<i>x</i> : <i>x</i> ∈ <i>A</i><sub><i>i </i></sub>for every set <i>A</i><sub><i>i </i></sub>with 1 ≤ <i>i</i>}. <i>i</i>=1</p>
+<p class="lbl example"><strong>Example 1.13 </strong>This example involves the following inﬁnite list of sets. <i>A</i><sub>1</sub> = { − 1,0,1}, <i>A</i><sub>2</sub> = { − 2,0,2}, <i>A</i><sub>3</sub> = { − 3,0,3}, ··· , <i>A</i><sub><i>i</i></sub> = { − <i>i</i>,0,<i> i</i>}, ···</p>
+<p class="display">∞ ∞</p>
+<p>Observe that <img class="m" src="figs/m/ch01-0148.svg" alt="[" data-crop="37:124.7,232.5,136.9,244.1" style="height:11.6pt;vertical-align:-1.1pt"> <i>Ai</i> = ℤ, and <img class="m" src="figs/m/ch01-0149.svg" alt="\" data-crop="37:198.7,232.5,211.0,244.1" style="height:11.6pt;vertical-align:-1.1pt"> <i>Ai</i> = {0}.</p>
+<p class="display"><i>i</i>=1 <i>i</i>=1</p>
+<p>Here is a useful twist on our new notation. We can write</p>
+<p class="display">3</p>
+<p class="display"><img class="m" src="figs/m/ch01-0150.svg" alt="[" data-crop="37:191.6,293.1,203.9,304.7" style="height:11.6pt;vertical-align:-1.7pt"> <i>A</i><sub><i>i </i></sub>= <img class="m" src="figs/m/ch01-0151.svg" alt="[" data-crop="37:250.5,293.1,262.7,304.7" style="height:11.6pt;vertical-align:-1.7pt"> <i>A</i><sub><i>i</i></sub>,</p>
+<p class="display"><i>i</i>=1 <i>i</i>∈{1,2,3}</p>
+<p>which is understood to be the union of the sets <i>Ai </i>for <i>i</i> = 1,2,3. Likewise:</p>
+<p class="display">3</p>
+<p class="display"><img class="m" src="figs/m/ch01-0152.svg" alt="\" data-crop="37:190.1,350.8,202.3,362.4" style="height:11.6pt;vertical-align:-1.4pt"> <i>A</i><sub><i>i </i></sub>= <img class="m" src="figs/m/ch01-0153.svg" alt="\" data-crop="37:251.8,350.8,264.1,362.4" style="height:11.6pt;vertical-align:-1.4pt"> <i>A</i><sub><i>i</i></sub></p>
+<p class="display"><i>i</i>=1 <i>i</i>∈{1,2,3}</p>
+<p class="display">∞</p>
+<p class="display"><img class="m" src="figs/m/ch01-0154.svg" alt="[" data-crop="37:190.1,383.1,202.3,394.7" style="height:11.6pt;vertical-align:-1.7pt"> <i>A</i><sub><i>i </i></sub>= <img class="m" src="figs/m/ch01-0155.svg" alt="[" data-crop="37:251.8,383.1,264.1,394.7" style="height:11.6pt;vertical-align:-1.7pt"> <i>A</i><sub><i>i</i></sub></p>
+<p class="display"><i>i</i>=1 <i>i</i>∈ℕ</p>
+<p class="display">∞</p>
+<p class="display"><img class="m" src="figs/m/ch01-0156.svg" alt="\" data-crop="37:190.1,414.0,202.3,425.7" style="height:11.6pt;vertical-align:-1.7pt"> <i>A</i><sub><i>i </i></sub>= <img class="m" src="figs/m/ch01-0157.svg" alt="\" data-crop="37:251.8,414.0,264.1,425.7" style="height:11.6pt;vertical-align:-1.7pt"> <i>A</i><sub><i>i</i></sub></p>
+<p class="display"><i>i</i>=1 <i>i</i>∈ℕ</p>
+<p>Here we are taking the union or intersection of a collection of sets <i>Ai </i>where <i>i</i> is an element of some set, be it {1,2,3} or ℕ. In general, the way this works is that we will have a collection of sets <i>A</i><sub><i>i </i></sub>for <i>i</i> ∈ <i>I</i>, where <i>I </i>is the set of possible subscripts. The set <i>I </i>is called an<strong> index set</strong>.</p>
+<p>It is important to realize that the set <i>I </i>need not even consist of integers. (We could subscript with letters or real numbers, etc.) Since we are programmed to think of <i>i </i>as an integer, let’s make a slight notational change: Use <i>α</i>, not <i>i</i>, to stand for an element of <i>I</i>. Thus we are dealing with a collection of sets <i>Aα </i>for <i>α</i> ∈ <i>I</i>. This leads to the following deﬁnition.</p>
+<p><strong>Deﬁnition 1.8 </strong>If <i>A</i><sub><i>α </i></sub>is a set for every <i>α</i> in some index set <i>I</i> ≠ ∅, then</p>
+<p class="display"><img class="m" src="figs/m/ch01-0158.svg" alt="[" data-crop="37:103.2,603.6,115.5,615.3" style="height:11.6pt;vertical-align:-1.3pt"> <i>A</i><sub><i>α </i></sub>= {<i>x </i>: <i>x</i> ∈ <i>A</i><sub><i>α </i></sub>for at least one set <i>A</i><sub><i>α </i></sub>with <i>α</i> ∈ <i>I</i>}</p>
+<p class="display"><i>α</i>∈<i>I</i></p>
+<p class="display"><img class="m" src="figs/m/ch01-0159.svg" alt="\" data-crop="37:103.2,627.9,115.5,639.6" style="height:11.6pt;vertical-align:-1.6pt"> <i>A</i><sub><i>α </i></sub>= {<i>x </i>: <i>x</i> ∈ <i>A</i><sub><i>α </i></sub>for every set <i>A</i><sub><i>α </i></sub>with <i>α</i> ∈ <i>I</i>}.</p>
+<p class="display"><i>α</i>∈<i>I</i></p>
+<p class="lbl example"><strong>Example 1.14 </strong>In this example, all sets <i>Aα </i>are all subsets of the plane ℝ<sup>2</sup>. Each <i>α</i> belongs to the index set <i>I</i> = [0,2] = {<i>x</i> ∈ ℝ : 0 ≤ <i>x</i> ≤ 2}, which is the set of all real numbers between 0 and 2. For each number<i> α</i> ∈ <i>I</i>, deﬁne <i>A</i><sub><i>α </i></sub>to be the set <i>A</i><sub><i>α</i></sub> = [<i>α</i>,2] × [0,<i>α</i>], which is the rectangle on the <i>xy</i>-plane whose base runs from <i>α</i> to 2 on the <i>x</i>-axis, and whose height is <i>α</i>. Some of these are shown shaded below. (The dotted diagonal line <i>y</i> =<i> x</i> is not a part of any of the sets, but is shown for clarity, as the upper left corner of each <i>A</i><sub><i>α </i></sub>touches it.) Note that these sets are not indexed with just integers. For example, as <img class="m" src="figs/m/ch01-0160.svg" alt="√2" data-crop="38:78.4,191.0,94.0,213.4" style="height:22.4pt;vertical-align:-2.4pt"> ∈ <i>I</i>, there is a set <i>A</i><img class="m" src="figs/m/ch01-0161.svg" alt="√2" data-crop="38:189.7,199.2,201.9,216.5" style="height:17.3pt;vertical-align:-5.5pt">, which is shown below on the right.</p>
+<figure><img src="figs/ch01-0162.svg" alt="Figure" style="width:82pt"></figure>
+<figure><img src="figs/ch01-0163.svg" alt="Figure" style="width:82pt"></figure>
+<figure><img src="figs/ch01-0164.svg" alt="Figure" style="width:82pt"></figure>
+<figure><img src="figs/ch01-0165.svg" alt="Figure" style="width:82pt"></figure>
+<p>Note that <i>A</i><sub>0</sub> = [0,2] × [0,0] = [0,2] × {0} is the interval [0,2] on the <i>x</i>-axis (a “ﬂat” rectangle). Also, <i>A</i>2 = [2,2] × [0,2] = {2} × [0,2] is the vertical side of the dotted triangle in the above pictures.</p>
+<p>Now consider the inﬁnite union <img class="m" src="figs/m/ch01-0166.svg" alt="[" data-crop="38:258.3,353.9,270.5,365.5" style="height:11.6pt;vertical-align:-1.5pt"> <i>A</i><sub><i>α</i></sub>. It is the shaded triangle shown</p>
+<p class="display"><i>α</i>∈<i>I</i></p>
+<p>below, because any point (<i>x</i>,<i> y</i>) on this triangle belongs to the set <i>Ax</i>, and is therefore in the union. (And any point not on the triangle is not in any <i>Ax</i>.)</p>
+<figure><img src="figs/ch01-0167.svg" alt="Figure" style="width:85pt"></figure>
+<p>Now let’s work out the intersection <img class="m" src="figs/m/ch01-0168.svg" alt="\" data-crop="38:272.1,502.7,284.3,514.4" style="height:11.6pt;vertical-align:-1.4pt"> <i>A</i><sub><i>α</i></sub>. Notice that the point (2,0) on</p>
+<p class="display"><i>α</i>∈<i>I</i></p>
+<p>the <i>x</i>-axis is the lower right corner of any set <i>A</i><sub><i>α</i></sub>, so (2,0) ∈ <i>A</i><sub><i>α </i></sub>for any <i>α</i> ∈ <i>I</i>. Therefore the point (2,0) is in the intersection of all the <i>Aα</i>. But any<em> other</em> point (<i>x</i>,<i> y</i>) ≠ (2,0) on the triangle does not belong to all of the sets <i>A</i><sub><i>α</i></sub>. The reason is that if <i>x</i> &lt; 2, then (<i>x</i>,<i> y</i>) ∉ <i>A</i><sub><i>α </i></sub>for any <i>x</i> &lt;<i> α</i> ≤ 2. (Check this.) And if <i>x</i> = 2, then (<i>x</i>,<i> y</i>) ∉ <i>A</i><sub><i>α </i></sub>for any 0 &lt;<i> α</i> &lt;<i> y</i>. Consequently</p>
+<p class="display"><img class="m" src="figs/m/ch01-0169.svg" alt="\" data-crop="38:228.6,605.8,240.8,617.5" style="height:11.6pt;vertical-align:-1.5pt"> <i>A</i><sub><i>α</i></sub> = {(2,0)}.</p>
+<p class="display"><i>α</i>∈<i>I</i></p>
+<p>This intersection consists of only one element, the point (2,0).</p>
+<p class="lbl example"><strong>Example 1.15 </strong>Here our sets are indexed by ℝ<sup>2</sup>. For any (<i>a</i>, <i>b</i>) ∈ ℝ<sup>2</sup>, let<i> P</i><sub>(</sub><sub><i>a</i></sub><sub>,</sub><sub><i>b</i></sub><sub>)</sub> be the following subset of ℝ<sup>3</sup>:</p>
+<p class="display"><i>P</i>(<i>a</i>,<i>b</i>) = {(<i>x</i>,<i> y</i>,<i> z</i>) ∈ ℝ<sup>3 </sup>: <i>ax </i>+<i> by</i> = 0}.</p>
+<p>In words, given a point (<i>a</i>, <i>b</i>) ∈ ℝ<sup>2</sup>, the corresponding set <i>P</i><sub>(</sub><sub><i>a</i></sub><sub>,</sub><sub><i>b</i></sub><sub>) </sub>consists of all points (<i>x</i>,<i> y</i>,<i> z</i>) in ℝ<sup>3 </sup>that satisfy the equation <i>ax </i>+<i> by</i> = 0. From previous math courses you will recognize this as a plane in ℝ<sup>3</sup>, that is,<i> P</i><sub>(</sub><sub><i>a</i></sub><sub>,</sub><sub><i>b</i></sub><sub>)</sub> is a plane in ℝ<sup>3</sup>. Moreover, since any point (0,0,<i> z</i>) on the <i>z</i>-axis automatically satisﬁes <i>ax </i>+<i> by</i> = 0, each <i>P</i><sub>(</sub><sub><i>a</i></sub><sub>,</sub><sub><i>b</i></sub><sub>) </sub>contains the <i>z</i>-axis.</p>
+<p>Figure 1.11 (left) shows the set <i>P</i>(1,2) = {(<i>x</i>,<i> y</i>,<i> z</i>) ∈ ℝ<sup>3 </sup>: <i>x </i>+ 2<i>y</i> = 0}. It is the vertical plane that intersects the <i>xy</i>-plane at the line <i>x </i>+ 2<i>y</i> = 0.</p>
+<figure><img src="figs/ch01-0170.svg" alt="Figure" style="width:147pt"></figure>
+<figure><img src="figs/ch01-0171.svg" alt="Figure" style="width:147pt"></figure>
+<p class="caption"><strong>Figure 1.11. </strong>The sets <i>P</i><sub>(</sub><sub><i>a</i></sub><sub>,</sub><sub><i>b</i></sub><sub>) </sub>are vertical planes containing the <i>z</i>-axis.</p>
+<p>For any point (<i>a</i>, <i>b</i>) ∈ ℝ<sup>2 </sup>with (<i>a</i>, <i>b</i>) ≠ (0,0), we can visualize <i>P</i><sub>(</sub><sub><i>a</i></sub><sub>,</sub><sub><i>b</i></sub><sub>) </sub>as the vertical plane that cuts the <i>xy</i>-plane at the line <i>ax</i> +<i> by</i> = 0. Figure 1.11 (right) shows a few of the <i>P</i><sub>(</sub><sub><i>a</i></sub><sub>,</sub><sub><i>b</i></sub><sub>)</sub>. Since any two such planes intersect along the<i> z</i>-axis, and because the<i> z</i>-axis is a subset of every<i> P</i><sub>(</sub><sub><i>a</i></sub><sub>,</sub><sub><i>b</i></sub><sub>)</sub>, it is immediately clear that</p>
+<p class="display"><img class="m" src="figs/m/ch01-0172.svg" alt="\" data-crop="39:139.6,517.2,151.8,528.8" style="height:11.6pt;vertical-align:-1.8pt"> <i>P</i><sub>(</sub><sub><i>a</i></sub><sub>,</sub><sub><i>b</i></sub><sub>) </sub>= {(0,0,<i> z</i>) : <i>z</i> ∈ ℝ} = “the <i>z</i>-axis”.</p>
+<p class="display">(<i>a</i>,<i>b</i>)∈ℝ<sup>2</sup></p>
+<p>For the union, note that any given point (<i>a</i>, <i>b</i>,<i> c</i>) ∈ ℝ<sup>3 </sup>belongs to the set <i>P</i><sub>(−</sub><sub><i>b</i></sub><sub>,</sub><sub><i>a</i></sub><sub>) </sub>because (<i>x</i>,<i> y</i>,<i> z</i>) = (<i>a</i>, <i>b</i>,<i> c</i>) satisﬁes the equation −<i>bx </i>+<i> ay</i> = 0. (In fact, any (<i>a</i>, <i>b</i>,<i> c</i>) belongs to the special set <i>P</i><sub>(0,0)</sub> = ℝ<sup>3</sup>, which is the only <i>P</i><sub>(</sub><sub><i>a</i></sub><sub>,</sub><sub><i>b</i></sub><sub>) </sub>that is not a plane.) Since any point in ℝ<sup>3 </sup>belongs to some <i>P</i>(<i>a</i>,<i>b</i>) we have</p>
+<p class="display"><img class="m" src="figs/m/ch01-0173.svg" alt="[" data-crop="39:207.1,616.1,219.3,627.8" style="height:11.6pt;vertical-align:-1.8pt"> <i>P</i><sub>(</sub><sub><i>a</i></sub><sub>,</sub><sub><i>b</i></sub><sub>) </sub>= ℝ<sup>3</sup>.</p>
+<p class="display">(<i>a</i>,<i>b</i>)∈ℝ<sup>2</sup></p>
+<div class="exercises" data-for="1.8"><h3>Exercises for Section 1.8</h3>
+<ol class="ex-list">
+<li class="ex" id="ex-1.8-1" value="1">Suppose <i>A</i>1 = {<i>a</i>, <i>b</i>, <i>d</i>,<i> e</i>,<i> g</i>,<i> f </i>}, <i>A</i>2 = {<i>a</i>, <i>b</i>,<i> c</i>, <i>d</i>}, <i>A</i>3 = {<i>b</i>, <i>d</i>,<i>a</i>} and <i>A</i>4 = {<i>a</i>, <i>b</i>, <i>h</i>}. 4 4 <strong>(a) </strong><img class="m" src="figs/m/ch01-0174.svg" alt="[" data-crop="40:113.1,140.6,124.4,151.3" style="height:10.8pt;vertical-align:-1.3pt"> <i>A</i><sub><i>i</i></sub> = <strong>(b) </strong><img class="m" src="figs/m/ch01-0175.svg" alt="\" data-crop="40:292.9,140.6,304.2,151.3" style="height:10.8pt;vertical-align:-1.3pt"> <i>A</i><sub><i>i</i></sub> = <i>i</i>=1 <i>i</i>=1 <img class="m" src="figs/m/ch01-0176.svg" alt="" data-crop="40:130.5,166.9,139.7,177.7" style="height:10.8pt;vertical-align:-2.7pt"> <i>A</i>1 = {0,2,4,8,10,12,14,16,18,20,22,24},</li>
+<li class="ex" id="ex-1.8-2" value="2">Suppose <img class="m" src="figs/m/ch01-0177.svg" alt="" data-crop="40:130.5,175.2,139.7,185.9" style="height:10.8pt;vertical-align:-0.0pt"> <i>A</i><sub>2 </sub>= {0,3,6,9,12,15,18,21,24}, <img class="m" src="figs/m/ch01-0178.svg" alt="" data-crop="40:130.5,191.7,139.7,202.4" style="height:10.8pt;vertical-align:-2.4pt"> <i>A</i>3 = {0,4,8,12,16,20,24}. 3 3 <strong>(a) </strong><img class="m" src="figs/m/ch01-0179.svg" alt="[" data-crop="40:113.1,211.7,124.4,222.5" style="height:10.8pt;vertical-align:-1.5pt"> <i>A</i><sub><i>i</i></sub> = <strong>(b) </strong><img class="m" src="figs/m/ch01-0180.svg" alt="\" data-crop="40:292.9,211.7,304.2,222.5" style="height:10.8pt;vertical-align:-1.5pt"> <i>A</i><sub><i>i</i></sub> = <i>i</i>=1 <i>i</i>=1</li>
+<li class="ex" id="ex-1.8-3" value="3">For each <i>n</i> ∈ ℕ, let <i>An</i> = {0,1,2,3,..., <i>n</i>}. <strong>(a) </strong><img class="m" src="figs/m/ch01-0181.svg" alt="[" data-crop="40:113.3,255.8,124.6,266.5" style="height:10.8pt;vertical-align:-1.5pt"> <i>A</i><sub><i>i</i></sub> = <strong>(b) </strong><img class="m" src="figs/m/ch01-0182.svg" alt="\" data-crop="40:293.2,255.8,304.5,266.5" style="height:10.8pt;vertical-align:-1.5pt"> <i>A</i><sub><i>i</i></sub> = <i>i</i>∈ℕ <i>i</i>∈ℕ</li>
+<li class="ex" id="ex-1.8-4" value="4">For each <i>n</i> ∈ ℕ, let <i>An</i> = { − 2<i>n</i>,0,2<i>n</i>}. <strong>(a) </strong><img class="m" src="figs/m/ch01-0183.svg" alt="[" data-crop="40:113.3,299.8,124.6,310.6" style="height:10.8pt;vertical-align:-1.6pt"> <i>A</i><sub><i>i</i></sub> = <strong>(b) </strong><img class="m" src="figs/m/ch01-0184.svg" alt="\" data-crop="40:293.2,299.8,304.5,310.6" style="height:10.8pt;vertical-align:-1.6pt"> <i>A</i><sub><i>i</i></sub> = <i>i</i>∈ℕ <i>i</i>∈ℕ</li>
+<li class="ex" id="ex-1.8-5" value="5"><strong>(a) </strong><img class="m" src="figs/m/ch01-0185.svg" alt="[" data-crop="40:113.3,327.3,124.6,338.1" style="height:10.8pt;vertical-align:-1.1pt">[<i>i</i>,<i> i</i> + 1] = <strong>(b) </strong><img class="m" src="figs/m/ch01-0186.svg" alt="\" data-crop="40:293.2,327.3,304.5,338.1" style="height:10.8pt;vertical-align:-1.1pt">[<i>i</i>,<i> i</i> + 1] = <i>i</i>∈ℕ <i>i</i>∈ℕ</li>
+<li class="ex" id="ex-1.8-6" value="6"><strong>(a) </strong><img class="m" src="figs/m/ch01-0187.svg" alt="[" data-crop="40:113.3,354.8,124.6,365.6" style="height:10.8pt;vertical-align:-1.6pt">[0,<i> i</i> + 1] = <strong>(b) </strong><img class="m" src="figs/m/ch01-0188.svg" alt="\" data-crop="40:293.2,354.8,304.5,365.6" style="height:10.8pt;vertical-align:-1.6pt">[0,<i> i</i> + 1] = <i>i</i>∈ℕ <i>i</i>∈ℕ</li>
+<li class="ex" id="ex-1.8-7" value="7"><strong>(a) </strong><img class="m" src="figs/m/ch01-0189.svg" alt="[" data-crop="40:113.3,382.4,124.6,393.1" style="height:10.8pt;vertical-align:-1.1pt"> ℝ × [<i>i</i>,<i> i</i> + 1] = <strong>(b) </strong><img class="m" src="figs/m/ch01-0190.svg" alt="\" data-crop="40:293.2,382.4,304.5,393.1" style="height:10.8pt;vertical-align:-1.1pt"> ℝ × [<i>i</i>,<i> i</i> + 1] = <i>i</i>∈ℕ <i>i</i>∈ℕ</li>
+<li class="ex" id="ex-1.8-8" value="8"><strong>(a) </strong><img class="m" src="figs/m/ch01-0191.svg" alt="[" data-crop="40:113.9,409.9,125.2,420.6" style="height:10.8pt;vertical-align:-1.6pt"> {<i>α</i>} × [0,1] = <strong>(b) </strong><img class="m" src="figs/m/ch01-0192.svg" alt="\" data-crop="40:293.8,409.9,305.1,420.6" style="height:10.8pt;vertical-align:-1.6pt"> {<i>α</i>} × [0,1] = <i>α</i>∈ℝ <i>α</i>∈ℝ</li>
+<li class="ex" id="ex-1.8-9" value="9"><strong>(a) </strong><img class="m" src="figs/m/ch01-0193.svg" alt="[" data-crop="40:116.3,437.1,127.6,447.9" style="height:10.8pt;vertical-align:-0.9pt"> <i>X </i>= <strong>(b) </strong><img class="m" src="figs/m/ch01-0194.svg" alt="\" data-crop="40:296.2,437.1,307.5,447.9" style="height:10.8pt;vertical-align:-0.9pt"> <i>X </i>= <i>X</i>∈𝒫(ℕ) <i>X</i>∈𝒫(ℕ)</li>
+<li class="ex" id="ex-1.8-10" value="10"><strong>(a) </strong><img class="m" src="figs/m/ch01-0195.svg" alt="[" data-crop="40:118.4,466.0,129.7,476.7" style="height:10.8pt;vertical-align:-1.7pt"> [<i>x</i>,1] × [0, <i>x</i><sup>2</sup>] = <strong>(b) </strong><img class="m" src="figs/m/ch01-0196.svg" alt="\" data-crop="40:298.3,466.0,309.6,476.7" style="height:10.8pt;vertical-align:-1.7pt"> [<i>x</i>,1] × [0, <i>x</i><sup>2</sup>] = <i>x</i>∈[0,1] <i>x</i>∈[0,1]</li>
+<li class="ex" id="ex-1.8-11" value="11">Is <img class="m" src="figs/m/ch01-0197.svg" alt="\" data-crop="40:102.2,494.8,113.5,505.6" style="height:10.8pt;vertical-align:-1.6pt"> <i>A</i><sub><i>α</i></sub> ⊆ <img class="m" src="figs/m/ch01-0198.svg" alt="[" data-crop="40:138.7,494.8,150.0,505.6" style="height:10.8pt;vertical-align:-1.6pt"> <i>A</i><sub><i>α </i></sub>always true for any collection of sets <i>A</i><sub><i>α </i></sub>with index set <i>I</i>? <i>α</i>∈<i>I α</i>∈<i>I</i></li>
+<li class="ex" id="ex-1.8-12" value="12">If <img class="m" src="figs/m/ch01-0199.svg" alt="\" data-crop="40:100.7,524.2,112.0,535.0" style="height:10.8pt;vertical-align:-1.0pt"> <i>Aα</i> = <img class="m" src="figs/m/ch01-0200.svg" alt="[" data-crop="40:137.2,524.2,148.5,535.0" style="height:10.8pt;vertical-align:-1.0pt"> <i>Aα</i>, what do you think can be said about the relationships between <i>α</i>∈<i>I α</i>∈<i>I</i> the sets <i>A</i><sub><i>α</i></sub>?</li>
+<li class="ex" id="ex-1.8-13" value="13">If <i>J</i> ≠ ∅ and <i>J</i> ⊆ <i>I</i>, does it follow that <img class="m" src="figs/m/ch01-0201.svg" alt="[" data-crop="40:255.5,565.5,266.8,576.3" style="height:10.8pt;vertical-align:-1.3pt"> <i>Aα</i> ⊆ <img class="m" src="figs/m/ch01-0202.svg" alt="[" data-crop="40:292.7,565.5,304.0,576.3" style="height:10.8pt;vertical-align:-1.3pt"> <i>Aα</i>? What about <img class="m" src="figs/m/ch01-0203.svg" alt="\" data-crop="40:383.0,565.5,394.4,576.3" style="height:10.8pt;vertical-align:-1.3pt"> <i>Aα</i> ⊆ <img class="m" src="figs/m/ch01-0204.svg" alt="\" data-crop="40:420.3,565.5,431.6,576.3" style="height:10.8pt;vertical-align:-1.3pt"> <i>Aα</i>? <i>α</i>∈<i>J α</i>∈<i>I α</i>∈<i>J α</i>∈<i>I</i></li>
+<li class="ex" id="ex-1.8-14" value="14">If <i>J</i> ≠ ∅ and <i>J</i> ⊆ <i>I</i>, does it follow that <img class="m" src="figs/m/ch01-0205.svg" alt="\" data-crop="40:259.4,595.0,270.7,605.8" style="height:10.8pt;vertical-align:-1.8pt"> <i>A</i><sub><i>α</i></sub> ⊆ <img class="m" src="figs/m/ch01-0206.svg" alt="\" data-crop="40:296.6,595.0,307.9,605.8" style="height:10.8pt;vertical-align:-1.8pt"> <i>A</i><sub><i>α</i></sub>? Explain. <i>α</i>∈<i>I α</i>∈<i>J</i></li>
+</ol>
+</div>
+</section>
+<section class="sec" id="s1-9" data-title="Sets That Are Number Systems">
+<h2><span class="num">1.9</span> Sets That Are Number Systems</h2>
+<p>In practice, the sets we tend to be most interested in often have special properties and structures. For example, the sets ℤ, ℚ and ℝ are familiar number systems: Given such a set, any two of its elements can be added (or multiplied, etc.) together to produce another element in the set. These operations obey the familiar commutative, associative and distributive properties that we all have dealt with for years. Such properties lead to the standard algebraic techniques for solving equations. Even though we are concerned with the idea of proof, we will not ﬁnd it necessary to deﬁne, prove or verify such properties and techniques; we will accept them as the ground rules upon which our further deductions are based.</p>
+<p>We also accept as fact the natural ordering of the elements of ℕ,ℤ,ℚ and ℝ, so that (for example) the meaning of “5 &lt; 7” is understood and does not need to be justiﬁed or explained. Similarly, if <i>x</i> ≤ <i>y</i> and <i>a</i> ≠ 0, we know that <i>ax</i> ≤ <i>ay</i> or <i>ax</i> ≥ <i>ay</i>, depending on whether <i>a</i> is positive or negative.</p>
+<p>Another thing that our ingrained understanding of number order tells us is that any non-empty subset of ℕ has a smallest element. In other words, if <i>A</i> ⊆ ℕ and <i>A</i> ≠ ∅, then there is an element <i>x</i>0 ∈ <i>A </i>that is smaller than every other element of <i>A</i>. (To ﬁnd it, start at 1, then move in increments to 2, 3, 4, etc., until you hit a number <i>x</i><sub>0</sub> ∈ <i>A</i>; this is the smallest element of <i>A</i>.) Similarly, given <i>b</i> ∈ ℤ, any non-empty subset <i>A</i> ⊆ {<i>b</i>,<i> b</i> + 1,<i> b</i> + 2,<i> b</i> + 3,...} has a smallest element. This fact is sometimes called the<strong> well-ordering</strong> <strong>principle</strong>. There is no need to remember this term, but do be aware that we will use this simple, intuitive idea often in proofs, usually without a second thought.</p>
+<p>The well-ordering principle seems innocent enough, but it actually says something very fundamental and special about the positive integers ℕ. In fact, the corresponding statement for the positive real numbers is false: The subset <i>A </i>= <img class="m" src="figs/m/ch01-0207.svg" alt="{ 1n" data-crop="41:136.1,488.9,148.4,506.2" style="height:17.3pt;vertical-align:-6.2pt"> :<i> n</i> ∈ ℕ} of the positive reals has no smallest element because for any <i>x</i><sub>0</sub> =<img class="m" src="figs/m/ch01-0208.svg" alt="n1" data-crop="41:151.3,503.2,160.9,520.5" style="height:17.3pt;vertical-align:-6.5pt"> ∈ <i>A </i>we might pick, there is a smaller element <img class="m" src="figs/m/ch01-0209.svg" alt="n+11" data-crop="41:389.1,503.2,405.5,520.5" style="height:17.4pt;vertical-align:-6.5pt"> ∈ <i>A</i>.</p>
+<p>One consequence of the well-ordering principle (as we will see below) is the familiar fact that any integer <i>a</i> can be divided by a non-zero integer <i>b</i>, resulting in a quotient <i>q </i>and remainder <i>r</i>. For example, <i>b</i> = 3 goes into <i>a</i> = 17 <i>q</i> = 5 times with remainder<i> r</i> = 2. In symbols, 17 = 5·3+2, or<i> a</i> =<i> qb</i>+<i>r</i>. This signiﬁcant fact is called the<strong> division algorithm</strong>.</p>
+<p class="lbl fact"><strong>Fact 1.5 (Division Algorithm) </strong>Given integers <i>a </i>and <i>b </i>with <i>b </i>&gt; 0, there exist unique integers <i>q</i> and <i>r </i>for which <i>a</i> =<i> qb</i> +<i> r </i>and 0 ≤ <i>r</i> &lt;<i> b</i>.</p>
+<p>Although there is no harm in accepting the division algorithm without proof, note that it does follow from the well-ordering principle. Here’s how: Given integers <i>a</i>, <i>b</i> with <i>b</i> &gt; 0, form the set</p>
+<p class="display"><i>A</i> = {<i>a </i>− <i>xb </i>: <i>x</i> ∈ ℤ, 0 ≤ <i>a </i>− <i>xb</i>} ⊆ {0,1,2,3,...}.</p>
+<p>This is the set of non-negative integers got by subtracting multiples of <i>b</i> from<i> a</i>. (Example: If<i> a</i> = 17 and<i> b</i> = 3, then we get <i>A</i> = {2,5,8,11,14,17,20,...} by subtracting multiples of 3 from 17. Note that the remainder<i> r</i> = 2 of 17÷3 is the smallest element of <i>A</i>.) In general, by the well-ordering principle, the set <i>A</i> = {<i>a</i> − <i>xb </i>: <i>x</i> ∈ ℤ, 0 ≤ <i>a</i> − <i>xb</i>} has a smallest element <i>r</i>. Then <i>r</i> =<i> a</i> − <i>qb</i> for some <i>x</i> =<i> q</i> ∈ ℤ, so <i>a</i> =<i> qb</i> +<i> r</i>. Because <i>r</i> ∈ <i>A</i> ⊆ {0,1,2,3...}, we know 0 ≤ <i>r</i>. In addition, it cannot happen that <i>r</i> ≥ <i>b</i>: If this were the case, then the non-negative number<i> r</i>−<i>b</i> = (<i>a</i>− <i>qb</i>)−<i>b</i> =<i> a</i>−(<i>q</i>+1)<i>b</i> having form<i> a</i>− <i>xb</i> would be a smaller element of <i>A</i> than<i> r</i>, and<i> r</i> was explicitly chosen as the smallest element of <i>A</i>. Since it is not true that <i>r</i> ≥ <i>b</i>, it must be that <i>r</i> &lt;<i> b</i>. Therefore 0 ≤ <i>r</i> &lt;<i> b</i>. We’ve now produced a <i>q </i>and an <i>r </i>for which <i>a</i> =<i> qb</i> +<i> r </i>and 0 ≤ <i>r</i> &lt;<i> b</i>. (Exercise 28 of Chapter 7 asks you to prove <i>q</i> and <i>r </i>are<em> unique</em> in the sense that no other values of <i>q</i> and <i>r </i>have these properties.)</p>
+<p>Moving on, it is time to clarify a small issue. This chapter asserted that all of mathematics can be described with sets. But at the same time we maintained that some mathematical entities are not sets. (For instance, our approach was to say that an individual number, such as 5, is not itself a set, though it may be an<em> element</em> of a set.) We have made this distinction because we need a place to stand as we explore sets: After all, it would appear suspiciously circular to declare that every mathematical entity is a set, and then go on to deﬁne a set as a collection whose members are sets!</p>
+<p>But to most mathematicians, saying “The number 5 is not a set,” is like saying “The number 5 is not a number.”</p>
+<p>The truth is that any number <em>can </em>itself be understood as a set. One way to do this is to begin with the identiﬁcation 0 = ∅. Then 1 = {∅} = {0}, and 2 = {∅,{∅}} = {0,1}, and 3 = {∅,{∅},{∅,{∅}}} = {0,1,2}. In general the natural number <i>n</i> is the set <i>n</i> = {0,1,2,..., <i>n</i>−1} of the <i>n</i> numbers (which are themselves sets) that come before it.</p>
+<p>We will not undertake such a study here, but the elements of the number systems ℤ, ℚ and ℝ can all be deﬁned in terms of sets. (Even the operations of addition, multiplication, etc., can be deﬁned in set-theoretic terms.) In fact, mathematics itself can be regarded as the study of things that can be described as sets. Any mathematical entity is a set, whether or not we choose to think of it that way.</p>
+</section>
+<section class="sec" id="s1-10" data-title="Russell’s Paradox">
+<h2><span class="num">1.10</span> Russell’s Paradox</h2>
+<p>This section contains some background information that may be interesting, but is not used in the remainder of the book.</p>
+<p>The philosopher and mathematician Bertrand Russell (1872–1970) did groundbreaking work on the theory of sets and the foundations of mathematics. He was probably among the ﬁrst to understand how the misuse of sets can lead to bizarre and paradoxical situations. He is famous for an idea that has come to be known as<strong> Russell’s paradox</strong>.</p>
+<p>Russell’s paradox involves the following set of sets:</p>
+<p class="display"><i>A</i> = { <i>X </i>: <i>X </i>is a set and <i>X </i>∉ <i>X </i>}. (1.1)</p>
+<p>In words, <i>A </i>is the set of all sets that do not include themselves as elements. Most sets we can think of are in <i>A</i>. The set ℤ of integers is not an integer (i.e., ℤ ∉ ℤ) and therefore ℤ ∈ <i>A</i>. Also ∅ ∈ <i>A </i>because ∅ is a set and ∅ ∉∅.</p>
+<p>Is there a set that is not in <i>A</i>? Consider <i>B</i> = {{{{...}}}}. Think of <i>B</i> as a box containing a box, containing a box, containing a box, and so on, forever. Or a set of identical Russian dolls, nested one inside the other, endlessly. The curious thing about <i>B</i> is that it has just one element, namely <i>B</i> itself:</p>
+<p class="display"><i>B</i> = { {{{...}}} }.</p>
+<p>Thus <i>B</i> ∈ <i>B</i>. As <i>B</i> does not satisfy <i>B</i> ∉ <i>B</i>, Equation (1.1) says <i>B</i> ∉ <i>A</i>.</p>
+<p>Russell’s paradox arises from the question “<em>Is </em><i>A </i><em>an element of </em><i>A</i><em>?</em>”</p>
+<p>For a set <i>X </i>, Equation (1.1) says <i>X </i>∈ <i>A </i>means the same thing as <i>X </i>∉ <i>X </i>. So for <i>X </i>=<i> A</i>, the previous line says <i>A</i> ∈ <i>A </i>means the same thing as <i>A</i> ∉ <i>A</i>. Conclusions: If <i>A</i> ∈ <i>A </i>is true, then it is false. If <i>A</i> ∈ <i>A </i>is false, then it is true. This is Russell’s paradox.</p>
+<p>Initially Russell’s paradox sparked a crisis among mathematicians. How could a mathematical statement be both true and false? This seemed to be in opposition to the very essence of mathematics.</p>
+<p>The paradox instigated a very careful examination of set theory and an evaluation of what can and cannot be regarded as a set. Eventually mathematicians settled upon a collection of axioms for set theory—the so-called <strong>Zermelo-Fraenkel axioms</strong>. One of these axioms is the well-ordering principle of the previous section. Another, the axiom of foundation, states that no non-empty set <i>X </i>is allowed to have the property <i>X</i> ∩ <i>x</i> ≠ ∅ for all its elements <i>x</i>. This rules out such circularly deﬁned “sets” as <i>B</i> = {<i>B</i>} mentioned above. If we adhere to these axioms, then situations like Russell’s paradox disappear. Most mathematicians accept all this on faith and happily ignore the Zermelo-Fraenkel axioms. Paradoxes like Russell’s do not tend to come up in everyday mathematics—you have to go out of your way to construct them.</p>
+<p>Still, Russell’s paradox reminds us that precision of thought and language is an important part of doing mathematics. The next chapter deals with the topic of logic, a codiﬁcation of thought and language.</p>
+<p><strong>Additional Reading on Sets. </strong>For a lively account of Bertrand Russell’s life and work (including his paradox), see the graphic novel<em> Logicomix: An</em> <em>Epic Search For Truth</em>, by Apostolos Doxiadis and Christos Papadimitriou. Also see cartoonist Jessica Hagy’s online strip<em> Indexed</em>—it is based largely on Venn diagrams.</p>
+</section>
+</section>
+</main>
+<nav class="pager"><a href="front.html" rel="prev">← Previous</a><a href="ch02.html" rel="next">Next →</a></nav>
+<footer class="license"><p><em>Book of Proof</em>, Third Edition, by Richard Hammack. © 2018 Richard Hammack. Licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>. The original PDF is freely available at <a href="https://richardhammack.github.io/BookOfProof/">richardhammack.github.io/BookOfProof</a>. This site is an unmodified format conversion with added progress tracking and exercise checking; it is not affiliated with or endorsed by the author.</p></footer>
+</body></html>

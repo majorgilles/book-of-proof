@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="15.360992" height="19.522004" viewBox="0 0 15.360992 19.522004">
+<defs>
+<clipPath id="clip_1">
+<path transform="matrix(1,0,0,-1,-214.798,336.549)" d="M214.798 317.027H230.159V336.549H214.798Z" clip-rule="evenodd"/>
+</clipPath>
+<clipPath id="clip_2">
+<path transform="matrix(.23213,0,0,-.23213,180.46298,-120.16199)" d="M0 0H35V35H0Z"/>
+</clipPath>
+<clipPath id="clip_3">
+<path transform="matrix(.23213,0,0,-.23213,179.76659,-119.23347)" d="M0 0H258V86H0Z"/>
+</clipPath>
+<clipPath id="clip_4">
+<path transform="matrix(.23213,0,0,-.23213,42.794008,-107.60898)" d="M0 0H35V35H0Z"/>
+</clipPath>
+<clipPath id="clip_5">
+<path transform="matrix(.23213,0,0,-.23213,32.116029,-106.68046)" d="M0 0H258V86H0Z"/>
+</clipPath>
+</defs>
+<g clip-path="url(#clip_1)">
+<g clip-path="url(#clip_2)">
+<g clip-path="url(#clip_3)">
+</g>
+</g>
+<g clip-path="url(#clip_4)">
+<g clip-path="url(#clip_5)">
+</g>
+</g>
+<path transform="matrix(1,0,0,-1,-20.693009,2.001007)" stroke-width=".398" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M0 0H23.392"/>
+<path transform="matrix(1,0,0,-1,2.5,17.522004)" stroke-width=".398" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M0 0V15.522"/>
+<path transform="matrix(1,0,0,-1,-20.693009,17.522004)" stroke-width=".398" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M0 0H23.392"/>
+<path transform="matrix(1,0,0,-1,12.662003,2.001007)" stroke-width=".398" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M0 0H23.392"/>
+<path transform="matrix(1,0,0,-1,12.860992,17.522004)" stroke-width=".398" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M0 0V15.522"/>
+<path transform="matrix(1,0,0,-1,12.662003,17.522004)" stroke-width=".398" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M0 0H23.392"/>
+</g>
+</svg>

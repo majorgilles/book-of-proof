@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="4.9420778" height="17.658265" viewBox="0 0 4.9420778 17.658265">
+<defs>
+<clipPath id="clip_1">
+<path transform="matrix(1,0,0,-1,-363.84898,458.31227)" d="M363.84898 440.654H368.79106V458.31227H363.84898Z" clip-rule="evenodd"/>
+</clipPath>
+<path id="font_2_38" d="M.19799805-.62597659V.026367188H.1349945V-.62597659H.19799805Z"/>
+</defs>
+<g clip-path="url(#clip_1)">
+<use data-text="&#xfffd;" xlink:href="#font_2_38" transform="matrix(10.0363,0,0,-10.0363,.7999878,1.4272461)"/>
+<use data-text="&#xfffd;" xlink:href="#font_2_38" transform="matrix(10.0363,0,0,-10.0363,.7999878,7.4492495)"/>
+<path transform="matrix(1,0,0,-1,-125.213977,66.381259)" stroke-width=".79701" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M0 42.5202H91.35637C99.60991 42.5202 106.30052 35.82957 106.30052 27.57605V14.94415C106.30052 6.69061 99.60991 0 91.35637 0H-91.35637C-99.60991 0-106.30052 6.69061-106.30052 14.94415V27.57605C-106.30052 35.82957-99.60991 42.5202-91.35637 42.5202H0"/>
+<path transform="matrix(1,0,0,-1,-125.213977,66.381259)" stroke-width=".79701" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M-63.7803 21.2601-42.5202 42.5202 0 0M-10.63004 10.63004 21.2601 42.5202"/>
+<path transform="matrix(1,0,0,-1,-309.64997,75.94525)" stroke-width=".398" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M0 0V108.248"/>
+<path transform="matrix(1,0,0,-1,62.792024,75.94525)" stroke-width=".398" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M0 0V108.248"/>
+</g>
+</svg>

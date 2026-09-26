@@ -1,0 +1,135 @@
+<!-- pages: 183-190 -->
+<section class="chapter" id="ch9">
+<h1><span class="num">Chapter 9</span> Disproof</h1>
+<p>Ever since Chapter 4 we have dealt with one major theme: Given a statement, prove that is it true. In every example and exercise we were handed a true statement and charged with the task of proving it. Have you ever wondered what would happen if you were given a<em> false</em> statement to prove? The answer is that no (correct) proof would be possible, for if it were, the statement would be true, not false.</p>
+<p>But how would you convince someone that a statement is false? The mere fact that you could not produce a proof does not automatically mean the statement is false, for you know (perhaps all too well) that proofs can be diﬃcult to construct. It turns out that there is a very simple and utterly convincing procedure that proves a statement is false. The process of carrying out this procedure is called<strong> disproof</strong>. Thus, this chapter is concerned with<strong> disproving</strong> statements.</p>
+<p>Before describing the new method, we will set the stage with some relevant background information. First, we point out that mathematical statements can be divided into three categories, described below.</p>
+<p>One category consists of all those statements that have been proved to be true. For the most part we regard these statements as signiﬁcant enough to be designated with special names such as “theorem,” “proposition,” “lemma” and “corollary.” Some examples of statements in this category are listed in the left-hand box in the diagram on the following page. There are also some wholly uninteresting statements (such as 2 = 2) in this category, and although we acknowledge their existence we certainly do not dignify them with terms such as “theorem” or “proposition.”</p>
+<p>At the other extreme is a category consisting of statements that are known to be false. Examples are listed in the box on the right. Since mathematicians are not very interested in them, these types of statements do not get any special names, other than the blanket term “false statement.”</p>
+<p>But there is a third (and quite interesting) category between these two extremes. It consists of statements whose truth or falsity has not been determined. Examples include things like <em>“Every perfect number</em> <em>is even,” </em>or <em>“Every even integer greater than 2 is the sum of two primes.”</em> (The latter statement is called the<em> Goldbach conjecture</em>. See Section 2.1.) Mathematicians have a special name for the statements in this category that they suspect (but haven’t yet proved) are true. Such statements are called<strong> conjectures</strong>.</p>
+<p class="display">Three Types of Statements:</p>
+<p><strong>Known to be true Truth unknown Known to be false</strong> (Theorems &amp; propositions) (Conjectures) Examples: Examples: Examples:</p>
+<p class="bullet">• All prime numbers are</p>
+<p class="bullet">• Pythagorean theorem • All perfect numbers are</p>
+<p class="display">odd.</p>
+<p class="display">even.</p>
+<p class="bullet">• Fermat’s last theorem</p>
+<p class="bullet">• Some quadratic equations</p>
+<p>(Section 2.1) • Any even number greater</p>
+<p class="display">have three solutions.</p>
+<p class="display">than 2 is the sum of two</p>
+<p class="bullet">• The square of an odd</p>
+<p class="display">primes. (Goldbach’s • 0 = 1</p>
+<p>number is odd.</p>
+<p class="display">conjecture, Section 2.1)</p>
+<p class="display"><sup>∞ </sup>1 • There exist natural</p>
+<p class="bullet">• The series <img class="m" src="figs/m/ch09-0001.svg" alt="X" data-crop="184:137.3,312.8,148.0,322.7" style="height:9.8pt;vertical-align:-0.7pt"> diverges.</p>
+<p class="display"><sub><i>k</i></sub><sub>=1 </sub><i>k </i>• There are inﬁnitely many numbers <i>a</i>,<i>b</i> and <i>c</i></p>
+<p class="display">prime numbers of form for which <i>a</i><sup>3 </sup>+<i> b</i><sup>3 </sup>=<i> c</i><sup>3</sup>.</p>
+<p class="display">2<sup><i>n </i></sup>−1, with <i>n</i> ∈ ℕ.</p>
+<p>Mathematicians spend much of their time and energy attempting to prove or disprove conjectures. (They also expend considerable mental energy in creating new conjectures based on collected evidence or intuition.) When a conjecture is proved (or disproved) the proof or disproof will typically appear in a published paper, provided the conjecture is of suﬃcient interest. If it is proved, the conjecture attains the status of a theorem or proposition. If it is disproved, then no one is really very interested in it anymore— mathematicians do not care much for false statements. (Though some disproved conjectures are viewed as instructive examples or curiosities, especially if the conjecture had been considered signiﬁcant.)</p>
+<p>Most conjectures that mathematicians are interested in are quite diﬃcult to prove or disprove. We are not at that level yet. In this text, the “conjectures” that you will encounter are the kinds of statements that an experienced mathematician would immediately spot as true or false, but you may have to do some work before ﬁguring out a proof or disproof. But in keeping with the cloud of uncertainty that surrounds conjectures at the advanced levels of mathematics, most exercises in this chapter (and many beyond it) will ask you to prove or disprove statements without giving any hint as to whether they are true or false. Your job will be to decide whether or not they are true and to either prove or disprove them. The examples in this chapter will illustrate the processes one typically goes through in deciding whether a statement is true or false, and then verifying that it’s true or false.</p>
+<p>You know the three major methods of proving a statement: direct proof, contrapositive proof and proof by contradiction. Now we are ready to understand the method of disproving a statement. Suppose you want to disprove a statement <i>P</i>. In other words you want to prove that <i>P </i>is<em> false</em>. The way to do this is to prove that ∼ <i>P </i>is<em> true</em>, for if ∼ <i>P </i>is true, it follows immediately that <i>P </i>has to be false.</p>
+<figure><img src="figs/ch09-0002.svg" alt="Figure" style="width:190pt"></figure>
+<p>Our approach is incredibly simple. To disprove <i>P</i>, prove ∼ <i>P</i>. In theory, this proof can be carried out by the direct, contrapositive or contradiction approaches. However, in practice things can be even easier than that if we are disproving a universally quantiﬁed statement or a conditional statement. That is our next topic.</p>
+<section class="sec" id="s9-1" data-title="Disproving Universal Statements: Counterexamples">
+<h2><span class="num">9.1</span> Disproving Universal Statements: Counterexamples</h2>
+<p>A conjecture may be described as a statement that we hope is a theorem. As we know, many theorems (hence many conjectures) are universally quantiﬁed statements. Thus it seems reasonable to begin our discussion by investigating how to disprove a universally quantiﬁed statement such as</p>
+<p class="display">∀ <i>x</i> ∈ <i>S</i>, <i>P</i>(<i>x</i>).</p>
+<p>To disprove this statement, we must prove its negation. Its negation is</p>
+<p class="display">∼ (∀ <i>x</i> ∈ <i>S</i>, <i>P</i>(<i>x</i>)) = ∃ <i>x</i> ∈ <i>S</i>,∼ <i>P</i>(<i>x</i>).</p>
+<p>The negation is an existence statement. To prove the negation is true, we just need to produce an<em> example</em> of an <i>x</i> ∈ <i>S </i>that makes ∼ <i>P</i>(<i>x</i>) true, that is, an <i>x</i> that makes<i> P</i>(<i>x</i>) false. This leads to the following outline for disproving a universally quantiﬁed statement.</p>
+<p class="display">Produce an example of an <i>x</i> ∈ <i>S</i></p>
+<p>Things are just as simple if we want to disprove a conditional statement <i>P</i>(<i>x</i>) ⇒ <i>Q</i>(<i>x</i>). This statement asserts that for every <i>x</i> that makes <i>P</i>(<i>x</i>) true, <i>Q</i>(<i>x</i>) will also be true. The statement can only be false if there is an <i>x</i> that makes <i>P</i>(<i>x</i>) true and<i> Q</i>(<i>x</i>) false. This leads to our next outline for disproof.</p>
+<p class="display">Produce an example of an <i>x </i>that</p>
+<p class="display">makes <i>P</i>(<i>x</i>) true and<i> Q</i>(<i>x</i>) false.</p>
+<p>In both of the above outlines, the statement is disproved simply by exhibiting an example that shows the statement is not always true. (Think of it as an example that exposes the statement as a promise that can be broken.) There is a special name for an example that disproves a statement: It is called a<strong> counterexample</strong>.</p>
+<p class="lbl example"><strong>Example 9.1 </strong>As our ﬁrst example, we will work through the process of deciding whether or not the following conjecture is true. <strong>Conjecture </strong>For every <i>n</i> ∈ ℤ, the integer <i>f</i> (<i>n</i>) =<i> n</i><sup>2 </sup>− <i>n </i>+ 11 is prime.</p>
+<p>In resolving the truth or falsity of a conjecture, it’s a good idea to gather as much information about the conjecture as possible. In this case let’s start by making a table that tallies the values of <i>f</i> (<i>n</i>) for some integers <i>n</i>.</p>
+<p><i>n </i>−3 −2 −1 0 1 2 3 4 5 6 7 8 9 10</p>
+<p><i>f</i> (<i>n</i>) 23 17 13 11 11 13 17 23 31 41 53 67 83 101</p>
+<p>In every case, <i>f</i> (<i>n</i>) is prime, so you may begin to suspect that the conjecture is true. Before attempting a proof, let’s try one more <i>n</i>. Unfortunately, <i>f</i> (11) = 11<sup>2 </sup>−11+11 = 11<sup>2 </sup>is not prime. The conjecture is false because <i>n</i> = 11 is a counterexample. We summarize our disproof as follows:</p>
+<p><em>Disproof. </em>The statement “<em>For every </em><i>n</i> ∈ ℤ<em>, the integer </em><i>f</i> (<i>n</i>) =<i> n</i><sup>2 </sup>− <i>n</i> + 11 <em>is</em> <em>prime,</em>” is <strong>false</strong>. For a counterexample, note that for <i>n</i> = 11, the integer <i>f</i> (11) = 121 = 11 · 11 is not prime. ■</p>
+<p>In disproving a statement with a counterexample, it is important to explain exactly how the counterexample makes the statement false. Our work would not have been complete if we had just said “<em>for a counterexample, consider</em> <i>n</i> = 11,” and left it at that. We need to show that the answer <i>f</i> (11) is not prime. Showing the factorization <i>f</i> (11) = 11 · 11 suﬃces for this.</p>
+<p class="lbl example"><strong>Example 9.2 </strong>Either prove or disprove the following conjecture. <strong>Conjecture </strong>If <i>A</i>, <i>B</i> and <i>C </i>are sets, then <i>A</i> − (<i>B</i> ∩ <i>C</i>) = (<i>A</i> − <i>B</i>) ∩ (<i>A</i> − <i>C</i>).</p>
+<p><em>Disproof. </em>This conjecture is false because of the following counterexample.  Let <i>A</i> = {1,2,3}, <i>B</i> = {1,2} and <i>C</i> = {2,3}. Notice that <i>A</i> − (<i>B</i> ∩ <i>C</i>) = {1,3} and (<i>A</i> − <i>B</i>) ∩ (<i>A</i> − <i>C</i>) = ∅, so <i>A</i> − (<i>B</i> ∩ <i>C</i>) ≠ (<i>A</i> − <i>B</i>) ∩ (<i>A</i> − <i>C</i>). ■</p>
+<p>(To see where this counterexample came from, draw Venn diagrams for <i>A</i> −(<i>B </i>∩ <i>C</i>) and (<i>A</i> − <i>B</i>)∩(<i>A</i> − <i>C</i>). You will see that the diagrams are diﬀerent. The numbers 1, 2 and 3 can then be inserted into the regions of the diagrams in such a way as to create the above counterexample.)</p>
+</section>
+<section class="sec" id="s9-2" data-title="Disproving Existence Statements">
+<h2><span class="num">9.2</span> Disproving Existence Statements</h2>
+<p>We have seen that we can disprove a universally quantiﬁed statement or a conditional statement simply by ﬁnding a counterexample. Now let’s turn to the problem of disproving an existence statement such as</p>
+<p class="display">∃ <i>x</i> ∈ <i>S</i>,<i> P</i>(<i>x</i>).</p>
+<p>Proving this would involve simply ﬁnding an example of an <i>x</i> that makes <i>P</i>(<i>x</i>) true. To <em>disprove </em>it, we have to prove its negation ∼ (∃ <i>x</i> ∈ <i>S</i>, <i>P</i>(<i>x</i>)) = ∀ <i>x</i> ∈ <i>S</i>,∼ <i>P</i>(<i>x</i>). But this negation is universally quantiﬁed. Proving<em> it</em> involves showing that ∼ <i>P</i>(<i>x</i>) is true for<em> all </em><i>x</i> ∈ <i>S</i>, and for this an example does not suﬃce. Instead we must use direct, contrapositive or contradiction proof to prove the conditional statement<em> “If </em><i>x</i> ∈ <i>S</i><em>, then </em>∼ <i>P</i>(<i>x</i>)<em>.” </em>As an example, here is a conjecture to either prove or disprove.</p>
+<p class="lbl example"><strong>Example 9.3 </strong>Either prove or disprove the following conjecture. <strong>Conjecture </strong>There is a real number <i>x</i> for which <i>x</i><sup>4 </sup>&lt;<i> x</i> &lt;<i> x</i><sup>2</sup>.</p>
+<p>This may not seem like an unreasonable statement at ﬁrst glance. After all, if the statement were asserting the existence of a real number for which <i>x</i><sup>3 </sup>&lt;<i> x</i> &lt;<i> x</i><sup>2</sup>, then it would be true: just take <i>x</i> = −2. But it asserts there is an <i>x </i>for which <i>x</i><sup>4 </sup>&lt;<i> x</i> &lt;<i> x</i><sup>2</sup>. When we apply some intelligent guessing to locate such an <i>x</i> we run into trouble. If <i>x</i> =<img class="m" src="figs/m/ch09-0003.svg" alt="12" data-crop="187:264.0,553.2,272.9,570.5" style="height:17.4pt;vertical-align:-6.5pt">, then <i>x</i><sup>4</sup> &lt;<i> x</i>, but we don’t have <i>x</i> &lt;<i> x</i><sup>2</sup>; similarly if <i>x</i> = 2, we have <i>x</i> &lt;<i> x</i><sup>2 </sup>but not <i>x</i><sup>4 </sup>&lt;<i> x</i>. Since ﬁnding an <i>x</i> with <i>x</i><sup>4 </sup>&lt;<i> x</i> &lt;<i> x</i><sup>2 </sup>seems problematic, we may begin to suspect that the given statement is false.</p>
+<p>Let’s see if we can disprove it. According to our strategy for disproof, to<em> disprove</em> it we must<em> prove</em> its negation. Symbolically, the statement is ∃ <i>x</i> ∈ ℝ, <i>x</i><sup>4 </sup>&lt;<i> x</i> &lt;<i> x</i><sup>2</sup>, so its negation is</p>
+<p class="display">∼ (∃ <i>x</i> ∈ ℝ, <i>x</i><sup>4 </sup>&lt;<i> x</i> &lt;<i> x</i><sup>2</sup>) = ∀ <i>x</i> ∈ ℝ,∼ (<i>x</i><sup>4 </sup>&lt;<i> x</i> &lt;<i> x</i><sup>2</sup>).</p>
+<p>Thus, in words the negation is</p>
+<p><em>For every real number </em><i>x</i><em>, it is not the case that </em><i>x</i><sup>4 </sup>&lt;<i> x</i> &lt;<i> x</i><sup>2</sup><em>.</em></p>
+<p>This can be proved with contradiction, as follows. Suppose for the sake of contradiction that there<strong> is</strong> an<i> x</i> for which<i> x</i><sup>4 </sup>&lt;<i> x</i> &lt;<i> x</i><sup>2</sup>. Then<i> x</i> must be positive since it’s greater than the non-negative number <i>x</i><sup>4</sup>. Dividing all parts of <i>x</i><sup>4 </sup>&lt;<i> x</i> &lt;<i> x</i><sup>2 </sup>by the positive number <i>x</i> produces <i>x</i><sup>3 </sup>&lt; 1 &lt;<i> x</i>. Now subtract 1 from all parts of <i>x</i><sup>3 </sup>&lt; 1 &lt;<i> x</i> to obtain <i>x</i><sup>3 </sup>− 1 &lt; 0 &lt;<i> x </i>− 1 and reason as follows:</p>
+<p class="display"><i>x</i><sup>3 </sup>− 1 &lt; 0 &lt; <i>x </i>− 1</p>
+<p class="display">(<i>x </i>− 1)(<i>x</i><sup>2 </sup>+<i> x </i>+ 1) &lt; 0 &lt; (<i>x </i>− 1)</p>
+<p class="display"><i>x</i><sup>2 </sup>+<i> x </i>+ 1 &lt; 0 &lt; 1</p>
+<p>(Division by <i>x </i>− 1 did not reverse the inequality &lt; because the second line above shows 0 &lt;<i> x</i> − 1, that is, <i>x</i> − 1 is positive.) Now we have <i>x</i><sup>2 </sup>+<i> x</i> + 1 &lt; 0, which is a contradiction because <i>x</i> being positive forces <i>x</i><sup>2 </sup>+<i> x </i>+ 1 &gt; 0.</p>
+<p>We summarize our work as follows.</p>
+<p>The statement “<em>There is a real number </em><i>x</i><em> for which </em><i>x</i><sup>4 </sup>&lt;<i> x</i> &lt;<i> x</i><sup>2</sup>” is<strong> false</strong> because we have proved its negation<em> “For every real number </em><i>x</i><em>, it is not the</em> <em>case that </em><i>x</i><sup>4 </sup>&lt;<i> x</i> &lt;<i> x</i><sup>2</sup><em>.”</em></p>
+<p>As you work the exercises, keep in mind that not every conjecture will be false. If one is true, then a disproof is impossible and you must produce a proof. Here is an example:</p>
+<p class="lbl example"><strong>Example 9.4 </strong>Either prove or disprove the following conjecture. <strong>Conjecture </strong>There exist three integers <i>x</i>,<i> y</i>,<i> z</i>, all greater than 1 and no two equal, for which <i>x</i><sup><i>y </i></sup>=<i> y</i><sup><i>z</i></sup>.</p>
+<p>This conjecture is true. It is an existence statement, so to prove it we just need to give an example of three integers <i>x</i>,<i> y</i>,<i> z</i>, all greater than 1 and no two equal, so that <i>x</i><sup><i>y </i></sup>=<i> y</i><sup><i>z</i></sup>. A proof follows.</p>
+<p class="lbl proposition"><strong>Proposition </strong>There exist three integers <i>x</i>,<i> y</i>,<i> z</i>, all greater than 1 and no two equal, for which <i>x</i><sup><i>y </i></sup>=<i> y</i><sup><i>z</i></sup>.</p>
+<p class="proof"><em>Proof. </em>Note that if <i>x</i> = 2, <i>y</i> = 16 and <i>z</i> = 4, then <i>x</i><sup><i>y </i></sup>= 2<sup>16 </sup>= (2<sup>4</sup>)<sup>4 </sup>= 16<sup>4 </sup>=<i> y</i><sup><i>z</i></sup>. ■</p>
+</section>
+<section class="sec" id="s9-3" data-title="Disproof by Contradiction">
+<h2><span class="num">9.3</span> Disproof by Contradiction</h2>
+<p>Contradiction can be a very useful way to disprove a statement. To see how this works, suppose we wish to disprove a statement <i>P</i>. We know that to disprove <i>P</i>, we must<em> prove </em>∼ <i>P</i>. To prove ∼ <i>P </i>with contradiction, we assume ∼∼ <i>P </i>is true and deduce a contradiction. But since ∼∼ <i>P</i> =<i> P</i>, this boils down to assuming <i>P </i>is true and deducing a contradiction. Here is an outline:</p>
+<p class="display"><strong>How to disprove </strong><i>P </i><strong>with contradiction:</strong></p>
+<p class="display">Assume <i>P </i>is true, and deduce a contradiction.</p>
+<p>To illustrate this, let’s revisit Example 9.3 but do the disproof with contradiction. You will notice that the work duplicates much of what we did in Example 9.3, but is it much more streamlined because here we do not have to negate the conjecture.</p>
+<p class="lbl example"><strong>Example 9.5 </strong>Disprove the following conjecture. <strong>Conjecture </strong>There is a real number <i>x</i> for which <i>x</i><sup>4 </sup>&lt;<i> x</i> &lt;<i> x</i><sup>2</sup>.</p>
+<p><em>Disproof. </em>Suppose for the sake of contradiction that this conjecture is true. Let <i>x</i> be a real number for which <i>x</i><sup>4 </sup>&lt;<i> x</i> &lt;<i> x</i><sup>2</sup>. Then <i>x</i> is positive, since it is greater than the non-negative number <i>x</i><sup>4</sup>. Dividing all parts of <i>x</i><sup>4 </sup>&lt;<i> x</i> &lt;<i> x</i><sup>2</sup> by the positive number <i>x</i> produces <i>x</i><sup>3 </sup>&lt; 1 &lt;<i> x</i>. Now subtract 1 from all parts of <i>x</i><sup>3 </sup>&lt; 1 &lt;<i> x</i> to obtain <i>x</i><sup>3 </sup>− 1 &lt; 0 &lt;<i> x </i>− 1 and reason as follows:</p>
+<p class="display"><i>x</i><sup>3 </sup>− 1 &lt; 0 &lt; <i>x </i>− 1</p>
+<p class="display">(<i>x </i>− 1)(<i>x</i><sup>2 </sup>+<i> x </i>+ 1) &lt; 0 &lt; (<i>x </i>− 1)</p>
+<p class="display"><i>x</i><sup>2 </sup>+<i> x </i>+ 1 &lt; 0 &lt; 1</p>
+<p>Now we have <i>x</i><sup>2 </sup>+<i> x</i> + 1 &lt; 0, which is a contradiction because <i>x </i>is positive. Thus the conjecture must be false. ■</p>
+<div class="exercises" data-for="ch9"><h3>Exercises for Chapter 9</h3>
+<p class="ex-group">Each of the following statements is either true or false. If a statement is true, prove it. If a statement is false, disprove it. These exercises are cumulative, covering all topics addressed in Chapters 1–9.</p>
+<ol class="ex-list">
+<li class="ex" id="ex-ch9-1" value="1">If <i>x</i>,<i> y</i> ∈ ℝ, then |<i>x </i>+<i> y</i>| = |<i>x</i>|+|<i>y</i>|.</li>
+<li class="ex" id="ex-ch9-2" value="2">For every natural number <i>n</i>, the integer 2<i>n</i><sup>2 </sup>− 4<i>n </i>+ 31 is prime.</li>
+<li class="ex" id="ex-ch9-3" value="3">If <i>n</i> ∈ ℤ and <i>n</i><sup>5 </sup>− <i>n</i> is even, then <i>n</i> is even.</li>
+<li class="ex" id="ex-ch9-4" value="4">For every natural number <i>n</i>, the integer <i>n</i><sup>2 </sup>+ 17<i>n </i>+ 17 is prime.</li>
+<li class="ex" id="ex-ch9-5" value="5">If <i>A</i>, <i>B</i>,<i>C </i>and <i>D </i>are sets, then (<i>A</i> × <i>B</i>) ∪ (<i>C</i> ×<i> D</i>) = (<i>A</i> ∪ <i>C</i>) × (<i>B</i> ∪ <i>D</i>).</li>
+<li class="ex" id="ex-ch9-6" value="6">If <i>A</i>, <i>B</i>,<i>C </i>and <i>D </i>are sets, then (<i>A</i> × <i>B</i>) ∩ (<i>C</i> ×<i> D</i>) = (<i>A</i> ∩ <i>C</i>) × (<i>B</i> ∩ <i>D</i>).</li>
+<li class="ex" id="ex-ch9-7" value="7">If <i>A</i>, <i>B</i> and <i>C </i>are sets, and <i>A</i> × <i>C</i> =<i> B</i> × <i>C</i>, then <i>A</i> =<i> B</i>.</li>
+<li class="ex" id="ex-ch9-8" value="8">If <i>A</i>, <i>B</i> and <i>C </i>are sets, then <i>A</i> − (<i>B</i> ∪ <i>C</i>) = (<i>A</i> − <i>B</i>) ∪ (<i>A</i> − <i>C</i>).</li>
+<li class="ex" id="ex-ch9-9" value="9">If <i>A </i>and <i>B</i> are sets, then 𝒫(<i>A</i>) − 𝒫(<i>B</i>) ⊆ 𝒫(<i>A</i> − <i>B</i>).</li>
+<li class="ex" id="ex-ch9-10" value="10">If <i>A </i>and <i>B</i> are sets and <i>A</i> ∩ <i>B</i> = ∅, then 𝒫(<i>A</i>) − 𝒫(<i>B</i>) ⊆ 𝒫(<i>A</i> − <i>B</i>).</li>
+<li class="ex" id="ex-ch9-11" value="11">If <i>a</i>, <i>b</i> ∈ ℕ, then <i>a </i>+<i> b</i> &lt;<i> ab</i>.</li>
+<li class="ex" id="ex-ch9-12" value="12">If <i>a</i>, <i>b</i>,<i> c</i> ∈ ℕ and <i>ab</i>, <i>bc</i> and <i>ac</i> all have the same parity, then <i>a</i>, <i>b</i> and <i>c</i> all have the same parity.</li>
+<li class="ex" id="ex-ch9-13" value="13">There exists a set <i>X </i>for which ℝ ⊆ <i>X </i>and ∅ ∈ <i>X</i>.</li>
+<li class="ex" id="ex-ch9-14" value="14">If <i>A </i>and <i>B</i> are sets, then 𝒫(<i>A</i>) ∩ 𝒫(<i>B</i>) = 𝒫(<i>A</i> ∩ <i>B</i>).</li>
+<li class="ex" id="ex-ch9-15" value="15">Every odd integer is the sum of three odd integers.</li>
+<li class="ex" id="ex-ch9-16" value="16">If <i>A </i>and <i>B</i> are ﬁnite sets, then |<i>A</i> ∪ <i>B</i>| = |<i>A</i>|+|<i>B</i>|.</li>
+<li class="ex" id="ex-ch9-17" value="17">For all sets <i>A </i>and <i>B</i>, if <i>A</i> − <i>B</i> = ∅, then <i>B</i> ≠ ∅.</li>
+<li class="ex" id="ex-ch9-18" value="18">If <i>a</i>, <i>b</i>,<i> c</i> ∈ ℕ, then at least one of <i>a </i>− <i>b</i>, <i>a </i>+<i> c</i> and <i>b</i> − <i>c</i> is even.</li>
+<li class="ex" id="ex-ch9-19" value="19">For every <i>r</i>, <i>s</i> ∈ ℚ with <i>r</i> &lt;<i> s</i>, there is an irrational number <i>u</i> for which <i>r</i> &lt;<i> u</i> &lt;<i> s</i>.</li>
+<li class="ex" id="ex-ch9-20" value="20">There exist prime numbers <i>p</i> and <i>q</i> for which <i>p</i> − <i>q</i> = 1000.</li>
+<li class="ex" id="ex-ch9-21" value="21">There exist prime numbers <i>p</i> and <i>q</i> for which <i>p</i> − <i>q</i> = 97.</li>
+<li class="ex" id="ex-ch9-22" value="22">If <i>p</i> and <i>q</i> are prime numbers for which <i>p</i> &lt;<i> q</i>, then 2<i>p</i> +<i> q</i><sup>2 </sup>is odd.</li>
+<li class="ex" id="ex-ch9-23" value="23">If <i>x</i>,<i> y</i> ∈ ℝ and <i>x</i><sup>3 </sup>&lt;<i> y</i><sup>3</sup>, then <i>x</i> &lt;<i> y</i>.</li>
+<li class="ex" id="ex-ch9-24" value="24">The inequality 2<sup><i>x </i></sup>≥ <i>x </i>+ 1 is true for all positive real numbers <i>x</i>.</li>
+<li class="ex" id="ex-ch9-25" value="25">For all <i>a</i>, <i>b</i>,<i> c</i> ∈ ℤ, if <i>a</i>| <i>bc</i>, then <i>a</i>| <i>b</i> or <i>a</i>|<i> c</i>.</li>
+<li class="ex" id="ex-ch9-26" value="26">Suppose<em> A, B</em> and <i>C </i>are sets. If <i>A</i> =<i> B</i> − <i>C</i>, then <i>B</i> =<i> A</i> ∪ <i>C</i>.</li>
+<li class="ex" id="ex-ch9-27" value="27">The equation <i>x</i><sup>2 </sup>= 2<sup><i>x </i></sup>has three real solutions.</li>
+<li class="ex" id="ex-ch9-28" value="28">Suppose <i>a</i>, <i>b</i> ∈ ℤ. If <i>a</i>| <i>b</i> and <i>b</i>|<i>a</i>, then <i>a</i> =<i> b</i>.</li>
+<li class="ex" id="ex-ch9-29" value="29">If <i>x</i>,<i> y</i> ∈ ℝ and |<i>x </i>+<i> y</i>| = |<i>x </i>− <i>y</i>|, then <i>y</i> = 0.</li>
+<li class="ex" id="ex-ch9-30" value="30">There exist integers <i>a</i> and <i>b</i> for which 42<i>a </i>+ 7<i>b</i> = 1.</li>
+<li class="ex" id="ex-ch9-31" value="31">No number (other than 1) appears in Pascal’s triangle more than four times.</li>
+<li class="ex" id="ex-ch9-32" value="32">If <i>n</i>, <i>k</i> ∈ ℕ and <img class="m" src="figs/m/ch09-0004.svg" alt="( nk)" data-crop="190:153.4,533.7,168.6,549.1" style="height:15.4pt;vertical-align:-5.1pt"> is a prime number, then <i>k</i> = 1 or <i>k</i> =<i> n </i>− 1.</li>
+<li class="ex" id="ex-ch9-33" value="33">Suppose <i>f</i> (<i>x</i>) =<i> a</i>0 +<i> a</i>1<i>x </i>+<i> a</i>2<i>x</i><sup>2 </sup>+···+<i> anx</i><sup><i>n </i></sup>is a polynomial of degree 1 or greater, and for which each coeﬃcient <i>ai </i>is in ℕ. Then there is a <i>k</i> ∈ ℕ for which the integer <i>f</i> (<i>k</i>) is not prime.</li>
+<li class="ex" id="ex-ch9-34" value="34">If <i>X </i>⊆ <i>A</i> ∪ <i>B</i>, then <i>X </i>⊆ <i>A </i>or <i>X </i>⊆ <i>B</i>.</li>
+<li class="ex" id="ex-ch9-35" value="35">In Chapter 5, Exercise 25 asked you to prove that if 2<sup><i>n </i></sup>− 1 is prime, then <i>n </i>is prime. Is the converse true?</li>
+</ol>
+</div>
+</section>
+</section>

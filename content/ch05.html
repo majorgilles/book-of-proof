@@ -1,0 +1,196 @@
+<!-- pages: 139-147 -->
+<section class="chapter" id="ch5">
+<h1><span class="num">Chapter 5</span> Contrapositive Proof</h1>
+<p class="display">We now examine an alternative to direct proof called<strong> contrapositive</strong></p>
+<p class="display"><strong>proof</strong>. Like direct proof, the technique of contrapositive proof is</p>
+<p>used to prove conditional statements of the form<em> “If </em><i>P</i><em>, then</em><i> Q</i><em>.” </em>Although it is possible to use direct proof exclusively, there are occasions where contrapositive proof is much easier.</p>
+<section class="sec" id="s5-1" data-title="Contrapositive Proof">
+<h2><span class="num">5.1</span> Contrapositive Proof</h2>
+<p>To understand how contrapositive proof works, imagine that you need to prove a proposition of the following form.</p>
+<p class="lbl proposition"><strong>Proposition </strong>If <i>P</i>, then<i> Q</i>.</p>
+<p>This is a conditional statement of form <i>P</i> ⇒ <i>Q</i>. Our goal is to show that this conditional statement is true. Recall that in Section 2.6 we observed that<i> P</i> ⇒ <i>Q</i> is logically equivalent to ∼ <i>Q</i> ⇒∼ <i>P</i>. For convenience, we duplicate the truth table that veriﬁes this fact.</p>
+<figure><img src="figs/ch05-0001.svg" alt="Figure" style="width:184pt"></figure>
+<p>According to the table, statements <i>P </i>⇒ <i>Q </i>and ∼ <i>Q</i> ⇒∼ <i>P </i>are diﬀerent ways of expressing exactly the same thing. The expression ∼ <i>Q </i>⇒∼ <i>P </i>is called the<strong> contrapositive form</strong> of <i>P</i> ⇒ <i>Q</i>. (Do not confuse the two words <em>contrapositive </em>and <em>converse</em>. Recall from Section 2.4 that the <em>converse </em>of <i>P</i> ⇒ <i>Q </i>is the statement<i> Q</i> ⇒ <i>P</i>, which is<em> not</em> logically equivalent to <i>P</i> ⇒ <i>Q</i>.)</p>
+<p>Since <i>P</i> ⇒ <i>Q </i>is logically equivalent to ∼ <i>Q</i> ⇒∼ <i>P</i>, it follows that to prove <i>P</i> ⇒ <i>Q </i>is true, it suﬃces to instead prove that ∼ <i>Q</i> ⇒∼ <i>P </i>is true. If we were to use direct proof to show ∼ <i>Q</i> ⇒∼ <i>P </i>is true, we would assume ∼ <i>Q </i>is true and use this to deduce that ∼ <i>P </i>is true. This in fact is the basic approach of contrapositive proof, summarized as follows.</p>
+<p class="display"><strong>Outline for Contrapositive Proof</strong></p>
+<p class="display"><strong>Proposition </strong>If <i>P</i>, then<i> Q</i>.</p>
+<p class="display"><em>Proof. </em>Suppose ∼ <i>Q</i>.</p>
+<p class="display">...</p>
+<p>So the setup for contrapositive proof is very simple. The ﬁrst line of the proof is the sentence<em> “Suppose</em><i> Q </i><em>is not true.” </em>(Or something to that eﬀect.) The last line is the sentence<em> “Therefore </em><i>P </i><em>is not true.” </em>Between the ﬁrst and last line we use logic and deﬁnitions to transform the statement ∼ <i>Q </i>to the statement ∼ <i>P</i>.</p>
+<p>To illustrate this new technique, and to contrast it with direct proof, we now prove a proposition in two ways: ﬁrst with direct proof and then with contrapositive proof.</p>
+<p class="lbl proposition"><strong>Proposition </strong>Suppose <i>x</i> ∈ ℤ. If 7<i>x </i>+ 9 is even, then <i>x</i> is odd.</p>
+<p class="proof"><em>Proof. </em>(Direct) Suppose 7<i>x </i>+ 9 is even. Thus 7<i>x </i>+ 9 = 2<i>a</i> for some integer <i>a</i>. Subtracting 6<i>x </i>+ 9 from both sides, we get <i>x</i> = 2<i>a </i>− 6<i>x </i>− 9. Thus <i>x</i> = 2<i>a </i>− 6<i>x </i>− 9 = 2<i>a </i>− 6<i>x </i>− 10 + 1 = 2(<i>a </i>− 3<i>x </i>− 5) + 1. Consequently <i>x</i> = 2<i>b</i> + 1, where <i>b</i> =<i> a </i>− 3<i>x </i>− 5 ∈ ℤ. Therefore <i>x</i> is odd. ■</p>
+<p>Here is a contrapositive proof of the same statement:</p>
+<p class="lbl proposition"><strong>Proposition </strong>Suppose <i>x</i> ∈ ℤ. If 7<i>x </i>+ 9 is even, then <i>x</i> is odd.</p>
+<p class="proof"><em>Proof. </em>(Contrapositive) Suppose <i>x</i> is not odd. Thus <i>x</i> is even, so <i>x</i> = 2<i>a</i> for some integer <i>a</i>. Then 7<i>x </i>+ 9 = 7(2<i>a</i>) + 9 = 14<i>a </i>+ 8 + 1 = 2(7<i>a </i>+ 4) + 1. Therefore 7<i>x </i>+ 9 = 2<i>b</i> + 1, where <i>b</i> is the integer 7<i>a </i>+ 4. Consequently 7<i>x </i>+ 9 is odd. Therefore 7<i>x </i>+ 9 is not even. ■</p>
+<p>Though the proofs have equal length, you may feel that the contrapositive proof was smoother. This is because it is easier to transform information about <i>x</i> into information about 7<i>x </i>+ 9 than the other way around. For our next example, consider the following proposition concerning an integer <i>x</i>:</p>
+<p class="lbl proposition"><strong>Proposition </strong>Suppose <i>x</i> ∈ ℤ. If <i>x</i><sup>2 </sup>− 6<i>x </i>+ 5 is even, then <i>x</i> is odd.</p>
+<p>A direct proof would be problematic. We would begin by assuming that <i>x</i><sup>2 </sup>− 6<i>x </i>+ 5 is even, so <i>x</i><sup>2 </sup>− 6<i>x </i>+ 5 = 2<i>a</i>. Then we would need to transform this into <i>x</i> = 2<i>b</i> + 1 for <i>b</i> ∈ ℤ. But it is not quite clear how that could be done, for it would involve isolating an <i>x</i> from the quadratic expression. However the proof becomes very simple if we use contrapositive proof.</p>
+<p class="lbl proposition"><strong>Proposition </strong>Suppose <i>x</i> ∈ ℤ. If <i>x</i><sup>2 </sup>− 6<i>x </i>+ 5 is even, then <i>x</i> is odd.</p>
+<p class="proof"><em>Proof. </em>(Contrapositive) Suppose <i>x</i> is not odd. Thus <i>x</i> is even, so <i>x</i> = 2<i>a</i> for some integer <i>a</i>. So<i> x</i><sup>2</sup>−6<i>x</i>+5 = (2<i>a</i>)<sup>2</sup>−6(2<i>a</i>)+5 = 4<i>a</i><sup>2</sup>−12<i>a</i>+5 = 4<i>a</i><sup>2</sup>−12<i>a</i>+4+1 = 2(2<i>a</i><sup>2</sup>−6<i>a</i>+2)+1. Therefore <i>x</i><sup>2 </sup>− 6<i>x </i>+ 5 = 2<i>b</i> + 1, where <i>b</i> is the integer 2<i>a</i><sup>2 </sup>− 6<i>a </i>+ 2. Consequently <i>x</i><sup>2 </sup>− 6<i>x </i>+ 5 is odd. Therefore <i>x</i><sup>2 </sup>− 6<i>x </i>+ 5 is not even. ■</p>
+<p>In summary, since <i>x</i> being not odd (∼ <i>Q</i>) resulted in <i>x</i><sup>2 </sup>− 6<i>x </i>+ 5 being not even (∼ <i>P</i>), then <i>x</i><sup>2 </sup>− 6<i>x </i>+ 5 being even (<i>P</i>) means that <i>x</i> is odd (<i>Q</i>). Thus we have proved <i>P</i> ⇒ <i>Q </i>by proving ∼ <i>Q</i> ⇒∼ <i>P</i>. Here is another example:</p>
+<p class="lbl proposition"><strong>Proposition </strong>Suppose <i>x</i>,<i> y</i> ∈ ℝ. If <i>y</i><sup>3 </sup>+<i> yx</i><sup>2 </sup>≤ <i>x</i><sup>3 </sup>+<i> xy</i><sup>2</sup>, then <i>y</i> ≤ <i>x</i>.</p>
+<p class="proof"><em>Proof. </em>(Contrapositive) Suppose it is not true that <i>y</i> ≤ <i>x</i>, so <i>y</i> &gt;<i> x</i>. Then <i>y </i>− <i>x</i> &gt; 0. Multiply both sides of <i>y </i>− <i>x</i> &gt; 0 by the positive value <i>x</i><sup>2 </sup>+<i> y</i><sup>2</sup>.</p>
+<p class="display">(<i>y </i>− <i>x</i>)(<i>x</i><sup>2 </sup>+<i> y</i><sup>2</sup>) &gt; 0(<i>x</i><sup>2 </sup>+<i> y</i><sup>2</sup>)</p>
+<p class="display"><i>yx</i><sup>2 </sup>+<i> y</i><sup>3 </sup>− <i>x</i><sup>3 </sup>− <i>xy</i><sup>2 </sup>&gt; 0</p>
+<p class="display"><i>y</i><sup>3 </sup>+<i> yx</i><sup>2 </sup>&gt; <i>x</i><sup>3 </sup>+<i> xy</i><sup>2</sup></p>
+<p>Therefore <i>y</i><sup>3 </sup>+<i> yx</i><sup>2 </sup>&gt;<i> x</i><sup>3 </sup>+<i> xy</i><sup>2</sup>, so it is not true that <i>y</i><sup>3 </sup>+<i> yx</i><sup>2 </sup>≤ <i>x</i><sup>3 </sup>+<i> xy</i><sup>2</sup>. ■</p>
+<p>Proving <em>“If </em><i>P</i><em>, then </em><i>Q</i><em>,” </em>with the contrapositive approach necessarily involves the negated statements ∼ <i>P </i>and ∼ <i>Q</i>. In working with these we may have to use the techniques for negating statements (e.g., DeMorgan’s laws) discussed in Section 2.10. We consider such an example next.</p>
+<p class="lbl proposition"><strong>Proposition </strong>Suppose <i>x</i>,<i> y</i> ∈ ℤ. If 5 ∤ <i>xy</i>, then 5 ∤ <i>x</i> and 5 ∤ <i>y</i>.</p>
+<p class="proof"><em>Proof. </em>(Contrapositive) Suppose it is not true that 5 ∤ <i>x</i><strong> and</strong> 5 ∤ <i>y</i>. By DeMorgan’s law, it is not true that 5 ∤ <i>x </i><strong>or</strong> it is not true that 5 ∤ <i>y</i>. Therefore 5 |<i> x</i> or 5 |<i> y</i>. We consider these possibilities separately. <strong>Case 1. </strong>Suppose 5 |<i> x</i>. Then <i>x</i> = 5<i>a</i> for some <i>a</i> ∈ ℤ. From this we get <i>xy</i> = (5<i>a</i>)<i>y</i> = 5(<i>ay</i>), and that means 5 |<i> xy</i>. <strong>Case 2. </strong>Suppose 5 |<i> y</i>. Then <i>y</i> = 5<i>a</i> for some <i>a</i> ∈ ℤ. From this we get <i>xy</i> =<i> x</i>(5<i>a</i>) = 5(<i>xa</i>), and that means 5 |<i> xy</i>. The above cases show that 5 |<i> xy</i>, so it is not true that 5 ∤ <i>xy</i>. ■</p>
+</section>
+<section class="sec" id="s5-2" data-title="Congruence of Integers">
+<h2><span class="num">5.2</span> Congruence of Integers</h2>
+<p>Now is a good time to introduce a new deﬁnition that occurs in many branches of mathematics and will surely play a role in some of your later courses. But our main reason for introducing it is that it provides more opportunities to practice writing proofs, both direct and contrapositive.</p>
+<p><strong>Deﬁnition 5.1 </strong>Given integers <i>a </i>and <i>b </i>and <i>n</i> ∈ ℕ, we say that <i>a </i>and <i>b</i> are<strong> congruent modulo n</strong> if <i>n</i> | (<i>a </i>− <i>b</i>). We express this as <i>a</i> ≡ <i>b</i> (mod <i>n</i>). If <i>a</i> and <i>b</i> are not congruent modulo <i>n</i>, we write this as <i>a</i> ≢ <i>b</i> (mod <i>n</i>).</p>
+<p class="lbl example"><strong>Example 5.1 </strong>Here are some examples: 1. 9 ≡ 1 (mod 4) because 4 | (9 − 1). 2. 6 ≡ 10 (mod 4) because 4 | (6 − 10). 3. 14 ≢ 8 (mod 4) because 4 ∤ (14 − 8). 4. 20 ≡ 4 (mod 8) because 8 | (20 − 4). 5. 17 ≡−4 (mod 3) because 3 | (17 − (−4)).</p>
+<p>In practical terms, <i>a</i> ≡ <i>b </i>(mod <i>n</i>) means that <i>a </i>and <i>b </i>have the same remainder when divided by <i>n</i>. For example, we saw above that 6 ≡ 10 (mod 4) and indeed 6 and 10 both have remainder 2 when divided by 4. Also we saw 14 ≢ 8 (mod 4), and sure enough 14 has remainder 2 when divided by 4, while 8 has remainder 0.</p>
+<p>To see that this is true in general, note that if <i>a </i>and <i>b </i>both have the same remainder <i>r </i>when divided by <i>n</i>, then it follows that <i>a</i> =<i> kn</i> +<i> r </i>and <i>b</i> =<i> ℓn</i> +<i> r </i>for some <i>k</i>,<i>ℓ </i>∈ ℤ. Then <i>a</i> − <i>b</i> = (<i>kn</i> +<i> r</i>) − (<i>ℓn</i> +<i> r</i>) = <i>n</i>(<i>k</i> − <i>ℓ</i>). But <i>a </i>− <i>b</i> =<i> n</i>(<i>k</i> − <i>ℓ</i>) means <i>n</i> | (<i>a </i>− <i>b</i>), so <i>a</i> ≡ <i>b</i> (mod <i>n</i>). Conversely, this chapter’s Exercise 32 asks you to show that if <i>a</i> ≡ <i>b </i>(mod <i>n</i>), then <i>a</i> and <i>b </i>have the same remainder when divided by <i>n</i>.</p>
+<p>We conclude this section with several proofs involving congruence of integers, but you will also test your skills with other proofs in the exercises.</p>
+<p class="lbl proposition"><strong>Proposition </strong>Let <i>a</i>, <i>b</i> ∈ ℤ and <i>n</i> ∈ ℕ. If <i>a</i> ≡ <i>b</i> (mod <i>n</i>), then <i>a</i><sup>2 </sup>≡ <i>b</i><sup>2 </sup>(mod <i>n</i>).</p>
+<p class="proof"><em>Proof. </em>We will use direct proof. Suppose <i>a</i> ≡ <i>b</i> (mod <i>n</i>). By deﬁnition of congruence of integers, this means <i>n</i> | (<i>a </i>− <i>b</i>). Then by deﬁnition of divisibility, there is an integer <i>c</i> for which <i>a </i>− <i>b</i> =<i> nc</i>. Now multiply both sides of this equation by <i>a </i>+<i> b</i>.</p>
+<p class="display"><i>a </i>− <i>b </i>= <i>nc</i></p>
+<p class="display">(<i>a </i>− <i>b</i>)(<i>a </i>+<i> b</i>) = <i>nc</i>(<i>a </i>+<i> b</i>)</p>
+<p class="display"><i>a</i><sup>2 </sup>− <i>b</i><sup>2 </sup>= <i>nc</i>(<i>a </i>+<i> b</i>)</p>
+<p>Since <i>c</i>(<i>a </i>+<i> b</i>) ∈ ℤ, the above equation tells us <i>n</i> | (<i>a</i><sup>2 </sup>− <i>b</i><sup>2</sup>). According to Deﬁnition 5.1, this gives <i>a</i><sup>2 </sup>≡ <i>b</i><sup>2 </sup>(mod <i>n</i>). ■</p>
+<p>Let’s pause to consider this proposition’s meaning. It says <i>a</i> ≡ <i>b </i>(mod <i>n</i>) implies <i>a</i><sup>2 </sup>≡ <i>b</i><sup>2 </sup>(mod <i>n</i>). In other words, it says that if integers <i>a</i> and <i>b</i> have the same remainder when divided by <i>n</i>, then <i>a</i><sup>2 </sup>and <i>b</i><sup>2 </sup>also have the same remainder when divided by<i> n</i>. As an example of this, 6 and 10 have the same remainder (2) when divided by <i>n</i> = 4, and their squares 36 and 100 also have the same remainder (0) when divided by <i>n</i> = 4. The proposition promises this will happen for all <i>a</i>, <i>b</i> and <i>n</i>. In our examples we tend to concentrate more on how to prove propositions than on what the propositions mean. This is reasonable since our main goal is to learn how to prove statements. But it is helpful to sometimes also think about the meaning of what we prove.</p>
+<p class="lbl proposition"><strong>Proposition </strong>Let<i> a</i>, <i>b</i>,<i> c</i> ∈ ℤ and<i> n</i> ∈ ℕ. If<i> a</i> ≡ <i>b</i> (mod<i> n</i>), then<i> ac</i> ≡ <i>bc</i> (mod<i> n</i>).</p>
+<p class="proof"><em>Proof. </em>We employ direct proof. Suppose <i>a</i> ≡ <i>b</i> (mod <i>n</i>). By Deﬁnition 5.1, it follows that <i>n</i> | (<i>a </i>− <i>b</i>). Therefore, by deﬁnition of divisibility, there exists an integer <i>k</i> for which <i>a </i>− <i>b</i> =<i> nk</i>. Multiply both sides of this equation by <i>c</i> to get<i> ac</i>− <i>bc</i> =<i> nkc</i>. Thus<i> ac</i>− <i>bc</i> =<i> n</i>(<i>kc</i>) where <i>kc</i> ∈ ℤ, which means <i>n</i> | (<i>ac</i>− <i>bc</i>). By Deﬁnition 5.1, we have <i>ac</i> ≡ <i>bc</i> (mod <i>n</i>). ■</p>
+<p>Contrapositive proof seems to be the best approach in the next example, since it will eliminate the symbols ∤ and ≢.</p>
+<p class="lbl proposition"><strong>Proposition </strong>Suppose <i>a</i>, <i>b</i> ∈ ℤ and <i>n</i> ∈ ℕ. If 12<i>a</i> ≢ 12<i>b</i> (mod <i>n</i>), then <i>n</i> ∤ 12.</p>
+<p class="proof"><em>Proof. </em>(Contrapositive) Suppose <i>n</i> | 12. Then 12 =<i> nc</i> for some <i>c</i> ∈ ℤ. Thus</p>
+<p class="display">12(<i>a </i>− <i>b</i>) = <i>nc</i>(<i>a </i>− <i>b</i>).</p>
+<p>From this, 12<i>a</i>−12<i>b</i> =<i> n</i>(<i>ca</i>−<i>cb</i>). Because<i> ca</i>−<i>cb</i> ∈ ℤ, we get<i> n</i> | (12<i>a</i>−12<i>b</i>). This in turn means 12<i>a</i> ≡ 12<i>b</i> (mod <i>n</i>). ■</p>
+</section>
+<section class="sec" id="s5-3" data-title="Mathematical Writing">
+<h2><span class="num">5.3</span> Mathematical Writing</h2>
+<p>Now that we have begun writing proofs, it is a good time to contemplate the craft of writing. Unlike logic and mathematics, where there is a clear-cut distinction between what is right or wrong, the diﬀerence between good and bad writing is sometimes a matter of opinion. But there are some standard guidelines that will make your writing clearer. Some are listed below.</p>
+<p class="item">1. <strong>Begin each sentence with a word, not a mathematical symbol.</strong></p>
+<p>The reason is that sentences begin with capital letters, but mathematical</p>
+<p>symbols are case sensitive. Because <i>x</i> and <i>X </i>can have entirely diﬀerent</p>
+<p>meanings, putting such symbols at the beginning of a sentence can lead</p>
+<p>to ambiguity. Here are some examples of bad usage (marked with ×)</p>
+<p>and good usage (marked with ✓):</p>
+<p class="display"><i>A </i>is a subset of <i>B</i>. ×</p>
+<p>The set <i>A </i>is a subset of <i>B</i>. ✓</p>
+<p class="display"><i>x</i> is an integer, so 2<i>x </i>+ 5 is an integer. ×</p>
+<p class="display">Because <i>x</i> is an integer, 2<i>x </i>+ 5 is an integer. ✓</p>
+<p class="display"><i>x</i><sup>2 </sup>− <i>x </i>+ 2 = 0 has two solutions. ×</p>
+<p class="display"><i>X </i><sup>2 </sup>− <i>x </i>+ 2 = 0 has two solutions. × (and silly too)</p>
+<p>The equation <i>x</i><sup>2 </sup>− <i>x </i>+ 2 = 0 has two solutions. ✓</p>
+<p class="item">2. <strong>End each sentence with a period,</strong> even when the sentence ends with</p>
+<p>a mathematical symbol or expression.</p>
+<p class="display"><sup>∞ </sup>1 1</p>
+<p class="display">Euler proved that <img class="m" src="figs/m/ch05-0002.svg" alt="X" data-crop="144:200.2,554.4,212.9,566.0" style="height:11.6pt;vertical-align:-1.0pt"> = <img class="m" src="figs/m/ch05-0003.svg" alt="Y" data-crop="144:239.9,554.4,252.8,566.0" style="height:11.6pt;vertical-align:-1.0pt"> ×</p>
+<p class="display"><sub><i>k</i></sub><sub>=1 </sub><i>k</i><sup><i>s </i></sup><i>p</i>∈<i>P </i>1 − <img class="m" src="figs/m/ch05-0004.svg" alt="p1s" data-crop="144:272.4,562.4,282.4,579.8" style="height:17.3pt;vertical-align:-5.8pt"></p>
+<p class="display"><sup>∞ </sup>1 1</p>
+<p class="display">Euler proved that <img class="m" src="figs/m/ch05-0005.svg" alt="X" data-crop="144:200.2,585.0,212.9,596.7" style="height:11.6pt;vertical-align:-0.7pt"> = <img class="m" src="figs/m/ch05-0006.svg" alt="Y" data-crop="144:239.9,585.0,252.8,596.7" style="height:11.6pt;vertical-align:-0.7pt"> . ✓</p>
+<p class="display"><sub><i>k</i></sub><sub>=1 </sub><i>k</i><sup><i>s </i></sup><sub><i>p</i></sub><sub>∈</sub><sub><i>P </i></sub>1 − <img class="m" src="figs/m/ch05-0007.svg" alt="p1s" data-crop="144:272.4,593.1,282.4,610.4" style="height:17.3pt;vertical-align:-6.4pt"></p>
+<p>Mathematical statements (equations, etc.) are like English phrases that</p>
+<p>happen to contain special symbols, so use normal punctuation.</p>
+<p class="item">3. <strong>Separate mathematical symbols and expressions with words.</strong></p>
+<p>Not doing this can cause confusion by making distinct expressions appear</p>
+<p>to merge. Compare the clarity of the following examples.</p>
+<p>Because <i>x</i><sup>2 </sup>− 1 = 0, <i>x</i> = 1 or <i>x</i> = −1. ×</p>
+<p>Because <i>x</i><sup>2 </sup>− 1 = 0, it follows that <i>x</i> = 1 or <i>x</i> = −1. ✓</p>
+<p>Unlike <i>A</i> ∪ <i>B</i>, <i>A</i> ∩ <i>B</i> equals ∅. ×</p>
+<p>Unlike <i>A</i> ∪ <i>B</i>, the set <i>A</i> ∩ <i>B</i> equals ∅. ✓</p>
+<p class="item">4. <strong>Avoid misuse of symbols. </strong>Symbols such as =, ≤, ⊆, ∈, etc., are not</p>
+<p>words. While it is appropriate to use them in mathematical expressions,</p>
+<p>they are out of place in other contexts.</p>
+<p>Since the two sets are =, one is a subset of the other. ×</p>
+<p>Since the two sets are equal, one is a subset of the other. ✓</p>
+<p>The empty set is a ⊆ of every set. ×</p>
+<p>The empty set is a subset of every set. ✓</p>
+<p>Since <i>a</i> is odd and <i>x</i> odd ⇒ <i>x</i><sup>2 </sup>odd, <i>a</i><sup>2 </sup>is odd. ×</p>
+<p>Since <i>a</i> is odd and any odd number squared is odd, <i>a</i><sup>2 </sup>is odd. ✓</p>
+<p class="item">5. <strong>Avoid using unnecessary symbols. </strong>Mathematics is confusing enough</p>
+<p>without them. Don’t muddy the water even more.</p>
+<p>No set <i>X </i>has negative cardinality. ×</p>
+<p>No set has negative cardinality. ✓</p>
+<p class="item">6. <strong>Use the ﬁrst person plural. </strong>In mathematical writing, it is common</p>
+<p>to use the words “we” and “us” rather than “I,” “you” or “me.” It is as if</p>
+<p>the reader and writer are having a conversation, with the writer guiding</p>
+<p>the reader through the details of the proof.</p>
+<p class="item">7. <strong>Use the active voice. </strong>This is just a suggestion, but the active voice</p>
+<p>makes your writing more lively. (And briefer too.)</p>
+<p>The value <i>x</i> = 3 is obtained through division of both sides by 5. ×</p>
+<p>Dividing both sides by 5, we get <i>x</i> = 3. ✓</p>
+<p class="item">8. <strong>Explain each new symbol. </strong>In writing a proof, you must explain the</p>
+<p>meaning of every new symbol you introduce. Failure to do this can lead</p>
+<p>to ambiguity, misunderstanding and mistakes. For example, consider</p>
+<p>the following two possibilities for a sentence in a proof, where <i>a</i> and <i>b</i></p>
+<p>have been introduced on a previous line.</p>
+<p class="display">Since <i>a</i> |<i> b</i>, it follows that <i>b</i> =<i> ac</i>. ×</p>
+<p class="display">Since <i>a</i> |<i> b</i>, it follows that <i>b</i> =<i> ac</i> for some integer <i>c</i>. ✓</p>
+<p>If you use the ﬁrst form, then the reader may momentarily scan backwards looking for where the <i>c</i> entered into the picture, not realizing at</p>
+<p>ﬁrst that it came from the deﬁnition of divides.</p>
+<p class="item">9. <strong>Watch out for “it.” </strong>The pronoun “it” causes confusion when it is</p>
+<p>unclear what it refers to. If there is any possibility of confusion, you</p>
+<p>should avoid “it.” Here is an example:</p>
+<p class="display">Since <i>X </i>⊆ <i>Y </i>, and 0 &lt; |<i>X </i>|, we see that it is not empty. ×</p>
+<p>Is “it” <i>X </i>or<i> Y </i>? Either one would make sense, but which do we mean?</p>
+<p class="display">Since <i>X </i>⊆ <i>Y </i>, and 0 &lt; |<i>X </i>|, we see that<i> Y </i>is not empty. ✓</p>
+<p class="item">10. <strong>Since, because, as, for, so. </strong>In proofs, it is common to use these</p>
+<p>words as conjunctions joining two statements, and meaning that one</p>
+<p>statement is true and as a consequence the other true. The following</p>
+<p>statements all mean that <i>P </i>is true (or assumed to be true) and as a</p>
+<p>consequence<i> Q </i>is true also.</p>
+<p class="display"><i>Q </i>since <i>P Q </i>because <i>P Q</i>, as <i>P Q</i>, for <i>P P</i>, so<i> Q</i></p>
+<p class="display">Since <i>P</i>,<i> Q </i>Because <i>P</i>,<i> Q </i>As <i>P</i>,<i> Q</i></p>
+<p>Notice that the meaning of these constructions is diﬀerent from that of</p>
+<p><em>“If </em><i>P</i><em>, then</em><i> Q</i><em>,”</em> for they are asserting not only that <i>P </i>implies<i> Q</i>, but<strong> also</strong></p>
+<p>that <i>P </i>is true. Exercise care in using them. It must be the case that <i>P</i></p>
+<p>and<i> Q </i>are both statements<strong> and</strong> that<i> Q </i>really does follow from <i>P</i>.</p>
+<p class="display"><i>x</i> ∈ ℕ, so ℤ ×</p>
+<p class="display"><i>x</i> ∈ ℕ, so <i>x</i> ∈ ℤ ✓</p>
+<p class="item">11. <strong>Thus, hence, therefore, consequently. </strong>These adverbs precede a</p>
+<p>statement that follows logically from previous sentences or clauses. Be</p>
+<p>sure that a statement follows them.</p>
+<p class="display">Therefore 2<i>k</i> + 1. ×</p>
+<p>Therefore <i>a</i> = 2<i>k</i> + 1. ✓</p>
+<p class="item">12. <strong>Clarity is the gold standard of mathematical writing. </strong>If you</p>
+<p>think breaking a rule makes your writing clearer, then break the rule.</p>
+<p>Your mathematical writing will evolve with practice. One of the best ways to develop a good mathematical writing style is to read other people’s proofs. Adopt what works and avoid what doesn’t.</p>
+<div class="exercises" data-for="ch5"><h3>Exercises for Chapter 5</h3>
+<p class="ex-group"><strong>A. </strong>Prove the following statements with contrapositive proof. (In each case, think about how a direct proof would work. In most cases contrapositive is easier.)</p>
+<ol class="ex-list">
+<li class="ex" id="ex-ch5-1" value="1">Suppose <i>n</i> ∈ ℤ. If <i>n</i><sup>2 </sup>is even, then <i>n</i> is even.</li>
+<li class="ex" id="ex-ch5-2" value="2">Suppose <i>n</i> ∈ ℤ. If <i>n</i><sup>2 </sup>is odd, then <i>n</i> is odd.</li>
+<li class="ex" id="ex-ch5-3" value="3">Suppose <i>a</i>, <i>b</i> ∈ ℤ. If <i>a</i><sup>2</sup>(<i>b</i><sup>2 </sup>− 2<i>b</i>) is odd, then <i>a</i> and <i>b</i> are odd.</li>
+<li class="ex" id="ex-ch5-4" value="4">Suppose <i>a</i>, <i>b</i>,<i> c</i> ∈ ℤ. If <i>a</i> does not divide <i>bc</i>, then <i>a</i> does not divide <i>b</i>.</li>
+<li class="ex" id="ex-ch5-5" value="5">Suppose <i>x</i> ∈ ℝ. If <i>x</i><sup>2 </sup>+ 5<i>x</i> &lt; 0 then <i>x</i> &lt; 0.</li>
+<li class="ex" id="ex-ch5-6" value="6">Suppose <i>x</i> ∈ ℝ. If <i>x</i><sup>3 </sup>− <i>x</i> &gt; 0 then <i>x</i> &gt; −1.</li>
+<li class="ex" id="ex-ch5-7" value="7">Suppose <i>a</i>, <i>b</i> ∈ ℤ. If both <i>ab</i> and <i>a </i>+<i> b</i> are even, then both <i>a</i> and <i>b</i> are even.</li>
+<li class="ex" id="ex-ch5-8" value="8">Suppose <i>x</i> ∈ ℝ. If <i>x</i><sup>5 </sup>− 4<i>x</i><sup>4 </sup>+ 3<i>x</i><sup>3 </sup>− <i>x</i><sup>2 </sup>+ 3<i>x </i>− 4 ≥ 0, then <i>x</i> ≥ 0.</li>
+<li class="ex" id="ex-ch5-9" value="9">Suppose <i>n</i> ∈ ℤ. If 3 ∤ <i>n</i><sup>2</sup>, then 3 ∤ <i>n</i>.</li>
+<li class="ex" id="ex-ch5-10" value="10">Suppose <i>x</i>,<i> y</i>,<i> z</i> ∈ ℤ and <i>x</i> ≠ 0. If <i>x</i> ∤ <i>yz</i>, then <i>x</i> ∤ <i>y</i> and <i>x</i> ∤ <i>z</i>.</li>
+<li class="ex" id="ex-ch5-11" value="11">Suppose <i>x</i>,<i> y</i> ∈ ℤ. If <i>x</i><sup>2</sup>(<i>y </i>+ 3) is even, then <i>x</i> is even or <i>y</i> is odd.</li>
+<li class="ex" id="ex-ch5-12" value="12">Suppose <i>a</i> ∈ ℤ. If <i>a</i><sup>2 </sup>is not divisible by 4, then <i>a</i> is odd.</li>
+<li class="ex" id="ex-ch5-13" value="13">Suppose <i>x</i> ∈ ℝ. If <i>x</i><sup>5 </sup>+ 7<i>x</i><sup>3 </sup>+ 5<i>x</i> ≥ <i>x</i><sup>4 </sup>+<i> x</i><sup>2 </sup>+ 8, then <i>x</i> ≥ 0.</li>
+</ol>
+<p class="ex-group"><strong>B. </strong>Prove the following statements using either direct or contrapositive proof.</p>
+<ol class="ex-list">
+<li class="ex" id="ex-ch5-14" value="14">If <i>a</i>, <i>b</i> ∈ ℤ and <i>a</i> and <i>b</i> have the same parity, then 3<i>a </i>+ 7 and 7<i>b</i> − 4 do not.</li>
+<li class="ex" id="ex-ch5-15" value="15">Suppose <i>x</i> ∈ ℤ. If <i>x</i><sup>3 </sup>− 1 is even, then <i>x</i> is odd.</li>
+<li class="ex" id="ex-ch5-16" value="16">Suppose <i>x</i>,<i> y</i> ∈ ℤ. If <i>x </i>+<i> y</i> is even, then <i>x</i> and <i>y</i> have the same parity.</li>
+<li class="ex" id="ex-ch5-17" value="17">If <i>n</i> is odd, then 8 | (<i>n</i><sup>2 </sup>− 1).</li>
+<li class="ex" id="ex-ch5-18" value="18">If <i>a</i>, <i>b</i> ∈ ℤ, then (<i>a </i>+<i> b</i>)<sup>3 </sup>≡ <i>a</i><sup>3 </sup>+<i> b</i><sup>3 </sup>(mod 3).</li>
+<li class="ex" id="ex-ch5-19" value="19">Let <i>a</i>, <i>b</i>,<i> c</i> ∈ ℤ and <i>n</i> ∈ ℕ. If <i>a</i> ≡ <i>b</i> (mod <i>n</i>) and <i>a</i> ≡ <i>c</i> (mod <i>n</i>), then <i>c</i> ≡ <i>b</i> (mod <i>n</i>).</li>
+<li class="ex" id="ex-ch5-20" value="20">If <i>a</i> ∈ ℤ and <i>a</i> ≡ 1 (mod 5), then <i>a</i><sup>2 </sup>≡ 1 (mod 5).</li>
+<li class="ex" id="ex-ch5-21" value="21">Let <i>a</i>, <i>b</i> ∈ ℤ and <i>n</i> ∈ ℕ. If <i>a</i> ≡ <i>b</i> (mod <i>n</i>), then <i>a</i><sup>3 </sup>≡ <i>b</i><sup>3 </sup>(mod <i>n</i>).</li>
+<li class="ex" id="ex-ch5-22" value="22">Let <i>a</i> ∈ ℤ, <i>n</i> ∈ ℕ. If <i>a</i> has remainder <i>r </i>when divided by <i>n</i>, then <i>a</i> ≡ <i>r </i>(mod <i>n</i>).</li>
+<li class="ex" id="ex-ch5-23" value="23">Let <i>a</i>, <i>b</i> ∈ ℤ and <i>n</i> ∈ ℕ. If <i>a</i> ≡ <i>b</i> (mod <i>n</i>), then <i>a</i><sup>2 </sup>≡ <i>ab</i> (mod <i>n</i>).</li>
+<li class="ex" id="ex-ch5-24" value="24">If <i>a</i> ≡ <i>b</i> (mod <i>n</i>) and <i>c</i> ≡ <i>d </i>(mod <i>n</i>), then <i>ac</i> ≡ <i>bd </i>(mod <i>n</i>).</li>
+<li class="ex" id="ex-ch5-25" value="25">Let <i>n</i> ∈ ℕ. If 2<sup><i>n </i></sup>− 1 is prime, then <i>n</i> is prime.</li>
+<li class="ex" id="ex-ch5-26" value="26">If <i>n</i> = 2<sup><i>k </i></sup>− 1 for <i>k</i> ∈ ℕ, then every entry in Row <i>n</i> of Pascal’s Triangle is odd.</li>
+<li class="ex" id="ex-ch5-27" value="27">If <i>a</i> ≡ 0 (mod 4) or <i>a</i> ≡ 1 (mod 4), then <img class="m" src="figs/m/ch05-0008.svg" alt="( a2)" data-crop="147:244.7,543.6,259.6,558.7" style="height:15.1pt;vertical-align:-4.7pt"> is even.</li>
+<li class="ex" id="ex-ch5-28" value="28">If <i>n</i> ∈ ℤ, then 4 ∤ (<i>n</i><sup>2 </sup>− 3).</li>
+<li class="ex" id="ex-ch5-29" value="29">If integers <i>a</i> and <i>b</i> are not both zero, then gcd(<i>a</i>, <i>b</i>) = gcd(<i>a </i>− <i>b</i>, <i>b</i>).</li>
+<li class="ex" id="ex-ch5-30" value="30">If <i>a</i> ≡ <i>b</i> (mod <i>n</i>), then gcd(<i>a</i>, <i>n</i>) = gcd(<i>b</i>, <i>n</i>).</li>
+<li class="ex" id="ex-ch5-31" value="31">Suppose the division algorithm applied to <i>a </i>and <i>b </i>yields <i>a</i> =<i> qb</i> +<i> r</i>. Prove gcd(<i>a</i>, <i>b</i>) = gcd(<i>r</i>, <i>b</i>).</li>
+<li class="ex" id="ex-ch5-32" value="32">If <i>a</i> ≡ <i>b</i> (mod <i>n</i>), then <i>a</i> and <i>b</i> have the same remainder when divided by <i>n</i>.</li>
+</ol>
+</div>
+</section>
+</section>

@@ -1,0 +1,1457 @@
+[
+ {
+  "slug": "front",
+  "title": "Book of Proof",
+  "sections": []
+ },
+ {
+  "slug": "ch01",
+  "title": "Chapter 1 Sets",
+  "sections": [
+   {
+    "id": "s1-1",
+    "title": "Introduction to Sets",
+    "ex": [
+     "ex-1.1-1",
+     "ex-1.1-2",
+     "ex-1.1-3",
+     "ex-1.1-4",
+     "ex-1.1-5",
+     "ex-1.1-6",
+     "ex-1.1-7",
+     "ex-1.1-8",
+     "ex-1.1-9",
+     "ex-1.1-10",
+     "ex-1.1-11",
+     "ex-1.1-12",
+     "ex-1.1-13",
+     "ex-1.1-14",
+     "ex-1.1-15",
+     "ex-1.1-16",
+     "ex-1.1-17",
+     "ex-1.1-18",
+     "ex-1.1-19",
+     "ex-1.1-20",
+     "ex-1.1-21",
+     "ex-1.1-22",
+     "ex-1.1-23",
+     "ex-1.1-24",
+     "ex-1.1-25",
+     "ex-1.1-26",
+     "ex-1.1-27",
+     "ex-1.1-28",
+     "ex-1.1-29",
+     "ex-1.1-30",
+     "ex-1.1-31",
+     "ex-1.1-32",
+     "ex-1.1-33",
+     "ex-1.1-34",
+     "ex-1.1-35",
+     "ex-1.1-36",
+     "ex-1.1-37",
+     "ex-1.1-38",
+     "ex-1.1-39",
+     "ex-1.1-40",
+     "ex-1.1-41",
+     "ex-1.1-42",
+     "ex-1.1-43",
+     "ex-1.1-44",
+     "ex-1.1-45",
+     "ex-1.1-46",
+     "ex-1.1-47",
+     "ex-1.1-48",
+     "ex-1.1-49",
+     "ex-1.1-50",
+     "ex-1.1-51",
+     "ex-1.1-52"
+    ]
+   },
+   {
+    "id": "s1-2",
+    "title": "The Cartesian Product",
+    "ex": [
+     "ex-1.2-1",
+     "ex-1.2-2",
+     "ex-1.2-3",
+     "ex-1.2-4",
+     "ex-1.2-5",
+     "ex-1.2-6",
+     "ex-1.2-7",
+     "ex-1.2-8",
+     "ex-1.2-9",
+     "ex-1.2-10",
+     "ex-1.2-11",
+     "ex-1.2-12",
+     "ex-1.2-13",
+     "ex-1.2-14",
+     "ex-1.2-15",
+     "ex-1.2-16",
+     "ex-1.2-17",
+     "ex-1.2-18",
+     "ex-1.2-19",
+     "ex-1.2-20"
+    ]
+   },
+   {
+    "id": "s1-3",
+    "title": "Subsets",
+    "ex": [
+     "ex-1.3-1",
+     "ex-1.3-2",
+     "ex-1.3-3",
+     "ex-1.3-4",
+     "ex-1.3-5",
+     "ex-1.3-6",
+     "ex-1.3-7",
+     "ex-1.3-8",
+     "ex-1.3-9",
+     "ex-1.3-10",
+     "ex-1.3-11",
+     "ex-1.3-12",
+     "ex-1.3-13",
+     "ex-1.3-14",
+     "ex-1.3-15",
+     "ex-1.3-16"
+    ]
+   },
+   {
+    "id": "s1-4",
+    "title": "Power Sets",
+    "ex": [
+     "ex-1.4-1",
+     "ex-1.4-2",
+     "ex-1.4-3",
+     "ex-1.4-4",
+     "ex-1.4-5",
+     "ex-1.4-6",
+     "ex-1.4-7",
+     "ex-1.4-8",
+     "ex-1.4-9",
+     "ex-1.4-10",
+     "ex-1.4-11",
+     "ex-1.4-12",
+     "ex-1.4-13",
+     "ex-1.4-14",
+     "ex-1.4-15",
+     "ex-1.4-16",
+     "ex-1.4-17",
+     "ex-1.4-18",
+     "ex-1.4-19",
+     "ex-1.4-20"
+    ]
+   },
+   {
+    "id": "s1-5",
+    "title": "Union, Intersection, Diﬀerence",
+    "ex": [
+     "ex-1.5-1",
+     "ex-1.5-2",
+     "ex-1.5-3",
+     "ex-1.5-4",
+     "ex-1.5-5",
+     "ex-1.5-6",
+     "ex-1.5-7",
+     "ex-1.5-8",
+     "ex-1.5-9",
+     "ex-1.5-10"
+    ]
+   },
+   {
+    "id": "s1-6",
+    "title": "Complement",
+    "ex": [
+     "ex-1.6-1",
+     "ex-1.6-2",
+     "ex-1.6-3",
+     "ex-1.6-4",
+     "ex-1.6-5",
+     "ex-1.6-6"
+    ]
+   },
+   {
+    "id": "s1-7",
+    "title": "Venn Diagrams",
+    "ex": [
+     "ex-1.7-1",
+     "ex-1.7-2",
+     "ex-1.7-3",
+     "ex-1.7-4",
+     "ex-1.7-5",
+     "ex-1.7-6",
+     "ex-1.7-7",
+     "ex-1.7-8",
+     "ex-1.7-9",
+     "ex-1.7-10",
+     "ex-1.7-11",
+     "ex-1.7-12",
+     "ex-1.7-13",
+     "ex-1.7-14"
+    ]
+   },
+   {
+    "id": "s1-8",
+    "title": "Indexed Sets",
+    "ex": [
+     "ex-1.8-1",
+     "ex-1.8-2",
+     "ex-1.8-3",
+     "ex-1.8-4",
+     "ex-1.8-5",
+     "ex-1.8-6",
+     "ex-1.8-7",
+     "ex-1.8-8",
+     "ex-1.8-9",
+     "ex-1.8-10",
+     "ex-1.8-11",
+     "ex-1.8-12",
+     "ex-1.8-13",
+     "ex-1.8-14"
+    ]
+   },
+   {
+    "id": "s1-9",
+    "title": "Sets That Are Number Systems",
+    "ex": []
+   },
+   {
+    "id": "s1-10",
+    "title": "Russell’s Paradox",
+    "ex": []
+   }
+  ]
+ },
+ {
+  "slug": "ch02",
+  "title": "Chapter 2 Logic",
+  "sections": [
+   {
+    "id": "s2-1",
+    "title": "Statements",
+    "ex": [
+     "ex-2.1-1",
+     "ex-2.1-2",
+     "ex-2.1-3",
+     "ex-2.1-4",
+     "ex-2.1-5",
+     "ex-2.1-6",
+     "ex-2.1-7",
+     "ex-2.1-8",
+     "ex-2.1-9",
+     "ex-2.1-10",
+     "ex-2.1-11",
+     "ex-2.1-12",
+     "ex-2.1-13",
+     "ex-2.1-14",
+     "ex-2.1-15"
+    ]
+   },
+   {
+    "id": "s2-2",
+    "title": "And, Or, Not",
+    "ex": [
+     "ex-2.2-1",
+     "ex-2.2-2",
+     "ex-2.2-3",
+     "ex-2.2-4",
+     "ex-2.2-5",
+     "ex-2.2-6",
+     "ex-2.2-7",
+     "ex-2.2-8",
+     "ex-2.2-9",
+     "ex-2.2-10",
+     "ex-2.2-11",
+     "ex-2.2-12",
+     "ex-2.2-13",
+     "ex-2.2-14"
+    ]
+   },
+   {
+    "id": "s2-3",
+    "title": "Conditional Statements",
+    "ex": [
+     "ex-2.3-1",
+     "ex-2.3-2",
+     "ex-2.3-3",
+     "ex-2.3-4",
+     "ex-2.3-5",
+     "ex-2.3-6",
+     "ex-2.3-7",
+     "ex-2.3-8",
+     "ex-2.3-9",
+     "ex-2.3-10",
+     "ex-2.3-11",
+     "ex-2.3-12",
+     "ex-2.3-13"
+    ]
+   },
+   {
+    "id": "s2-4",
+    "title": "Biconditional Statements",
+    "ex": [
+     "ex-2.4-1",
+     "ex-2.4-2",
+     "ex-2.4-3",
+     "ex-2.4-4",
+     "ex-2.4-5"
+    ]
+   },
+   {
+    "id": "s2-5",
+    "title": "Truth Tables for Statements",
+    "ex": [
+     "ex-2.5-1",
+     "ex-2.5-2",
+     "ex-2.5-3",
+     "ex-2.5-4",
+     "ex-2.5-5",
+     "ex-2.5-6",
+     "ex-2.5-7",
+     "ex-2.5-8",
+     "ex-2.5-9",
+     "ex-2.5-10",
+     "ex-2.5-11"
+    ]
+   },
+   {
+    "id": "s2-6",
+    "title": "Logical Equivalence",
+    "ex": [
+     "ex-2.6-1",
+     "ex-2.6-2",
+     "ex-2.6-3",
+     "ex-2.6-4",
+     "ex-2.6-5",
+     "ex-2.6-6",
+     "ex-2.6-7",
+     "ex-2.6-8",
+     "ex-2.6-9",
+     "ex-2.6-10",
+     "ex-2.6-11",
+     "ex-2.6-12",
+     "ex-2.6-13",
+     "ex-2.6-14"
+    ]
+   },
+   {
+    "id": "s2-7",
+    "title": "Quantiﬁers",
+    "ex": [
+     "ex-2.7-1",
+     "ex-2.7-2",
+     "ex-2.7-3",
+     "ex-2.7-4",
+     "ex-2.7-5",
+     "ex-2.7-6",
+     "ex-2.7-7",
+     "ex-2.7-8",
+     "ex-2.7-9",
+     "ex-2.7-10"
+    ]
+   },
+   {
+    "id": "s2-8",
+    "title": "More on Conditional Statements",
+    "ex": []
+   },
+   {
+    "id": "s2-9",
+    "title": "Translating English to Symbolic Logic",
+    "ex": [
+     "ex-2.9-1",
+     "ex-2.9-2",
+     "ex-2.9-3",
+     "ex-2.9-4",
+     "ex-2.9-5",
+     "ex-2.9-6",
+     "ex-2.9-7",
+     "ex-2.9-8",
+     "ex-2.9-9",
+     "ex-2.9-10",
+     "ex-2.9-11",
+     "ex-2.9-12",
+     "ex-2.9-13"
+    ]
+   },
+   {
+    "id": "s2-10",
+    "title": "Negating Statements",
+    "ex": [
+     "ex-2.10-1",
+     "ex-2.10-2",
+     "ex-2.10-3",
+     "ex-2.10-4",
+     "ex-2.10-5",
+     "ex-2.10-6",
+     "ex-2.10-7",
+     "ex-2.10-8",
+     "ex-2.10-9",
+     "ex-2.10-10",
+     "ex-2.10-11",
+     "ex-2.10-12"
+    ]
+   },
+   {
+    "id": "s2-11",
+    "title": "Logical Inference",
+    "ex": []
+   },
+   {
+    "id": "s2-12",
+    "title": "An Important Note",
+    "ex": []
+   }
+  ]
+ },
+ {
+  "slug": "ch03",
+  "title": "Chapter 3 Counting",
+  "sections": [
+   {
+    "id": "s3-1",
+    "title": "Lists",
+    "ex": []
+   },
+   {
+    "id": "s3-2",
+    "title": "The Multiplication Principle",
+    "ex": [
+     "ex-3.2-1",
+     "ex-3.2-2",
+     "ex-3.2-3",
+     "ex-3.2-4",
+     "ex-3.2-5",
+     "ex-3.2-6",
+     "ex-3.2-7",
+     "ex-3.2-8",
+     "ex-3.2-9"
+    ]
+   },
+   {
+    "id": "s3-3",
+    "title": "The Addition and Subtraction Principles",
+    "ex": [
+     "ex-3.3-1",
+     "ex-3.3-2",
+     "ex-3.3-3",
+     "ex-3.3-4",
+     "ex-3.3-5",
+     "ex-3.3-6",
+     "ex-3.3-7",
+     "ex-3.3-8",
+     "ex-3.3-9",
+     "ex-3.3-10",
+     "ex-3.3-11",
+     "ex-3.3-12"
+    ]
+   },
+   {
+    "id": "s3-4",
+    "title": "Factorials and Permutations",
+    "ex": [
+     "ex-3.4-1",
+     "ex-3.4-2",
+     "ex-3.4-3",
+     "ex-3.4-4",
+     "ex-3.4-5",
+     "ex-3.4-6",
+     "ex-3.4-7",
+     "ex-3.4-8",
+     "ex-3.4-9",
+     "ex-3.4-10",
+     "ex-3.4-11",
+     "ex-3.4-12",
+     "ex-3.4-13",
+     "ex-3.4-14",
+     "ex-3.4-15",
+     "ex-3.4-16",
+     "ex-3.4-17",
+     "ex-3.4-18"
+    ]
+   },
+   {
+    "id": "s3-5",
+    "title": "Counting Subsets",
+    "ex": [
+     "ex-3.5-1",
+     "ex-3.5-2",
+     "ex-3.5-3",
+     "ex-3.5-4",
+     "ex-3.5-5",
+     "ex-3.5-6",
+     "ex-3.5-7",
+     "ex-3.5-8",
+     "ex-3.5-9",
+     "ex-3.5-10",
+     "ex-3.5-11",
+     "ex-3.5-12",
+     "ex-3.5-13",
+     "ex-3.5-14",
+     "ex-3.5-15",
+     "ex-3.5-16",
+     "ex-3.5-17",
+     "ex-3.5-18",
+     "ex-3.5-19"
+    ]
+   },
+   {
+    "id": "s3-6",
+    "title": "Pascal’s Triangle and the Binomial Theorem",
+    "ex": [
+     "ex-3.6-1",
+     "ex-3.6-2",
+     "ex-3.6-3",
+     "ex-3.6-4",
+     "ex-3.6-5",
+     "ex-3.6-6",
+     "ex-3.6-7",
+     "ex-3.6-8",
+     "ex-3.6-9",
+     "ex-3.6-10",
+     "ex-3.6-11",
+     "ex-3.6-12",
+     "ex-3.6-13",
+     "ex-3.6-14"
+    ]
+   },
+   {
+    "id": "s3-7",
+    "title": "The Inclusion-Exclusion Principle",
+    "ex": [
+     "ex-3.7-1",
+     "ex-3.7-2",
+     "ex-3.7-3",
+     "ex-3.7-4",
+     "ex-3.7-5",
+     "ex-3.7-6",
+     "ex-3.7-7",
+     "ex-3.7-8",
+     "ex-3.7-9",
+     "ex-3.7-10",
+     "ex-3.7-11",
+     "ex-3.7-12",
+     "ex-3.7-13",
+     "ex-3.7-14",
+     "ex-3.7-15"
+    ]
+   },
+   {
+    "id": "s3-8",
+    "title": "Counting Multisets",
+    "ex": [
+     "ex-3.8-1",
+     "ex-3.8-2",
+     "ex-3.8-3",
+     "ex-3.8-4",
+     "ex-3.8-5",
+     "ex-3.8-6",
+     "ex-3.8-7",
+     "ex-3.8-8",
+     "ex-3.8-9",
+     "ex-3.8-10",
+     "ex-3.8-11",
+     "ex-3.8-12",
+     "ex-3.8-13",
+     "ex-3.8-14",
+     "ex-3.8-15",
+     "ex-3.8-16",
+     "ex-3.8-17",
+     "ex-3.8-18",
+     "ex-3.8-19",
+     "ex-3.8-20",
+     "ex-3.8-21"
+    ]
+   },
+   {
+    "id": "s3-9",
+    "title": "The Division and Pigeonhole Principles",
+    "ex": [
+     "ex-3.9-1",
+     "ex-3.9-2",
+     "ex-3.9-3",
+     "ex-3.9-4",
+     "ex-3.9-5",
+     "ex-3.9-6"
+    ]
+   },
+   {
+    "id": "s3-10",
+    "title": "Combinatorial Proof",
+    "ex": [
+     "ex-3.10-1",
+     "ex-3.10-2",
+     "ex-3.10-3",
+     "ex-3.10-4",
+     "ex-3.10-5",
+     "ex-3.10-6",
+     "ex-3.10-7",
+     "ex-3.10-8",
+     "ex-3.10-9",
+     "ex-3.10-10",
+     "ex-3.10-11",
+     "ex-3.10-12"
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "ch04",
+  "title": "Part II",
+  "sections": [
+   {
+    "id": "s4-1",
+    "title": "Theorems",
+    "ex": []
+   },
+   {
+    "id": "s4-2",
+    "title": "Deﬁnitions",
+    "ex": []
+   },
+   {
+    "id": "s4-3",
+    "title": "Direct Proof",
+    "ex": []
+   },
+   {
+    "id": "s4-4",
+    "title": "Using Cases",
+    "ex": []
+   },
+   {
+    "id": "s4-5",
+    "title": "Treating Similar Cases",
+    "ex": []
+   },
+   {
+    "id": "x-ch4",
+    "title": "Exercises for Chapter 4",
+    "ex": [
+     "ex-ch4-1",
+     "ex-ch4-2",
+     "ex-ch4-3",
+     "ex-ch4-4",
+     "ex-ch4-5",
+     "ex-ch4-6",
+     "ex-ch4-7",
+     "ex-ch4-8",
+     "ex-ch4-9",
+     "ex-ch4-10",
+     "ex-ch4-11",
+     "ex-ch4-12",
+     "ex-ch4-13",
+     "ex-ch4-14",
+     "ex-ch4-15",
+     "ex-ch4-16",
+     "ex-ch4-17",
+     "ex-ch4-18",
+     "ex-ch4-19",
+     "ex-ch4-20",
+     "ex-ch4-21",
+     "ex-ch4-22",
+     "ex-ch4-23",
+     "ex-ch4-24",
+     "ex-ch4-25",
+     "ex-ch4-26",
+     "ex-ch4-27",
+     "ex-ch4-28"
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "ch05",
+  "title": "Chapter 5 Contrapositive Proof",
+  "sections": [
+   {
+    "id": "s5-1",
+    "title": "Contrapositive Proof",
+    "ex": []
+   },
+   {
+    "id": "s5-2",
+    "title": "Congruence of Integers",
+    "ex": []
+   },
+   {
+    "id": "s5-3",
+    "title": "Mathematical Writing",
+    "ex": []
+   },
+   {
+    "id": "x-ch5",
+    "title": "Exercises for Chapter 5",
+    "ex": [
+     "ex-ch5-1",
+     "ex-ch5-2",
+     "ex-ch5-3",
+     "ex-ch5-4",
+     "ex-ch5-5",
+     "ex-ch5-6",
+     "ex-ch5-7",
+     "ex-ch5-8",
+     "ex-ch5-9",
+     "ex-ch5-10",
+     "ex-ch5-11",
+     "ex-ch5-12",
+     "ex-ch5-13",
+     "ex-ch5-14",
+     "ex-ch5-15",
+     "ex-ch5-16",
+     "ex-ch5-17",
+     "ex-ch5-18",
+     "ex-ch5-19",
+     "ex-ch5-20",
+     "ex-ch5-21",
+     "ex-ch5-22",
+     "ex-ch5-23",
+     "ex-ch5-24",
+     "ex-ch5-25",
+     "ex-ch5-26",
+     "ex-ch5-27",
+     "ex-ch5-28",
+     "ex-ch5-29",
+     "ex-ch5-30",
+     "ex-ch5-31",
+     "ex-ch5-32"
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "ch06",
+  "title": "Chapter 6 Proof by Contradiction",
+  "sections": [
+   {
+    "id": "s6-1",
+    "title": "Proving Statements with Contradiction",
+    "ex": []
+   },
+   {
+    "id": "s6-2",
+    "title": "Proving Conditional Statements by Contradiction",
+    "ex": []
+   },
+   {
+    "id": "s6-3",
+    "title": "Combining Techniques",
+    "ex": []
+   },
+   {
+    "id": "s6-4",
+    "title": "Some Words of Advice",
+    "ex": []
+   },
+   {
+    "id": "x-ch6",
+    "title": "Exercises for Chapter 6",
+    "ex": [
+     "ex-ch6-1",
+     "ex-ch6-2",
+     "ex-ch6-3",
+     "ex-ch6-4",
+     "ex-ch6-5",
+     "ex-ch6-6",
+     "ex-ch6-7",
+     "ex-ch6-8",
+     "ex-ch6-9",
+     "ex-ch6-10",
+     "ex-ch6-11",
+     "ex-ch6-12",
+     "ex-ch6-13",
+     "ex-ch6-14",
+     "ex-ch6-15",
+     "ex-ch6-16",
+     "ex-ch6-17",
+     "ex-ch6-18",
+     "ex-ch6-19",
+     "ex-ch6-20",
+     "ex-ch6-21",
+     "ex-ch6-22",
+     "ex-ch6-23",
+     "ex-ch6-24"
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "ch07",
+  "title": "Part III",
+  "sections": [
+   {
+    "id": "s7-1",
+    "title": "If-and-Only-If Proof",
+    "ex": []
+   },
+   {
+    "id": "s7-2",
+    "title": "Equivalent Statements",
+    "ex": []
+   },
+   {
+    "id": "s7-3",
+    "title": "Existence Proofs; Existence and Uniqueness Proofs",
+    "ex": []
+   },
+   {
+    "id": "s7-4",
+    "title": "Constructive Versus Non-Constructive Proofs",
+    "ex": []
+   },
+   {
+    "id": "x-ch7",
+    "title": "Exercises for Chapter 7",
+    "ex": [
+     "ex-ch7-1",
+     "ex-ch7-2",
+     "ex-ch7-3",
+     "ex-ch7-4",
+     "ex-ch7-5",
+     "ex-ch7-6",
+     "ex-ch7-7",
+     "ex-ch7-8",
+     "ex-ch7-9",
+     "ex-ch7-10",
+     "ex-ch7-11",
+     "ex-ch7-12",
+     "ex-ch7-13",
+     "ex-ch7-14",
+     "ex-ch7-15",
+     "ex-ch7-16",
+     "ex-ch7-17",
+     "ex-ch7-18",
+     "ex-ch7-19",
+     "ex-ch7-20",
+     "ex-ch7-21",
+     "ex-ch7-22",
+     "ex-ch7-23",
+     "ex-ch7-24",
+     "ex-ch7-25",
+     "ex-ch7-26",
+     "ex-ch7-27",
+     "ex-ch7-28",
+     "ex-ch7-29",
+     "ex-ch7-30",
+     "ex-ch7-31",
+     "ex-ch7-32",
+     "ex-ch7-33",
+     "ex-ch7-34",
+     "ex-ch7-35",
+     "ex-ch7-36"
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "ch08",
+  "title": "Chapter 8 Proofs Involving Sets",
+  "sections": [
+   {
+    "id": "s8-1",
+    "title": "How to Prove a ∈A",
+    "ex": []
+   },
+   {
+    "id": "s8-2",
+    "title": "How to Prove A ⊆B",
+    "ex": []
+   },
+   {
+    "id": "s8-3",
+    "title": "How to Prove A = B",
+    "ex": []
+   },
+   {
+    "id": "s8-4",
+    "title": "Examples: Perfect Numbers",
+    "ex": []
+   },
+   {
+    "id": "x-ch8",
+    "title": "Exercises for Chapter 8",
+    "ex": [
+     "ex-ch8-1",
+     "ex-ch8-2",
+     "ex-ch8-3",
+     "ex-ch8-4",
+     "ex-ch8-5",
+     "ex-ch8-6",
+     "ex-ch8-7",
+     "ex-ch8-8",
+     "ex-ch8-9",
+     "ex-ch8-10",
+     "ex-ch8-11",
+     "ex-ch8-12",
+     "ex-ch8-13",
+     "ex-ch8-14",
+     "ex-ch8-15",
+     "ex-ch8-16",
+     "ex-ch8-17",
+     "ex-ch8-18",
+     "ex-ch8-19",
+     "ex-ch8-20",
+     "ex-ch8-21",
+     "ex-ch8-22",
+     "ex-ch8-23",
+     "ex-ch8-24",
+     "ex-ch8-25",
+     "ex-ch8-26",
+     "ex-ch8-27",
+     "ex-ch8-28",
+     "ex-ch8-29",
+     "ex-ch8-30",
+     "ex-ch8-31"
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "ch09",
+  "title": "Chapter 9 Disproof",
+  "sections": [
+   {
+    "id": "s9-1",
+    "title": "Disproving Universal Statements: Counterexamples",
+    "ex": []
+   },
+   {
+    "id": "s9-2",
+    "title": "Disproving Existence Statements",
+    "ex": []
+   },
+   {
+    "id": "s9-3",
+    "title": "Disproof by Contradiction",
+    "ex": []
+   },
+   {
+    "id": "x-ch9",
+    "title": "Exercises for Chapter 9",
+    "ex": [
+     "ex-ch9-1",
+     "ex-ch9-2",
+     "ex-ch9-3",
+     "ex-ch9-4",
+     "ex-ch9-5",
+     "ex-ch9-6",
+     "ex-ch9-7",
+     "ex-ch9-8",
+     "ex-ch9-9",
+     "ex-ch9-10",
+     "ex-ch9-11",
+     "ex-ch9-12",
+     "ex-ch9-13",
+     "ex-ch9-14",
+     "ex-ch9-15",
+     "ex-ch9-16",
+     "ex-ch9-17",
+     "ex-ch9-18",
+     "ex-ch9-19",
+     "ex-ch9-20",
+     "ex-ch9-21",
+     "ex-ch9-22",
+     "ex-ch9-23",
+     "ex-ch9-24",
+     "ex-ch9-25",
+     "ex-ch9-26",
+     "ex-ch9-27",
+     "ex-ch9-28",
+     "ex-ch9-29",
+     "ex-ch9-30",
+     "ex-ch9-31",
+     "ex-ch9-32",
+     "ex-ch9-33",
+     "ex-ch9-34",
+     "ex-ch9-35"
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "ch10",
+  "title": "Chapter 10 Mathematical Induction",
+  "sections": [
+   {
+    "id": "s10-1",
+    "title": "Proof by Induction",
+    "ex": []
+   },
+   {
+    "id": "s10-2",
+    "title": "Proof by Strong Induction",
+    "ex": []
+   },
+   {
+    "id": "s10-3",
+    "title": "Proof by Smallest Counterexample",
+    "ex": []
+   },
+   {
+    "id": "s10-4",
+    "title": "The Fundamental Theorem of Arithmetic",
+    "ex": []
+   },
+   {
+    "id": "s10-5",
+    "title": "Fibonacci Numbers",
+    "ex": []
+   },
+   {
+    "id": "x-ch10",
+    "title": "Exercises for Chapter 10",
+    "ex": [
+     "ex-ch10-1",
+     "ex-ch10-2",
+     "ex-ch10-3",
+     "ex-ch10-4",
+     "ex-ch10-5",
+     "ex-ch10-6",
+     "ex-ch10-7",
+     "ex-ch10-8",
+     "ex-ch10-9",
+     "ex-ch10-10",
+     "ex-ch10-11",
+     "ex-ch10-12",
+     "ex-ch10-13",
+     "ex-ch10-14",
+     "ex-ch10-15",
+     "ex-ch10-16",
+     "ex-ch10-17",
+     "ex-ch10-18",
+     "ex-ch10-19",
+     "ex-ch10-20",
+     "ex-ch10-21",
+     "ex-ch10-22",
+     "ex-ch10-23",
+     "ex-ch10-24",
+     "ex-ch10-25",
+     "ex-ch10-26",
+     "ex-ch10-27",
+     "ex-ch10-28",
+     "ex-ch10-29",
+     "ex-ch10-30",
+     "ex-ch10-31",
+     "ex-ch10-32",
+     "ex-ch10-33",
+     "ex-ch10-34",
+     "ex-ch10-35",
+     "ex-ch10-36",
+     "ex-ch10-37",
+     "ex-ch10-38",
+     "ex-ch10-39",
+     "ex-ch10-40",
+     "ex-ch10-41",
+     "ex-ch10-42",
+     "ex-ch10-43"
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "ch11",
+  "title": "Part IV",
+  "sections": [
+   {
+    "id": "s11-1",
+    "title": "Relations",
+    "ex": [
+     "ex-11.1-1",
+     "ex-11.1-2",
+     "ex-11.1-3",
+     "ex-11.1-4",
+     "ex-11.1-5",
+     "ex-11.1-6",
+     "ex-11.1-7",
+     "ex-11.1-8",
+     "ex-11.1-9",
+     "ex-11.1-10",
+     "ex-11.1-11",
+     "ex-11.1-12",
+     "ex-11.1-13",
+     "ex-11.1-14",
+     "ex-11.1-15"
+    ]
+   },
+   {
+    "id": "s11-2",
+    "title": "Properties of Relations",
+    "ex": [
+     "ex-11.2-1",
+     "ex-11.2-2",
+     "ex-11.2-3",
+     "ex-11.2-4",
+     "ex-11.2-5",
+     "ex-11.2-6",
+     "ex-11.2-7",
+     "ex-11.2-8",
+     "ex-11.2-9",
+     "ex-11.2-10",
+     "ex-11.2-11",
+     "ex-11.2-12",
+     "ex-11.2-13",
+     "ex-11.2-14",
+     "ex-11.2-15",
+     "ex-11.2-16",
+     "ex-11.2-17",
+     "ex-11.2-18"
+    ]
+   },
+   {
+    "id": "s11-3",
+    "title": "Equivalence Relations",
+    "ex": [
+     "ex-11.3-1",
+     "ex-11.3-2",
+     "ex-11.3-3",
+     "ex-11.3-4",
+     "ex-11.3-5",
+     "ex-11.3-6",
+     "ex-11.3-7",
+     "ex-11.3-8",
+     "ex-11.3-9",
+     "ex-11.3-10",
+     "ex-11.3-11",
+     "ex-11.3-12",
+     "ex-11.3-13",
+     "ex-11.3-14",
+     "ex-11.3-15",
+     "ex-11.3-16"
+    ]
+   },
+   {
+    "id": "s11-4",
+    "title": "Equivalence Classes and Partitions",
+    "ex": [
+     "ex-11.4-1",
+     "ex-11.4-2",
+     "ex-11.4-3",
+     "ex-11.4-4",
+     "ex-11.4-5",
+     "ex-11.4-6"
+    ]
+   },
+   {
+    "id": "s11-5",
+    "title": "The Integers Modulo n",
+    "ex": [
+     "ex-11.5-1",
+     "ex-11.5-2",
+     "ex-11.5-3",
+     "ex-11.5-4",
+     "ex-11.5-5",
+     "ex-11.5-6",
+     "ex-11.5-7",
+     "ex-11.5-8"
+    ]
+   },
+   {
+    "id": "s11-6",
+    "title": "Relations Between Sets",
+    "ex": []
+   }
+  ]
+ },
+ {
+  "slug": "ch12",
+  "title": "Chapter 12 Functions",
+  "sections": [
+   {
+    "id": "s12-1",
+    "title": "Functions",
+    "ex": [
+     "ex-12.1-1",
+     "ex-12.1-2",
+     "ex-12.1-3",
+     "ex-12.1-4",
+     "ex-12.1-5",
+     "ex-12.1-6",
+     "ex-12.1-7",
+     "ex-12.1-8",
+     "ex-12.1-9",
+     "ex-12.1-10",
+     "ex-12.1-11",
+     "ex-12.1-12"
+    ]
+   },
+   {
+    "id": "s12-2",
+    "title": "Injective and Surjective Functions",
+    "ex": [
+     "ex-12.2-1",
+     "ex-12.2-2",
+     "ex-12.2-3",
+     "ex-12.2-4",
+     "ex-12.2-5",
+     "ex-12.2-6",
+     "ex-12.2-7",
+     "ex-12.2-8",
+     "ex-12.2-9",
+     "ex-12.2-10",
+     "ex-12.2-11",
+     "ex-12.2-12",
+     "ex-12.2-13",
+     "ex-12.2-14",
+     "ex-12.2-15",
+     "ex-12.2-16",
+     "ex-12.2-17",
+     "ex-12.2-18",
+     "ex-12.2-19"
+    ]
+   },
+   {
+    "id": "s12-3",
+    "title": "The Pigeonhole Principle Revisited",
+    "ex": [
+     "ex-12.3-1",
+     "ex-12.3-2",
+     "ex-12.3-3",
+     "ex-12.3-4",
+     "ex-12.3-5",
+     "ex-12.3-6",
+     "ex-12.3-7"
+    ]
+   },
+   {
+    "id": "s12-4",
+    "title": "Composition",
+    "ex": [
+     "ex-12.4-1",
+     "ex-12.4-2",
+     "ex-12.4-3",
+     "ex-12.4-4",
+     "ex-12.4-5",
+     "ex-12.4-6",
+     "ex-12.4-7",
+     "ex-12.4-8",
+     "ex-12.4-9",
+     "ex-12.4-10"
+    ]
+   },
+   {
+    "id": "s12-5",
+    "title": "Inverse Functions",
+    "ex": [
+     "ex-12.5-1",
+     "ex-12.5-2",
+     "ex-12.5-3",
+     "ex-12.5-4",
+     "ex-12.5-5",
+     "ex-12.5-6",
+     "ex-12.5-7",
+     "ex-12.5-8",
+     "ex-12.5-9",
+     "ex-12.5-10"
+    ]
+   },
+   {
+    "id": "s12-6",
+    "title": "Image and Preimage",
+    "ex": [
+     "ex-12.6-1",
+     "ex-12.6-2",
+     "ex-12.6-3",
+     "ex-12.6-4",
+     "ex-12.6-5",
+     "ex-12.6-6",
+     "ex-12.6-7",
+     "ex-12.6-8",
+     "ex-12.6-9",
+     "ex-12.6-10",
+     "ex-12.6-11",
+     "ex-12.6-12",
+     "ex-12.6-13",
+     "ex-12.6-14"
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "ch13",
+  "title": "Chapter 13 Proofs in Calculus",
+  "sections": [
+   {
+    "id": "s13-1",
+    "title": "The Triangle Inequality",
+    "ex": []
+   },
+   {
+    "id": "s13-2",
+    "title": "Deﬁnition of a Limit",
+    "ex": [
+     "ex-13.2-1",
+     "ex-13.2-2",
+     "ex-13.2-3",
+     "ex-13.2-4",
+     "ex-13.2-5",
+     "ex-13.2-6"
+    ]
+   },
+   {
+    "id": "s13-3",
+    "title": "Limits That Do Not Exist",
+    "ex": [
+     "ex-13.3-1",
+     "ex-13.3-2",
+     "ex-13.3-3",
+     "ex-13.3-4",
+     "ex-13.3-5",
+     "ex-13.3-6"
+    ]
+   },
+   {
+    "id": "s13-4",
+    "title": "Limit Laws",
+    "ex": [
+     "ex-13.4-1",
+     "ex-13.4-2",
+     "ex-13.4-3",
+     "ex-13.4-4",
+     "ex-13.4-5",
+     "ex-13.4-6"
+    ]
+   },
+   {
+    "id": "s13-5",
+    "title": "Continuity and Derivatives",
+    "ex": [
+     "ex-13.5-1",
+     "ex-13.5-2"
+    ]
+   },
+   {
+    "id": "s13-6",
+    "title": "Limits at Inﬁnity",
+    "ex": [
+     "ex-13.6-1",
+     "ex-13.6-2",
+     "ex-13.6-3",
+     "ex-13.6-4",
+     "ex-13.6-5",
+     "ex-13.6-6",
+     "ex-13.6-7",
+     "ex-13.6-8",
+     "ex-13.6-9",
+     "ex-13.6-10"
+    ]
+   },
+   {
+    "id": "s13-7",
+    "title": "Sequences",
+    "ex": [
+     "ex-13.7-1",
+     "ex-13.7-2",
+     "ex-13.7-3",
+     "ex-13.7-4",
+     "ex-13.7-5",
+     "ex-13.7-6",
+     "ex-13.7-7",
+     "ex-13.7-8",
+     "ex-13.7-9",
+     "ex-13.7-10",
+     "ex-13.7-11",
+     "ex-13.7-12",
+     "ex-13.7-13",
+     "ex-13.7-14"
+    ]
+   },
+   {
+    "id": "s13-8",
+    "title": "Series",
+    "ex": [
+     "ex-13.8-1",
+     "ex-13.8-2",
+     "ex-13.8-3",
+     "ex-13.8-4",
+     "ex-13.8-5"
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "ch14",
+  "title": "Chapter 14 Cardinality of Sets",
+  "sections": [
+   {
+    "id": "s14-1",
+    "title": "Sets with Equal Cardinalities",
+    "ex": [
+     "ex-14.1-1",
+     "ex-14.1-2",
+     "ex-14.1-3",
+     "ex-14.1-4",
+     "ex-14.1-5",
+     "ex-14.1-6",
+     "ex-14.1-7",
+     "ex-14.1-8",
+     "ex-14.1-9",
+     "ex-14.1-10",
+     "ex-14.1-11",
+     "ex-14.1-12",
+     "ex-14.1-13",
+     "ex-14.1-14",
+     "ex-14.1-15",
+     "ex-14.1-16"
+    ]
+   },
+   {
+    "id": "s14-2",
+    "title": "Countable and Uncountable Sets",
+    "ex": [
+     "ex-14.2-1",
+     "ex-14.2-2",
+     "ex-14.2-3",
+     "ex-14.2-4",
+     "ex-14.2-5",
+     "ex-14.2-6",
+     "ex-14.2-7",
+     "ex-14.2-8",
+     "ex-14.2-9",
+     "ex-14.2-10",
+     "ex-14.2-11",
+     "ex-14.2-12",
+     "ex-14.2-13",
+     "ex-14.2-14",
+     "ex-14.2-15"
+    ]
+   },
+   {
+    "id": "s14-3",
+    "title": "Comparing Cardinalities",
+    "ex": [
+     "ex-14.3-1",
+     "ex-14.3-2",
+     "ex-14.3-3",
+     "ex-14.3-4",
+     "ex-14.3-5",
+     "ex-14.3-6",
+     "ex-14.3-7",
+     "ex-14.3-8",
+     "ex-14.3-9",
+     "ex-14.3-10"
+    ]
+   },
+   {
+    "id": "s14-4",
+    "title": "The Cantor-Bernstein-Schröder Theorem",
+    "ex": [
+     "ex-14.4-1",
+     "ex-14.4-2",
+     "ex-14.4-3",
+     "ex-14.4-4",
+     "ex-14.4-5",
+     "ex-14.4-6",
+     "ex-14.4-7"
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "conclusion",
+  "title": "Conclusion",
+  "sections": []
+ },
+ {
+  "slug": "solutions",
+  "title": "Solutions",
+  "sections": []
+ }
+]

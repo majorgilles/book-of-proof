@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Book of Proof — Book of Proof</title>
+<link rel="stylesheet" href="assets/style.css">
+<script>window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]},startup:{typeset:false}};</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<script defer src="assets/app.js"></script>
+</head><body data-page="front">
+<header class="top"><a href="index.html" class="home">Book of Proof</a>
+<nav><a href="ch01.html" rel="next">Next →</a><button id="settings-btn" type="button">Settings</button></nav></header>
+<main class="book"><!-- skip: 3-5 -->
+<section class="front" id="front">
+<h1>Book of Proof</h1>
+<p class="display">Third Edition</p>
+<p class="display">Richard Hammack</p>
+<p>Published by Richard Hammack Richmond, Virginia</p>
+<p><strong>Book of Proof</strong></p>
+<p>Edition 3.4</p>
+<p>© 2018 by Richard Hammack</p>
+<p>This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivative 4.0 International License</p>
+<figure><img src="figs/front-0001.svg" alt="Figure" style="width:90pt"></figure>
+<p>Typeset in 11pt TEX Gyre Schola using PDFLATEX</p>
+<p>Cover by R. Hammack. The cover diagrams are based on a geometric construction that renders a correct perspective view of an object (here an octagonal column) from its ﬂoor plan. The method was invented by Piero della Francesca 1415–1492, a Renaissance painter and mathematician.</p>
+<p class="display"><em>To my students</em></p>
+</section>
+<section class="front" id="front">
+<h1>Preface to the Third Edition</h1>
+<p class="display">My goal in writing this book has been to create a very inexpensive</p>
+<p class="display">high-quality textbook. The book can be downloaded from my web</p>
+<p>page in PDF format for free, and the print version costs considerably less than comparable traditional textbooks.</p>
+<p>In this third edition, Chapter 3 (on counting) has been expanded, and a new chapter on calculus proofs has been added. New examples and exercises have been added throughout. My decisions regarding revisions have been guided by both the Amazon reviews and emails from readers, and I am grateful for all comments.</p>
+<p>I have taken pains to ensure that the third edition is compatible with the second. Exercises have not been reordered, although some have been edited for clarity and some new ones have been appended. (The one exception is that Chapter 3’s reorganization shifted some exercises.) The chapter sequencing is identical between editions, with one exception: The ﬁnal chapter on cardinality has become Chapter 14 in order to make way for the new Chapter 13 on calculus proofs. There has been a slight renumbering of the sections within chapters 10 and 11, but the numbering of the exercises within the sections is unchanged.</p>
+<p>This core of this book is an expansion and reﬁnement of lecture notes I developed while teaching proofs courses over the past 18 years at Virginia Commonwealth University (a large state university) and Randolph-Macon College (a small liberal arts college). I found the needs of these two audiences to be nearly identical, and I wrote this book for them. But I am mindful of a larger audience. I believe this book is suitable for almost any undergraduate mathematics program.</p>
+<p>Richard Hammack <em>Lawrenceville, Virginia</em></p>
+<p class="display"><em>February 14, 2018</em></p>
+</section>
+<section class="front" id="front">
+<h1>Introduction</h1>
+<p>This is a book about how to prove theorems.</p>
+<p>Until this point in your education, mathematics has probably been presented as a primarily computational discipline. You have learned to solve equations, compute derivatives and integrals, multiply matrices and ﬁnd determinants; and you have seen how these things can answer practical questions about the real world. In this setting your primary goal in using mathematics has been to compute answers.</p>
+<p>But there is another side of mathematics that is more theoretical than computational. Here the primary goal is to understand mathematical structures, to prove mathematical statements, and even to invent or discover new mathematical theorems and theories. The mathematical techniques and procedures that you have learned and used up until now are founded on this theoretical side of mathematics. For example, in computing the area under a curve, you use the fundamental theorem of calculus. It is because this theorem is true that your answer is correct. However, in learning calculus you were probably far more concerned with how that theorem could be applied than in understanding why it is true. But how do we<em> know</em> it is true? How can we convince ourselves or others of its validity? Questions of this nature belong to the theoretical realm of mathematics. This book is an introduction to that realm.</p>
+<p>This book will initiate you into an esoteric world. You will learn and apply the methods of thought that mathematicians use to verify theorems, explore mathematical truth and create new mathematical theories. This will prepare you for advanced mathematics courses, for you will be better able to understand proofs, write your own proofs and think critically and inquisitively about mathematics.</p>
+<p>The book is organized into four parts, as outlined below. <strong>PART I Fundamentals</strong></p>
+<p class="bullet">• Chapter 1: Sets</p>
+<p class="bullet">• Chapter 2: Logic</p>
+<p class="bullet">• Chapter 3: Counting Chapters 1 and 2 lay out the language and conventions used in all advanced mathematics. Sets are fundamental because every mathematical structure, object, or entity can be described as a set. Logic is fundamental because it allows us to understand the meanings of statements, to deduce facts about mathematical structures and to uncover further structures. All subsequent chapters build on these ﬁrst two chapters. Chapter 3 is included partly because its topics are central to many branches of mathematics, but also because it is a source of many examples and exercises that occur throughout the book. (However, the course instructor may choose to omit Chapter 3.)</p>
+<p><strong>PART II Proving Conditional Statements</strong></p>
+<p class="bullet">• Chapter 4: Direct Proof</p>
+<p class="bullet">• Chapter 5: Contrapositive Proof</p>
+<p class="bullet">• Chapter 6: Proof by Contradiction Chapters 4 through 6 are concerned with three main techniques used for proving theorems that have the “conditional” form<em> “If </em><i>P</i><em>, then Q.”</em></p>
+<p><strong>PART III More on Proof</strong></p>
+<p class="bullet">• Chapter 7: Proving Non-Conditional Statements</p>
+<p class="bullet">• Chapter 8: Proofs Involving Sets</p>
+<p class="bullet">• Chapter 9: Disproof</p>
+<p class="bullet">• Chapter 10: Mathematical Induction These chapters deal with useful variations, embellishments and consequences of the proof techniques introduced in Chapters 4 through 6.</p>
+<p><strong>PART IV Relations, Functions and Cardinality</strong></p>
+<p class="bullet">• Chapter 11: Relations</p>
+<p class="bullet">• Chapter 12: Functions</p>
+<p class="bullet">• Chapter 13: Proofs in Calculus</p>
+<p class="bullet">• Chapter 14: Cardinality of Sets These ﬁnal chapters are mainly concerned with the idea of<em> functions</em>, which are central to all of mathematics. Upon mastering this material you will be ready for advanced mathematics courses such as abstract algebra, analysis, topology, combinatorics and theory of computation.</p>
+<p>The chapters are organized as in the following dependency tree. The left-hand column forms the core of the book; each chapter in this column uses material from all chapters above it. Chapters 3 and 13 may be omitted without loss of continuity. But the material in Chapter 3 is a great source of exercises, and the reader who omits it should ignore the later exercises that draw from it. Chapter 10, on induction, can also be omitted with no break in continuity. However, induction is a topic that most proof courses will include.</p>
+<p class="display"><sup>Chapter 1 </sup><strong>Dependency Tree</strong></p>
+<p class="display">Sets</p>
+<p class="display">Chapter 2</p>
+<p class="display">Logic Chapter 3</p>
+<p class="display">Counting</p>
+<p class="display">Chapter 4</p>
+<p class="display">Direct Proof</p>
+<p class="display">Proof by Contradiction §3.5 and §3.6 used in some exercises. Ignore them if Chapter 3 is omitted.</p>
+<p class="display">Chapter 5</p>
+<p class="display">Contrapositive Proof</p>
+<p class="display">Chapter 6</p>
+<p class="display">Chapter 7</p>
+<p class="display">Non-Conditional Proof</p>
+<p class="display">Chapter 8</p>
+<p class="display">Proofs Involving Sets</p>
+<p class="display">Chapter 9</p>
+<p class="display">Disproof Chapter 10</p>
+<p class="display">Mathematical Induction</p>
+<p class="display">Relations §10.1 used in two exercises</p>
+<p class="display">Chapter 11</p>
+<p class="display">Chapter 12</p>
+<p class="display">Functions Chapter 13</p>
+<p class="display">Proofs in Calculus</p>
+<p class="display">Chapter 14</p>
+<p class="display">Cardinality of Sets</p>
+<p><strong>To the instructor. </strong>The book is designed for a three or four credit course. A course emphasizing discrete mathematics could cover chapters 1–12. A course that is more of a preparation for analysis could cover all but Chapter 3. The following timetable (for a fourteen-week semester) is a hybrid of these two options. Sections marked with ∗ may require only the briefest mention in class, or may be best left for the students to digest on their own.</p>
+<p>Week Monday Wednesday Friday 1 Section 1.1 Section 1.2 Sections 1.3, 1.4 2 Sections 1.5, 1.6, 1.7 Section 1.8 Sections 1.9<sup>∗</sup>, 2.1 3 Section 2.2 Sections 2.3, 2.4 Sections 2.5, 2.6 4 Section 2.7 Sections 2.8<sup>∗</sup>, 2.9 Sections 2.10, 2.11<sup>∗</sup>, 2.12<sup>∗</sup> 5 Sections 3.1, 3.2, 3.3 Section 3.4, 3.5 Sections 3.5, 3.6 6 EXAM Sections 4.1, 4.2, 4.3 Sections 4.3, 4.4, 4.5<sup>∗</sup> 7 Sections 5.1, 5.2, 5.3<sup>∗ </sup>Section 6.1 Sections 6.2 6.3<sup>∗</sup> 8 Sections 7.1, 7.2<sup>∗</sup>, 7.3, 7.4 Sections 8.1, 8.2 Section 8.3 9 Section 8.4 Sections 9.1, 9.2, 9.3<sup>∗ </sup>Section 10.1 10 Sections 10.1, 10.4<sup>∗ </sup>Sections 10.2, 10.3 EXAM 11 Sections 11.1, 11.2 Sections 11.3, 11.4 Sections 11.5, 11.6 12 Section 12.1 Section 12.2 Section 12.2 13 Sections 12.3, 12.4<sup>∗ </sup>Section 12.5 Sections 12.5, 12.6<sup>∗</sup> 14 Section 14.1 Section 14.2 Sections 14.3, 14.4<sup>∗</sup></p>
+<p>The <em>entire </em>book could be covered in a 4-credit course, or in a 3-credit course pitched to a more mature audience. <strong>Acknowledgments. </strong>I thank my students in VCU’s MATH 300 courses for oﬀering feedback as they read the ﬁrst edition of this book. Thanks especially to Cory Colbert and Lauren Pace for rooting out typographical and logical mistakes. Cory proofed early drafts of each chapter before I posted them to my web page, created the index, suggested some interesting exercises and wrote some solutions. Thanks to Moa Apagodu, Sean Cox, Brent Cody and Andy Lewis for suggesting improvements while teaching from the book, and to John Ganci for prooﬁng the entire third edition. Mehmet Dagli caught further typos and inconsistencies while painstakingly translating the book into Turkish. I am indebted to Lon Mitchell, whose expertise with typesetting and on-demand publishing made the print version of this book a reality.</p>
+<p>And thanks to countless readers all over the world who contacted me concerning errors and omissions. Because of you, this is a better book.</p>
+</section>
+<section class="front" id="front">
+<h1>Part I</h1>
+</section>
+<section class="front" id="front">
+<h1>Fundamentals</h1>
+</section>
+</main>
+<nav class="pager"><a href="ch01.html" rel="next">Next →</a></nav>
+<footer class="license"><p><em>Book of Proof</em>, Third Edition, by Richard Hammack. © 2018 Richard Hammack. Licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>. The original PDF is freely available at <a href="https://richardhammack.github.io/BookOfProof/">richardhammack.github.io/BookOfProof</a>. This site is an unmodified format conversion with added progress tracking and exercise checking; it is not affiliated with or endorsed by the author.</p></footer>
+</body></html>

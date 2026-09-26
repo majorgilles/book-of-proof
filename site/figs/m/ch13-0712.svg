@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="9.765793" height="14.837219" viewBox="0 0 9.765793 14.837219">
+<defs>
+<clipPath id="clip_1">
+<path transform="matrix(1,0,0,-1,-211.88422,551.6932)" d="M211.88422 536.85598H221.65001V551.6932H211.88422Z" clip-rule="evenodd"/>
+</clipPath>
+<path id="font_2_16" d="M.32199098 .70399478C.28799439 .6629944 .19599915 .6319885 .10398865 .6299896V.58699038H.19198609C.25 .58699038 .2539978 .58299258 .2539978 .5239868V.12298584 .09399414C.2539978 .051986696 .24499512 .04699707 .16499329 .04699707H.099990848V0H.49598695V.04699707H.44099427C.3880005 .04699707 .3659973 .050994874 .35798646 .06098938 .35099793 .067993167 .35099793 .067993167 .35099793 .12298584V.5359955C.35099793 .58499148 .35299684 .6329956 .35798646 .70399478H.32199098Z"/>
+</defs>
+<g clip-path="url(#clip_1)">
+<use data-text="1" xlink:href="#font_2_16" transform="matrix(10.1454,0,0,-10.1454,3.3247987,8.877136)"/>
+<path transform="matrix(1,0,0,-1,3.3247834,13.437195)" stroke-width=".582" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M0 0H5.641"/>
+</g>
+</svg>

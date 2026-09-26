@@ -1,0 +1,601 @@
+<!-- pages: 45-75 -->
+<section class="chapter" id="ch2">
+<h1><span class="num">Chapter 2</span> Logic</h1>
+<p>Logic is a systematic way of thinking that allows us to parse the meanings of sentences and to deduce new information from old information. You use logic informally in everyday life and certainly also in doing mathematics. For example, say you are working with a certain circle (call it “Circle X”), and suppose you have available the following two pieces of information.</p>
+<p class="item">1. Circle X has a radius of 3 units.</p>
+<p class="item">2. If any circle has radius <i>r</i>, then its area is <i>πr</i><sup>2 </sup>square units.</p>
+<p>You have no trouble putting these two facts together to get:</p>
+<p class="item">3. Circle X has area 9<i>π</i> square units.</p>
+<p>In doing this you are using logic to combine existing information to produce new information. Because deducing new information is central to mathematics, logic plays a fundamental role. This chapter is intended to give you a suﬃcient mastery of it.</p>
+<p>It is important to realize that logic is a process of deducing information correctly,<em> not</em> just deducing correct information. For example, suppose we were mistaken and Circle X actually had a radius of 4, not 3. Let’s look at our exact same argument again.</p>
+<p class="item">1. Circle X has a radius of 3 units.</p>
+<p class="item">2. If any circle has radius <i>r</i>, then its area is <i>πr</i><sup>2 </sup>square units.</p>
+<p class="item">3. Circle X has area 9<i>π</i> square units.</p>
+<p>The sentence<em> “Circle X has a radius of</em> 3<em> units.” </em>is now untrue, and so is our conclusion <em>“Circle X has area </em>9<i>π </i><em>square units.” </em>But the logic is perfectly correct; the information was combined correctly, even if some of it was false. This distinction between correct logic and correct information is signiﬁcant because it is often important to follow the consequences of an incorrect assumption. Ideally, we want both our logic <em>and </em>our information to be correct, but the point is that they are diﬀerent things.</p>
+<p>In proving theorems, we apply logic to information that is considered obviously true (such as<em> “Any two points determine exactly one line.”</em>) or is already known to be true (e.g., the Pythagorean theorem). If our logic is correct, then anything we deduce from such information will also be true (or at least as true as the “obviously true” information we began with).</p>
+<section class="sec" id="s2-1" data-title="Statements">
+<h2><span class="num">2.1</span> Statements</h2>
+<p>The study of logic begins with statements. A<strong> statement</strong> is a sentence or a mathematical expression that is either deﬁnitely true or deﬁnitely false. You can think of statements as pieces of information that are either correct or incorrect. Thus statements are pieces of information that we might apply logic to in order to produce other pieces of information (which are also statements).</p>
+<p class="lbl example"><strong>Example 2.1 </strong>Here are some examples of statements. They are all true.</p>
+<p>If a circle has radius <i>r</i>, then its area is <i>πr</i><sup>2 </sup>square units.</p>
+<p>Every even number is divisible by 2.</p>
+<p>2 ∈ ℤ</p>
+<p><img class="m" src="figs/m/ch02-0001.svg" alt="√2" data-crop="46:89.3,339.8,104.9,362.1" style="height:22.4pt;vertical-align:-3.1pt"> ∉ ℤ</p>
+<p>ℕ ⊆ ℤ</p>
+<p>The set {0,1,2} has three elements.</p>
+<p>Some right triangles are isosceles.</p>
+<p class="lbl example"><strong>Example 2.2 </strong>Here are some additional statements. They are all false.</p>
+<p>All right triangles are isosceles.</p>
+<p>5 = 2</p>
+<p><img class="m" src="figs/m/ch02-0002.svg" alt="√2" data-crop="46:89.3,475.9,104.9,498.2" style="height:22.4pt;vertical-align:-3.2pt"> ∉ ℝ</p>
+<p>ℤ ⊆ ℕ</p>
+<p>{0,1,2} ∩ ℕ = ∅</p>
+<p class="lbl example"><strong>Example 2.3 </strong>Here non-statements are paired with similar statements.</p>
+<p>NOT a statement: Statement: Add 5 to both sides. Adding 5 to both sides of <i>x </i>− 5 = 37 gives <i>x</i> = 42. ℤ 42 ∈ ℤ 42 42 is not a number. What is the solution of 2<i>x</i> = 84? The solution of 2<i>x</i> = 84 is 42.</p>
+<p class="lbl example"><strong>Example 2.4 </strong>We will often use the letters <i>P</i>, <i>Q</i>, <i>R </i>and <i>S </i>to stand for speciﬁc statements. When more letters are needed we can use subscripts. Here are more statements, designated with letters. You decide which of them are true and which are false.</p>
+<p><i>P</i> : For every integer <i>n</i> &gt; 1, the number 2<sup><i>n </i></sup>− 1 is prime.</p>
+<p><i>Q</i> : Every polynomial of degree <i>n</i> has at most <i>n</i> roots.</p>
+<p><i>R</i> : The function <i>f</i> (<i>x</i>) =<i> x</i><sup>2 </sup>is continuous.</p>
+<p><i>S</i><sub>1</sub> : ℤ ⊆ ∅</p>
+<p><i>S</i><sub>2</sub> : {0,−1,−2} ∩ ℕ = ∅</p>
+<p>Designating statements with letters (as was done above) is a very useful shorthand. In discussing a particular statement, such as <em>“The function</em> <i>f</i> (<i>x</i>) =<i> x</i><sup>2 </sup><em>is continuous,”</em> it is convenient to just refer to it as<i> R</i> to avoid having to write or say it many times.</p>
+<p>Statements can contain variables. Here is an example.</p>
+<p><i>P</i> : If an integer <i>x</i> is a multiple of 6, then <i>x</i> is even. This is a sentence that is true. (All multiples of 6 are even, so no matter which multiple of 6 the integer<i> x</i> happens to be, it is even.) Since the sentence <i>P </i>is deﬁnitely true, it is a statement. When a sentence or statement <i>P</i> contains a variable such as<i> x</i>, we sometimes denote it as<i> P</i>(<i>x</i>) to indicate that it is saying something about <i>x</i>. Thus the above statement can be denoted as</p>
+<p><i>P</i>(<i>x</i>) : If an integer <i>x</i> is a multiple of 6, then <i>x</i> is even.</p>
+<p>A statement or sentence involving two variables might be denoted<i> P</i>(<i>x</i>,<i> y</i>), and so on.</p>
+<p>It is quite possible for a sentence containing variables to not be a statement. Consider the following example.</p>
+<p><i>Q</i>(<i>x</i>) : The integer <i>x</i> is even. Is this a statement? Whether it is true or false depends on just which integer <i>x</i> is. It is true if <i>x</i> = 4 and false if <i>x</i> = 7, etc. But without any stipulations on the value of <i>x</i> it is impossible to say whether<i> Q</i>(<i>x</i>) is true or false. Since it is neither deﬁnitely true nor deﬁnitely false, <i>Q</i>(<i>x</i>) cannot be a statement. A sentence such as this, whose truth depends on the value of one or more variables, is called an<strong> open sentence</strong>. The variables in an open sentence (or statement) can represent any type of entity, not just numbers. Here is an open sentence where the variables are functions:</p>
+<p><i>R</i>(<i>f</i>,<i> g</i>) : The function <i>f </i>is the derivative of the function <i>g</i>.</p>
+<p>This open sentence is true if <i>f</i> (<i>x</i>) = 2<i>x </i>and <i>g</i>(<i>x</i>) =<i> x</i><sup>2</sup>. It is false if <i>f</i> (<i>x</i>) =<i> x</i><sup>3</sup> and <i>g</i>(<i>x</i>) =<i> x</i><sup>2</sup>, etc. A sentence such as <i>R</i>(<i>f</i>,<i> g</i>) (that involves variables) can be denoted either as <i>R</i>(<i>f</i>,<i> g</i>) or just <i>R</i>. We use the expression <i>R</i>(<i>f</i>,<i> g</i>) when we want to emphasize that the sentence involves variables.</p>
+<p>We will have more to say about open sentences later, but for now let’s return to statements.</p>
+<p>Statements are everywhere in mathematics. Any result or theorem that has been proved true is a statement. The quadratic formula and the Pythagorean theorem are both statements:</p>
+<figure><img src="figs/ch02-0003.svg" alt="Figure" style="width:90pt"></figure>
+<p><i>P</i> : The solutions of the equation <i>ax</i><sup>2 </sup>+<i> bx </i>+<i> c</i> = 0 are <i>x</i></p>
+<p><i>Q</i> : If a right triangle has legs of lengths <i>a</i> and <i>b</i> and hypotenuse of</p>
+<p class="display">length <i>c</i>, then <i>a</i><sup>2 </sup>+<i> b</i><sup>2 </sup>=<i> c</i><sup>2</sup>.</p>
+<p>Here is a very famous statement, so famous, in fact, that it has a name. It is called <strong>Fermat’s last theorem </strong>after Pierre Fermat, a seventeenthcentury French mathematician who scribbled it in the margin of a book.</p>
+<p><i>R</i> : For all numbers<i> a</i>, <i>b</i>,<i> c</i>, <i>n</i> ∈ ℕ with <i>n</i> &gt; 2, it is the case that<i> a</i><sup><i>n </i></sup>+ <i>b</i><sup><i>n </i></sup>≠<i> c</i><sup><i>n</i></sup>.</p>
+<p>Fermat believed this statement to be true. He noted that he could prove it was true, except the book’s margin was too narrow to contain his proof. It is doubtful that he really had a correct proof in mind, for after his death many generations of brilliant mathematicians tried unsuccessfully to prove that his statement was true (or false). Finally, in 1993, Andrew Wiles of Princeton University announced that he had devised a proof. Wiles had worked on the problem for over seven years, and his proof runs through hundreds of pages. The moral of this story is that some true statements are not obviously true.</p>
+<p>Here is another statement famous enough to be named. It was ﬁrst posed in the eighteenth century by the German mathematician Christian Goldbach, and thus is called the<strong> Goldbach conjecture</strong>:</p>
+<p><i>S</i> : Every even integer greater than 2 is a sum of two prime numbers.</p>
+<p>You must agree that <i>S </i>is either true or false. It appears to be true, because when you examine even numbers that are bigger than 2, they seem to be sums of two primes: 4 = 2 + 2, 6 = 3 + 3, 8 = 3 + 5, 10 = 5 + 5, 12 = 5 + 7, 100 = 17 + 83 and so on. But that’s not to say there isn’t some large even number that’s not the sum of two primes. If such a number exists, then <i>S</i> is false. The thing is, in the over 260 years since Goldbach ﬁrst posed this problem, no one has been able to determine whether it’s true or false. But since it is clearly either true or false, <i>S </i>is a statement.</p>
+<p>This book is about the methods that can be used to prove that <i>S </i>(or any other statement) is true or false. To prove that <i>S </i>is true, start with obvious statements (or other statements that have been proven true) and use logic to deduce more and more complex statements until ﬁnally we obtain the statement <i>S</i>. Of course some statements are more diﬃcult to prove than others, and <i>S </i>appears to be notoriously diﬃcult; we will concentrate on statements that are easier to prove.</p>
+<p>But the point is this: In proving that statements are true, we use logic to help us understand statements and to combine pieces of information to produce new pieces of information. In the next several sections we explore some standard ways that statements can be combined to form new statements, or broken down into simpler statements.</p>
+<div class="exercises" data-for="2.1"><h3>Exercises for Section 2.1</h3>
+<p class="ex-group">Decide whether or not the following are statements. In the case of a statement, say if it is true or false, if possible.</p>
+<ol class="ex-list">
+<li class="ex" id="ex-2.1-1" value="1">Every real number is an even integer.</li>
+<li class="ex" id="ex-2.1-2" value="2">Every even integer is a real number.</li>
+<li class="ex" id="ex-2.1-3" value="3">If <i>x</i> and <i>y</i> are real numbers and 5<i>x</i> = 5<i>y</i>, then <i>x</i> =<i> y</i>.</li>
+<li class="ex" id="ex-2.1-4" value="4">Sets ℤ and ℕ.</li>
+<li class="ex" id="ex-2.1-5" value="5">Sets ℤ and ℕ are inﬁnite.</li>
+<li class="ex" id="ex-2.1-6" value="6">Some sets are ﬁnite.</li>
+<li class="ex" id="ex-2.1-7" value="7">The derivative of any polynomial of degree 5 is a polynomial of degree 6.</li>
+<li class="ex" id="ex-2.1-8" value="8">ℕ ∉ 𝒫(ℕ).</li>
+<li class="ex" id="ex-2.1-9" value="9">cos(<i>x</i>) = −1.</li>
+<li class="ex" id="ex-2.1-10" value="10">(ℝ × ℕ) ∩ (ℕ × ℝ) = ℕ × ℕ.</li>
+<li class="ex" id="ex-2.1-11" value="11">The integer <i>x</i> is a multiple of 7.</li>
+<li class="ex" id="ex-2.1-12" value="12">If the integer <i>x</i> is a multiple of 7, then it is divisible by 7.</li>
+<li class="ex" id="ex-2.1-13" value="13">Either <i>x</i> is a multiple of 7, or it is not.</li>
+<li class="ex" id="ex-2.1-14" value="14">Call me Ishmael.</li>
+<li class="ex" id="ex-2.1-15" value="15">In the beginning, God created the heaven and the earth.</li>
+</ol>
+</div>
+</section>
+<section class="sec" id="s2-2" data-title="And, Or, Not">
+<h2><span class="num">2.2</span> And, Or, Not</h2>
+<p>The word “and” can be used to combine two statements to form a new statement. Consider for example the following sentence.</p>
+<p><i>R</i><sub>1</sub> : The number 2 is even<strong> and</strong> the number 3 is odd.</p>
+<p>We recognize this as a true statement, based on our ingrained understanding of the meaning of the word “and.” Notice that <i>R</i>1 is made up of two simpler statements:</p>
+<p><i>P</i> : The number 2 is even.</p>
+<p><i>Q</i> : The number 3 is odd.</p>
+<p>These are joined together by the word “and” to form the more complex statement <i>R</i><sub>1</sub>. The statement <i>R</i><sub>1 </sub>asserts that <i>P </i>and<i> Q </i>are both true. Since both <i>P </i>and<i> Q </i>are in fact true, the statement <i>R</i><sub>1 </sub>is also true.</p>
+<p>Had one or both of <i>P </i>and <i>Q </i>been false, then <i>R</i><sub>1 </sub>would be false. For instance, each of the following statements is false.</p>
+<p><i>R</i>2 : The number 1 is even<strong> and</strong> the number 3 is odd.</p>
+<p><i>R</i><sub>3</sub> : The number 2 is even<strong> and</strong> the number 4 is odd.</p>
+<p><i>R</i><sub>4</sub> : The number 3 is even<strong> and</strong> the number 2 is odd.</p>
+<p>From these examples we see that any two statements <i>P </i>and<i> Q </i>can be combined to form a new statement “<i>P</i><strong> and</strong><i> Q</i>.” In the spirit of using letters to denote statements, we now introduce the special symbol ∧ to stand for the word “and.” Thus if <i>P </i>and<i> Q </i>are statements, <i>P</i> ∧<i>Q </i>stands for the statement “<i>P</i><strong> and</strong><i> Q</i>.” The statement <i>P</i> ∧ <i>Q </i>is true if both <i>P </i>and<i> Q </i>are true; otherwise it is false. This is summarized in the following table, called a<strong> truth table</strong>.</p>
+<figure><img src="figs/ch02-0004.svg" alt="Figure" style="width:75pt"></figure>
+<p>In this table, <i>T </i>stands for “True,” and <i>F </i>stands for “False.” (<i>T </i>and <i>F </i>are called<strong> truth values</strong>.) Each line lists one of the four possible combinations of truth values for <i>P </i>and<i> Q</i>, and the column headed by <i>P</i> ∧ <i>Q </i>tells whether the statement <i>P</i> ∧ <i>Q </i>is true or false in each case.</p>
+<p>Statements can also be combined using the word “or.” Consider the following four statements.</p>
+<p><i>S</i>1 : The number 2 is even<strong> or</strong> the number 3 is odd.</p>
+<p><i>S</i><sub>2</sub> : The number 1 is even<strong> or</strong> the number 3 is odd.</p>
+<p><i>S</i><sub>3</sub> : The number 2 is even<strong> or</strong> the number 4 is odd.</p>
+<p><i>S</i><sub>4</sub> : The number 3 is even<strong> or</strong> the number 2 is odd. In mathematics, the assertion “<i>P</i><strong> or</strong><i> Q</i>” is always understood to mean that one <em>or both </em>of <i>P </i>and <i>Q </i>is true. Thus statements <i>S</i>1, <i>S</i>2, <i>S</i>3 are all true, while <i>S</i>4 is false. The symbol ∨ is used to stand for the word “or.” So if <i>P</i> and<i> Q </i>are statements, <i>P</i> ∨<i>Q </i>represents the statement “<i>P</i><strong> or</strong><i> Q</i>.” Here is the truth table.</p>
+<figure><img src="figs/ch02-0005.svg" alt="Figure" style="width:75pt"></figure>
+<p>It is important to be aware that the meaning of “or” expressed in the above table diﬀers from the way it is often used in everyday conversation. For example, suppose a university oﬃcial makes the following threat:</p>
+<p>You pay your tuition<strong> or</strong> you will be withdrawn from school. You understand that this means that either you pay your tuition<em> or</em> you will be withdrawn from school,<em> but not both</em>. In mathematics we never use the word “or” in such a sense. For us “or” means exactly what is stated in the table for ∨. Thus <i>P</i> ∨ <i>Q </i>being true means<em> one or both</em> of <i>P </i>and<i> Q </i>is true. If we ever need to express the fact that exactly one of <i>P </i>and<i> Q </i>is true, we use one of the following constructions:</p>
+<p><i>P </i><strong>or</strong><i> Q</i>,<strong> but not both</strong>.</p>
+<p><strong>Either </strong><i>P </i><strong>or</strong><i> Q</i>.</p>
+<p><strong>Exactly one of </strong><i>P </i><strong>or</strong><i> Q</i>. If the university oﬃcial were a mathematician, he might have qualiﬁed his statement in one of the following ways.</p>
+<p>Pay your tuition<strong> or</strong> you will be withdrawn from school,<strong> but not both</strong>.</p>
+<p><strong>Either</strong> you pay your tuition<strong> or</strong> you will be withdrawn from school.</p>
+<p>To conclude this section, we mention another way of obtaining new statements from old ones. Given any statement <i>P</i>, we can form the new statement “<strong>It is not true that </strong><i>P</i>.” For example, consider the following statement.</p>
+<p>The number 2 is even.</p>
+<p>This statement is true. Now change it by inserting the words “It is not true that” at the beginning:</p>
+<p><strong>It is not true that</strong> the number 2 is even.</p>
+<p>This new statement is false.</p>
+<p>For another example, starting with the false statement “2 ∈ ∅,” we get the true statement “It is not true that 2 ∈ ∅.”</p>
+<p>We use the symbol ∼ to stand for the words “It’s not true that,” so ∼ <i>P</i> means “<strong>It’s not true that </strong><i>P</i>.” We can read ∼ <i>P </i>simply as “not <i>P</i>.” Unlike ∧ and ∨, which combine two statements, the symbol ∼ just alters a single statement. Thus its truth table has just two lines, one for each possible value of <i>P</i>.</p>
+<figure><img src="figs/ch02-0006.svg" alt="Figure" style="width:50pt"></figure>
+<p>The statement ∼ <i>P</i> is called the<strong> negation</strong> of<i> P</i>. The negation of a speciﬁc statement can be expressed in numerous ways. Consider</p>
+<p><i>P</i> : The number 2 is even.</p>
+<p>Here are several ways of expressing its negation.</p>
+<p>∼ <i>P</i> : It’s not true that the number 2 is even.</p>
+<p>∼ <i>P</i> : It is false that the number 2 is even.</p>
+<p>∼ <i>P</i> : The number 2 is not even.</p>
+<p>In this section we’ve learned how to combine or modify statements with the operations ∧, ∨ and ∼. Of course we can also apply these operations to open sentences or a mixture of open sentences and statements. For example, (<i>x</i> is an even integer) ∧ (3 is an odd integer) is an open sentence that is a combination of an open sentence and a statement.</p>
+<div class="exercises" data-for="2.2"><h3>Exercises for Section 2.2</h3>
+<p class="ex-group">Express each statement or open sentence in a symbolic form such as <i>P</i> ∧<i>Q</i>, <i>P</i> ∨<i>Q</i>, <i>P</i>∨∼ <i>Q </i>or ∼ <i>P</i>, etc. Be sure to also state exactly what statements<i> P </i>and<i> Q </i>stand for.</p>
+<ol class="ex-list">
+<li class="ex" id="ex-2.2-1" value="1">The number 8 is both even and a power of 2.</li>
+<li class="ex" id="ex-2.2-2" value="2">The matrix <i>A </i>is not invertible.</li>
+<li class="ex" id="ex-2.2-3" value="3"><i>x</i> ≠<i> y </i></li>
+<li class="ex" id="ex-2.2-4" value="4"><i>x</i> &lt;<i> y </i></li>
+<li class="ex" id="ex-2.2-5" value="5"><i>y</i> ≥ <i>x</i></li>
+<li class="ex" id="ex-2.2-6" value="6">There is a quiz scheduled for Wednesday or Friday.</li>
+<li class="ex" id="ex-2.2-7" value="7">The number <i>x</i> equals zero, but the number <i>y</i> does not.</li>
+<li class="ex" id="ex-2.2-8" value="8">At least one of the numbers <i>x</i> and <i>y</i> equals 0.</li>
+<li class="ex" id="ex-2.2-9" value="9"><i>x</i> ∈ <i>A</i> − <i>B </i></li>
+<li class="ex" id="ex-2.2-10" value="10"><i>x</i> ∈ <i>A</i> ∪ <i>B </i></li>
+<li class="ex" id="ex-2.2-11" value="11"><i>A</i> ∈ {<i>X </i>∈ 𝒫(ℕ) : |<img class="m" src="figs/m/ch02-0007.svg" alt="X" data-crop="53:382.8,237.2,392.6,249.7" style="height:12.5pt;vertical-align:-2.7pt">| &lt; ∞}</li>
+<li class="ex" id="ex-2.2-12" value="12">Happy families are all alike, but each unhappy family is unhappy in its own way. (Leo Tolstoy,<em> Anna Karenina</em>)</li>
+<li class="ex" id="ex-2.2-13" value="13">Human beings want to be good, but not too good, and not all the time. (George Orwell)</li>
+<li class="ex" id="ex-2.2-14" value="14">A man should look for what is, and not for what he thinks should be. (Albert Einstein)</li>
+</ol>
+</div>
+</section>
+<section class="sec" id="s2-3" data-title="Conditional Statements">
+<h2><span class="num">2.3</span> Conditional Statements</h2>
+<p>There is yet another way to combine two statements. Suppose we have in mind a speciﬁc integer <i>a</i>. Consider the following statement about <i>a</i>.</p>
+<p><i>R</i> : If the integer <i>a</i> is a multiple of 6, then <i>a</i> is divisible by 2. We immediately spot this as a true statement based on our knowledge of integers and the meanings of the words “if” and “then.” If integer <i>a </i>is a multiple of 6, then <i>a</i> is even, so therefore <i>a</i> is divisible by 2. Notice that <i>R </i>is built up from two simpler statements:</p>
+<p><i>P</i> : The integer <i>a</i> is a multiple of 6.</p>
+<p><i>Q</i> : The integer <i>a</i> is divisible by 2.</p>
+<p><i>R</i> : If <i>P</i>, then<i> Q</i>.</p>
+<p>In general, given any two statements <i>P </i>and<i> Q </i>whatsoever, we can form the new statement <em>“If </em><i>P</i><em>, then </em><i>Q</i><em>.” </em>This is written symbolically as <i>P </i>⇒ <i>Q</i> which we read as<em> “If </em><i>P</i><em>, then</em><i> Q</i><em>,”</em> or<em> “</em><i>P </i><em>implies</em><i> Q</i><em>.” </em>Like ∧ and ∨, the symbol ⇒ has a very speciﬁc meaning. When we assert that the statement <i>P</i> ⇒ <i>Q</i> is true, we mean that<em> if </em><i>P </i>is true<em> then</em><i> Q </i>must also be true. (In other words we mean that the condition <i>P </i>being true forces<i> Q </i>to be true.) A statement of form <i>P</i> ⇒ <i>Q </i>is called a<strong> conditional</strong> statement because it means<i> Q </i>will be true<em> under the condition</em> that <i>P </i>is true.</p>
+<p>Think of<i> P</i> ⇒ <i>Q </i>as a promise that whenever<i> P </i>is true,<i> Q </i>will be true also. There is only one way this promise can be broken (i.e., be false), namely if <i>P</i> is true but<i> Q </i>is false. So the truth table for the promise <i>P</i> ⇒ <i>Q </i>is as follows:</p>
+<figure><img src="figs/ch02-0008.svg" alt="Figure" style="width:79pt"></figure>
+<p>Perhaps you are bothered by how<i> P</i> ⇒ <i>Q</i> is true in the last two lines. Here is an example to explain it. Suppose your professor makes this promise:</p>
+<p><strong>If</strong> you pass the ﬁnal exam,<strong> then</strong> you will pass the course.</p>
+<p>Your professor is making the promise</p>
+<p>(You pass the exam) ⇒ (You pass the course).</p>
+<p>Under what circumstances did she lie? There are four possible scenarios, depending on whether or not you passed the exam and whether or not you passed the course. These scenarios are tallied in the following table.</p>
+<p>You pass exam You pass course (You pass exam) ⇒ (You pass course)</p>
+<p class="display"><i>T T T</i></p>
+<p class="display"><i>T F F</i></p>
+<p class="display"><i>F T T</i></p>
+<p class="display"><i>F F T</i></p>
+<p>The ﬁrst row is the scenario in which you pass the exam and you pass the course. Clearly the professor kept her promise, so the <i>T </i>in the third column indicates that she told the truth. In the second row, you passed the exam but failed the course. In this case your professor broke her promise, and the <i>F </i>in the third column indicates that what she said was untrue.</p>
+<p>The third row describes the scenario in which you failed the exam but still passed the course. How could that happen? Maybe your professor felt sorry for you. But that doesn’t make her a liar. Her only promise was that if you passed the exam then you would pass the course. She did not say passing the exam was the<em> only way</em> to pass the course. Since she didn’t lie, then she told the truth, so there is a <i>T </i>in the third column.</p>
+<p>Finally look at the fourth row: you failed the exam and failed the course. Your professor certainly<strong> did not</strong> lie to you. Hence the<i> T </i>in the third column.</p>
+<p>For another example, consider this statement:</p>
+<p><strong>If</strong> this month is September,<strong> then</strong> there is an equinox this month.</p>
+<p>An<em> equinox</em> is a day for which there are equal hours of darkness and light. There are two equinoxes per year, one in September and the other in March. The above statement is thus unquestionably true, for it asserts correctly that if the current month is September, then an equinox will occur this month. In symbolic form, our statement is</p>
+<p>(This month is September) ⇒ (There is an equinox this month).</p>
+<p>This statement is true, but the open sentences<i> P</i>: “<em>This month is September</em>,” and<i> Q</i>: “<em>There is an equinox this month</em>,” are either true or false, depending on what month it is. But <i>P </i>⇒ <i>Q </i>is always true. This is shown below for three (out of 12) months. Notice how <i>P</i> ⇒ <i>Q </i>is true, even when <i>P </i>is false.</p>
+<figure><img src="figs/ch02-0009.svg" alt="Figure" style="width:16pt"></figure>
+<p class="display">There is an <img class="m" src="figs/m/ch02-0010.svg" alt="" data-crop="55:340.1,304.0,347.2,314.8" style="height:10.8pt;vertical-align:-1.8pt">There is an<img class="m" src="figs/m/ch02-0011.svg" alt="" data-crop="55:397.0,304.0,404.0,314.8" style="height:10.8pt;vertical-align:-1.8pt"></p>
+<p class="display">This month This month )</p>
+<p class="display">equinox ⇒ equinox</p>
+<p class="display">is September is September <img class="m" src="figs/m/ch02-0012.svg" alt="" data-crop="55:340.1,320.5,347.2,331.3" style="height:10.8pt;vertical-align:-1.3pt"> <img class="m" src="figs/m/ch02-0013.svg" alt="" data-crop="55:397.0,320.5,404.0,331.3" style="height:10.8pt;vertical-align:-1.3pt"></p>
+<p class="display">this month this month</p>
+<p>Sept. <i>T T T</i></p>
+<p>March <i>F T T</i></p>
+<p>May <i>F F T</i></p>
+<p>As <i>P</i> ⇒ <i>Q </i>is a true statement in this particular example, there is no month with <i>P </i>true and<i> Q </i>false. (Unless we imagine that Earth is destroyed by an asteroid before September 21, a possibility that we shall not entertain.)</p>
+<p>In mathematics, whenever we encounter the construction<em> “If </em><i>P</i><em>, then</em><i> Q</i><em>,”</em> it means exactly what the truth table for ⇒ expresses. Of course there are other grammatical constructions that also mean <i>P</i> ⇒ <i>Q</i>. Here is a summary of the main ones. The meaning of each is encapsulated by the table for ⇒.</p>
+<p class="display"><i>P </i>implies<i> Q</i>. <img class="m" src="figs/m/ch02-0014.svg" alt="" data-crop="55:238.3,514.3,247.5,525.1" style="height:10.8pt;vertical-align:-1.1pt"></p>
+<p class="display">If <i>P</i>, then<i> Q</i>. <img class="m" src="figs/m/ch02-0015.svg" alt="" data-crop="55:238.3,522.6,247.5,544.3" style="height:21.8pt;vertical-align:-7.3pt"></p>
+<p class="display"><i>Q </i>if <i>P</i>. <img class="m" src="figs/m/ch02-0016.svg" alt="" data-crop="55:238.3,536.3,247.5,555.3" style="height:19.0pt;vertical-align:-6.3pt"></p>
+<figure><img src="figs/ch02-0017.svg" alt="Figure" style="width:79pt"></figure>
+<p class="display"><i>Q </i>whenever <i>P</i>. <img class="m" src="figs/m/ch02-0018.svg" alt="" data-crop="55:238.3,547.3,247.5,569.1" style="height:21.8pt;vertical-align:-7.1pt"></p>
+<p class="display"><i>Q</i>, provided that <i>P</i>. <img class="m" src="figs/m/ch02-0019.svg" alt="" data-crop="55:238.3,561.1,247.5,580.1" style="height:19.0pt;vertical-align:-6.1pt"></p>
+<p class="display">Whenever <i>P</i>, then also<i> Q</i>. <img class="m" src="figs/m/ch02-0020.svg" alt="" data-crop="55:238.3,572.1,247.5,585.6" style="height:13.5pt;vertical-align:-0.0pt"> <i>P</i> ⇒ <i>Q</i></p>
+<p class="display"><i>P </i>is a suﬃcient condition for<i> Q</i>. <img class="m" src="figs/m/ch02-0021.svg" alt="" data-crop="55:238.3,591.3,247.5,604.8" style="height:13.5pt;vertical-align:-4.8pt"></p>
+<p class="display">For<i> Q</i>, it is suﬃcient that <i>P</i>. <img class="m" src="figs/m/ch02-0022.svg" alt="" data-crop="55:238.3,596.8,247.5,618.6" style="height:21.8pt;vertical-align:-6.6pt"></p>
+<p class="display"><i>Q </i>is a necessary condition for <i>P</i>. <img class="m" src="figs/m/ch02-0023.svg" alt="" data-crop="55:238.3,610.6,247.5,629.6" style="height:19.0pt;vertical-align:-4.6pt"></p>
+<p class="display">For <i>P</i>, it is necessary that<i> Q</i>. <img class="m" src="figs/m/ch02-0024.svg" alt="" data-crop="55:238.3,621.6,247.5,643.3" style="height:21.8pt;vertical-align:-6.3pt"></p>
+<p class="display"><i>P </i>only if<i> Q</i>. <img class="m" src="figs/m/ch02-0025.svg" alt="" data-crop="55:238.3,635.3,247.5,654.3" style="height:19.0pt;vertical-align:-4.3pt"></p>
+<p>These can all be used in the place of (and mean exactly the same thing as)<em> “If</em><i> P</i><em>, then</em><i> Q</i><em>.” </em>You should analyze the meaning of each one and convince yourself that it captures the meaning of <i>P</i> ⇒ <i>Q</i>. For example, <i>P</i> ⇒ <i>Q </i>means the condition of <i>P </i>being true is enough (i.e., suﬃcient) to make <i>Q </i>true; hence “<i>P </i><em>is a suﬃcient condition for</em><i> Q</i><em>.</em>”</p>
+<p>The wording can be tricky. An everyday situation may help clarify it. For example, consider your professor’s promise:</p>
+<p>(You pass the exam) ⇒ (You pass the course).</p>
+<p>This means that your passing the exam is a suﬃcient (though perhaps not necessary) condition for your passing the course. Thus your professor might just as well have phrased her promise in one of the following ways.</p>
+<p>Passing the exam is a suﬃcient condition for passing the course.</p>
+<p>For you to pass the course, it is suﬃcient that you pass the exam.</p>
+<p>However, when we want to say<em> “If </em><i>P</i><em>, then</em><i> Q</i><em>”</em> in everyday conversation, we do not normally express this as <em>“</em><i>Q </i><em>is a necessary condition for </em><i>P</i><em>” </em>or <em>“</em><i>P </i><em>only if</em><i> Q</i><em>.” </em>But such constructions are not uncommon in mathematics. To understand why they make sense, notice that <i>P</i> ⇒ <i>Q </i>being true means that it’s impossible that <i>P </i>is true but<i> Q </i>is false, so in order for <i>P </i>to be true it is necessary that<i> Q </i>is true; hence “<i>Q </i><em>is a necessary condition for </em><i>P</i><em>.</em>” And this means that <i>P </i>can only be true if<i> Q </i>is true, i.e., “<i>P </i><em>only if</em><i> Q</i><em>.</em>”</p>
+<div class="exercises" data-for="2.3"><h3>Exercises for Section 2.3</h3>
+<p class="ex-group">Without changing their meanings, convert each of the following sentences into a sentence having the form “<em>If </em><i>P</i><em>, then</em><i> Q</i><em>.</em>”</p>
+<ol class="ex-list">
+<li class="ex" id="ex-2.3-1" value="1">A matrix is invertible provided that its determinant is not zero.</li>
+<li class="ex" id="ex-2.3-2" value="2">For a function to be continuous, it is suﬃcient that it is diﬀerentiable.</li>
+<li class="ex" id="ex-2.3-3" value="3">For a function to be continuous, it is necessary that it is integrable.</li>
+<li class="ex" id="ex-2.3-4" value="4">A function is rational if it is a polynomial.</li>
+<li class="ex" id="ex-2.3-5" value="5">An integer is divisible by 8 only if it is divisible by 4.</li>
+<li class="ex" id="ex-2.3-6" value="6">Whenever a surface has only one side, it is non-orientable.</li>
+<li class="ex" id="ex-2.3-7" value="7">A series converges whenever it converges absolutely.</li>
+<li class="ex" id="ex-2.3-8" value="8">A geometric series with ratio <i>r </i>converges if |<i>r</i>| &lt; 1.</li>
+<li class="ex" id="ex-2.3-9" value="9">A function is integrable provided the function is continuous.</li>
+<li class="ex" id="ex-2.3-10" value="10">The discriminant is negative only if the quadratic equation has no real solutions.</li>
+<li class="ex" id="ex-2.3-11" value="11">You fail only if you stop writing. (Ray Bradbury)</li>
+<li class="ex" id="ex-2.3-12" value="12">People will generally accept facts as truth only if the facts agree with what they already believe. (Andy Rooney)</li>
+<li class="ex" id="ex-2.3-13" value="13">Whenever people agree with me I feel I must be wrong. (Oscar Wilde)</li>
+</ol>
+</div>
+</section>
+<section class="sec" id="s2-4" data-title="Biconditional Statements">
+<h2><span class="num">2.4</span> Biconditional Statements</h2>
+<p>It is important to understand that <i>P</i> ⇒ <i>Q </i>is not the same as<i> Q</i> ⇒ <i>P</i>. To see why, suppose that <i>a</i> is some integer and consider the statements</p>
+<p class="display">(<i>a</i> is a multiple of 6) ⇒ (<i>a</i> is divisible by 2),</p>
+<p class="display">(<i>a</i> is divisible by 2) ⇒ (<i>a</i> is a multiple of 6).</p>
+<p>The ﬁrst statement asserts that if <i>a </i>is a multiple of 6 then <i>a </i>is divisible by 2. This is clearly true, for any multiple of 6 is even and therefore divisible by 2. The second statement asserts that if <i>a </i>is divisible by 2 then it is a multiple of 6. This is not necessarily true, for <i>a</i> = 4 (for instance) is divisible by 2, yet not a multiple of 6. Therefore the meanings of <i>P</i> ⇒ <i>Q </i>and <i>Q</i> ⇒ <i>P</i> are in general quite diﬀerent. The conditional statement <i>Q</i> ⇒ <i>P </i>is called the<strong> converse</strong> of <i>P</i> ⇒ <i>Q</i>, so a conditional statement and its converse express entirely diﬀerent things.</p>
+<p>But sometimes, if <i>P </i>and<i> Q </i>are just the right statements, it can happen that <i>P</i> ⇒ <i>Q </i>and<i> Q</i> ⇒ <i>P </i>are both necessarily true. For example, consider the statements</p>
+<p class="display">(<i>a</i> is even) ⇒ (<i>a</i> is divisible by 2),</p>
+<p class="display">(<i>a</i> is divisible by 2) ⇒ (<i>a</i> is even).</p>
+<p>No matter what value <i>a</i> has, both of these statements are true. Since both <i>P</i> ⇒ <i>Q </i>and<i> Q</i> ⇒ <i>P </i>are true, it follows that (<i>P</i> ⇒ <i>Q</i>) ∧ (<i>Q</i> ⇒ <i>P</i>) is true.</p>
+<p>Let’s introduce a new symbol ⇔ to express the meaning of the statement (<i>P</i> ⇒ <i>Q</i>) ∧ (<i>Q</i> ⇒ <i>P</i>). The expression <i>P</i> ⇔ <i>Q </i>is understood to have exactly the same meaning as (<i>P</i> ⇒ <i>Q</i>)∧(<i>Q</i> ⇒ <i>P</i>). According to the previous section,<i> Q</i> ⇒ <i>P</i> is read as “<i>P </i><em>if </em><i>Q</i>,” and <i>P</i> ⇒ <i>Q </i>can be read as “<i>P </i><em>only if </em><i>Q</i>.” Therefore we pronounce <i>P</i> ⇔ <i>Q </i>as<em> “</em><i>P </i><em>if and only if</em><i> Q</i><em>.” </em>For example, given an integer <i>a</i>, we have the true statement</p>
+<p class="display">(<i>a</i> is even) ⇔ (<i>a</i> is divisible by 2),</p>
+<p>which we can read as<em> “The integer </em><i>a</i><em> is even if and only if </em><i>a</i><em> is divisible by</em> 2<em>.”</em></p>
+<p>The truth table for ⇔ is shown below. Notice that in the ﬁrst and last rows, both <i>P</i> ⇒ <i>Q </i>and<i> Q</i> ⇒ <i>P </i>are true (according to the truth table for ⇒), so (<i>P</i> ⇒ <i>Q</i>) ∧ (<i>Q</i> ⇒ <i>P</i>) is true, and hence <i>P</i> ⇔ <i>Q </i>is true. However, in the middle two rows one of<i> P</i> ⇒ <i>Q </i>or<i> Q</i> ⇒ <i>P </i>is false, so (<i>P</i> ⇒ <i>Q</i>)∧(<i>Q</i> ⇒ <i>P</i>) is false, making <i>P</i> ⇔ <i>Q </i>false.</p>
+<figure><img src="figs/ch02-0026.svg" alt="Figure" style="width:79pt"></figure>
+<p>Compare the statement <i>R </i>: (<i>a</i> is even) ⇔ (<i>a</i> is divisible by 2) with this truth table. If <i>a </i>is even then the two statements on either side of ⇔ are true, so according to the table <i>R </i>is true. If <i>a</i> is odd then the two statements on either side of ⇔ are false, and again according to the table <i>R </i>is true. Thus <i>R </i>is true no matter what value <i>a</i> has. In general, <i>P</i> ⇔ <i>Q </i>being true means <i>P </i>and<i> Q </i>are both true or both false.</p>
+<p>Not surprisingly, there are many ways of saying <i>P</i> ⇔ <i>Q </i>in English. The following constructions all mean <i>P</i> ⇔ <i>Q</i>:</p>
+<p class="display"><i>P </i>if and only if<i> Q</i>. <img class="m" src="figs/m/ch02-0027.svg" alt="" data-crop="58:355.2,358.0,364.4,368.8" style="height:10.8pt;vertical-align:-1.8pt"></p>
+<p class="display"><i>P </i>is a necessary and suﬃcient condition for<i> Q</i>. <img class="m" src="figs/m/ch02-0028.svg" alt="" data-crop="58:355.2,366.3,364.4,385.3" style="height:19.0pt;vertical-align:-5.3pt"></p>
+<p class="display">For <i>P </i>it is necessary and suﬃcient that<i> Q</i>. <img class="m" src="figs/m/ch02-0029.svg" alt="" data-crop="58:355.2,377.3,364.4,390.8" style="height:13.5pt;vertical-align:-0.0pt"> <i>P</i> ⇔ <i>Q</i></p>
+<p class="display"><i>P </i>is equivalent to<i> Q</i>. <img class="m" src="figs/m/ch02-0030.svg" alt="" data-crop="58:355.2,396.5,364.4,410.0" style="height:13.5pt;vertical-align:-5.0pt"></p>
+<p class="display">If <i>P</i>, then<i> Q</i>, and conversely. <img class="m" src="figs/m/ch02-0031.svg" alt="" data-crop="58:355.2,402.0,364.4,421.0" style="height:19.0pt;vertical-align:-4.0pt"></p>
+<p>The ﬁrst three of these just combine constructions from the previous section to express that<i> P</i> ⇒ <i>Q</i> and<i> Q</i> ⇒ <i>P</i>. In the last one, the words<em> “...and conversely”</em> mean that in addition to<em> “If </em><i>P</i><em>, then</em><i> Q</i><em>”</em> being true, the converse statement <em>“If</em><i> Q</i><em>, then </em><i>P</i><em>”</em> is also true.</p>
+<div class="exercises" data-for="2.4"><h3>Exercises for Section 2.4</h3>
+<p class="ex-group">Without changing their meanings, convert each of the following sentences into a sentence having the form “<i>P </i><em>if and only if</em><i> Q</i><em>.</em>”</p>
+<ol class="ex-list">
+<li class="ex" id="ex-2.4-1" value="1">For matrix <i>A </i>to be invertible, it is necessary and suﬃcient that det(<i>A</i>) ≠ 0.</li>
+<li class="ex" id="ex-2.4-2" value="2">If a function has a constant derivative then it is linear, and conversely.</li>
+<li class="ex" id="ex-2.4-3" value="3">If <i>xy</i> = 0 then <i>x</i> = 0 or <i>y</i> = 0, and conversely.</li>
+<li class="ex" id="ex-2.4-4" value="4">If <i>a</i> ∈ ℚ then 5<i>a</i> ∈ ℚ, and if 5<i>a</i> ∈ ℚ then <i>a</i> ∈ ℚ.</li>
+<li class="ex" id="ex-2.4-5" value="5">For an occurrence to become an adventure, it is necessary and suﬃcient for one to recount it. (Jean-Paul Sartre)</li>
+</ol>
+</div>
+</section>
+<section class="sec" id="s2-5" data-title="Truth Tables for Statements">
+<h2><span class="num">2.5</span> Truth Tables for Statements</h2>
+<p>You should now know the truth tables for ∧, ∨, ∼, ⇒ and ⇔. They should be<em> internalized</em> as well as memorized. You must understand the symbols thoroughly, for we now combine them to form more complex statements.</p>
+<p>For example, suppose we want to convey that one or the other of<i> P </i>and<i> Q</i> is true but they are not both true. No single symbol expresses this, but we could combine them as</p>
+<p class="display">(<i>P</i> ∨ <i>Q</i>)∧∼ (<i>P</i> ∧ <i>Q</i>),</p>
+<p>which literally means:</p>
+<p><i>P </i><em>or</em><i> Q </i><em>is true, and it is not the case that both </em><i>P </i><em>and</em><i> Q </i><em>are true.</em> This statement will be true or false depending on the truth values of<i> P</i> and<i> Q</i>. In fact we can make a truth table for the entire statement. Begin as usual by listing the possible true/false combinations of <i>P </i>and<i> Q </i>on four lines. The statement (<i>P</i> ∨ <i>Q</i>)∧∼ (<i>P</i> ∧ <i>Q</i>) contains the individual statements (<i>P</i> ∨ <i>Q</i>) and (<i>P</i> ∧ <i>Q</i>), so we next tally their truth values in the third and fourth columns. The ﬁfth column lists values for ∼ (<i>P</i> ∧ <i>Q</i>), and these are just the opposites of the corresponding entries in the fourth column. Finally, combining the third and ﬁfth columns with ∧, we get the values for (<i>P</i> ∨ <i>Q</i>)∧∼ (<i>P</i> ∧ <i>Q</i>) in the sixth column.</p>
+<p class="display"><i>P Q </i>(<i>P</i> ∨<i>Q</i>) (<i>P</i> ∧<i>Q</i>) ∼ (<i>P</i> ∧<i>Q</i>) (<i>P</i> ∨<i>Q</i>)∧∼ (<i>P</i> ∧<i>Q</i>)</p>
+<p class="display"><i>T T T T F </i><strong>F</strong></p>
+<p class="display"><i>T F T F T </i><strong>T</strong></p>
+<p class="display"><i>F T T F T </i><strong>T</strong></p>
+<p class="display"><i>F F F F T </i><strong>F</strong></p>
+<p>This truth table tells us that (<i>P</i> ∨ <i>Q</i>)∧∼ (<i>P</i> ∧ <i>Q</i>) is true precisely when one but not both of<i> P </i>and<i> Q</i> are true, so it has the meaning we intended. (Notice that the middle three columns of our truth table are just “helper columns” and are not necessary parts of the table. In writing truth tables, you may choose to omit such columns if you are conﬁdent about your work.)</p>
+<p>For another example, consider the following familiar statement about real numbers <i>x</i> and <i>y</i>:</p>
+<p>The product <i>xy</i> equals zero if and only if <i>x</i> = 0 or <i>y</i> = 0.</p>
+<p>This can be modeled as (<i>xy</i> = 0) ⇔ (<i>x</i> = 0 ∨ <i>y</i> = 0). If we introduce letters<i> P</i>,<i>Q</i> and<i> R</i> for the statements<i> xy</i> = 0,<i> x</i> = 0 and<i> y</i> = 0, it becomes<i> P</i> ⇔ (<i>Q</i>∨<i>R</i>). Notice that the parentheses are necessary here, for without them we wouldn’t know whether to read the statement as <i>P</i> ⇔ (<i>Q</i> ∨ <i>R</i>) or (<i>P</i> ⇔ <i>Q</i>) ∨ <i>R</i>.</p>
+<p>Making a truth table for <i>P</i> ⇔ (<i>Q</i> ∨ <i>R</i>) entails a line for each <i>T</i>/<i>F </i>combination for the three statements <i>P</i>,<i> Q </i>and <i>R</i>. The eight possible combinations are tallied in the ﬁrst three columns of the following table.</p>
+<figure><img src="figs/ch02-0032.svg" alt="Figure" style="width:169pt"></figure>
+<p>We ﬁll in the fourth column using our knowledge of the truth table for ∨. Finally the ﬁfth column is ﬁlled in by combining the ﬁrst and fourth columns with our understanding of the truth table for ⇔. The resulting table gives the true/false values of <i>P</i> ⇔ (<i>Q</i> ∨ <i>R</i>) for all values of <i>P</i>,<i> Q </i>and <i>R</i>.</p>
+<p>Notice that when we plug in various values for <i>x</i> and <i>y</i>, the statements <i>P</i> :<i> xy</i> = 0,<i> Q</i> :<i> x</i> = 0 and <i>R</i> :<i> y</i> = 0 have various truth values, but the statement <i>P</i> ⇔ (<i>Q</i> ∨ <i>R</i>) is always true. For example, if <i>x</i> = 2 and <i>y</i> = 3, then <i>P</i>, <i>Q </i>and <i>R </i>are all false. This scenario is described in the last row of the table, and there we see that <i>P </i>⇔ (<i>Q</i> ∨ <i>R</i>) is true. Likewise if <i>x</i> = 0 and <i>y</i> = 7, then <i>P</i> and <i>Q </i>are true and <i>R </i>is false, a scenario described in the second line of the table, where again <i>P</i> ⇔ (<i>Q</i> ∨ <i>R</i>) is true. There is a simple reason why <i>P</i> ⇔ (<i>Q </i>∨<i>R</i>) is true for any values of <i>x</i> and <i>y</i>: It is that<i> P</i> ⇔ (<i>Q </i>∨<i>R</i>) represents (<i>xy</i> = 0) ⇔ (<i>x</i> = 0 ∨ <i>y</i> = 0), which is a <em>true mathematical statement. </em>It is absolutely impossible for it to be false.</p>
+<p>This may make you wonder about the lines in the table where<i> P</i> ⇔ (<i>Q</i>∨<i>R</i>) is false. Why are they there? The reason is that <i>P </i>⇔ (<i>Q</i> ∨ <i>R</i>) can also represent a false statement. To see how, imagine that at the end of the semester your professor makes the following promise.</p>
+<p>You pass the class if and only if you get an “A” on the ﬁnal or you get a</p>
+<p>“B” on the ﬁnal.</p>
+<p>This promise has the form <i>P</i> ⇔ (<i>Q</i> ∨ <i>R</i>), so its truth values are tabulated in the above table. Imagine it turned out that you got an “A” on the exam but failed the course. Then surely your professor lied to you. In fact, <i>P </i>is false, <i>Q </i>is true and <i>R </i>is false. This scenario is reﬂected in the sixth line of the table, and indeed <i>P</i> ⇔ (<i>Q</i> ∨ <i>R</i>) is false (i.e., it is a lie).</p>
+<p>The moral of this example is that people can lie, but true mathematical statements<em> never</em> lie.</p>
+<p>We close this section with a word about the use of parentheses. The symbol ∼ is analogous to the minus sign in algebra. It negates the expression it precedes. Thus ∼ <i>P</i> ∨ <i>Q </i>means (∼ <i>P</i>) ∨ <i>Q</i>, not ∼ (<i>P</i> ∨ <i>Q</i>). In ∼ (<i>P</i> ∨ <i>Q</i>), the value of the entire expression <i>P</i> ∨ <i>Q </i>is negated.</p>
+<div class="exercises" data-for="2.5"><h3>Exercises for Section 2.5</h3>
+<p class="ex-group">Write a truth table for the logical statements in problems 1–9:</p>
+<ol class="ex-list">
+<li class="ex" id="ex-2.5-1" value="1"><i>P</i> ∨ (<i>Q</i> ⇒ <i>R</i>)</li>
+<li class="ex" id="ex-2.5-2" value="2">(<i>Q</i> ∨ <i>R</i>) ⇔ (<i>R</i> ∧<i>Q</i>)</li>
+<li class="ex" id="ex-2.5-3" value="3">∼ (<i>P</i> ⇒ <i>Q</i>)</li>
+<li class="ex" id="ex-2.5-4" value="4">∼ (<i>P</i> ∨<i>Q</i>) ∨ (∼ <i>P</i>)</li>
+<li class="ex" id="ex-2.5-5" value="5">(<i>P</i>∧∼ <i>P</i>) ∨<i>Q </i></li>
+<li class="ex" id="ex-2.5-6" value="6">(<i>P</i>∧∼ <i>P</i>) ∧<i>Q </i></li>
+<li class="ex" id="ex-2.5-7" value="7">(<i>P</i>∧∼ <i>P</i>) ⇒ <i>Q</i></li>
+<li class="ex" id="ex-2.5-8" value="8"><i>P</i> ∨ (<i>Q</i>∧∼ <i>R</i>)</li>
+<li class="ex" id="ex-2.5-9" value="9">∼ (∼ <i>P</i>∨∼ <i>Q</i>)</li>
+<li class="ex" id="ex-2.5-10" value="10">Suppose the statement ((<i>P</i> ∧<i>Q</i>) ∨ <i>R</i>) ⇒ (<i>R</i> ∨ <i>S</i>) is false. Find the truth values of <i>P</i>,<i>Q</i>,<i>R </i>and <i>S</i>. (This can be done without a truth table.)</li>
+<li class="ex" id="ex-2.5-11" value="11">Suppose <i>P </i>is false and that the statement (<i>R</i> ⇒ <i>S</i>) ⇔ (<i>P</i> ∧ <i>Q</i>) is true. Find the truth values of <i>R </i>and <i>S</i>. (This can be done without a truth table.)</li>
+</ol>
+</div>
+</section>
+<section class="sec" id="s2-6" data-title="Logical Equivalence">
+<h2><span class="num">2.6</span> Logical Equivalence</h2>
+<p>In contemplating the truth table for<i> P</i> ⇔ <i>Q</i>, you probably noticed that<i> P</i> ⇔ <i>Q</i> is true exactly when <i>P </i>and <i>Q </i>are both true or both false. In other words, <i>P</i> ⇔ <i>Q</i> is true precisely when at least one of the statements<i> P </i>∧<i>Q</i> or ∼ <i>P</i>∧∼ <i>Q</i> is true. This may tempt us to say that <i>P </i>⇔ <i>Q </i>means the same thing as (<i>P</i> ∧ <i>Q</i>) ∨ (∼ <i>P</i>∧∼ <i>Q</i>).</p>
+<p>To see if this is really so, we can write truth tables for <i>P </i>⇔ <i>Q </i>and (<i>P</i> ∧ <i>Q</i>) ∨ (∼ <i>P</i>∧∼ <i>Q</i>). In doing this, it is more eﬃcient to put these two statements into the same table, as follows. (This table has helper columns for the intermediate expressions ∼ <i>P</i>, ∼ <i>Q</i>, (<i>P</i> ∧ <i>Q</i>) and (∼ <i>P</i>∧∼ <i>Q</i>).)</p>
+<figure><img src="figs/ch02-0033.svg" alt="Figure" style="width:83pt"></figure>
+<p class="display"><i>P Q </i>∼ <i>P </i>∼ <i>Q </i>(<i>P</i> ∧<i>Q</i>) (∼ <i>P</i>∧∼ ∧∼ <i>Q</i>) <i>P</i> ⇔ <i>Q</i></p>
+<p class="display"><i>T T F F T F </i><strong>T</strong></p>
+<p class="display"><i>T F F T F F </i><strong>F</strong></p>
+<p class="display"><i>F T T F F F </i><strong>F</strong></p>
+<p class="display"><i>F F T T F T </i><strong>T</strong></p>
+<p>The table shows that <i>P</i> ⇔ <i>Q </i>and (<i>P</i> ∧ <i>Q</i>) ∨ (∼ <i>P</i>∧∼ <i>Q</i>) have the same truth value, no matter the values<i> P </i>and<i> Q</i>. It is as if<i> P</i> ⇔ <i>Q</i> and (<i>P </i>∧<i>Q</i>)∨(∼ <i>P</i>∧∼ <i>Q</i>) are algebraic expressions that are equal no matter what is “plugged into” variables <i>P </i>and<i> Q</i>. We express this state of aﬀairs by writing</p>
+<p class="display"><i>P</i> ⇔ <i>Q </i>= (<i>P</i> ∧ <i>Q</i>) ∨ (∼ <i>P</i>∧∼ <i>Q</i>)</p>
+<p>and saying that <i>P</i> ⇔ <i>Q </i>and (<i>P</i> ∧ <i>Q</i>) ∨ (∼ <i>P</i>∧∼ <i>Q</i>) are<strong> logically equivalent</strong>.</p>
+<p>In general, two statements are <strong>logically equivalent </strong>if their truth values match up line-for-line in a truth table.</p>
+<p>Logical equivalence is important because it can give us diﬀerent (and potentially useful) ways of looking at the same thing. As an example, the following table shows that <i>P</i> ⇒ <i>Q </i>is logically equivalent to (∼ <i>Q</i>) ⇒ (∼ <i>P</i>).</p>
+<figure><img src="figs/ch02-0034.svg" alt="Figure" style="width:198pt"></figure>
+<p>The fact <i>P</i> ⇒ <i>Q </i>= (∼ <i>Q</i>) ⇒ (∼ <i>P</i>) is useful because so many theorems have the form <i>P</i> ⇒ <i>Q</i>. As we will see in Chapter 5, proving such a theorem may be easier if we express it in the logically equivalent form (∼ <i>Q</i>) ⇒ (∼ <i>P</i>).</p>
+<p>Two pairs of logically equivalent statements in particular are signiﬁcant enough to have a special name: <strong>DeMorgan’s laws</strong>.</p>
+<figure><img src="figs/ch02-0035.svg" alt="Figure" style="width:197pt"></figure>
+<p>The ﬁrst of DeMorgan’s laws is veriﬁed by the following table. You are asked to verify the second in one of the exercises.</p>
+<figure><img src="figs/ch02-0036.svg" alt="Figure" style="width:239pt"></figure>
+<p>DeMorgan’s laws are actually very natural and intuitive. Consider the statement ∼ (<i>P</i> ∧ <i>Q</i>), which we can interpret as meaning that<em> it is not the</em> <em>case that both </em><i>P </i><em>and</em><i> Q </i><em>are true. </em>If it is not the case that both <i>P </i>and<i> Q </i>are true, then at least one of <i>P </i>or<i> Q </i>is false, in which case (∼ <i>P</i>) ∨ (∼ <i>Q</i>) is true. Thus ∼ (<i>P</i> ∧ <i>Q</i>) means the same thing as (∼ <i>P</i>) ∨ (∼ <i>Q</i>).</p>
+<p>DeMorgan’s laws can be very useful. Suppose we happen to know that some statement of form ∼ (<i>P</i> ∨ <i>Q</i>) is true. The second of DeMorgan’s laws tells us that (∼ <i>P</i>) ∧ (∼ <i>Q</i>) is also true, hence ∼ <i>P </i>and ∼ <i>Q </i>are both true as well. Quickly obtaining this additional information can be extremely useful.</p>
+<p>Here is a summary of some signiﬁcant logical equivalences. Those that are not immediately obvious can be veriﬁed with truth tables.</p>
+<p class="display"><i>P</i> ⇒ <i>Q </i>= (∼ <i>Q</i>) ⇒ (∼ <i>P</i>) Contrapositive law (2.1)</p>
+<p class="display">∼ (<i>P</i> ∧ <i>Q</i>) = ∼ <i>P</i>∨∼ <i>Q </i><img class="m" src="figs/m/ch02-0037.svg" alt="¾" data-crop="63:254.6,199.5,262.3,211.1" style="height:11.6pt;vertical-align:-2.1pt"></p>
+<p class="display">DeMorgan’s laws (2.2)</p>
+<p class="display">∼ (<i>P</i> ∨ <i>Q</i>) = ∼ <i>P</i>∧∼ <i>Q</i></p>
+<p class="display"><i>P</i> ∧ <i>Q </i>= <i>Q</i> ∧ <i>P </i><img class="m" src="figs/m/ch02-0038.svg" alt="¾" data-crop="63:254.6,229.1,262.3,240.7" style="height:11.6pt;vertical-align:-2.7pt"></p>
+<p class="display">Commutative laws (2.3)</p>
+<p class="display"><i>P</i> ∨ <i>Q </i>= <i>Q</i> ∨ <i>P</i></p>
+<p class="display"><i>P</i> ∧ (<i>Q</i> ∨ <i>R</i>) = (<i>P</i> ∧ <i>Q</i>) ∨ (<i>P</i> ∧ <i>R</i>) <img class="m" src="figs/m/ch02-0039.svg" alt="¾" data-crop="63:254.6,258.7,262.3,270.3" style="height:11.6pt;vertical-align:-2.3pt"></p>
+<p class="display">Distributive laws (2.4)</p>
+<p class="display"><i>P</i> ∨ (<i>Q</i> ∧ <i>R</i>) = (<i>P</i> ∨ <i>Q</i>) ∧ (<i>P</i> ∨ <i>R</i>)</p>
+<p class="display"><i>P</i> ∧ (<i>Q</i> ∧ <i>R</i>) = (<i>P</i> ∧ <i>Q</i>) ∧ <i>R </i><img class="m" src="figs/m/ch02-0040.svg" alt="¾" data-crop="63:254.6,288.3,262.3,299.9" style="height:11.6pt;vertical-align:-1.9pt"></p>
+<p class="display">Associative laws (2.5)</p>
+<p class="display"><i>P</i> ∨ (<i>Q</i> ∨ <i>R</i>) = (<i>P</i> ∨ <i>Q</i>) ∨ <i>R</i></p>
+<p>Notice how the distributive law <i>P</i> ∧ (<i>Q</i> ∨ <i>R</i>) = (<i>P</i> ∧ <i>Q</i>) ∨ (<i>P</i> ∧ <i>R</i>) has the same structure as the distributive law <i>p</i> · (<i>q</i> +<i> r</i>) = <i>p</i> ·<i> q</i> +<i> p</i> ·<i> r </i>from algebra. Concerning the associative laws, the fact that<i> P</i> ∧(<i>Q</i> ∧ <i>R</i>) = (<i>P</i> ∧<i>Q</i>)∧ <i>R </i>means that the position of the parentheses is irrelevant, and we can write this as <i>P</i> ∧ <i>Q</i> ∧ <i>R </i>without ambiguity. Similarly, we may drop the parentheses in an expression such as <i>P</i> ∨ (<i>Q</i> ∨ <i>R</i>).</p>
+<p>But parentheses are essential when there is a mix of ∧ and ∨, as in <i>P</i> ∨ (<i>Q</i> ∧ <i>R</i>). Indeed, <i>P</i> ∨ (<i>Q</i> ∧ <i>R</i>) and (<i>P</i> ∨ <i>Q</i>) ∧ <i>R </i>are<strong> not</strong> logically equivalent. (See Exercise 13 for Section 2.6, below.)</p>
+<div class="exercises" data-for="2.6"><h3>Exercises for Section 2.6</h3>
+<p class="ex-group"><strong>A. </strong>Use truth tables to show that the following statements are logically equivalent.</p>
+<ol class="ex-list">
+<li class="ex" id="ex-2.6-1" value="1"><i>P</i> ∧ (<i>Q</i> ∨ <i>R</i>) = (<i>P</i> ∧<i>Q</i>) ∨ (<i>P</i> ∧ <i>R</i>)</li>
+<li class="ex" id="ex-2.6-2" value="2"><i>P</i> ∨ (<i>Q</i> ∧ <i>R</i>) = (<i>P</i> ∨<i>Q</i>) ∧ (<i>P</i> ∨ <i>R</i>)</li>
+<li class="ex" id="ex-2.6-3" value="3"><i>P</i> ⇒ <i>Q</i> = (∼ <i>P</i>) ∨<i>Q </i></li>
+<li class="ex" id="ex-2.6-4" value="4">∼ (<i>P</i> ∨<i>Q</i>) = (∼ <i>P</i>) ∧ (∼ <i>Q</i>)</li>
+<li class="ex" id="ex-2.6-5" value="5">∼ (<i>P</i> ∨<i>Q</i> ∨ <i>R</i>) = (∼ <i>P</i>) ∧ (∼ <i>Q</i>) ∧ (∼ <i>R</i>)</li>
+<li class="ex" id="ex-2.6-6" value="6">∼ (<i>P</i> ∧<i>Q</i> ∧ <i>R</i>) = (∼ <i>P</i>) ∨ (∼ <i>Q</i>) ∨ (∼ <i>R</i>)</li>
+<li class="ex" id="ex-2.6-7" value="7"><i>P</i> ⇒ <i>Q </i>= (<i>P</i>∧∼ <i>Q</i>) ⇒ (<i>Q</i>∧∼ <i>Q</i>)</li>
+<li class="ex" id="ex-2.6-8" value="8">∼ <i>P</i> ⇔ <i>Q</i> = (<i>P</i> ⇒∼ <i>Q</i>) ∧ (∼ <i>Q</i> ⇒ <i>P</i>)</li>
+</ol>
+<p class="ex-group"><strong>B. </strong>Decide whether or not the following pairs of statements are logically equivalent.</p>
+<ol class="ex-list">
+<li class="ex" id="ex-2.6-9" value="9"><i>P</i> ∧<i>Q </i>and ∼ (∼ <i>P</i>∨∼ <i>Q</i>)</li>
+<li class="ex" id="ex-2.6-10" value="10">(<i>P</i> ⇒ <i>Q</i>) ∨ <i>R </i>and ∼ ((<i>P</i>∧∼ <i>Q</i>)∧∼ <i>R</i>)</li>
+<li class="ex" id="ex-2.6-11" value="11">(∼ <i>P</i>) ∧ (<i>P</i> ⇒ <i>Q</i>) and ∼ (<i>Q</i> ⇒ <i>P</i>)</li>
+<li class="ex" id="ex-2.6-12" value="12">∼ (<i>P</i> ⇒ <i>Q</i>) and <i>P</i>∧∼ <i>Q</i></li>
+<li class="ex" id="ex-2.6-13" value="13"><i>P</i> ∨ (<i>Q</i> ∧ <i>R</i>) and (<i>P</i> ∨<i>Q</i>) ∧ <i>R</i></li>
+<li class="ex" id="ex-2.6-14" value="14"><i>P</i> ∧ (<i>Q</i>∨∼ <i>Q</i>) and (∼ <i>P</i>) ⇒ (<i>Q</i>∧∼ <i>Q</i>)</li>
+</ol>
+</div>
+</section>
+<section class="sec" id="s2-7" data-title="Quantiﬁers">
+<h2><span class="num">2.7</span> Quantiﬁers</h2>
+<p>Using symbols ∧, ∨, ∼, ⇒ and ⇔, we can deconstruct many English sentences into a symbolic form. As we have seen, this symbolic form can help us understand the logical structure of sentences and how diﬀerent sentences may actually have the same meaning (as in logical equivalence).</p>
+<p>But these symbols alone are not powerful enough to capture the full meaning of every statement. To see why, imagine that we are dealing with an inﬁnite set <i>X </i>= {<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, <i>x</i><sub>3</sub>,...} of integers. Suppose we want to express the statement “<em>Every element of </em><i>X </i><em>is odd.” </em>We would have to write</p>
+<p class="display"><i>P</i>(<i>x</i><sub>1</sub>) ∧ <i>P</i>(<i>x</i><sub>2</sub>) ∧ <i>P</i>(<i>x</i><sub>3</sub>) ∧ <i>P</i>(<i>x</i><sub>4</sub>) ∧··· ,</p>
+<p>where <i>P</i>(<i>x</i>) is the open sentence “<i>x </i><em>is odd</em>.” And if we wanted to express “<em>There is at least one element of </em><i>X </i><em>that is odd,”</em> we’d have to write</p>
+<p class="display"><i>P</i>(<i>x</i><sub>1</sub>) ∨ <i>P</i>(<i>x</i><sub>2</sub>) ∨ <i>P</i>(<i>x</i><sub>3</sub>) ∨ <i>P</i>(<i>x</i><sub>4</sub>) ∨··· .</p>
+<p>The problem is that these expressions trail on forever.</p>
+<p>To overcome this defect, we will introduce two new symbols ∀ and ∃. The symbol ∀ stands for the phrase “<em>for all</em>” and ∃ stands for “<em>there exists</em>.” Thus the statement “<em>Every element of </em><i>X </i><em>is odd.” </em>is written symbolically as</p>
+<p class="display">∀<i>x</i> ∈ <i>X </i>,<i> P</i>(<i>x</i>),</p>
+<p>and “<em>There is at least one element of </em><i>X </i><em>that is odd,”</em> is written succinctly as</p>
+<p class="display">∃<i>x</i> ∈ <i>X </i>,<i> P</i>(<i>x</i>),</p>
+<p>These new symbols are called<em> quantiﬁers</em>.</p>
+<p><strong>Deﬁnition 2.1 </strong>The symbols ∀ and ∃ are called<strong> quantiﬁers</strong>.</p>
+<p class="display">∀ stands for the phrase<em> “For all”</em> or<em> “For every,”</em> or<em> “For each,”</em></p>
+<p class="display">∃ stands for the phrase<em> “There exists a”</em> or<em> “There is a.”</em></p>
+<p>Thus the statement</p>
+<p>For every <i>n</i> ∈ ℤ, 2<i>n</i> is even, can be expressed in either of the following ways:</p>
+<p>∀ <i>n</i> ∈ ℤ, 2<i>n</i> is even,</p>
+<p>∀ <i>n</i> ∈ ℤ,<i> E</i>(2<i>n</i>) (where <i>E</i>(<i>x</i>) means <i>x</i> is even). Likewise, a statement such as</p>
+<p>There exists a subset <i>X </i>of ℕ for which |<i>X </i>| = 5.</p>
+<p>can be translated as</p>
+<p>∃ <i>X </i>, (<i>X </i>⊆ ℕ) ∧ (|<i>X </i>| = 5) or ∃ <i>X </i>⊆ ℕ, |<i>X </i>| = 5 or ∃ <i>X </i>∈ 𝒫(ℕ), |<i>X </i>| = 5.</p>
+<p>The symbols ∀ and ∃ are called quantiﬁers because they refer in some sense to the quantity (i.e., all or some) of the variable that follows them. The symbol ∀ is called the<strong> universal quantiﬁer</strong> and ∃ is called the<strong> existential</strong> <strong>quantiﬁer</strong>. Statements containing them are called<strong> quantiﬁed</strong> statements. A statement beginning with ∀ is called a <strong>universally quantiﬁed </strong>statement, and one beginning with ∃ is called an <strong>existentially quantiﬁed</strong> statement.</p>
+<p class="lbl example"><strong>Example 2.5 </strong>The following English statements are paired with their translations into symbolic form.</p>
+<p>Every integer that is not odd is even.</p>
+<p>∀ <i>n</i> ∈ ℤ,∼ (<i>n</i> is odd ) ⇒ (<i>n</i> is even), or ∀ <i>n</i> ∈ ℤ,∼ <i>O</i>(<i>n</i>) ⇒ <i>E</i>(<i>n</i>).</p>
+<p>There is an integer that is not even.</p>
+<p>∃ <i>n</i> ∈ ℤ,∼ <i>E</i>(<i>n</i>).</p>
+<p>For every real number <i>x</i>, there is a real number <i>y</i> for which <i>y</i><sup>3 </sup>=<i> x</i>.</p>
+<p>∀ <i>x</i> ∈ ℝ,∃ <i>y</i> ∈ ℝ, <i>y</i><sup>3 </sup>=<i> x</i>.</p>
+<p>Given any two rational numbers <i>a</i> and <i>b</i>, the product <i>ab</i> is rational.</p>
+<p>∀ <i>a</i>, <i>b</i> ∈ ℚ,<i> ab</i> ∈ ℚ.</p>
+<p>Given a set <i>X </i>(such as, but not limited to, ℕ, ℤ, ℚ, etc.), a quantiﬁed statement of form ∀ <i>x</i> ∈ <i>X </i>, <i>P</i>(<i>x</i>) is understood to be true if<i> P</i>(<i>x</i>) is true for every <i>x</i> ∈ <i>X </i>. If there is at least one <i>x</i> ∈ <i>X </i>for which <i>P</i>(<i>x</i>) is false, then ∀ <i>x</i> ∈ <i>X </i>, <i>P</i>(<i>x</i>) is a false statement. Similarly, ∃ <i>x</i> ∈ <i>X </i>, <i>P</i>(<i>x</i>) is true provided that <i>P</i>(<i>x</i>) is true for at least one element <i>x</i> ∈ <i>X </i>; otherwise it is false. Thus each statement in Example 2.5 is true. Here are some examples of quantiﬁed statements that are false:</p>
+<p class="lbl example"><strong>Example 2.6 </strong>The following false quantiﬁed statements are paired with their translations.</p>
+<p>Every integer is even.</p>
+<p>∀ <i>n</i> ∈ ℤ,<i> E</i>(<i>n</i>).</p>
+<p>There is an integer <i>n</i> for which <i>n</i><sup>2 </sup>= 2.</p>
+<p>∃ <i>n</i> ∈ ℤ,<i> n</i><sup>2 </sup>= 2.</p>
+<p>For every real number <i>x</i>, there is a real number <i>y</i> for which <i>y</i><sup>2 </sup>=<i> x</i>.</p>
+<p>∀ <i>x</i> ∈ ℝ, ∃ <i>y</i> ∈ ℝ,<i> y</i><sup>2 </sup>=<i> x</i>.</p>
+<p>Given any two rational numbers <i>a</i> and <i>b</i>, the number <img class="m" src="figs/m/ch02-0041.svg" alt="√ab" data-crop="66:359.9,148.9,382.2,171.4" style="height:22.5pt;vertical-align:-2.4pt"> is rational.</p>
+<p>∀ <i>a</i>, <i>b</i> ∈ ℚ, <img class="m" src="figs/m/ch02-0042.svg" alt="√ab" data-crop="66:135.9,163.1,158.2,185.6" style="height:22.5pt;vertical-align:-2.6pt"> ∈ ℚ.</p>
+<p class="lbl example"><strong>Example 2.7 </strong>When a statement contains two quantiﬁers you must be very alert to their order, for reversing the order can change the meaning. Consider the following statement from Example 2.5.</p>
+<p>∀ <i>x</i> ∈ ℝ,∃ <i>y</i> ∈ ℝ,<i> y</i><sup>3 </sup>=<i> x</i>.</p>
+<p>This statement is true, for no matter what number<i> x</i> is there exists a number <i>y</i> = <img class="m" src="figs/m/ch02-0043.svg" alt="√3x" data-crop="66:95.8,282.7,111.4,303.8" style="height:21.2pt;vertical-align:-2.8pt"> for which <i>y</i><sup>3</sup> =<i> x</i>. Now reverse the order of the quantiﬁers to get the new statement</p>
+<p>∃ <i>y</i> ∈ ℝ,∀ <i>x</i> ∈ ℝ,<i> y</i><sup>3 </sup>=<i> x</i>.</p>
+<p>This new statement says that there exists a particular number <i>y</i> with the property that <i>y</i><sup>3 </sup>=<i> x</i> for<em> every</em> real number <i>x</i>. Since no number <i>y</i> can have this property, the statement is false. The two statements above have entirely diﬀerent meanings.</p>
+<p>Quantiﬁed statements are often misused in casual conversation. Maybe you’ve heard someone say<em> “All students do not pay full tuition.” </em>when they mean <em>“Not all students pay full tuition.” </em>While the mistake is perhaps marginally forgivable in casual conversation, it must never be made in a mathematical context. Do not say<em> “All integers are not even.” </em>because that means there are no even integers. Instead, say<em> “Not all integers are even.”</em></p>
+<div class="exercises" data-for="2.7"><h3>Exercises for Section 2.7</h3>
+<p class="ex-group">Write the following as English sentences. Say whether they are true or false.</p>
+<ol class="ex-list">
+<li class="ex" id="ex-2.7-1" value="1">∀ <i>x</i> ∈ ℝ, <i>x</i><sup>2 </sup>&gt; 0</li>
+<li class="ex" id="ex-2.7-2" value="2">∀ <i>x</i> ∈ ℝ,∃ <i>n</i> ∈ ℕ, <i>x</i><sup><i>n </i></sup>≥ 0</li>
+<li class="ex" id="ex-2.7-3" value="3">∃<i>a</i> ∈ ℝ,∀ <i>x</i> ∈ ℝ,<i>ax</i> =<i> x </i></li>
+<li class="ex" id="ex-2.7-4" value="4">∀ <i>X </i>∈ 𝒫(ℕ),<i> X </i>⊆ ℝ</li>
+<li class="ex" id="ex-2.7-5" value="5">∀ <i>n</i> ∈ ℕ,∃ <i>X </i>∈ 𝒫(ℕ),|<i>X</i>| &lt;<i> n </i></li>
+<li class="ex" id="ex-2.7-6" value="6">∃ <i>n</i> ∈ ℕ,∀ <i>X </i>∈ 𝒫(ℕ),|<i>X</i>| &lt;<i> n</i></li>
+<li class="ex" id="ex-2.7-7" value="7">∀ <i>X </i>⊆ ℕ,∃ <i>n</i> ∈ ℤ,|<i>X</i>| =<i> n</i></li>
+<li class="ex" id="ex-2.7-8" value="8">∀ <i>n</i> ∈ ℤ, ∃ <i>X </i>⊆ ℕ,|<i>X</i>| =<i> n</i></li>
+<li class="ex" id="ex-2.7-9" value="9">∀ <i>n</i> ∈ ℤ,∃ <i>m</i> ∈ ℤ, <i>m</i> =<i> n </i>+ 5</li>
+<li class="ex" id="ex-2.7-10" value="10">∃ <i>m</i> ∈ ℤ,∀ <i>n</i> ∈ ℤ, <i>m</i> =<i> n </i>+ 5</li>
+</ol>
+</div>
+</section>
+<section class="sec" id="s2-8" data-title="More on Conditional Statements">
+<h2><span class="num">2.8</span> More on Conditional Statements</h2>
+<p>It is time to address a very important point about conditional statements that contain variables. To motivate this, let’s return to the following example concerning integers <i>x</i>:</p>
+<p class="display">(<i>x</i> is a multiple of 6) ⇒ (<i>x</i> is even).</p>
+<p>As noted earlier, since every multiple of 6 is even, this is a true statement no matter what integer <i>x</i> is. We could even underscore this fact by writing this true statement as</p>
+<p class="display">∀ <i>x</i> ∈ ℤ, (<i>x</i> is a multiple of 6) ⇒ (<i>x</i> is even).</p>
+<p>But now switch things around to get the diﬀerent statement</p>
+<p class="display">(<i>x</i> is even) ⇒ (<i>x</i> is a multiple of 6).</p>
+<p>This is true for some values of <i>x</i> such as −6, 12, 18, etc., but false for others (such as 2, 4, etc.). Thus we do not have a statement, but rather an open sentence. (Recall from Section 2.1 that an <em>open sentence </em>is a sentence whose truth value depends on the value of a certain variable or variables.) However, by putting a universal quantiﬁer in front we get</p>
+<p class="display">∀ <i>x</i> ∈ ℤ, (<i>x</i> is even) ⇒ (<i>x</i> is a multiple of 6),</p>
+<p>which is deﬁnitely false, so this new expression is a statement,<em> not an open</em> <em>sentence</em>. In general, given any two open sentences <i>P</i>(<i>x</i>) and <i>Q</i>(<i>x</i>) about integers <i>x</i>, the expression ∀ <i>x</i> ∈ ℤ,<i> P</i>(<i>x</i>) ⇒ <i>Q</i>(<i>x</i>) is either true or false, so it is a statement, not an open sentence.</p>
+<p>Now we come to the very important point. In mathematics, whenever <i>P</i>(<i>x</i>) and <i>Q</i>(<i>x</i>) are open sentences concerning elements <i>x </i>in some set <i>X</i> (depending on context), an expression of form<i> P</i>(<i>x</i>) ⇒ <i>Q</i>(<i>x</i>) is understood to be the<em> statement</em> ∀ <i>x</i> ∈ <i>X </i>,<i> P</i>(<i>x</i>) ⇒ <i>Q</i>(<i>x</i>). In other words, if a conditional statement is not explicitly quantiﬁed then there is an implied universal quantiﬁer in front of it. This is done because statements of the form ∀ <i>x</i> ∈ <i>X </i>,<i> P</i>(<i>x</i>) ⇒ <i>Q</i>(<i>x</i>) are so common in mathematics that we would get tired of putting the ∀ <i>x</i> ∈ <i>X</i> in front of them.</p>
+<p>Thus the following sentence is a true statement (as it is true for all <i>x</i>).</p>
+<p>If <i>x</i> is a multiple of 6, then <i>x</i> is even. Likewise, the next sentence is a false statement (as it is not true for all <i>x</i>).</p>
+<p>If <i>x</i> is even, then <i>x</i> is a multiple of 6.</p>
+<p>This leads to the following signiﬁcant interpretation of a conditional statement, which is more general than (but consistent with) its deﬁnition in Section 2.3.</p>
+<p><strong>Deﬁnition 2.2 </strong>If <i>P </i>and<i> Q </i>are statements or open sentences, then</p>
+<p><em>“If </em><i>P</i><em>, then</em><i> Q</i><em>,”</em></p>
+<p>is a statement. This statement is true if it’s impossible for <i>P </i>to be true while<i> Q </i>is false. It is false if there is at least one instance in which <i>P </i>is true but<i> Q </i>is false.</p>
+<p>Thus the following are<strong> true</strong> statements:</p>
+<p>If <i>x</i> ∈ ℝ, then <i>x</i><sup>2 </sup>+ 1 &gt; 0.</p>
+<p>If a function <i>f </i>is diﬀerentiable on ℝ, then <i>f </i>is continuous on ℝ.</p>
+<p>Likewise, the following are<strong> false</strong> statements:</p>
+<p>If <i>p</i> is a prime number, then <i>p</i> is odd. (2 is prime.)</p>
+<p>If <i>f </i>is a rational function, then <i>f </i>has an asymptote. (<i>x</i><sup>2 </sup>is rational.)</p>
+</section>
+<section class="sec" id="s2-9" data-title="Translating English to Symbolic Logic">
+<h2><span class="num">2.9</span> Translating English to Symbolic Logic</h2>
+<p>In writing (and reading) proofs of theorems, we must always be alert to the logical structure and meanings of the sentences. Sometimes it is necessary or helpful to parse them into expressions involving logic symbols. This may be done mentally or on scratch paper, or occasionally even explicitly within the body of a proof. The purpose of this section is to give you suﬃcient practice in translating English sentences into symbolic form so that you can better understand their logical structure. Here are some examples:</p>
+<p class="lbl example"><strong>Example 2.8 </strong>Consider the Mean Value Theorem from Calculus:</p>
+<p>If <i>f </i>is continuous on the interval [<i>a</i>, <i>b</i>] and diﬀerentiable on (<i>a</i>, <i>b</i>), then</p>
+<p>there is a number <i>c</i> ∈ (<i>a</i>, <i>b</i>) for which <i>f </i><sup>′</sup>(<i>c</i>) =<img class="m" src="figs/m/ch02-0044.svg" alt="f (bb)−−af (a)" data-crop="68:302.9,589.5,342.4,609.3" style="height:19.8pt;vertical-align:-6.3pt">.</p>
+<p>Here is a translation to symbolic form:</p>
+<p>((<i>f </i>cont. on [<i>a</i>, <i>b</i>]) ∧ (<i>f </i>is diﬀ. on (<i>a</i>, <i>b</i>))) ⇒ (∃ <i>c</i> ∈ (<i>a</i>, <i>b</i>),<i> f </i><sup>′</sup>(<i>c</i>) =<img class="m" src="figs/m/ch02-0045.svg" alt="f (bb)−−af (a))" data-crop="68:379.1,633.6,423.8,653.4" style="height:19.8pt;vertical-align:-6.4pt">.</p>
+<p class="lbl example"><strong>Example 2.9 </strong>Consider Goldbach’s conjecture, from Section 2.1:</p>
+<p>Every even integer greater than 2 is the sum of two primes.</p>
+<p>This can be translated in the following ways, where <i>P </i>is the set of prime numbers and <i>X </i>= {4,6,8,10,...} is the set of even integers greater than 2.</p>
+<p>(<i>n</i> ∈ <i>X </i>) ⇒ (∃ <i>p</i>,<i> q</i> ∈ <i>P</i>,<i> n</i> =<i> p</i> +<i> q</i>)</p>
+<p>∀ <i>n</i> ∈ <i>X </i>, ∃ <i>p</i>,<i> q</i> ∈ <i>P</i>,<i> n</i> =<i> p</i> +<i> q</i></p>
+<p>These translations of Goldbach’s conjecture illustrate an important point. The ﬁrst has the basic structure (<i>n</i> ∈ <i>X </i>) ⇒ <i>Q</i>(<i>n</i>) and the second has structure ∀ <i>n</i> ∈ <i>X </i>,<i> Q</i>(<i>n</i>), yet they have exactly the same meaning. This is signiﬁcant. Every universally quantiﬁed statement can be expressed as a conditional statement.</p>
+<p class="lbl fact"><strong>Fact 2.2 </strong>Suppose <i>X </i>is a set and <i>Q</i>(<i>x</i>) is a statement about <i>x </i>for each <i>x</i> ∈ <i>X </i>. The following statements mean the same thing:</p>
+<p>∀ <i>x</i> ∈ <i>X </i>,<i> Q</i>(<i>x</i>)</p>
+<p>(<i>x</i> ∈ <i>X </i>) ⇒ <i>Q</i>(<i>x</i>).</p>
+<p>This fact is signiﬁcant because so many theorems have the form of a conditional statement. (The Mean Value Theorem is an example.) In proving a theorem we have to think carefully about what it says. Sometimes a theorem will be expressed as a universally quantiﬁed statement, but it will be more convenient to think of it as a conditional statement. Understanding the above fact allows us to switch between the two forms.</p>
+<p>The section closes with some ﬁnal points. In translating a statement, be attentive to its intended meaning. Don’t jump into, for example, automatically replacing every “and” with ∧ and “or” with ∨. An example:</p>
+<p>At least one of the integers <i>x</i> and <i>y</i> is even.</p>
+<p>Don’t be led astray by the presence of the word “and.” The meaning of the statement is that one or both of the numbers is even, so it should be translated with “or,” not “and”:</p>
+<p>(<i>x</i> is even) ∨ (<i>y</i> is even).</p>
+<p>Finally, the logical meaning of “but” can be captured by “and.” The sentence “<em>The integer </em><i>x</i><em> is even, but the integer </em><i>y</i><em> is odd</em>,” is translated as</p>
+<p>(<i>x</i> is even) ∧ (<i>y</i> is odd).</p>
+<div class="exercises" data-for="2.9"><h3>Exercises for Section 2.9</h3>
+<p class="ex-group">Translate each of the following sentences into symbolic logic.</p>
+<ol class="ex-list">
+<li class="ex" id="ex-2.9-1" value="1">If <i>f </i>is a polynomial and its degree is greater than 2, then <i>f </i><sup>′ </sup>is not constant.</li>
+<li class="ex" id="ex-2.9-2" value="2">The number <i>x</i> is positive but the number <i>y</i> is not positive.</li>
+<li class="ex" id="ex-2.9-3" value="3">If <i>x</i> is prime, then <img class="m" src="figs/m/ch02-0046.svg" alt="√x" data-crop="70:174.3,168.5,188.6,188.0" style="height:19.5pt;vertical-align:-3.0pt"> is not a rational number.</li>
+<li class="ex" id="ex-2.9-4" value="4">For every prime number <i>p</i>, there is another prime number <i>q</i> with <i>q</i> &gt;<i> p</i>.</li>
+<li class="ex" id="ex-2.9-5" value="5">For every positive number <i>ε</i>, there is a positive number <i>δ </i>for which |<i>x</i> − <i>a</i>| &lt;<i> δ</i> implies |<i>f</i> (<i>x</i>) − <i>f</i> (<i>a</i>)| &lt;<i> ε</i>.</li>
+<li class="ex" id="ex-2.9-6" value="6">For every positive number<i> ε</i>, there is a positive number <i>M </i>for which |<i>f</i> (<i>x</i>)− <i>b</i>| &lt;<i> ε</i>, whenever <i>x</i> &gt;<i> M</i>.</li>
+<li class="ex" id="ex-2.9-7" value="7">There exists a real number <i>a</i> for which <i>a </i>+<i> x</i> =<i> x</i> for every real number <i>x</i>.</li>
+<li class="ex" id="ex-2.9-8" value="8">I don’t eat anything that has a face.</li>
+<li class="ex" id="ex-2.9-9" value="9">If <i>x</i> is a rational number and <i>x</i> ≠ 0, then tan(<i>x</i>) is not a rational number.</li>
+<li class="ex" id="ex-2.9-10" value="10">If sin(<i>x</i>) &lt; 0, then it is not the case that 0 ≤ <i>x</i> ≤ <i>π</i>.</li>
+<li class="ex" id="ex-2.9-11" value="11">There is a Providence that protects idiots, drunkards, children and the United States of America. (Otto von Bismarck)</li>
+<li class="ex" id="ex-2.9-12" value="12">You can fool some of the people all of the time, and you can fool all of the people some of the time, but you can’t fool all of the people all of the time. (Abraham Lincoln)</li>
+<li class="ex" id="ex-2.9-13" value="13">Everything is funny as long as it is happening to somebody else. (Will Rogers)</li>
+</ol>
+</div>
+</section>
+<section class="sec" id="s2-10" data-title="Negating Statements">
+<h2><span class="num">2.10</span> Negating Statements</h2>
+<p>Given a statement<i> R</i>, the statement ∼ <i>R </i>is called the<strong> negation</strong> of<i> R</i>. If<i> R </i>is a complex statement, then it is often the case that its negation ∼ <i>R </i>can be written in a simpler or more useful form. The process of ﬁnding this form is called<strong> negating </strong><i>R</i>. In proving theorems it is often necessary to negate certain statements. We now investigate how to do this.</p>
+<p>We have already examined part of this topic. <strong>DeMorgan’s laws</strong></p>
+<p class="display">∼ (<i>P</i> ∧ <i>Q</i>) = (∼ <i>P</i>) ∨ (∼ <i>Q</i>) (2.6)</p>
+<p class="display">∼ (<i>P</i> ∨ <i>Q</i>) = (∼ <i>P</i>) ∧ (∼ <i>Q</i>) (2.7)</p>
+<p>(from Section 2.6) can be viewed as rules that tell us how to negate the statements <i>P</i> ∧ <i>Q </i>and <i>P</i> ∨ <i>Q</i>. Here are some examples that illustrate how DeMorgan’s laws are used to negate statements involving “and” or “or.”</p>
+<p class="lbl example"><strong>Example 2.10 </strong>Consider negating the following statement.</p>
+<p><i>R</i> : You can solve it by factoring or with the quadratic formula.</p>
+<p>Now, <i>R </i>means (You can solve it by factoring) ∨ (You can solve it with Q.F.), which we will denote as <i>P</i> ∨ <i>Q</i>. The negation of this is</p>
+<p class="display">∼ (<i>P</i> ∨ <i>Q</i>) = (∼ <i>P</i>) ∧ (∼ <i>Q</i>).</p>
+<p>Therefore, in words, the negation of <i>R </i>is</p>
+<p class="display">∼ <i>R</i> : You can’t solve it by factoring and you can’t solve it with</p>
+<p class="display">the quadratic formula.</p>
+<p>Maybe you can ﬁnd ∼ <i>R </i>without invoking DeMorgan’s laws. That is good; you have internalized DeMorgan’s laws and are using them unconsciously.</p>
+<p class="lbl example"><strong>Example 2.11 </strong>We will negate the following sentence.</p>
+<p><i>R</i> : The numbers <i>x</i> and <i>y</i> are both odd.</p>
+<p>This statement means (<i>x</i> is odd) ∧ (<i>y</i> is odd), so its negation is</p>
+<p class="display">∼ ((<i>x</i> is odd) ∧ (<i>y</i> is odd)) = ∼ (<i>x</i> is odd) ∨∼ (<i>y</i> is odd)</p>
+<p class="display">= (<i>x</i> is even) ∨ (<i>y</i> is even).</p>
+<p>Therefore the negation of <i>R </i>can be expressed in the following ways:</p>
+<p>∼ <i>R</i> : The number <i>x</i> is even or the number <i>y</i> is even.</p>
+<p>∼ <i>R</i> : At least one of <i>x</i> and <i>y</i> is even.</p>
+<p>Now let’s move on to a slightly diﬀerent kind of problem. It’s often necessary to ﬁnd the negations of quantiﬁed statements. For example, consider ∼ (∀ <i>x</i> ∈ ℕ,<i> P</i>(<i>x</i>)). Reading this in words, we have the following:</p>
+<p>It is not the case that <i>P</i>(<i>x</i>) is true for all natural numbers <i>x</i>.</p>
+<p>This means <i>P</i>(<i>x</i>) is false for at least one <i>x</i>. In symbols, this is ∃ <i>x</i> ∈ ℕ, ∼ <i>P</i>(<i>x</i>). Thus ∼ (∀ <i>x</i> ∈ ℕ,<i> P</i>(<i>x</i>)) = ∃ <i>x</i> ∈ ℕ, ∼ <i>P</i>(<i>x</i>). Similarly, you can reason out that ∼ (∃ <i>x</i> ∈ ℕ,<i> P</i>(<i>x</i>)) = ∀ <i>x</i> ∈ ℕ, ∼ <i>P</i>(<i>x</i>). In general:</p>
+<p class="display">∼ (∀ <i>x</i> ∈ <i>X </i>,<i> P</i>(<i>x</i>)) = ∃ <i>x</i> ∈ <i>X </i>, ∼ <i>P</i>(<i>x</i>), (2.8)</p>
+<p class="display">∼ (∃ <i>x</i> ∈ <i>X </i>,<i> P</i>(<i>x</i>)) = ∀ <i>x</i> ∈ <i>X </i>, ∼ <i>P</i>(<i>x</i>). (2.9)</p>
+<p>Be sure that you<em> understand</em> these two logical equivalences. They conform to our everyday use of language, but they pin down the meaning in a mathematically precise way.</p>
+<p class="lbl example"><strong>Example 2.12 </strong>Consider negating the following statement.</p>
+<p><i>R</i> : The square of every real number is non-negative. Symbolically, <i>R </i>can be expressed as ∀ <i>x</i> ∈ ℝ,<i> x</i><sup>2 </sup>≥ 0, and thus its negation is ∼ (∀ <i>x</i> ∈ ℝ,<i> x</i><sup>2 </sup>≥ 0) = ∃ <i>x</i> ∈ ℝ, ∼ (<i>x</i><sup>2 </sup>≥ 0) = ∃ <i>x</i> ∈ ℝ,<i> x</i><sup>2 </sup>&lt; 0. In words, this is</p>
+<p>∼ <i>R</i> : There exists a real number whose square is negative. Observe that<i> R </i>is true and ∼ <i>R </i>is false. Maybe you can get ∼ <i>R </i>immediately, without using Equation (2.8) as we did above. If so, that is good; if not, you should be there soon.</p>
+<p class="lbl example"><strong>Example 2.13 </strong>If a statement has multiple quantiﬁers, negating it involves several iterations of Equations (2.8) and (2.9). Consider the following:</p>
+<p><i>S</i> : For every real number <i>x</i>, there is a real number <i>y</i> for which <i>y</i><sup>3 </sup>=<i> x</i>. This statement asserts any real number <i>x </i>has a cube root <i>y</i>, so it’s true. Symbolically <i>S </i>can be expressed as</p>
+<p class="display">∀ <i>x</i> ∈ ℝ,∃ <i>y</i> ∈ ℝ, <i>y</i><sup>3 </sup>=<i> x</i>.</p>
+<p>Let’s work out the negation of this statement.</p>
+<p class="display">∼ (∀ <i>x</i> ∈ ℝ,∃ <i>y</i> ∈ ℝ, <i>y</i><sup>3 </sup>=<i> x</i>) = ∃ <i>x</i> ∈ ℝ,∼ (∃ <i>y</i> ∈ ℝ, <i>y</i><sup>3 </sup>=<i> x</i>)</p>
+<p class="display">= ∃ <i>x</i> ∈ ℝ,∀ <i>y</i> ∈ ℝ, ∼ (<i>y</i><sup>3 </sup>=<i> x</i>)</p>
+<p class="display">= ∃ <i>x</i> ∈ ℝ,∀ <i>y</i> ∈ ℝ, <i>y</i><sup>3 </sup>≠<i> x</i>.</p>
+<p>Thus the negation is a (false) statement that can be written in either of the following ways.</p>
+<p>∼ <i>S</i> : There is a real number <i>x</i> such that for all real numbers <i>y</i>, <i>y</i><sup>3 </sup>≠<i> x</i>.</p>
+<p>∼ <i>S</i> : There is a real number <i>x</i> for which <i>y</i><sup>3 </sup>≠<i> x</i> for all real numbers <i>y</i>.</p>
+<p>In writing proofs you will occasionally have to negate a conditional statement <i>P</i> ⇒ <i>Q</i>. The remainder of this section describes how to do this. To begin, look at the expression ∼ (<i>P</i> ⇒ <i>Q</i>), which literally says <em>“</em><i>P</i> ⇒ <i>Q </i><em>is</em> <em>false.” </em>You know from the truth table for ⇒ that the only way that <i>P</i> ⇒ <i>Q</i> can be false is if <i>P </i>is true and<i> Q </i>is false. Therefore</p>
+<p class="display">∼ (<i>P</i> ⇒ <i>Q</i>) = <i>P</i>∧∼ <i>Q</i>. (2.10)</p>
+<p>(In fact, in Exercise 12 of Section 2.6, you used a truth table to verify that these two statements are indeed logically equivalent.)</p>
+<p class="lbl example"><strong>Example 2.14 </strong>Negate the following statement about a particular (i.e., constant) number <i>a</i>.</p>
+<p><i>R</i> : If <i>a</i> is odd, then <i>a</i><sup>2 </sup>is odd.</p>
+<p>Using Equation (2.10), we get the following negation.</p>
+<p>∼ <i>R</i> : <i>a</i> is odd and <i>a</i><sup>2 </sup>is not odd.</p>
+<p class="lbl example"><strong>Example 2.15 </strong>This example is like the previous one, but the constant <i>a</i> is replaced by a variable <i>x</i>. We will negate the following statement.</p>
+<p><i>R</i> : If <i>x</i> is odd, then <i>x</i><sup>2 </sup>is odd.</p>
+<p>As in Section 2.8, we interpret this as the universally quantiﬁed statement</p>
+<p><i>R</i> : ∀<i>x</i> ∈ ℤ, (<i>x</i> odd) ⇒ (<i>x</i><sup>2 </sup>odd).</p>
+<p>By Equations (2.8) and (2.10), we get the following negation for <i>R</i>.</p>
+<p class="display">∼ (∀<i>x</i> ∈ ℤ, (<i>x</i> odd) ⇒ (<i>x</i><sup>2 </sup>odd)) = ∃<i>x</i> ∈ ℤ,∼ ((<i>x</i> odd) ⇒ (<i>x</i><sup>2 </sup>odd))</p>
+<p class="display">= ∃<i>x</i> ∈ ℤ,(<i>x</i> odd)∧∼ (<i>x</i><sup>2 </sup>odd).</p>
+<p>Translating back into words, we have</p>
+<p>∼ <i>R</i> : There is an odd integer <i>x</i> whose square is not odd.</p>
+<p>Notice that <i>R </i>is true and ∼ <i>R </i>is false.</p>
+<p>The above Example 2.15 showed how to negate a conditional statement <i>P</i>(<i>x</i>) ⇒ <i>Q</i>(<i>x</i>). This type of problem can sometimes be embedded in more complex negation. See Exercise 5 below (and its solution).</p>
+<div class="exercises" data-for="2.10"><h3>Exercises for Section 2.10</h3>
+<p class="ex-group">Negate the following sentences.</p>
+<ol class="ex-list">
+<li class="ex" id="ex-2.10-1" value="1">The number <i>x</i> is positive, but the number <i>y</i> is not positive.</li>
+<li class="ex" id="ex-2.10-2" value="2">If <i>x</i> is prime, then <img class="m" src="figs/m/ch02-0047.svg" alt="√x" data-crop="73:149.1,527.7,163.4,547.2" style="height:19.5pt;vertical-align:-2.2pt"> is not a rational number.</li>
+<li class="ex" id="ex-2.10-3" value="3">For every prime number <i>p</i>, there is another prime number <i>q</i> with <i>q</i> &gt;<i> p</i>.</li>
+<li class="ex" id="ex-2.10-4" value="4">For every positive number <i>ε</i>, there is a positive number <i>δ </i>such that |<i>x</i> − <i>a</i>| &lt;<i> δ</i> implies |<i>f</i> (<i>x</i>) − <i>f</i> (<i>a</i>)| &lt;<i> ε</i>.</li>
+<li class="ex" id="ex-2.10-5" value="5">For every positive number <i>ε</i>, there is a positive number <i>M </i>for which |<i>f</i> (<i>x</i>)− <i>b</i>| &lt;<i> ε</i> whenever <i>x</i> &gt;<i> M</i>.</li>
+<li class="ex" id="ex-2.10-6" value="6">There exists a real number <i>a</i> for which <i>a </i>+<i> x</i> =<i> x</i> for every real number <i>x</i>.</li>
+<li class="ex" id="ex-2.10-7" value="7">I don’t eat anything that has a face.</li>
+<li class="ex" id="ex-2.10-8" value="8">If <i>x</i> is a rational number and <i>x</i> ≠ 0, then tan(<i>x</i>) is not a rational number.</li>
+<li class="ex" id="ex-2.10-9" value="9">If sin(<i>x</i>) &lt; 0, then it is not the case that 0 ≤ <i>x</i> ≤ <i>π</i>.</li>
+<li class="ex" id="ex-2.10-10" value="10">If <i>f </i>is a polynomial and its degree is greater than 2, then <i>f </i><sup>′ </sup>is not constant.</li>
+<li class="ex" id="ex-2.10-11" value="11">You can fool all of the people all of the time.</li>
+<li class="ex" id="ex-2.10-12" value="12">Whenever I have to choose between two evils, I choose the one I haven’t tried yet. (Mae West)</li>
+</ol>
+</div>
+</section>
+<section class="sec" id="s2-11" data-title="Logical Inference">
+<h2><span class="num">2.11</span> Logical Inference</h2>
+<p>Suppose we know that a conditional statement <i>P</i> ⇒ <i>Q </i>is true. This tells us that whenever<i> P </i>is true,<i> Q</i> will also be true. By itself,<i> P</i> ⇒ <i>Q</i> being true does not tell us that either <i>P </i>or <i>Q </i>is true (they could both be false, or <i>P </i>could be false and<i> Q </i>true). But if in addition we happen to know that <i>P </i>is true, then <i>Q </i>must be true. This is called a <strong>logical inference</strong>: From two true statements we infer that a third statement is true. In essence, statements <i>P</i> ⇒ <i>Q </i>and<i> P </i>are “added together” to get<i> Q</i>. We can indicate this by stacking <i>P</i> ⇒ <i>Q </i>and <i>P </i>one atop the other with a line separating them from<i> Q</i>. The intended meaning is that <i>P</i> ⇒ <i>Q </i>combined with <i>P </i>produces<i> Q</i>.</p>
+<p class="display"><i>P</i> ⇒ <i>Q</i></p>
+<p class="display"><i>P</i></p>
+<p class="display"><i>Q</i></p>
+<p>This is a very frequently-used pattern of thought. (In fact, it is exactly the pattern we used in the example on page 34.) This rule even has a name. It is called the<strong> modus ponens</strong> rule.</p>
+<p>Two other logical inferences, called<strong> modus tollens</strong> and<strong> elimination</strong> are listed below. In each case you should convince yourself (based on your knowledge of the relevant truth tables) that the truth of the statements above the line forces the statement below the line to be true.</p>
+<p>Modus Ponens Modus Tollens Elimination</p>
+<p class="display"><i>P</i> ⇒ <i>Q P</i> ⇒ <i>Q P</i> ∨<i>Q</i></p>
+<p class="display"><i>P </i>∼ <i>Q </i>∼ <i>P</i></p>
+<p class="display"><i>Q </i>∼ <i>P Q</i></p>
+<p>It is important to internalize these rules. (You already use at least modus ponens and elimination in daily life anyway.) But you need not remember their names; few mathematicians can recall the names, though they use the rules constantly. The names are not important, but the rules are.</p>
+<p>Three additional logical inferences are listed below. The ﬁrst states the obvious fact that if <i>P </i>and<i> Q </i>are both true, then so is the statement <i>P</i> ∧ <i>Q</i>. On the other hand, <i>P</i> ∧ <i>Q </i>being true forces <i>P </i>(also<i> Q</i>) to be true. Finally, if <i>P </i>is true, then <i>P</i> ∨ <i>Q </i>must be true, no matter what statement<i> Q </i>is.</p>
+<p class="display"><i>P</i></p>
+<p class="display"><i>Q P</i> ∧<i>Q P</i></p>
+<p class="display"><i>P</i> ∧<i>Q P P</i> ∨<i>Q</i></p>
+<p>These inferences are so intuitively obvious that they scarcely need to be mentioned. However, they represent certain patterns of reasoning that we will frequently apply to sentences in proofs, so we should be cognizant of the fact that we are using them.</p>
+</section>
+<section class="sec" id="s2-12" data-title="An Important Note">
+<h2><span class="num">2.12</span> An Important Note</h2>
+<p>It is important to be aware of the reasons that we study logic. There are three very signiﬁcant reasons. First, the truth tables we studied tell us the exact meanings of the words such as “and,” “or,” “not” and so on. For instance, whenever we use or read the <em>“If..., then” </em>construction in a mathematical context, logic tells us exactly what is meant. Second, the rules of inference provide a system in which we can produce new information (statements) from known information. Finally, logical rules such as DeMorgan’s laws help us correctly change certain statements into (potentially more useful) statements with the same meaning. Thus, logic helps us understand the meanings of statements, and it also produces new meaningful statements.</p>
+<p>Logic is the glue that holds strings of statements together and pins down the exact meaning of certain key phrases such as the <em>“If..., then” </em>or <em>“For</em> <em>all”</em> constructions. Logic is the common language that all mathematicians use, so we must have a ﬁrm grip on it in order to write and understand mathematics.</p>
+<p>But despite its fundamental role, logic’s place is in the background of what we do, not the forefront. From here on, the beautiful symbols ∧, ∨, ⇒, ⇔, ∼, ∀ and ∃ are rarely written. But we are aware of their meanings constantly. When reading or writing a sentence involving mathematics we parse it with these symbols, either mentally or on scratch paper, so as to understand the true and unambiguous meaning.</p>
+</section>
+</section>

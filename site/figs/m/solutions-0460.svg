@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="14.463333" height="14.308716" viewBox="0 0 14.463333 14.308716">
+<defs>
+<clipPath id="clip_1">
+<path transform="matrix(1,0,0,-1,-233.29599,183.93872)" d="M233.29599 169.63H247.75933V183.93872H233.29599Z" clip-rule="evenodd"/>
+</clipPath>
+<path id="font_2_48" d="M.084991458 .31092835V.2529297H.33099366V.0068359377H.3889923V.2529297H.6349945V.31092835H.3889923V.5566406H.33099366V.31092835H.084991458Z"/>
+<path id="font_3_16" d="M.32199098 .70399478C.28799439 .6629944 .19599915 .6319885 .10398865 .6299896V.58699038H.19198609C.25 .58699038 .2539978 .58299258 .2539978 .5239868V.12298584 .09399414C.2539978 .051986696 .24499512 .04699707 .16499329 .04699707H.099990848V0H.49598695V.04699707H.44099427C.3880005 .04699707 .3659973 .050994874 .35798646 .06098938 .35099793 .067993167 .35099793 .067993167 .35099793 .12298584V.5359955C.35099793 .58499148 .35299684 .6329956 .35798646 .70399478H.32199098Z"/>
+</defs>
+<g>
+<g clip-path="url(#clip_1)">
+<use data-text="+" xlink:href="#font_2_48" transform="matrix(8.2491,0,0,-8.2491,.80000308,13.508713)"/>
+<use data-text="1" xlink:href="#font_3_16" transform="matrix(8.3387,0,0,-8.3387,9.027008,7.4387056)"/>
+<path transform="matrix(1,0,0,-1,9.027008,11.186722)" stroke-width=".478" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M0 0H4.636"/>
+</g>
+</g>
+</svg>

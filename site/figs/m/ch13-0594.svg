@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="12.680084" height="11.6362919" viewBox="0 0 12.680084 11.6362919">
+<defs>
+<clipPath id="clip_1">
+<path transform="matrix(1,0,0,-1,-145.87699,115.253238)" d="M145.87699 103.61694H158.55707V115.253238H145.87699Z" clip-rule="evenodd"/>
+</clipPath>
+<path id="font_2_20" d="M.98799136-1.2441406 1.0499878-.99313357H1.0179901C.9819946-1.0591431 .94099429-1.1191406 .8880005-1.1191406H.18199158L.5529938-.59306338 .22698975-.0599823H.81399539C.8849945-.0599823 .9259949-.116989139 .95899966-.19900513H.9909973L.94400027-.0009765625H.06298828V-.032989503L.43798829-.6440735 .039993287-1.212143V-1.2441406H.98799136Z"/>
+</defs>
+<g>
+<g clip-path="url(#clip_1)">
+<use data-text="&#xfffd;" xlink:href="#font_2_20" transform="matrix(10.0363,0,0,-10.0363,.80000308,1.4272308)"/>
+</g>
+</g>
+</svg>
