@@ -7,6 +7,7 @@ import re, json, html, pathlib
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 CONTENT, SITE = ROOT / 'content', ROOT / 'site'
 BOOK = 'Book of Proof'
+BOOK_ID = 'bop'          # short unique id per book: namespaces saved progress (books on one github.io share storage)
 LICENSE = ('<footer class="license"><p><em>Book of Proof</em>, Third Edition, by Richard Hammack. '
            '© 2018 Richard Hammack. Licensed under '
            '<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>. '
@@ -25,7 +26,7 @@ PAGE = '''<!doctype html>
 <script>window.MathJax={{tex:{{inlineMath:[['\\\\(','\\\\)']],displayMath:[['\\\\[','\\\\]']]}},startup:{{typeset:false}}}};</script>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 <script defer src="assets/app.js"></script>
-</head><body data-page="{slug}"{code}>
+</head><body data-book="{book_id}" data-page="{slug}"{code}>
 <header class="top"><a href="index.html" class="home">{book}</a>
 <nav>{home}{prev}{next}<button id="settings-btn" type="button">Settings</button></nav></header>
 <main class="book">{body}</main>
@@ -70,7 +71,7 @@ def main():
         prev = f'<a href="{pages[i-1][0]}.html" rel="prev">← Previous</a>' if i else ''
         nxt = f'<a href="{pages[i+1][0]}.html" rel="next">Next →</a>' if i + 1 < len(pages) else ''
         body = re.sub(r'^<!-- pages: .*? -->\s*', '', src)
-        (SITE / f'{slug}.html').write_text(PAGE.format(title=title_of(src), book=BOOK, slug=slug, prev=prev, next=nxt, home=HOME, code=code_attr(src),
+        (SITE / f'{slug}.html').write_text(PAGE.format(title=title_of(src), book=BOOK, book_id=BOOK_ID, slug=slug, prev=prev, next=nxt, home=HOME, code=code_attr(src),
                                                        body=body, license=LICENSE), encoding='utf-8')
         book.append(outline(slug, src) if slug != 'solutions' else {'slug': slug, 'title': title_of(src), 'sections': []})
     (SITE / 'outline.json').write_text(json.dumps(book, ensure_ascii=False, indent=1), encoding='utf-8')
@@ -94,7 +95,7 @@ def main():
              '<p class="io"><button id="export-btn" type="button">Export progress</button> '
              '<label class="btn">Import progress<input id="import-file" type="file" accept="application/json" hidden></label></p>'
              f'<ol class="toc">{toc}</ol></section>')
-    (SITE / 'index.html').write_text(PAGE.format(title='Contents', book=BOOK, slug='index', prev='', next='', home='', code='', body=index,
+    (SITE / 'index.html').write_text(PAGE.format(title='Contents', book=BOOK, book_id=BOOK_ID, slug='index', prev='', next='', home='', code='', body=index,
                                                  license=LICENSE), encoding='utf-8')
     print(f'built {len(pages)} pages, {sum(len(s["ex"]) for c in book for s in c["sections"])} exercises, {len(sols)} solutions')
 

@@ -1,6 +1,8 @@
 // Book of Proof reader: progress tracking (localStorage) + exercise grading with the reader's own LLM key.
 (() => {
-  const PKEY = 'bop-progress-v1', SKEY = 'bop-settings-v1';
+  // progress is per book (all books on one GitHub Pages user share an origin); settings and theme are shared on purpose
+  const BOOK_ID = document.body.dataset.book || 'bop';
+  const PKEY = `${BOOK_ID}-progress-v1`, SKEY = 'bop-settings-v1';
   const load = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) || d; } catch { return d; } };
   const save = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch { /* private mode: progress not kept */ } };
   const P = load(PKEY, { ex: {}, manual: {} });
@@ -170,7 +172,7 @@ Reply with ONLY a JSON object: {"verdict":"correct"|"partial"|"incorrect","feedb
       }
     }
     document.getElementById('export-btn').onclick = () => {
-      const a = el('a', { href: URL.createObjectURL(new Blob([JSON.stringify(P)], { type: 'application/json' })), download: 'book-of-proof-progress.json' });
+      const a = el('a', { href: URL.createObjectURL(new Blob([JSON.stringify(P)], { type: 'application/json' })), download: `${BOOK_ID}-progress.json` });
       a.click(); URL.revokeObjectURL(a.href);
     };
     document.getElementById('import-file').onchange = async e => {
