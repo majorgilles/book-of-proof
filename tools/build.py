@@ -7,6 +7,7 @@ import re, json, html, pathlib
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 CONTENT, SITE = ROOT / 'content', ROOT / 'site'
 BOOK = 'Book of Proof'
+AUTHOR = 'Richard Hammack'
 BOOK_ID = 'bop'          # short unique id per book: namespaces saved progress (books on one github.io share storage)
 LICENSE = ('<footer class="license"><p><em>Book of Proof</em>, Third Edition, by Richard Hammack. '
            '© 2018 Richard Hammack. Licensed under '
@@ -75,6 +76,8 @@ def main():
                                                        body=body, license=LICENSE), encoding='utf-8')
         book.append(outline(slug, src) if slug != 'solutions' else {'slug': slug, 'title': title_of(src), 'sections': []})
     (SITE / 'outline.json').write_text(json.dumps(book, ensure_ascii=False, indent=1), encoding='utf-8')
+    (SITE / 'book.json').write_text(json.dumps({'title': BOOK, 'id': BOOK_ID, 'author': AUTHOR}, ensure_ascii=False),
+                                    encoding='utf-8')          # read by the user's bookshelf page (<user>.github.io)
 
     sol = CONTENT / 'solutions.html'
     sols = {}
