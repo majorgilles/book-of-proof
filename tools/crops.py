@@ -41,28 +41,47 @@ def export(size):
     print(f'{len(keys)} crops, {len(items)} unique images, {(len(items) + size - 1) // size} batches of {size}')
 
 
+NAMED = r'\\(lim|log|ln|sin|cos|tan|cot|sec|csc|exp|max|min|gcd|lcm|mod|bmod|pmod|det|inf|sup|arctan|arcsin)(?![a-zA-Z])'
+
+
 def signature(s):
-    """Digits and latin letters, the part of a formula a transcription must preserve."""
-    s = re.sub(r'\\(?:mathbb|mathscr|mathcal|mathrm|text|operatorname)\{', '{', s)
+    """Digits, latin letters and blackboard letters: the part of a formula a transcription must preserve."""
+    bb = collections.Counter('bb' + c for c in re.findall(r'\\mathbb\{([A-Z])\}', s))
+    bb += collections.Counter('bb' + {'ℕ': 'N', 'ℤ': 'Z', 'ℚ': 'Q', 'ℝ': 'R', 'ℂ': 'C'}[c] for c in re.findall('[ℕℤℚℝℂ]', s))
+    s = re.sub(r'\\mathbb\{[A-Z]\}', ' ', s)
+    s = re.sub(r'\\(?:mathscr|mathcal|mathrm|text|operatorname)\{', '{', s)
+    s = re.sub(NAMED, lambda m: ' ' + m.group(1).replace('bmod', 'mod').replace('pmod', 'mod') + ' ', s)
     s = re.sub(r'\\[a-zA-Z]+', ' ', s)                        # other commands (\frac, \sqrt, \pi ...) carry no digits/letters
-    return collections.Counter(c for c in s if c.isdigit() or c.isascii() and c.isalpha())
+    return bb + collections.Counter(c for c in s if c.isdigit() or c.isascii() and c.isalpha())
 
 
 def load_latex():
     out = {}
-    for f in sorted(LATEX.glob('*.json')):
-        out.update(json.loads(f.read_text(encoding='utf-8')))
+    for f in sorted(LATEX.glob('batch_*.json')):             # agents' outputs (whole batches or parts)
+        d = json.loads(f.read_text(encoding='utf-8'))
+        if isinstance(d, dict): out.update(d)
     return out
 
 
 def check():
     items = {i['id']: i for f in CROPS.glob('batch_*.json') for i in json.loads(f.read_text(encoding='utf-8'))}
+    # re-read each crop's characters with fonts: Fourier big operators/radicals are encoded as Latin letters (P X R Y p ...)
+    sys.path.insert(0, str(ROOT / 'tools')); from layout import page_spans
+    doc, spans_by_page = pymupdf.open(ROOT / 'work/Main.pdf'), {}
+    for k, h in json.loads((CROPS / 'keys.json').read_text(encoding='utf-8')).items():
+        if h not in items or 'clean' in items[h]: continue
+        pno, box = int(k.split(':')[0]), pymupdf.Rect(*map(float, k.split(':')[1].split(',')))
+        sp = spans_by_page.setdefault(pno, page_spans(doc[pno]))
+        items[h]['clean'] = ''.join(s.text for s in sp if not s.hard and s.font != 'Fourier-Math-Extension'
+                                    and (s.rect() & box).get_area() > 0.5 * max(s.rect().get_area(), .01))
+    for i in items.values(): i['text_layer'] = i.get('clean', i['text_layer'])
     tex = load_latex()
     missing = [i for i in items if i not in tex]
     bad = []
     for i, t in tex.items():
-        tl = re.sub(r'[ℕℤℚℝℂ]', lambda c: {'ℕ': 'N', 'ℤ': 'Z', 'ℚ': 'Q', 'ℝ': 'R', 'ℂ': 'C'}[c.group()], items.get(i, {}).get('text_layer', ''))
-        if signature(tl) - signature(t):                        # text layer has digits/letters the LaTeX lacks
+        if not t: continue                                      # null = fragment, stays an exact image
+        tl = items.get(i, {}).get('text_layer', '')
+        if signature(tl) - signature(t) or signature(t) - signature(tl):   # omitted or invented digits/letters
             bad.append((i, tl, t))
     print(f'{len(tex)} transcribed, {len(missing)} missing, {len(bad)} failing the digit/letter check')
     for b in bad[:40]: print('  ', b)
@@ -79,13 +98,16 @@ def apply():
         def sub(m):
             nonlocal n, kept
             h = keys.get(key(m))
-            if h in tex and h not in failed and tex[h].strip():
+            if h in tex and h not in failed and (tex[h] or "").strip():
                 n += 1
                 return '\\(' + html.escape(tex[h].strip(), quote=False) + '\\)'
             kept += 1
             return m.group(0)
         f.write_text(IMG.sub(sub, src), encoding='utf-8')
-    print(f'replaced {n} crops with LaTeX, kept {kept} as exact images')
+    used = {m for f in (ROOT / 'content').glob('*.html') for m in re.findall(r'src="(figs/m/[^"]+)"', f.read_text(encoding='utf-8'))}
+    stale = [p for p in (ROOT / 'site/figs/m').glob('*.svg') if f'figs/m/{p.name}' not in used]
+    for p in stale: p.unlink()                                 # crops replaced by LaTeX are not published
+    print(f'replaced {n} crops with LaTeX, kept {kept} as exact images, removed {len(stale)} unused crop files')
 
 
 if __name__ == '__main__':
