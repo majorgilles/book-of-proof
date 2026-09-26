@@ -93,7 +93,7 @@ def main():
                 f'<span class="bar"><span></span></span><span class="pct"></span>'
                 + (f'<ul>{secs}</ul>' if secs else '') + '</li>')
     toc = ''.join(toc_entry(c) for c in book)
-    index = (f'<section class="front"><h1>{BOOK}</h1><p class="sub">Third Edition — Richard Hammack</p>'
+    index = (f'<section class="front"><h1>{BOOK}</h1><p class="sub">{html.escape(AUTHOR)}</p>'
              '<div class="overall"><span class="bar big"><span></span></span><span class="pct"></span> of the book mastered</div>'
              '<p class="io"><button id="export-btn" type="button">Export progress</button> '
              '<label class="btn">Import progress<input id="import-file" type="file" accept="application/json" hidden></label></p>'
